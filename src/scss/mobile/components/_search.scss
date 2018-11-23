@@ -1,0 +1,36 @@
+
+
+.search-form {
+  background: #3fb1ff;
+  padding: 20px;
+  margin-top: -66px;
+  transition: 1s ease;
+  position: relative;
+  display: none;
+  &__input {
+    border-radius: 25px;
+    height: 26px;
+    background: white;
+    padding-left: 15px;
+    border: none;
+    width: 100%;
+  }
+  &__submit {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    height: 26px;
+    background: transparent;
+    border: none;
+    img {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}
+
+.show-search-form {
+  display: block;
+  margin-top: 0;
+  transition: 1s ease;
+}

@@ -1,0 +1,161 @@
+.product-slider, .product-slider1 {
+  display: flex;
+  overflow: hidden;
+  
+  &-wrapper {
+    position: relative;
+    padding: 0 15px;
+    margin-bottom: 15px;
+  }
+  
+  .item {
+    position: relative;
+    padding: 5px 15px;
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid #dadbdb;
+      .product-slider {
+        &__size {
+          display: flex;
+        }
+      }
+    }
+  }
+  
+  .owl-stage {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .owl-nav {
+    position: absolute;
+    top: calc(50% - 15px);
+    width: 100%;
+    
+    .owl-prev, .owl-next {
+      border: none;
+      background: none;
+      display: inline-block;
+      font: normal normal normal 14px / 1 FontAwesome;
+      font-size: 14px;
+      cursor: pointer;
+      text-rendering: auto;
+      color: #b3b3b3;
+      padding-top: 2px;
+      height: 30px;
+      background-position: 50%;
+      background-repeat: no-repeat;
+      position: absolute;
+      background-size: 8px 14px;
+      
+      span {
+        display: none;
+      }
+      
+      &:hover, &:focus {
+        outline: none;
+        opacity: 0.7;
+      }
+    }
+    
+    .owl-prev {
+      left: -14px;
+      background-image: url("/img/svg/left-arrow-grey.svg");
+      &.disabled {
+        display: none;
+      }
+    }
+    
+    .owl-next {
+      right: 14px;
+      background-image: url("/img/svg/right-arrow-grey.svg");
+      &.disabled {
+        display: none;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__name, &__price {
+    font-size: 12px;
+    font-weight: 300;
+    color: #666666;
+    text-align: center;
+    
+    &--span {
+      color: #333333;
+      font-weight: 400;
+    }
+  }
+
+  &__name {
+    text-transform: uppercase;
+  }
+
+  &__hr {
+    margin: 8px 0;
+  }
+
+  &__type {
+    position: absolute;
+    top: -1px;
+    right: 15px;
+    display: block;
+    width: 47px;
+    height: 45px;
+    background-size: cover;
+    text-align: center;
+    
+    &--new {
+      background: url(/img/catalog-new.png);
+      background-size: cover;
+    }
+    
+    &--actual-discount {
+      background: url(/img/catalog-sale.png);
+      background-size: cover;
+    }
+    
+    &-text {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 14px;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+
+  &__size {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 50px;
+    right: 15px;
+    display: none;
+    max-height: 130px;
+    max-width: 53px;
+    font-size: 11px;
+    border-top: 1px solid #3fb1ff;
+    border-right: 0;
+    border-bottom: 0;
+    border-collapse: collapse;
+    
+    .number {
+      width: 26px;
+      line-height: 26px;
+      text-align: center;
+      border: 1px solid #3fb1ff;
+      border-top: none;
+      background: white;
+      
+      &:nth-child(2n) {
+        border-left: none;
+      }
+    }
+  }
+}

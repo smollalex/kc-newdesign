@@ -1,0 +1,148 @@
+.first-type-slider {
+  .owl-stage {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+  }
+  .owl-nav {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    .owl-prev, .owl-next {
+      width: 45px;
+      height: 45px;
+      background: #cbdce3;
+      border: none;
+      border-radius: 50%;
+      padding: 0;
+      display: inline-block;
+      font: normal normal normal 14px / 1 FontAwesome;
+      font-size: 18px;
+      text-rendering: auto;
+      color: white;
+      padding-top: 2px;
+      span {
+        display: none;
+      }
+      &:hover, &:focus {
+        outline: none;
+        opacity: 0.7;
+      }
+    }
+    .owl-prev {
+      position: absolute;
+      left: 30px;
+      cursor: pointer;
+      padding-right: 0px;
+      &:before {
+        content: "\f053";
+      }
+    }
+    .owl-next {
+      position: absolute;
+      cursor: pointer;
+      right: 30px;
+      padding-left: 3px;
+      &:before {
+        content: "\f054";
+      }
+    }
+  }
+  .owl-dots {
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    justify-content: center;
+    .owl-dot {
+      border: 1px solid transparent;
+      background: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      margin: 0 5px;
+      &:hover, &:focus {
+        outline: none;
+      }
+      span {
+        background: #b0b0b0;
+        height: 6px;
+        width: 6px;
+        margin: 3px 4px;
+      }
+      &.active {
+        border: 1px solid #b0b0b0;
+        span {
+          background: #b0b0b0;
+        }
+      }
+    }
+  }
+}
+
+.second-type-slider {
+  .owl-stage {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+  }
+  .owl-nav {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    .owl-prev, .owl-next {
+      border: none;
+      background: none;
+      display: inline-block;
+      font: normal normal normal 14px / 1 FontAwesome;
+      font-size: 14px;
+      cursor: pointer;
+      text-rendering: auto;
+      color: #b3b3b3;
+      padding-top: 2px;
+      span {
+        display: none;
+      }
+      &:hover, &:focus {
+        outline: none;
+        opacity: 0.7;
+      }
+    }
+    .owl-prev {
+      position: absolute;
+      left: -22px;
+      &:before {
+        content: "\f053";
+      }
+    }
+    .owl-next {
+      position: absolute;
+      right: 7px;
+      &:before {
+        content: "\f054";
+      }
+    }
+  }
+}
+
+.main-slider {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .owl-nav {
+    display: none;
+  }
+  .owl-dots {
+    bottom: 10px;
+  }
+}
+
+

@@ -1,0 +1,42 @@
+footer.footer
+  .wrapper
+    .footer__block
+      form.subscribe
+        h4.subscribe__title
+          | Дарим 300 рублей
+          br
+          | на первый заказ за подписку!
+        .subscribe__radio-block
+          input#subscribe-gender-female.subscribe__radio(name='subscribe-gender', type='radio', checked='true')
+          label.subscribe__label.subscribe__label--radio.active(for='subscribe-gender-female') Женщинам
+          input#subscribe-gender-male.subscribe__radio(name='subscribe-gender', type='radio')
+          label.subscribe__label.subscribe__label--radio(for='subscribe-gender-male') Мужчинам
+        .subscribe__input-block
+          input.subscribe__input(type='email', placeholder='Ваша эл. почта')
+          button.subscribe__submit(type='submit') Подписаться
+        .subscribe__checkbox-block
+          input#subscribe-checkbox.subscribe__checkbox(type='checkbox')
+          label.subscribe__label.subscribe__label--checkbox(for='subscribe-checkbox')
+            | Я согласен на обработку 
+            a.subscribe__link(href='javascript:;') персональных данных,
+            |  а также с 
+            a.subscribe__link(href='javascript:;') условиями подписки
+      .footer-social
+        a(href='javascript:;')
+          .footer-social__item
+            i.fa.fa-vk(aria-hidden='true')
+        a(href='javascript:;')
+          .footer-social__item
+            i.fa.fa-odnoklassniki(aria-hidden='true')
+        a(href='javascript:;')
+          .footer-social__item
+            i.fa.fa-instagram(aria-hidden='true')
+        a(href='javascript:;')
+          .footer-social__item
+            i.fa.fa-facebook(aria-hidden='true')
+    .footer-copyright
+      p.footer__text
+        | перейти на 
+        a.footer-copyright__link(href='index.html') основную версию сайта
+      p.footer-copyright__text © 2010-2019 kc-shoes
+    

@@ -1,0 +1,51 @@
+.breadcrumb {
+  background: white;
+  padding-left: 0;
+  margin: 5px 0;
+  
+  &__list {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 15px;
+    height: 13px;
+    margin-right: 7px;
+    
+    &:before {
+      position: absolute;
+      content: ">";
+      background-size: cover;
+      width: 7px;
+      left: 0;
+      height: 14px;
+      color: #bcbcbc;
+    }
+    
+    &--home {
+      padding-left: 0;
+      
+      &:before {
+        display: none;
+      }
+      
+      img {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+  
+  &__link {
+    font-family: "PT Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: #666666;
+    cursor: pointer;
+  }
+}

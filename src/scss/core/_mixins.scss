@@ -1,0 +1,24 @@
+@mixin news($background,$color) {
+	color: $color;
+	height: 450px;
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+	
+	.news-block__title {
+		font-size: $font-size-title;
+	}
+		
+	.news-block__date {
+		font-size: $font-size-text;
+	}
+		
+	.news-block__text {
+		font-size: $font-size-text;
+	}
+		
+	.news-block__link {
+		font-size: $font-size-link;
+		color: $color;
+	}
+}
