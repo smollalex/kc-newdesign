@@ -1,5 +1,8 @@
+import $ from 'jquery';
+
 $(document).ready(function(){
-	$('.header__link').not('.header__link--yandex').hover(function(){
+
+ 	$('.header__link').not('.header__link--yandex').hover(function(){
 		$('.header__link:first-child').removeClass('active');
 	},function(){
 		$('.header__link:first-child').addClass('active');

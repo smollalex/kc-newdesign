@@ -1,4 +1,4 @@
-%index-title {
+.index-title {
   margin: 0 32px;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 22px;
@@ -8,13 +8,13 @@
   letter-spacing: 1px;
 }
 
-%index-title__block {
+.index-title__block {
   display: flex;
   align-items: center;
   margin-bottom: 33px;
 }
 
-%index-title__hr {
+.index-title__hr {
   width: 100%;
   margin: 0;
 }
@@ -27,14 +27,14 @@
   margin-bottom: 40px;
   
   &__title {
-    @extend %index-title;
+    @extend .index-title;
     
     &-block {
-      @extend %index-title__block;
+      @extend .index-title__block;
     }
     
     &-hr {
-      @extend %index-title__hr;
+      @extend .index-title__hr;
     }
   }
 
@@ -615,12 +615,12 @@
     }
   }
   &__title {
-    @extend %index-title;
+    @extend .index-title;
     &-hr {
-      @extend %index-title__hr;
+      @extend .index-title__hr;
     }
     &-block {
-      @extend %index-title__block;
+      @extend .index-title__block;
       display: flex;
       align-items: center;
       margin-bottom: 65px;
