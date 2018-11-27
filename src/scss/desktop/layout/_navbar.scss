@@ -1,7 +1,7 @@
 .nav {
   
   &__logo {
-    background: url("../img/logo.png");
+    background: url(../img/logo.png);
     background-size: cover;
     min-width: 90px;
     height: 48px;
@@ -64,13 +64,13 @@
       height: 16px;
       
       &--stock {
-        background: url(/img/svg/share.svg) 0 0 no-repeat;
+        background: url(../img/svg/share.svg) 0 0 no-repeat;
         background-size: 14px 15px;
         margin-right: 2px;
       }
 
       &--star {
-        background: url(/img/svg/new.svg) 0 0 no-repeat;
+        background: url(../img/svg/new.svg) 0 0 no-repeat;
         background-size: 16px 16px;
         margin-right: 2px;
       }
@@ -184,22 +184,22 @@
         margin-right: 5px;
         
         &--winter {
-          background: url(/img/ic/ic-winter.png) 0 0 no-repeat;
+          background: url(../img/ic/ic-winter.png) 0 0 no-repeat;
           background-size: 14px 16px;
         }
         
         &--summer {
-          background: url(/img/ic/ic-summer.png) 0 0 no-repeat;
+          background: url(../img/ic/ic-summer.png) 0 0 no-repeat;
           background-size: 16px 16px;
         }
         
         &--autumn-spring {
-          background: url(/img/ic/ic-autumn-spring.png) 0 0 no-repeat;
+          background: url(../img/ic/ic-autumn-spring.png) 0 0 no-repeat;
           background-size: 16px 13px;
         }
         
         &--star {
-          background: url(/img/ic/ic-star.png) 0 0 no-repeat;
+          background: url(../img/ic/ic-star.png) 0 0 no-repeat;
           background-size: 13px 12px;
         }
         
@@ -229,12 +229,12 @@
         }
         
         &--big-size {
-          background: url(/img/ic/ic-big-size.png) 0 0 no-repeat;
+          background: url(../img/ic/ic-big-size.png) 0 0 no-repeat;
           background-size: 13px 13px;
         }
         
         &--small-size {
-          background: url(/img/ic/ic-small-size.png) 0 0 no-repeat;
+          background: url(../img/ic/ic-small-size.png) 0 0 no-repeat;
           background-size: 13px 13px;
         }
       }

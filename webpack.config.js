@@ -4,13 +4,17 @@ const webpack = require('webpack');
 const path = require('path');
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+//const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config =  {
 
-  entry: `./src/${version}.js`,
+  entry: [
+    `./src/js/${version}.js`,
+    `./src/scss/${version}.scss`
+  ],
   output: {
     path: path.resolve(__dirname, `dist/${version}`),
     filename: `js/${version}.js`,
@@ -24,49 +28,67 @@ const config =  {
  
   module: {
     rules: [
+
+      // JS
       {
         test: /\.js$/,
         use: ['babel-loader'],
         exclude: '/node_modules/'
       },
+
+      // CSS
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           use: [{
             loader: "css-loader",
-            //options: { url: false } 
+            options: { 
+              //url: false
+            } 
           }]
         })
       },
+
+      // SCSS
       {
-        test: /\.scss$/,
+        test: /\.(sass|scss)$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
           use: [
             {
               loader: 'css-loader',
-              // если false то строка с url игнорируется и вставляется как есть
-              //options: { url: false } 
+              options: {
+                sourceMap: true,
+                minimize: true,
+                //url: false
+              }
             },
             {
-              loader: 'sass-loader'
+              loader: "resolve-url-loader"
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
             }
           ]
         })
       },
+
+      // Images
       {
         test: /\.(gif|png|jpe?g|svg)$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: '[name].[ext]',
-              outputPath: 'img',
-              include: path.resolve(__dirname, 'src')
+              name: 'img/[name].[ext]'
             }
           }
         ],
       },
+
+      // Fonts
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
@@ -79,37 +101,57 @@ const config =  {
           }
         ],
       },
+
+      // Pug
       {
         test: /\.pug$/,
-        loader: 'pug-loader',
-        options: {
-          pretty: true
-        }
+        use: [
+          {
+            loader: 'pug-loader',
+            options: { pretty: true }
+          }
+        ]
       }
     ]
   },
 
   plugins: [
+    
+
     new ExtractTextPlugin({
-      filename: "css/styles.css"
+      filename: 'css/style.css',
+      allChunks: true,
     }),
 
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'src/templates/desktop/index.pug'
+      template: 'src/templates/index.pug'
     }),
-
-    //new CopyWebpackPlugin([{ from: 'src/img', to: 'img' }])
+/*
+    new CopyWebpackPlugin([
+      {
+        from: './src/fonts',
+        to: './fonts'
+      },
+      {
+        from: './src/favicon',
+        to: './favicon'
+      },
+      {
+        from: './src/img',
+        to: './img'
+      }
+  ]),
+  */
   ]
 };
 
 
-
+ 
 module.exports = (env, argv) => {
 
   if (argv.mode === 'development') {
     config.devtool = 'source-map';
-    console.log(argv.mode)
   }
 
   if (argv.mode === 'production') {

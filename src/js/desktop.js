@@ -1,4 +1,5 @@
-import $ from 'jquery';
+window.$ = window.jQuery = require("jquery");
+require ('owl.carousel/dist/owl.carousel');
 
 $(document).ready(function(){
 

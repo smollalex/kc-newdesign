@@ -1,3 +1,12 @@
+/*
+
+// Vendor
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~font-awesome/scss/font-awesome';
+@import '~animate.css/animate.css';
+@import '~owl.carousel/dist/assets/owl.carousel.css';
+@import '~owl.carousel/dist/assets/owl.theme.default.css';
+
 // Core
 @import "core/core";
 
@@ -12,10 +21,16 @@
 
 
 .wrapper {
-  width: 1280px;
-  max-width: 100%;
-  padding: 0 30px;
+  min-width: 768px;
+  max-width: 1280px;
   margin: 0 auto;
   height: 100%;
+}
 
+*/
+
+h1 {
+  width: 50px;
+  height: 50px;
+  background: url(../img/logo.png);
 }

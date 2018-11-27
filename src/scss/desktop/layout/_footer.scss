@@ -1,5 +1,5 @@
 .footer {
-  background: #155dbc url("../img/footer-bg.png") no-repeat 50%;
+  background: #155dbc url(/img/footer-bg.png) no-repeat 50%;
   background-size: 100% 100%;
   color: white;
   font-family: "Roboto Condensed", sans-serif;
@@ -29,7 +29,7 @@
   }
 
   &__logo {
-    background: url("../img/logo-footer.png");
+    background: url(../img/logo-footer.png);
     width: 133px;
     height: 71px;
     margin-bottom: 24px;
@@ -141,7 +141,7 @@
         }
 
         &.active {
-          background: url(/img/radio.png) no-repeat;
+          background: url(../img/radio.png) no-repeat;
           
           &:before {
             display: none;

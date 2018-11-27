@@ -30,7 +30,7 @@
     height: 20px;
     bottom: 15px;
     left: 50%;
-    background: url(/img/city-arrow.png);
+    background: url('img/city-arrow.png');
     cursor: pointer;
   }
   
@@ -40,14 +40,13 @@
     line-height: normal;
   }
   
-  .city__table {
-    margin-left: -10px;
+  .city__list {
     margin-top: 15px;
-    
-    td {
-      padding-right: 25px;
+  
+    > div {
+      display: flex;
+      flex-direction: column;
     }
-    
     span {
       padding: 0 10px;
       line-height: 26px;
