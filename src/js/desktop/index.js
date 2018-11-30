@@ -3,57 +3,178 @@ require ('owl.carousel/dist/owl.carousel');
 
 $(document).ready(function(){
 
- 	$('.header__link').not('.header__link--yandex').hover(function(){
-		$('.header__link:first-child').removeClass('active');
+	// Header items
+ 	$('.header-item').hover(function(){
+	
+		$(this).addClass('header-item--active');
+		//not('.header-item--yandex')
+		
 	},function(){
-		$('.header__link:first-child').addClass('active');
-	}
-	);
+		$(this).removeClass('header-item--active');
+	});
+
 	$('.nav-icons__counter').each(function(){
 		let counter = $(this).text();
 		if (counter !== "0") {
 			$(this).addClass("active");
 		};
 	});
-    $('.main-slider').owlCarousel({
-	    loop:true,
-	    nav:true,
-	    mouseDrag:true,
-	    dots:true,
-	    items:1,
-	    lazyLoad: true,
-	    navText: ['<img src="/img/svg/left-arrow.svg" class="svg-icon">','<img src="/img/svg/right-arrow.svg" class="svg-icon">']
+
+
+	// Sliders
+
+	// Main home slider
+	$('#main-slider').owlCarousel({
+		loop: true,
+		nav: true,
+		mouseDrag: true,
+		dots: true,
+		items: 1,
+		lazyLoad: true,
+		navText: [ '<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
 	});
-	$('.categories-slider').owlCarousel({
-	    loop:true,
-	    nav:true,
-	    mouseDrag:true,
-	    dots:false,
-	    items:6,
-	    slideBy:5,
-	    lazyLoad: true
+
+	// Brands home slider
+	$('#brands-slider').owlCarousel({
+		loop: true,
+		nav: true,
+		mouseDrag: true,
+		dots: true,
+		slideBy: 5,
+		lazyLoad: true,
+		navText: [ '<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+		responsive: {
+			0: {
+				items: 6
+			},
+			769: {
+				items: 8
+			}
+		}
 	});
+
+	// New product slider
+	$('#new-products-slider, #actual-discount-slider').owlCarousel({
+		loop: true,
+		nav: true,
+		mouseDrag: true,
+		dots: false,
+		lazyLoad: true,
+		slideBy: 1,
+		margin: 10,
+		stagePadding: 1,
+		navText: [ '<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+		responsive: {
+			0: {
+				items: 3
+			},
+			844: {
+				items: 4
+			},
+			991: {
+				items: 2
+			},
+			1024: {
+				items: 3
+			},
+			1280: {
+				items: 4,
+			}
+		}
+	});
+
+	// Product slider
 	$('.product-slider').owlCarousel({
-	    loop:true,
-	    nav:true,
-	    mouseDrag:true,
-	    dots:false,
-	    items:4,
-	    slideBy:4,
-	    lazyLoad: true
+		loop: true,
+		nav: true,
+		mouseDrag: true,
+		dots: true,
+		slideBy: 4,
+		lazyLoad: true,
+		items: 1,
+		margin: 10,
+		responsive: {
+			768: {
+				items: 3
+			},
+			1024: {
+				items: 4
+			},
+			1280: {
+				items: 5
+			}
+		}
 	});
-	$('.trends__slider').owlCarousel({
-	    loop:true,
-	    nav:true,
-	    mouseDrag:false,
-	    dots:true,
-	    items:1,
-	    lazyLoad: true,
-	    navText: ['<img src="/img/svg/left-arrow.svg" class="svg-icon">','<img src="/img/svg/right-arrow.svg" class="svg-icon">']
+
+
+	// Trends slider
+	const $trends_slider_1 = $('#trend-slider-1'),
+        $trends_slider_2 = $('#trend-slider-2')
+    
+  $trends_slider_1.on('click', '.owl-next', function () {
+		$trends_slider_2.trigger('next.owl.carousel')
 	});
+	$trends_slider_1.on('click', '.owl-prev', function () {
+		$trends_slider_2.trigger('prev.owl.carousel')
+	});
+
+	$trends_slider_1.owlCarousel({
+		loop: true,
+		nav: true,
+		mouseDrag: true,
+		dots: true,
+		items: 1,
+		lazyLoad: true,
+		navText: [ '<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+	}).on('dragged.owl.carousel', function (e) {
+		if (e.relatedTarget['_drag']['direction' == 'left']) {
+			$trends_slider_2.trigger('next.owl.carousel')
+		} else {
+			$trends_slider_2.trigger('prev.owl.carousel')
+		}
+	}).on('click', '.owl-dot', function () {
+		let i = $(this).index();
+		$trends_slider_2.trigger('to.owl.carousel', [i, true]);
+	});
+
+	$trends_slider_2.owlCarousel({
+		animateOut: 'fadeOut',
+		animateIn: 'fadeIn',
+		loop: true,
+		nav: false,
+		mouseDrag: false,
+		touchDrag: false,
+		dots: false,
+		items: 1,
+		lazyLoad: true,
+	});
+
+
+	// Reviews slider
+	$('#reviews-slider').owlCarousel({
+		loop: true,
+		nav: false,
+		mouseDrag: true,
+		dots: false,
+		margin: 20,
+		lazyLoad: true,
+		responsive: {
+			0: {
+				items: 2
+			},
+			991: {
+				items: 3
+			}
+		}
+	});
+
+
+
+
 	$('.footer__write-to-us').click(function(){
 		$(this).toggleClass("active");
 	});
+
 	$('.trends__slider .owl-prev').click(function(){
 		let idSlide = $('.trends__slider .owl-item.active .item').attr('id');
 		idSlide = idSlide.slice(-1);
@@ -76,20 +197,21 @@ $(document).ready(function(){
 			$('.trends__content #trends__content' + idSlide).addClass("active");
 		},150);		
 	});
-	$('.header__city').click(function(){
-		$('#city-panel').toggleClass("show-panel");
+
+	
+
+	// City panel
+	$('body').on('click', function(e){
+		e.preventDefault;
+		if (e.target.closest('.header-item--city')) {
+			$('#city-panel').addClass("city-panel--opened");
+		} else if (e.target.closest('.city-panel-close') || !(e.target.closest('.city-panel'))) {
+			$('#city-panel').removeClass("city-panel--opened");
+		}
 	});
-	$('.city__arrow').click(function(){
-		$('#city-panel').toggleClass("show-panel");
-	});
-	$('.reviews__slider').owlCarousel({
-	    loop:true,
-	    nav:true,
-	    mouseDrag:true,
-	    dots:false,
-	    margin:20,
-	    items:3,
-	    lazyLoad: true});
+
+
+	
 	$('.subscribe__radio-block').find('.subscribe__label').each(function(){
 		$(this).click(function(){
 			var valueRadio = $(this).html();
@@ -110,7 +232,7 @@ $(document).ready(function(){
 	    items:8,
 	    slideBy:4,
 	    lazyLoad: true,
-	    navText: ['<img src="/img/svg/left-arrow-grey.svg" class="svg-icon">','<img src="/img/svg/right-arrow-grey.svg" class="svg-icon">']
+	    navText: ['<img src="img/svg/left-arrow-grey.svg" class="svg-icon">','<img src="img/svg/right-arrow-grey.svg" class="svg-icon">']
 	});
 	$('#interesting-slider').owlCarousel({
 	    loop:true,

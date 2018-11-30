@@ -1,9 +1,9 @@
 header.header
-  .wrapper
-    a.header__link.active(href='javascript:;')
-      .header__item
-        p.header__text
-          svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64', xml:space='preserve')
+  .container-fluid
+    a.header-item(href='javascript:;')
+      .header-item-title
+        .header-item-title-icon
+          svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xitem='http://www.w3.org/1999/xitem', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64', xml:space='preserve')
             rect(opacity='0', fill='inherit', width='64', height='64')
             path(fill='inherit', d='M6.414,27.458c0-0.556,0.453-1.009,1.009-1.009h22.488c0.556,0,1.008,0.454,1.008,1.009\
             c0,0.557-0.452,1.009-1.008,1.009H7.423C6.867,28.467,6.414,28.015,6.414,27.458z M62.035,36.015v7.254\
@@ -19,15 +19,15 @@ header.header
             C61.693,34.078,62.035,35.035,62.035,36.015z M44.49,29.991c0,0.337,0.274,0.611,0.611,0.611h11.134l-6.308-7.709h-4.826\
             c-0.337,0-0.611,0.275-0.611,0.611V29.991z M52.914,40.199c-2.139,0-3.88,1.74-3.88,3.881c0,2.139,1.741,3.881,3.88,3.881\
             c2.141,0,3.881-1.742,3.881-3.881C56.795,41.939,55.055,40.199,52.914,40.199z')
-          | 				Бесплатная доставка
-        .header__item--content
-          p.header--content__text Доставим в Омск бесплатно при предоплате заказа.
-          p.header--content__link Подробнее
-    a.header__link(href='javascript:;')
-      .header__item
-        p.header__text
+        span.header-item-title-text Бесплатная доставка
+      .header-item-content
+        span.header-item-content-text Доставим в Омск бесплатно при предоплате заказа.
+        span.header-item-content-link Подробнее
+    a.header-item(href='javascript:;')
+      .header-item-title
+        .header-item-title-icon
           // ?xml version="1.0" encoding="utf-8"?
-          svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64', xml:space='preserve')
+          svg(version='1.1', id='Слой_1', xmlns='http://www.w3.org/2000/svg', xmlns:xitem='http://www.w3.org/1999/xitem', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64', xml:space='preserve')
             rect(opacity='0', fill='#201600', width='64', height='64')
             path(fill='inherit', d='M57.011,39.586L33.129,27.971v-1.293c0.011-0.002,0.021-0.005,0.032-0.007\
             c3.763-0.932,6.288-3.276,6.288-6.29c0-3.473-2.815-6.288-6.288-6.288c-3.206,0-5.994,2.347-6.27,5.491\
@@ -38,43 +38,41 @@ header.header
             C59.154,41.485,58.291,40.246,57.011,39.586z M54.888,44.473H9.113c-1.085,0-2.004-0.717-2.004-1.566\
             c0-0.522,0.344-1.014,0.919-1.313l0.01-0.003l0.011-0.007l23.949-11.652l23.955,11.652l0.011,0.007l0.01,0.003\
             c0.574,0.299,0.918,0.79,0.918,1.313C56.892,43.756,55.974,44.473,54.888,44.473z')
-          | 					Примерка перед покупкой
-        .header__item--content
-          p.header--content__text Примеряйте и покупайте то, что вам подошло и понравилось.
-          p.header--content__link Подробнее
-    a.header__link(href='javascript:;')
-      .header__item
-        p.header__text
-          span.header__span 100%
-          |   Оригинальные бренды
-        .header__item--content
-          p.header--content__text Все товары подлинные и сертифицированные.
-          p.header--content__link Подробнее
-    a.header__link.header__link--yandex(href='javascript:;')
-      .header__item
-        p.header__text.header__text--orange
+        span.header-item-title-text Примерка перед покупкой
+      .header-item-content
+        p.header-item-content-text Примеряйте и покупайте то, что вам подошло и понравилось.
+        p.header-item-content-link Подробнее
+    a.header-item(href='javascript:;')
+      .header-item-title
+        span.header-item-title-icon 100%
+        span.header-item-title-text Оригинальные бренды
+      .header-item-content
+        p.header-item-content-text Все товары подлинные и сертифицированные.
+        p.header-item-content-link Подробнее
+    a.header-item.header-item--yandex(href='javascript:;')
+      .header-item-title
+        span.header-item-title-icon
           img(src='img/svg/yandex.svg')
-          span
-            | маркет
-            i.fa.fa-star(aria-hidden='true')
-            i.fa.fa-star(aria-hidden='true')
-            i.fa.fa-star(aria-hidden='true')
-            i.fa.fa-star(aria-hidden='true')
-            i.fa.fa-star(aria-hidden='true')
-        .header__item--content
-          p.header--content__text Наш рейтинг по отзывам покупателей на независимом сервисе.
-          p.header--content__link Подробнее
-    a.header__phone.d-none.d-xl-flex(href='javascript:;')
-      .header__item
-        p.header__text.header__text--phone
-          | 8 (800) 700-27-68
-          span Бесплатно по России
-        .header__item--content
-          p.header--content__text Время работы операторов
-          p.header--content__text пн-пт 6:00 - 17:00 МСК
-          p.header--content__text сб-вс 7:00 - 16:00
-    button.header__city(role='button')
-      | Нижний новгород 
-      img.svg-icon(src='img/svg/arrow_city.svg')
-      br
-      span.header__city--span Пунктов выдачи: 23
+        span.header-item-title-text маркет
+          i.fa.fa-star(aria-hidden='true')
+          i.fa.fa-star(aria-hidden='true')
+          i.fa.fa-star(aria-hidden='true')
+          i.fa.fa-star(aria-hidden='true')
+          i.fa.fa-star(aria-hidden='true')
+      .header-item-content
+        p.header-item-content-text Наш рейтинг по отзывам покупателей на независимом сервисе.
+        p.header-item-content-link Подробнее
+    a.header-item.header-item--phone(href='javascript:;')
+      .header-item-title
+        span.header-item-title-text 8 (800) 700-27-68
+      .header-item-content
+        p.header-item-content-text Бесплатно по России
+        p.header-item-content-text Время работы операторов
+        p.header-item-content-text пн-пт 6:00 - 17:00 МСК
+        p.header-item-content-text сб-вс 7:00 - 16:00
+    a.header-item.header-item--city(href='javascript:;')
+      .header-item-title
+        span.header-item-title-icon
+          img.svg-icon(src='img/svg/arrow_city.svg')
+        span.header-item-title-text Нижний новгород 
+          span Пунктов выдачи: 23

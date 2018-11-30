@@ -1,116 +1,115 @@
 footer.footer
-  .wrapper
-    .flex-row
-      .footer__block1
-        a(href='#')
-          .footer__logo
-        .footer-hours-work
-          p.footer-hours-work__title 8 (800) 700-27-68
-          p.footer-hours-work__text пн-пт 6:00 - 17:00
-          p.footer-hours-work__text сб-вс 7:00 - 16:00 мск
-        p.footer__address
-          | 644007, г. Омск,
+  .container-fluid
+    .footer-block
+      a.footer-brand(href='#')
+      .footer-hours-work
+        span.footer-hours-work-title 8 (800) 700-27-68
+        span.footer-hours-work-text пн-пт 6:00 - 17:00
+        span.footer-hours-work-text сб-вс 7:00 - 16:00 мск
+      .footer-address
+        span 644007, г. Омск,
+        span ул. Фрунзе, 101
+      a.footer-write(href='javascript:;')
+        img(src='img/ic/ic-mail.png')
+        span Написать нам
+    .footer-block
+      h4.footer-block-title Компания
+      .footer-block-list
+        ul.nav
+          li.nav-item
+            a.nav-link(href='javascript:;') Весь каталог
+          li.nav-item
+            a.nav-link(href='javascript:;') О нас
+          li.nav-item
+            a.nav-link(href='javascript:;') Отзывы
+        ul.nav
+          li.nav-item
+            a.nav-link(href='javascript:;') Контакты
+          li.nav-item
+            a.nav-link(href='javascript:;') Вакансии
+          li.nav-item
+            a.nav-link(href='javascript:;') Сертификаты
+    .footer-block
+      h4.footer-block-title Покупателям
+      .footer-block-list
+        ul.nav
+          li.nav-item
+            a.nav-link(href='javascript:;') Доставка и оплата
+          li.nav-item
+            a.nav-link(href='javascript:;') Пункты самовывоза
+          li.nav-item
+            a.nav-link(href='javascript:;') Возврат и обмен
+          li.nav-item
+            a.nav-link(href='javascript:;') Состояние заказа
+        ul.nav
+          li.nav-item
+            a.nav-link(href='javascript:;') Таблица размеров
+          li.nav-item
+            a.nav-link(href='javascript:;') Система скидок
+          li.nav-item
+            a.nav-link(href='javascript:;') Оферта
+    .footer-block
+      form.footer-subscribe
+        h4.footer-subscribe-title
+          | Дарим 300 рублей
           br
-          | 					ул. Фрунзе, 101
-        a.footer__write-to-us(href='javascript:;')
-          img(src='img/ic/ic-mail.png')
-          span.footer__write-to-us--s Написать нам
-          span.footer__write-to-us--span info@kc-shoes.ru
-      .footer__block
-        h4.footer__title Компания
-        .footer__block--list
-          ul.footer__list
-            li.footer__item
-              a.footer__link(href='javascript:;') Весь каталог
-            li.footer__item
-              a.footer__link(href='javascript:;') О нас
-            li.footer__item
-              a.footer__link(href='javascript:;') Отзывы
-          ul.footer__list
-            li.footer__item
-              a.footer__link(href='javascript:;') Контакты
-            li.footer__item
-              a.footer__link(href='javascript:;') Вакансии
-            li.footer__item
-              a.footer__link(href='javascript:;') Сертификаты
-      .footer__block
-        h4.footer__title Покупателям
-        .footer__block--list
-          ul.footer__list
-            li.footer__item
-              a.footer__link(href='javascript:;') Доставка и оплата
-            li.footer__item
-              a.footer__link(href='javascript:;') Пункты самовывоза
-            li.footer__item
-              a.footer__link(href='javascript:;') Возврат и обмен
-            li.footer__item
-              a.footer__link(href='javascript:;') Состояние заказа
-          ul.footer__list
-            li.footer__item
-              a.footer__link(href='javascript:;') Таблица размеров
-            li.footer__item
-              a.footer__link(href='javascript:;') Система скидок
-            li.footer__item
-              a.footer__link(href='javascript:;') Оферта
-      .footer__block
-        form.subscribe
-          h4.subscribe__title
-            | Дарим 300 рублей
-            br
-            | на первый заказ за подписку!
-          .subscribe__radio-block
-            input#subscribe-gender-female.subscribe__radio(name='subscribe-gender', type='radio', checked='true')
-            label.subscribe__label.subscribe__label--radio.active(for='subscribe-gender-female') Женщинам
-            input#subscribe-gender-male.subscribe__radio(name='subscribe-gender', type='radio')
-            label.subscribe__label.subscribe__label--radio(for='subscribe-gender-male') Мужчинам
-          .subscribe__input-block
-            input.subscribe__input(type='email', placeholder='Ваша эл. почта')
-            button.subscribe__submit(type='submit') Подписаться
-          .subscribe__checkbox-block
-            input#subscribe-checkbox.subscribe__checkbox(type='checkbox')
-            label.subscribe__label.subscribe__label--checkbox(for='subscribe-checkbox')
+          | на первый заказ за подписку!
+        
+        .footer-subscribe-gender
+          .form-group
+            input(name='subscribe-gender', type='radio')
+            label(for='subscribe-gender-female') Женщинам
+          .form-group
+            input(name='subscribe-gender', type='radio')
+            label(for='subscribe-gender-male') Мужчинам
+
+        .footer-subscribe-email
+          .form-group
+            input(type='email', placeholder='Ваша эл. почта')
+            button(type='submit') Подписаться
+
+        .footer-subscribe-confirm
+          .form-group
+            input(name='subscribe-confirm', type='checkbox')
+            label(for='subscribe-confirm')
               | Я согласен на обработку 
-              a.subscribe__link(href='javascript:;') персональных данных,
-              br
-              |  а также с 
-              a.subscribe__link(href='javascript:;') условиями подписки
-        .footer-social
-          a(href='javascript:;')
-            .footer-social__item
-              i.fa.fa-vk(aria-hidden='true')
-          a(href='javascript:;')
-            .footer-social__item
-              i.fa.fa-odnoklassniki(aria-hidden='true')
-          a(href='javascript:;')
-            .footer-social__item
-              i.fa.fa-instagram(aria-hidden='true')
-          a(href='javascript:;')
-            .footer-social__item
-              i.fa.fa-facebook(aria-hidden='true')
-    .fullwidth
-      .footer-brand
-        .item
-          img.footer-brand__img(src='img/footer-yandex.png')
-        .item.item--column
-          p.footer-brand__text Более 500 отзывов
-          a.footer-brand__link(href='javascript:;') Смотреть
-        .item
-          p.footer-brand__text.footer-brand__text--partners Наши партнёры
-          img.footer-brand__img(src='img/halva.png')
-        .item
-          p.footer-brand__text.footer-brand__text--payment
-            | Вы можете оплачивать заказы банковскими картами
-            br
-            | 					или наличными при получении
-        .item
-          img.footer-brand__img(src='img/mastercard.png')
-        .item
-          img.footer-brand__img(src='img/visa.png')
-        .item
-          img.footer-brand__img(src='img/yandex-money.png')
-        .item
-          img.footer-brand__img(src='img/webmoney.png')
-    .fullwidth
-      .footer-copyright
-        p.footer-copyright__text © 2010-2019 kc-shoes
-        a.footer-copyright__link(href='index-mobile.html') Мобильная версия
+              a(href='javascript:;') персональных данных,
+              | а также с 
+              a(href='javascript:;') условиями подписки
+      
+      .footer-social
+        a(href='javascript:;')
+          .footer-social-item
+            i.fa.fa-vk(aria-hidden='true')
+        a(href='javascript:;')
+          .footer-social-item
+            i.fa.fa-odnoklassniki(aria-hidden='true')
+        a(href='javascript:;')
+          .footer-social-item
+            i.fa.fa-instagram(aria-hidden='true')
+        a(href='javascript:;')
+          .footer-social-item
+            i.fa.fa-facebook(aria-hidden='true')
+  
+  .container-fluid
+    .footer-partners
+      .footer-partners-yandex
+        img(src='img/footer-yandex.png')
+        div
+          span Более 500 отзывов
+          a(href='javascript:;') Смотреть
+      .footer-partners-our 
+        div
+          span Наши партнёры
+        div
+          img(src='img/halva.png')
+          span Вы можете оплачивать заказы банковскими картами или наличными при получении
+          img(src='img/mastercard.png')
+          img(src='img/visa.png')
+          img(src='img/yandex-money.png')
+          img(src='img/webmoney.png')
+  
+  .container-fluid
+    .footer-copyright
+      span.footer-copyright-text © 2010-2019 kc-shoes
+      a.footer-copyright-link(href='index-mobile.html') Мобильная версия

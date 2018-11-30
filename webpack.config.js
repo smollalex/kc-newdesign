@@ -7,17 +7,17 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-//const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config =  {
 
   entry: [
-    `./src/js/${version}.js`,
+    `./src/js/${version}/index.js`,
     `./src/scss/${version}.scss`
   ],
   output: {
     path: path.resolve(__dirname, `dist/${version}`),
-    filename: `js/${version}.js`,
+    filename: `js/${version}/index.js`,
   },
  
   devServer: {
@@ -43,7 +43,7 @@ const config =  {
           use: [{
             loader: "css-loader",
             options: { 
-              //url: false
+              url: false
             } 
           }]
         })
@@ -59,16 +59,14 @@ const config =  {
               options: {
                 sourceMap: true,
                 minimize: true,
-                //url: false
+                url: false
               }
-            },
-            {
-              loader: "resolve-url-loader"
             },
             {
               loader: 'sass-loader',
               options: {
-                sourceMap: true
+                sourceMap: true,
+                url: false
               }
             }
           ]
@@ -125,9 +123,9 @@ const config =  {
 
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'src/templates/index.pug'
+      template: `src/templates/${version}/index.pug`
     }),
-/*
+
     new CopyWebpackPlugin([
       {
         from: './src/fonts',
@@ -141,8 +139,8 @@ const config =  {
         from: './src/img',
         to: './img'
       }
-  ]),
-  */
+    ]),
+ 
   ]
 };
 

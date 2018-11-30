@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/main.js",
   "scripts": {
-    "dev": "del-cli dist && webpack --mode development --watch",
+    "dev": "webpack --mode development --watch",
+    "build": "del-cli dist && webpack --mode development",
     "prod": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open"
   },
