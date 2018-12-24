@@ -1,0 +1,16 @@
+.modal {
+
+  &-product-preview {
+    .close {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+    }
+
+    .modal-content {
+      border: none;
+      border-radius: 0;
+      padding: 0 30px;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+// Custom checkbox
+.checkbox {
+    
+  [type="checkbox"] {
+    vertical-align: top;
+    margin: 0;
+    width: 14px;
+    height: 14px;
+
+    &:not(checked) {
+      position: absolute;
+      opacity: 0;
+
+      & + label {
+        position: relative;
+        padding: 0 0 0 20px;
+        display: flex;
+        align-items: center;
+
+        &:before {
+          content: '';
+          left: 0;
+          position: absolute;
+          border: 1px solid #d9e0ea;;
+          width: 14px;
+          height: 14px;
+        }
+
+        span {
+          color: #778190;
+        }
+      }
+    }
+
+    &:checked {
+      & + label {
+
+        &:before {
+          border-color: #02b1ff;
+        }
+
+        &:after {
+          content: '';
+          left: 3px;
+          top: 4px;
+          position: absolute;
+          background-color: #02b1ff;
+          width: 8px;
+          height: 8px;
+        }
+
+        span {
+          color: #000;
+        }
+      }
+    }
+
+    & + label {
+      cursor: pointer;
+
+      span {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 300;
+        padding-left: 3px;
+      }
+
+      svg, img {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

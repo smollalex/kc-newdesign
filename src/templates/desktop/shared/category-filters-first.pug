@@ -1,0 +1,281 @@
+#filter-season.dropdown.dropdown-filter
+  button#dropdown-filter-season.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false',  data-boundary="filter-season")
+    span.filter-name Сезон
+    span.filter-count 0
+    span.filter-arrow
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+        polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+    span.filter-clear
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+        path(d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+  .dropdown-menu(aria-labelledby='dropdown-filter-season')
+    .dropdown-menu-list
+      .dropdown-item
+        .checkbox
+          input(id='', name='season[]', type='checkbox' )
+          label(for='') 
+            img.dropdown-item-icon(src='img/svg/season-winter.svg', alt='', width='16', height='16')
+            span.dropdown-item-title Зима
+      .dropdown-item
+        .checkbox
+          input(id='', name='season[]', type='checkbox' )
+          label(for='') 
+            img.dropdown-item-icon(src='img/svg/season-autumn-spring.svg', alt='', width='16', height='16')
+            span.dropdown-item-title Весна/Осень
+      .dropdown-item
+        .checkbox
+          input(id='', name='season[]', type='checkbox' )
+          label(for='') 
+            img.dropdown-item-icon(src='img/svg/season-summer.svg', alt='', width='16', height='16')
+            span.dropdown-item-title Лето
+    button.filter-apply(type='button', class='disabled') Применить
+
+#filter-brand.dropdown.dropdown-filter
+  button#dropdown-filter-brand.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false',  data-boundary="filter-brand")
+    span.filter-name Бренд
+    span.filter-count 0
+    span.filter-arrow
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+        polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+    span.filter-clear
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+        path(d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+  .dropdown-menu(aria-labelledby='dropdown-filter-brand')
+    .dropdown-menu-list
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='manufacturer[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title Aaltonen
+            span.dropdown-item-count 78
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='manufacturer[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title Aidini trend
+            span.dropdown-item-count 11
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='manufacturer[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title Alaska Originale
+            span.dropdown-item-count 3
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='manufacturer[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title Ara
+            span.dropdown-item-count 692
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='manufacturer[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title Ascalini
+            span.dropdown-item-count 110
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='manufacturer[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title Baden
+            span.dropdown-item-count 356
+    button.filter-apply(type='button', class='disabled') Применить
+
+#filter-size.dropdown.dropdown-filter
+  button#dropdown-filter-size.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false',  data-boundary="filter-size")
+    span.filter-name Размер
+    span.filter-count 0
+    span.filter-arrow
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+        polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+    span.filter-clear
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+        path(d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+  .dropdown-menu(aria-labelledby='dropdown-filter-size')
+    .dropdown-menu-list
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 31
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 32
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 33
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 34
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 35
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 36
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 37
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 38
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 39
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 40
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 41
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 42
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 43
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 44
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 45
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title 46
+      
+    button.filter-apply(type='button', class='disabled') Применить
+
+#filter-fullness.dropdown.dropdown-filter
+  button#dropdown-filter-fullness.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false',  data-boundary="filter-fullness")
+    span.filter-name Полнота
+    span.filter-count 0
+    span.filter-arrow
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+        polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+    span.filter-clear
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+        path(d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')  
+  .dropdown-menu(aria-labelledby='dropdown-filter-fullness')
+    .dropdown-menu-list
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title Фильтр
+
+#filter-color.dropdown.dropdown-filter
+  button#dropdown-filter-color.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false',  data-boundary="filter-color")
+    span.filter-name Цвет
+    span.filter-count 0
+    span.filter-arrow
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+        polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+    span.filter-clear
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+        path(d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+  .dropdown-menu(aria-labelledby='dropdown-filter-color')
+    .dropdown-menu-list
+      .dropdown-item.dropdown-item-filter
+          .checkbox
+            input(id='', name='size[]', type='checkbox' )
+            label(for='') 
+              span.dropdown-item-title Фильтр
+
+#filter-price.dropdown.dropdown-filter
+  button#dropdown-filter-price.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false',  data-boundary="filter-price")
+    span.filter-name Цена
+    span.filter-count 0
+    span.filter-arrow
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+        polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+    span.filter-clear
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+        path(d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+  .dropdown-menu(aria-labelledby='dropdown-filter-price')
+    .dropdown-menu-list
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title Фильтр
+#filter-manufacture.dropdown.dropdown-filter
+  button#dropdown-filter-manufacture.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false',  data-boundary="filter-manufacture")
+    span.filter-name Производитель
+    span.filter-count 0
+    span.filter-arrow
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+        polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+    span.filter-clear
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+        path(d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+  .dropdown-menu(aria-labelledby='dropdown-filter-manufacture')
+    .dropdown-menu-list
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title Фильтр
+#filter-material.dropdown.dropdown-filter
+  button#dropdown-filter-material.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false',  data-boundary="filter-material")
+    span.filter-name Материал
+    span.filter-count 0
+    span.filter-arrow
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+        polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+    span.filter-clear
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+        path(d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+  .dropdown-menu(aria-labelledby='dropdown-filter-material')
+    .dropdown-menu-list
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title Фильтр
+#filter-shop.dropdown.dropdown-filter
+  button#dropdown-filter-shop.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false', data-boundary="filter-shop")
+    span.filter-name Магазин
+    span.filter-count 0
+    span.filter-arrow
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+        polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+    span.filter-clear
+      svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+        path(d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+  .dropdown-menu(aria-labelledby='dropdown-filter-shop')
+    .dropdown-menu-list
+      .dropdown-item.dropdown-item-filter
+        .checkbox
+          input(id='', name='size[]', type='checkbox' )
+          label(for='') 
+            span.dropdown-item-title Фильтр

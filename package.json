@@ -2,7 +2,7 @@
   "name": "kc-shoes.new-design",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/main.js",
+  "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "del-cli dist && webpack --mode development",
@@ -13,11 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.5.0",
     "@zeitiger/elevatezoom": "^2.5.4",
     "animate.css": "^3.7.0",
     "bootstrap": "^4.1.3",
-    "font-awesome": "^4.7.0",
+    "hamburgers": "^1.1.3",
     "jquery": "^3.3.1",
+    "jquery-hoverintent": "^1.9.0",
     "jquery-masked-input": "^0.1.2",
     "magnific-popup": "^1.1.0",
     "owl.carousel": "^2.3.4",
@@ -26,6 +28,8 @@
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-3": "^6.24.1",
     "copy-webpack-plugin": "^4.6.0",

@@ -1,0 +1,320 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 0 10px 0;
+  background-color: #fff;
+  border: 1px solid #f3f9fe;
+  border-radius: 0;
+  
+  min-width: 200px;
+  transition: .4s;
+  
+  &:hover, &:focus {
+    border-color: $border-color;
+    @include box-shadow();
+
+    .card-size {
+      display: flex;
+    }
+
+    .card-extra-info {
+      display: flex;
+      border-color: $border-color;
+    }
+  }
+
+  &--new {
+    /*
+    &:hover, &:focus {
+      border-color: #01b2ff;
+      
+      .card-extra-info {
+        border-color: #01b2ff;
+      }
+    }
+*/
+    .card-type {
+      background-color: #01b2ff;
+    }
+  }
+  &--sale {
+    /*
+    &:hover, &:focus {
+      border-color: #f69781;
+
+      .card-extra-info {
+        border-color: #f69781;
+      }
+    }
+
+    */
+    .card-type {
+      background-color: #f69781;
+    }
+  }
+
+  &--promo {
+    
+    &:hover, &:focus {
+      //border-color: #fb4545;;
+
+      .card-extra-info {
+        //border-color: #fb4545;
+      }
+    }
+
+    .card-type {
+      //background-color: #fb4545;;
+    }
+    
+  }
+
+  &-img {
+    margin: auto;
+  }
+
+  &-title {
+    font-size: 14px;
+    font-weight: 300;
+    color: #444444;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #f3f9fe;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    margin-top:  auto;
+
+    &-name {
+      
+    }
+
+    &-brand {
+      font-weight: 400;
+      padding-left: 3px;
+    }
+  }
+
+  &-price {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0 5px;
+      
+      span {
+        font-size: .9em;
+        font-weight: 300;
+        margin: 0 0 0 2px;
+      }
+    }
+
+    .price {
+      &--through {
+        text-decoration: line-through;
+      }
+  
+      &--sale {
+        color: #f69781;
+      }
+  
+      
+    }
+    
+  }
+
+  &-type {
+    position: absolute;
+    top: -1px;
+    right: 15px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    text-align: center;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-bottom: 14px solid #fff;
+      border-left: 56px solid transparent;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    
+    span {
+      display: block;
+      margin-top: 11px;
+      font-size: 14px;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+
+  &-size {
+    position: absolute;
+    flex-wrap: wrap;
+    flex-direction: column;
+    top: 60px;
+    right: 15px;
+    display: none;
+    font-size: 11px;
+    height: 135px;
+    
+    &--three-col {
+      width: 81px;
+    }
+    &--two-col {
+      width: 54px;
+    }
+    &--one-col {
+      width: 27px;
+    }
+
+    span {
+      width: 27px;
+      line-height: 27px;
+      text-align: center;
+      box-shadow: 0 0 1px 0px #c0cbd8;
+      background: white;
+      letter-spacing: -0.6px;
+    
+      
+      &:hover, &:focus {
+        background-color: $primary;
+        border-color: $primary;
+        color: #fff;
+      }
+    }
+  }
+
+  &-extra-info {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    bottom: 0;
+    left: 0px;
+    right: 0px;
+    z-index: 1010;
+  }
+
+  &-promo {
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    top: 60px;
+    padding: 10px 0;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fb4545;
+    color: #fff;
+    @include box-shadow();
+
+    &-title {
+      width: 100%;
+      font-family: Ubuntu;
+      font-size: 13.2px;
+      text-align: center;
+      color: white;
+      margin-bottom: 7px;
+      display: none;
+    }
+    
+    &-timer {
+      display: flex;
+      align-items: center;
+      margin: 0 10px 0 0;
+
+      &:before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/svg/time.svg);
+        display: inline-block;
+        background-size: 100%;
+        top: -1px;
+        position: relative;
+        margin-right: 5px;
+      }
+    }
+    &-price {
+      font-family: Ubuntu;
+      font-size: 12px;
+      line-height: 18px;
+
+      b {
+        font-size: 15px;
+        display: inline-block;
+        border-bottom: 1px dashed;
+        font-family: Roboto;
+        margin-left: 5px;
+      }
+    }
+  }
+  
+  &-preview {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background-color: #fff;
+    width: 100%;
+    height: 60px;
+
+    &-link {
+      margin: auto;
+
+      span {
+        font: normal 12px/12px $font-ubuntu;
+        color: #0079bf;
+        padding-bottom: 2px;
+        border-bottom: 1px dashed #0079bf;
+      }
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: #0079bf;
+      }
+
+      &:hover, &:focus {
+        span {
+          color: #02b1ff;
+          border-color: #02b1ff;
+        }
+        svg {
+          fill {
+            color: #02b1ff;
+          }
+        }
+      }
+    }
+
+    &-add-to-like {
+      width: 30px;
+      height: 30px;
+      border: 2px solid #f5f9fe;
+      margin-left: 0;
+
+      svg {
+        fill: #3fb1ff;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover, &:focus {
+        background-color: #3fb1ff;
+        border-color: #3fb1ff;
+
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}

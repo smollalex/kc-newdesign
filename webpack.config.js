@@ -2,22 +2,23 @@ const version = 'desktop';
 
 const webpack = require('webpack');
 const path = require('path');
-
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config =  {
 
-  entry: [
-    `./src/js/${version}/index.js`,
-    `./src/scss/${version}.scss`
-  ],
+  entry: {
+    common: `./src/js/${version}/common.js`,
+    home: `./src/js/${version}/pages/home.js`,
+    card: `./src/js/${version}/pages/product.js`,
+    category: `./src/js/${version}/pages/category.js`,
+    style: `./src/scss/${version}.scss`
+  },
+
   output: {
     path: path.resolve(__dirname, `dist/${version}`),
-    filename: `js/${version}/index.js`,
+    filename: 'js/[name].js'
   },
  
   devServer: {
@@ -125,11 +126,27 @@ const config =  {
       filename: 'index.html',
       template: `src/templates/${version}/index.pug`
     }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'product.html',
+      template: `src/templates/${version}/product.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'category.html',
+      template: `src/templates/${version}/category.pug`
+    }),
+
+    
 
     new CopyWebpackPlugin([
       {
         from: './src/fonts',
         to: './fonts'
+      },
+      {
+        from: './src/webfonts',
+        to: './webfonts'
       },
       {
         from: './src/favicon',
