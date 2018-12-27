@@ -237,6 +237,7 @@
         }
       }
 
+      // Preview silder
       &-product-preview {
         .owl-nav {
           position: absolute;
@@ -277,8 +278,22 @@
           .owl-dot {
             width: 15%;
             height: 80px;
-            background-size: 100%;
+            background-size: contain;
             background-repeat: no-repeat;
+          }
+        }
+
+        .owl-stage-outer {
+          max-height: 500px;
+        }
+
+        .owl-item {
+          display: flex;
+
+          img {
+            margin: auto;
+            max-height: 500px;
+            width: auto;
           }
         }
       }

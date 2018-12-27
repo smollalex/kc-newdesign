@@ -41,13 +41,14 @@ main {
 
     .product-zoom {
       display: flex;
-      height: 400px;
+      height: 450px;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-bottom: 20px;
 
       .zoom-img {
-        height: 400px;
+        height: 450px;
         margin: 0 auto;
         z-index: 0;
       }
@@ -60,7 +61,7 @@ main {
 
         .zoom-img {
           width: auto;
-          height: 400px;
+          height: 450px;
           margin: 0 auto;
           z-index: 3;
         }
@@ -580,7 +581,7 @@ main {
       }
     }
     &-name-trait {
-      font-size: 12px;
+      font-size: 13px;
       font-family: $font-ubuntu;
       color: #b5b5b5;
     }
@@ -592,10 +593,10 @@ main {
       border-bottom: 1px dotted #dadbdb;
     }
     &-name {
-      font-size: 12px;
       color: #333333;
-      font-family: $font-ubuntu;
+      font: normal 13px/13px $font-ubuntu;
       min-width: 140px;
+      margin-right: 20px;
     }
 
     &-technology {
@@ -921,6 +922,39 @@ main {
         color: white;
       }
     }    
+  }
+
+
+  &-preview {
+    &-nav {
+      position: absolute;
+      top: calc(50% - 50px);
+      width: 100%;
+      left: 0;
+
+      &-prev, &-next {
+        width: 100px;
+        height: 100px;
+        background: none;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+
+        svg {
+          width: 60px;
+          height: 100px;
+          fill: #fff;
+        }
+      }
+      &-prev {
+        left: -100px;
+      }
+      &-next {
+        right: -100px;
+        transform: rotate(180deg);
+      }
+    }
   }
 }
 

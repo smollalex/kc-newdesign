@@ -8,8 +8,10 @@ $(document).ready(function(){
 		e.preventDefault();
     
     if (e.target.closest('.card-preview-link')) {
-      getProductPreviewSlider();
       $('#productPreview').modal('show');
+      $('#productPreview').on('shown.bs.modal', function(){
+        getProductPreviewSlider();
+      });
     }
     if (e.target.closest('.card-preview-add-to-like')) {
       console.log('card-preview-add-to-like');
@@ -122,17 +124,13 @@ $(document).ready(function(){
   function getProductPreviewSlider(){
      $('.product-preview-slider').owlCarousel({
       loop: false,
-      nav: true,
+      nav: false,
       mouseDrag: true,
       touchDrag: true,
       dots: true,
       items: 1,
       animateIn: 'fadeIn',
       smartSpeed: 450,
-      navText: [
-        '<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>', 
-        '<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>'
-      ]
     });
     
     var dotcount = 1;

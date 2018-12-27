@@ -20,6 +20,7 @@
         &:before {
           content: '';
           left: 0;
+          top: 0;
           position: absolute;
           border: 1px solid #d9e0ea;;
           width: 14px;
@@ -42,7 +43,7 @@
         &:after {
           content: '';
           left: 3px;
-          top: 4px;
+          top: 3px;
           position: absolute;
           background-color: #02b1ff;
           width: 8px;

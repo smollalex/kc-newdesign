@@ -1,5 +1,6 @@
 .modal {
 
+  // Modal product preview
   &-product-preview {
     .close {
       position: absolute;
@@ -7,10 +8,25 @@
       top: 10px;
     }
 
+    .modal-dialog {
+      @include media-breakpoint-up(lg){
+        max-width: 60vw;
+      }
+    }
+
     .modal-content {
       border: none;
       border-radius: 0;
-      padding: 0 30px;
+      padding: 30px 40px;
+    }
+
+    .modal-body {
+      padding: 0;
+    }
+
+    & +.modal-backdrop {
+      background: rgba(2, 23, 33, 0.58);
+      opacity: 1;
     }
   }
 }
