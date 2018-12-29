@@ -35,25 +35,29 @@ html(lang='ru')
                   .product-slide-item(data-zoom-image='img/small/image7.jpg')
                     img.zoom-img(src='img/small/image7.jpg')
               .product-info
-                h4.product-info-title Сандалии PM Shoes 
+                h4.product-info-title Сандалии 
+                  span PM Shoes 
                 span.product-info-articul
                   | Артикул
                   span PM18-172055-111
                 .product-info-price
-                  .price.price--through 5790
-                    small ₽
-                  .price.price--sale 4990
-                    small ₽
+                  .price.price--through
+                    b 5790
+                    small руб.
+                  .price.price--sale
+                    b 4990
+                    small руб.
                     span.price-badge-discount -10%
-                  .price.price--promo 2990
-                    small ₽
+                  .price.price--promo
+                    b 2990
+                    small руб.
                     span.price-badge-discount -33%
                 .product-info-promo
                   span.product-info-promo-title 30% доп. скидка по 
                     a.cpipc-open(href="#") Промокоду
                   .product-info-promo-content
                     span.cpipc-price 2990
-                      small ₽
+                      small руб.
                     a.cpipc-close(href="#").cpipc-close
                     p.cpipc-text Цена с доп. скидкой -30% по промокоду 
                       span PMSALE30
@@ -285,3 +289,4 @@ html(lang='ru')
         .card-slider.owl-carousel
           include shared/cards
   include shared/footer
+  include shared/product-preview

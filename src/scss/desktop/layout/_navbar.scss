@@ -69,7 +69,7 @@
 
     @include media-breakpoint-down(md) {
       max-width: 90px;
-      margin-right: 10px;
+      margin-right: 20px;
     }
     svg {
       fill: $primary;
@@ -169,11 +169,14 @@
         @include media-breakpoint-up(lg) {
           min-width: 1000px;
         }
-        @include media-breakpoint-down(md) {
-          max-width: 100%;
+        @include media-breakpoint-down(lg) {
+          min-width: 870px;
           padding: 25px;
         }
-
+        @include media-breakpoint-down(md) {
+          min-width: auto;
+          max-width: 100%;
+        }
         .nav-list {
           display: flex;
           flex-direction: column;
@@ -187,7 +190,7 @@
             flex-direction: column;
             align-items: flex-start;
             padding-right: 30px;
-            margin-bottom: 20px;
+            margin-bottom: 17px;
 
             .nav-link {
               font-size: 17px;
@@ -654,9 +657,13 @@
       flex-direction: column;
       font-size: 11px;
       line-height: 11px;
-      border-left: 1px solid #f4f9fe;
-      padding-left: 10px;
+      border-left: 1px solid #e9eff7;
+      padding-left: 20px;
       opacity: .8;
     }
   }
+}
+
+body.menu--opened {
+  overflow-y: hidden;
 }

@@ -12,6 +12,7 @@
     position: relative;
     color: #333333;
     padding: 0 10px;
+    
 
     @include media-breakpoint-up(xl) {
       padding: 0 15px;
@@ -73,12 +74,15 @@
 
       &-link {
         margin-top: 5px;
-        color: #00b3ff;
+        color: $primary;
         border-bottom: 1px dashed;
         display: inline-block;
+        font: normal 12px/12px $font-ubuntu;
+        margin-top: 10px;
+        padding-bottom: 2px;
 
         &:hover, &:focus {
-          color: #0079bf;
+          color: $primary-second;
         }
       }
     }
@@ -216,7 +220,6 @@
               margin-top: 10px;
               border-bottom: 1px dashed #fff;
               display: inline-flex;
-              max-width: 91px;
               color: #fff;
             }
           }

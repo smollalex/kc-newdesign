@@ -49,7 +49,7 @@
           &.active {
             
             > .nav-link {
-              background-color: #02b1ff;
+              background-color: $primary-second;
               border: none;
               color: #fff;
               padding: 3px 6px;
@@ -68,7 +68,7 @@
                 color: #777;
 
                 &:hover, &:focus {
-                  color: #02b1ff;
+                  color: $primary-second;
                   text-decoration: underline;
                 }
               }
@@ -95,8 +95,8 @@
           
           &:hover, &:focus {
             text-decoration: none;
-            border-color: #02b1ff;
-            color: #02b1ff;
+            border-color: $primary-second;
+            color: $primary-second;
           }
         }
       }
@@ -132,7 +132,6 @@
         margin-left: auto;
         
         @include media-breakpoint-down(md) {
-          margin-left: 0;
           margin-top: 10px;
         }
 
@@ -143,7 +142,7 @@
         .dropdown-sort {
           
           .dropdown-menu {
-            padding: 10px 20px;
+            padding: 10px 15px;
             border-radius: 0;
             border-color: $border-color;
             top: 8px !important;
@@ -155,7 +154,7 @@
             font-size: 14px;
   
             &:hover, &:focus {
-              color: #02b1ff;
+              color: $primary-second;
               background: none;
             }
           }
@@ -164,11 +163,17 @@
             margin-left: 5px;
             background: none;
             border: none;
-            border-bottom: 1px dashed #02b1ff;
-            color: #02b1ff;
-    
+            border-bottom: 1px dashed $primary;
+            color: $primary;
+            cursor: pointer;
+            
             &:after {
               display: none;
+            }
+
+            &:hover, &:focus {
+              border-color: $primary-second;
+              color: $primary-second;
             }
           }
         }
@@ -179,12 +184,7 @@
       padding: 5px 0 10px 0;
       display: flex;
       flex-wrap: wrap;
-      //flex-wrap: nowrap;
-      //align-items: center;
-      //overflow-x: auto;
-
       border-bottom: 1px solid #e9eff7;
-
 
       a[data-toggle="collapse"] {
         margin-left: 5px;
@@ -250,10 +250,8 @@
           letter-spacing: 0.4px;
           display: inline-flex;
           align-items: center;
+          transition: 0.3s;
 
-          .filter-name {
-          
-          }
           .filter-count {
             display: none;
             padding-left: 5px;
@@ -294,11 +292,11 @@
           }
   
           &:hover, &:focus {
-            border-color: #02b1ff;
-            color: #02b1ff;
+            border-color: $primary-second;
+            color: $primary-second;
 
             svg {
-              fill:#02b1ff;
+              fill:$primary-second;
             }
           }
 
@@ -341,19 +339,17 @@
             }
           }
           .filter-apply {
-            border: 1px solid #02b1ff;
+            border: 1px solid $primary-second;
             width: 100%;
-            padding: 0;
+            padding: 0 15px;
             background: none;
-            font-size: 13px;
-            letter-spacing: .5px;
-            line-height: 36px;
-            text-transform: uppercase;
-            color: #02b1ff;
+            color: $primary-second;
             cursor: pointer;
-    
+            font: normal 13px/35px "Ubuntu", sans-serif;
+            transition: .4s;
+            
             &:hover, &:focus {
-              background-color: #02b1ff;
+              background-color: $primary-second;
               color: #fff;
             }
           }
@@ -401,12 +397,20 @@
           }
         }
   
-
+        &.show {
+          .dropdown-toggle { 
+            .filter-arrow {
+              svg {
+                transform: rotate(90deg) scale(1.3);
+              }
+            }
+          }
+        }
         &.active {
           .dropdown-toggle {
             color: #fff;
-            background-color: #02b1ff;
-            border-color: #02b1ff;
+            background-color: $primary-second;
+            border-color: $primary-second;
 
             .filter-count {
               display: inline-flex;
@@ -430,8 +434,13 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      margin-left: 4px;
       margin-top: -3px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-top: -3px;
+      width: calc(100% - 40px);
     }
   }
 
@@ -458,7 +467,7 @@
       flex-basis: calc(25% - 16px);
       margin: 8px;
 
-      @include media-breakpoint-down(md){
+      @include media-breakpoint-down(lg){
         flex-basis: calc(33% - 16px);
       }
 
@@ -524,6 +533,7 @@
         text-transform: uppercase;
         border: 1px solid #e9eff7;
         margin: 0 5px;
+        
 
         &:hover, &:focus {
           border-color: #00b3ff;

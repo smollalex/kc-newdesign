@@ -45,6 +45,10 @@
         width: 13px;
         height: 13px;
       }
+
+      .breadcrumb-link {
+        border: none;
+      }
     }
   }
   
@@ -56,17 +60,18 @@
     cursor: pointer;
     align-items: center;
     letter-spacing: .4px;
+    border-bottom: 1px dashed transparent;
 
     svg {
       fill: #8c979e;
     }
 
     &:hover, &:focus {
-      color: #02b1ff;
-      text-decoration: underline;
+      color: $primary;
+      border-color: $primary;
 
       svg {
-        fill: #02b1ff;
+        fill: $primary;
       }
     }
   }

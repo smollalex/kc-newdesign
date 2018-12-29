@@ -35,7 +35,7 @@
     }
 */
     .card-type {
-      background-color: #01b2ff;
+      background-color: #72e6aa;
     }
   }
   &--sale {
@@ -187,9 +187,10 @@
     
       
       &:hover, &:focus {
-        background-color: $primary;
-        border-color: $primary;
-        color: #fff;
+        box-shadow: 0 0 1px 0px $primary-second;
+        border-color: $primary-second;
+        color: $primary-second;
+        z-index: 1010;
       }
     }
   }
@@ -208,7 +209,7 @@
     position: absolute;
     left: -1px;
     right: -1px;
-    top: 60px;
+    top: 61px;
     padding: 10px 0;
     justify-content: center;
     display: flex;
@@ -271,26 +272,24 @@
       margin: auto;
 
       span {
-        font: normal 12px/12px $font-ubuntu;
-        color: #0079bf;
+        font: normal 12px/14px $font-ubuntu;
+        color: $primary;
         padding-bottom: 2px;
-        border-bottom: 1px dashed #0079bf;
+        border-bottom: 1px dashed $primary;
       }
       svg {
         width: 24px;
         height: 24px;
-        fill: #0079bf;
+        fill: $primary;
       }
 
       &:hover, &:focus {
         span {
-          color: #02b1ff;
-          border-color: #02b1ff;
+          color: $primary-second;
+          border-color: $primary-second;
         }
         svg {
-          fill {
-            color: #02b1ff;
-          }
+          fill: $primary-second;
         }
       }
     }

@@ -273,13 +273,21 @@
         
         .owl-dots {
           display: flex;
-          height: 100px;
+          height: 80px;
+          border-top: 1px solid #f5f9fe;
+          margin-top: 20px;
         
           .owl-dot {
             width: 15%;
             height: 80px;
-            background-size: contain;
+            background-size: 75%;
             background-repeat: no-repeat;
+            background-position: center bottom;
+            border-top: 2px solid transparent;
+
+            &.active {
+              border-color: #0079bf;
+            }
           }
         }
 

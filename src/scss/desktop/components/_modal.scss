@@ -9,8 +9,12 @@
     }
 
     .modal-dialog {
+      
       @include media-breakpoint-up(lg){
-        max-width: 60vw;
+        max-width: 900px;
+      }
+      @include media-breakpoint-down(md){
+        max-width: calc(100% - 100px)
       }
     }
 
