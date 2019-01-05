@@ -126,14 +126,14 @@ main {
     }
 
     &-articul {
-      font: normal 12px/18px $font-ubuntu;
-      color: #a8a8a8;
+      font: 400 12px/18px $font-ubuntu;
+      color: #999;
       line-height: 18px;
       margin-bottom: 4px;
       
       span {
         color: #666666;
-        margin-left: 10px;
+        margin-left: 6px;
       }
     }
 
@@ -145,20 +145,18 @@ main {
       align-items: center;
 
       small {
-        font-size: 16px;
-        margin-left: 2px;
+        font-size: 20px;
+        margin-left: 4px;
       }
 
       .price {
-        color: $primary-second;
+        color: #333;
         display: flex;
         align-items: baseline;;
         margin-right: 7px;
         position: relative;
 
         &--sale {
-          color: #f69781;
-
           .price-badge-discount {
             background-color: #f69781;
             &:before {
@@ -168,7 +166,7 @@ main {
         }
         &--promo {
           display: none;
-          color: #ff423c;
+          color: #333;
 
           .price-badge-discount {
             background-color: #ff423c;
@@ -191,8 +189,8 @@ main {
               display: block;
               border-top: 1px solid;
               position: absolute;
-              width: 110%;
-              transform: translate(0px, 12px) rotate(-15deg);
+              width: 100%;
+              top: 55%;
             }
           }
 
@@ -215,7 +213,7 @@ main {
           font-size: 12px;
           font-family: Ubuntu;
           position: absolute;
-          right: -40px;
+          right: -43px;
           top: -13px;
 
           &:before {
@@ -287,13 +285,12 @@ main {
             font-size: 25px;
             line-height: 25px;
             margin-bottom: 10px;
-            color: #ff423c;
+            color: #333;
             font-family: $font-roboto;
 
             small {
-              font-size: 14px;
-              margin-left: 2px;
-              transform: translateY(3px);
+              font-size: 20px;
+              margin-left: 4px;
             }
           }
           &-close {
@@ -387,7 +384,7 @@ main {
       }
 
       &-title {
-        font: 400 13px/16px $font-ubuntu;
+        font: 400 12px/18px $font-ubuntu;
         color: rgba(51, 51, 51, 0.5);
         margin-bottom: 5px;
         display: inline-block;
@@ -401,7 +398,7 @@ main {
 
         img {
           width: auto;
-          height: 110px;
+          height: 90px;
         }
 
         &.active {
@@ -421,8 +418,8 @@ main {
         display: flex;
         align-items: baseline;
         width: 100%;
-        font: 400 13px/16px $font-ubuntu;
-        color: rgba(51, 51, 51, 0.5);
+        font: 400 12px/18px $font-ubuntu;
+        color: #999;
         margin-bottom: 5px;
 
         a {
@@ -553,13 +550,14 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: .4s;
     }
 
     &-to-cart {
       background: $primary;
       color: white;
       height: 40px;
-      padding: 0 25px;
+      padding: 0 20px;
       font: normal 13px/40px $font-ubuntu;
 
       svg {

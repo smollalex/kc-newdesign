@@ -13,6 +13,7 @@ const config =  {
     home: `./src/js/${version}/pages/home.js`,
     card: `./src/js/${version}/pages/product.js`,
     category: `./src/js/${version}/pages/category.js`,
+    chc: `./src/js/${version}/pages/chc.js`,
     style: `./src/scss/${version}.scss`
   },
 
@@ -135,6 +136,11 @@ const config =  {
     new HtmlWebpackPlugin({
       filename: 'category.html',
       template: `src/templates/${version}/category.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'delivery-payment.html',
+      template: `src/templates/${version}/delivery-payment.pug`
     }),
 
     

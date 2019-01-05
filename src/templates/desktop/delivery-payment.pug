@@ -1,0 +1,108 @@
+doctype html
+html(lang='ru')
+  head
+    title Интернет магазин обуви
+    meta(charset='UTF-8')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  body
+    include shared/city-panel
+    include shared/header
+    include shared/nav
+    
+    section.breadcrumb
+      .container-fluid
+        ul.breadcrumb-list
+          li.breadcrumb-item.breadcrumb-item--home
+            a.breadcrumb-link(href='javascript:;')
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+              </svg>
+          li.breadcrumb-item
+            a.breadcrumb-link(href='javascript:;') Доставка и оплата
+    
+    main.chc
+      .container-fluid
+        section.page-header
+          h1 Доставка и оплата
+          p Мы доставим Ваш товар в кратчайшие сроки
+        .row
+          .col-lg-9
+            .delivery
+              .delivery-item
+                .delivery-item-type
+                  .delivery-item-type-icon
+                    img(src="img/svg/", alt="")
+                  h2.delivery-item-type-title Самовывоз
+                    span Срок доставки: 
+                      b 1 день
+                  .delivery-item-content-pickup  
+                    span.delivery-item-content-pickup-title В вашем городе  - 
+                      a(href="#", data-toggle="modal", data-target="#pickupPoint") 1 пункт самовывоза    
+                .delivery-items
+                  .delivery-item-content
+                    .delivery-item-content-header
+                      h3.delivery-item-content-header-title Оплата при получении - 
+                        span бесплатно
+                      //a.delivery-item-content-header-select(href="") Выбрать
+                    ul.delivery-item-content-features
+                      li.list-yes Заказ до 5-и пар
+                      li.list-yes Доступна примерка
+                        a(href="#") ?
+                      li.list-yes Доступен частичный выкуп
+                        a(href="#") ?
+                  .delivery-item-content
+                    .delivery-item-content-header
+                      h3.delivery-item-content-header-title По предоплате - 
+                        span бесплатно
+                      //a.delivery-item-content-header-select(href="") Выбрать
+                    ul.delivery-item-content-features
+                      li.list-yes Заказ до 5-и пар
+                      li.list-yes Доступна примерка
+                        a(href="#") ?
+                      li.list-yes Доступен частичный выкуп
+                        a(href="#") ?
+              .delivery-item
+                .delivery-item-type
+                  .delivery-item-type-icon
+                    img(src="img/svg/", alt="")
+                  h2.delivery-item-type-title Курьером
+                    span Срок доставки: 
+                      b 1 день
+                .delivery-items
+                  .delivery-item-content
+                    .delivery-item-content-header
+                      h3.delivery-item-content-header-title Оплата при получении - 
+                        span 200 руб
+                      //a.delivery-item-content-header-select(href="") Выбрать
+                    ul.delivery-item-content-features
+                      li.list-yes Заказ до 5-и пар
+                      li.list-yes Доступна примерка
+                        a(href="#") ?
+                      li.list-yes Доступен частичный выкуп
+                        a(href="#") ?
+              .delivery-item
+                .delivery-item-type
+                  .delivery-item-type-icon
+                    img(src="img/svg/", alt="")
+                  h2.delivery-item-type-title Почта России
+                    span Срок доставки: 
+                      b 3-10 дней
+                .delivery-items
+                  .delivery-item-content
+                    .delivery-item-content-header
+                      h3.delivery-item-content-header-title Оплата при получении - 
+                        span 250 руб
+                      //a.delivery-item-content-header-select(href="") Выбрать
+                    ul.delivery-item-content-features
+                      li.list-yes Заказ до 5-и пар
+                      li.list-no Примерка не доступна
+                        a(href="#") ?
+                      li.list-no Частичный выкуп не доступен
+                        a(href="#") ?
+                      li.list-warning Почта России взимает дополнительную комиссию за денежный перевод
+          .col-lg-3
+            include shared/chc-navbar
+  include shared/footer
+  include shared/pickup-point

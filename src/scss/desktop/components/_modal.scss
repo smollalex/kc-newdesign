@@ -1,15 +1,43 @@
 .modal {
+  &-dialog {
 
-  // Modal product preview
-  &-product-preview {
+  }
+  &-content {
+    border: none;
+    border-radius: 0;
+    
+
     .close {
       position: absolute;
       right: 20px;
-      top: 10px;
+      top: 18px;
     }
+  }
+  &-header {
 
+  }
+  &-title {
+    font-size: 20px;
+    color: $primary;
+    margin: 0;
+    text-align: center;
+    margin: auto;
+  }
+  &-body {
+
+  }
+  &-footer {
+
+  }
+
+  & +.modal-backdrop {
+    background: rgba(2, 23, 33, 0.58);
+    opacity: 1;
+  }
+
+  // Modal product preview
+  &-product-preview {
     .modal-dialog {
-      
       @include media-breakpoint-up(lg){
         max-width: 900px;
       }
@@ -17,20 +45,23 @@
         max-width: calc(100% - 100px)
       }
     }
-
-    .modal-content {
-      border: none;
-      border-radius: 0;
-      padding: 30px 40px;
-    }
-
     .modal-body {
       padding: 0;
     }
+    .modal-content {
+      padding: 30px 40px;
+    }
+  }
 
-    & +.modal-backdrop {
-      background: rgba(2, 23, 33, 0.58);
-      opacity: 1;
+  // Modal pickup point
+  &-pickup-point {
+    .modal-dialog {
+      @include media-breakpoint-up(lg){
+        max-width: 900px;
+      }
+      @include media-breakpoint-down(md){
+        max-width: calc(100% - 100px)
+      }
     }
   }
 }

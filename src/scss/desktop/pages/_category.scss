@@ -29,8 +29,7 @@
           &-sub {
             display: none;
             flex-direction: column;
-            padding-left: 6px;
-            margin-top: 6px;
+            margin: 10px 0;
 
             .nav-item {
               margin-bottom: 3px;
@@ -49,20 +48,13 @@
           &.active {
             
             > .nav-link {
-              background-color: $primary-second;
-              border: none;
-              color: #fff;
-              padding: 3px 6px;
-              border-radius: 2px;
+              border-color: $primary-second;
+              color: $primary-second;
             }
 
             .nav-list-sub {
               display: block;
               border-right: none;
-              padding-left: 8px;
-              border-left: 2px solid #9da3ab38;
-              margin-left: 1px;
-              border-radius: 2px;
 
               .nav-link {
                 color: #777;
@@ -88,7 +80,7 @@
           display: inline-flex;
           align-items: flex-start;
           text-transform: none;
-          color: #778190;
+          //color: #778190;
           padding: 0;
           border-bottom: 1px solid #e9eff7;
           height: 100%;
@@ -152,6 +144,7 @@
             font-weight: 300;
             padding: 5px 0;
             font-size: 14px;
+            color: #8b939e;
   
             &:hover, &:focus {
               color: $primary-second;
@@ -251,6 +244,7 @@
           display: inline-flex;
           align-items: center;
           transition: 0.3s;
+          font-weight: 300;
 
           .filter-count {
             display: none;

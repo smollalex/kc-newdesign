@@ -2,7 +2,7 @@
   position: absolute;
   z-index: 1100;
   width: 100%;
-  padding: 50px 0;
+  padding: 30px 0 40px;
   color: white;
   background: #3fb1ff;
   font-weight: 400;
@@ -54,6 +54,8 @@
       width: 25%;
       line-height: 26px;
       cursor: pointer;
+      font-weight: 300;
+      font-size: 14px;
 
       @include media-breakpoint-down(md) {
         width: 50%;
@@ -62,10 +64,6 @@
       &:hover, &:focus {
         text-decoration: underline;
       }
-    }
-    
-    .html_format {
-      font-size: 16px;
     }
   }
   
