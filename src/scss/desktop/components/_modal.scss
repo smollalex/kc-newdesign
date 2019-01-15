@@ -49,7 +49,7 @@
       padding: 0;
     }
     .modal-content {
-      padding: 30px 40px;
+      padding: 30px 50px 30px 40px;
     }
   }
 
@@ -57,11 +57,17 @@
   &-pickup-point {
     .modal-dialog {
       @include media-breakpoint-up(lg){
-        max-width: 900px;
+        max-width: 1000px;
       }
       @include media-breakpoint-down(md){
         max-width: calc(100% - 100px)
       }
+    }
+    .modal-header {
+      border-bottom: 0;
+    }
+    .modal-body {
+      padding: 0;
     }
   }
 }

@@ -190,8 +190,15 @@
         background-color: #e3eff7;
         border-radius: 2px;
         letter-spacing: 0.4px;
-        width: 32px;
         height: 32px;
+
+        span {
+          text-transform: uppercase;
+          font-size: 11px;
+          letter-spacing: 0.3px;
+          padding-left: 10px;
+          margin-right: -5px;
+        }
 
         svg {
           width: 32px;
@@ -200,10 +207,14 @@
         }
 
         &[aria-expanded="false"] {
-          transform: rotate(-90deg);
+          svg {
+            transform: rotate(-90deg);
+          }
         }
         &[aria-expanded="true"] {
-          transform: rotate(90deg);
+          svg {
+            transform: rotate(90deg);
+          }
         }
       }
 
@@ -434,7 +445,7 @@
       flex-wrap: wrap;
       margin-left: auto;
       margin-top: -3px;
-      width: calc(100% - 40px);
+      width: calc(100% - 113px);
     }
   }
 

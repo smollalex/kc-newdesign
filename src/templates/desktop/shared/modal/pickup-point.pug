@@ -1,0 +1,21 @@
+#pickupPoint.modal.modal-pickup-point.fade(tabindex='-1', role='dialog', aria-labelledby='pickupPointTitle', aria-hidden='true')
+  .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        h5.modal-title Пункты самовывоза в г. Омск
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true')
+            svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+              path(fill='', d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+      .modal-body
+        .pickup-point-map
+          #delivery-map
+          ol.nav.nav-pickup-point#pickup-point-accordion
+            li.nav-item
+              a#headingOne.nav-link(href="#", data-toggle='collapse', data-target='#point-1', aria-expanded='true', aria-controls='point-1') На Фрунзе
+                svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                  polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+              #point-1.collapse.show(data-parent="#pickup-point-accordion", aria-labelledby="headingOne")
+                span ул. Фрунзе, 101, оф. 32
+                span 8(3812)66-66-05
+                span пн-пт 9:00-19:00

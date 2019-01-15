@@ -1,0 +1,104 @@
+doctype html
+html(lang='ru')
+  head
+    title Интернет магазин обуви
+    meta(charset='UTF-8')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  body
+    include shared/city-panel
+    include shared/header
+    include shared/nav
+    
+    section.breadcrumb
+      .container-fluid
+        ul.breadcrumb-list
+          li.breadcrumb-item.breadcrumb-item--home
+            a.breadcrumb-link(href='javascript:;')
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+              </svg>
+          li.breadcrumb-item
+            a.breadcrumb-link(href='javascript:;') Возврат товара
+    
+    main.chc
+      .container-fluid
+        section.page-header
+          h1 Возврат товара
+        .row
+          .col-sm-9
+            .refund
+              
+              .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+                img.alert-icon(src="img/svg/сlothes-fitting-warning.svg", alt="")
+                p Если товар не подошел по цвету, размеру или фасону, вы можете вернуть товар в течении 14 дней с момента получения заказа.
+                button.close(type='button', data-dismiss='alert', aria-label='Close')
+                  svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+                    path(fill='', d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+
+              .refund-item
+                h2.refund-item-title Зайдите в Личный кабинет в раздел Возврат товара.
+                .refund-item-content
+                  //img(src="", alt="")
+              .refund-item
+                h2.refund-item-title Выберите заказ, товары из которого хотите вернуть.
+                .refund-item-content
+                  //img(src="", alt="")
+              .refund-item
+                h2.refund-item-title Отметьте товары, которые вы хотите вернуть, указав причину возврата.
+                .refund-item-content
+                  //img(src="", alt="")
+              .refund-item
+                h2.refund-item-title Выберите способ возврата денег и заполните указанные реквизиты.
+                .refund-item-content
+                  //img(src="", alt="")
+              .refund-item
+                h2.refund-item-title Распечатайте сформированное заявление и обязательно его подпишите. Копия заявления будет выслана на ваш электронный адрес.
+                .refund-item-content
+              .refund-item
+                h2.refund-item-title Отправьте обыкновенную посылку удобным для вас способом
+                  sup *
+                  |, вложив:
+                .refund-item-content
+                  ul
+                    li - товар
+                    li - заявление на возврат
+                    li - товарный чек
+                      sup **
+                  ul
+                    li Кому: ИП Куксгаус ЛН
+                    li Куда: 644007 г. Омск, ул. Фрунзе, д. 101
+              .refund-item
+                h2.refund-item-title По прибытии посылки с товаром на наш склад с вами обязательно с вяжется наш менеджер. Денежные средства будут переведены в течение 10 дней со сдня поступления товара на склад.
+                .refund-item-content
+              
+              hr
+              p
+                sup *
+                | - Посылки с наложенным платежом на склад не принимаются и будут возвращены.
+              p
+                sup **
+                | - Вы вправе совершить возврат без товарного чека, но это возможно потребует дополнительного времени на идентификацию товара.
+              
+              
+              .refund-boxes
+                .refund-box
+                  .refund-box-title
+                    img(src="img/svg/сlothes-fitting-yes.svg", alt="")
+                    span ВОЗВРАТ ТОВАРА НАДЛЕЖАЩЕГО КАЧЕСТВА
+                  .refund-box-content
+                    p Возврат возможен в случае, если сохранены его товарный вид, упаковка, потребительские свойства, документ, подтверждающий факт и условия покупки указанного товара (товарный или кассовый чек) и документ, удостоверяющий личность (паспорт гражданина РФ/загранпаспорт, временное удостоверение личности гражданина РФ, выдаваемое на период оформления паспорта, военный билет, водительские права).
+                .refund-box
+                  .refund-box-title
+                    img(src="img/svg/сlothes-fitting-no.svg", alt="")
+                    span ВОЗВРАТ ТОВАРА НЕНАДЛЕЖАЩЕГО КАЧЕСТВА
+                  .refund-box-content
+                    p Под товаром ненадлежащего качества подразумевается неисправный и не обеспечвающий исполнение своих функциональных качеств. Полученный товар должен соответствовать описанию на сайте. Отличие элементов дизайна или оформления от заявленных в описании на сайте не является неисправностью или нефункциональностью товара.
+                    p Если вам был передан товар ненадлежащего качества, и оно не было заранее оговорено продавцом, вы вправе воспользоваться положениями ст. 18 Закона о защите прав потребителей.
+
+
+          .col-sm-3
+            include shared/chc-navbar
+  include shared/footer
+  include shared/modal/pickup-point

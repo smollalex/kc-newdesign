@@ -56,12 +56,13 @@ html(lang='ru')
                     a.dropdown-item(href='#') По убыванию скидки
             .category-filters-bottom
               a(data-toggle='collapse', href='#filtersCollapse', role='button', aria-expanded='false', aria-controls='filtersCollapse')
+                span Все фильтры
                 svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
                   polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
               .category-filters-items
                 include shared/category-filters-first
               #filtersCollapse.collapse
-                .category-filters-items(style="margin: 0;margin-left: 40px;")
+                .category-filters-items(style="margin: 0;margin-left: -3px;width: 100%;")
                   include shared/category-filters-other
           .category-content
             .category-content-chunk
@@ -94,4 +95,4 @@ html(lang='ru')
               include shared/cards
               include shared/cards
   include shared/footer
-  include shared/product-preview
+  include shared/modal/product-preview

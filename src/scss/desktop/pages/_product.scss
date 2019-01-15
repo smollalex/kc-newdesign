@@ -412,7 +412,7 @@ main {
       flex-wrap: wrap;
       justify-content: space-between;
       margin-bottom: 20px;
-      max-width: 240px;
+      max-width: 280px;
 
       &-title {
         display: flex;
@@ -558,7 +558,8 @@ main {
       color: white;
       height: 40px;
       padding: 0 20px;
-      font: normal 13px/40px $font-ubuntu;
+      font: normal 12px/40px $font-ubuntu;
+      text-transform: uppercase;
 
       svg {
         width: 30px;
@@ -795,7 +796,7 @@ main {
 
       span {
         color: #bbb;
-        font: normal 13px/12px "Ubuntu", sans-serif;
+        font: normal 13px/12px $font-ubuntu;
       }
       a {
         margin-left: 10px;
@@ -816,19 +817,34 @@ main {
 
     &-title {
       font-size: 18px;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
 
     &-city {
-      font: normal 13px/20px $font-ubuntu;
+      font: normal 14px/20px $font-roboto;
       display: flex;
       align-items: center;
       
-      img {
+      svg {
         height: 20px;
         width: 20px;
+        fill: $primary;
         margin-right: 2px;
         margin-left: -5px;
+      }
+      span {
+        color: $primary;
+        border-bottom: 1px dashed $primary;
+      }
+
+      &:hover, &:focus {
+        svg {
+          fill: $primary-second;
+        }
+        span {
+          color: $primary-second;
+          border-bottom-color: $primary-second;
+        }
       }
     }
 
@@ -841,7 +857,7 @@ main {
       }
 
       &-item {
-        margin-top: 10px;
+        margin-top: 15px;
         
         @include media-breakpoint-down(md) {
           margin-right: 50px;
@@ -850,45 +866,63 @@ main {
         .cpdti {
 
           &-title {
-            font: normal 13px/16px $font-ubuntu;
+            font: normal 14px/16px $font-roboto;
             color: #333;
-            margin-bottom: 3px;
+            margin-bottom: 5px;
             display: inline-block;
 
             span {
-              font-size: 11px;
               color: $primary;
               margin-left: 4px;
             }
           }
           &-date {
-            font-size: 12px;
-            line-height: 16px;
+            font-size: 13px;
+            line-height: 19px;
             color: #939292;
-            margin-bottom: 2px;
             display: flex;
             align-items: center;
           }
           &-point {
-            font-size: 12px;
-            line-height: 16px;
+            font-size: 13px;
+            line-height: 19px;
             color: #939292;
-            margin-bottom: 2px;
             display: flex;
             align-items: center;
           }
           &-option {
-            font-size: 12px;
-            line-height: 16px;
+            font-size: 13px;
+            line-height: 19px;
             color: #939292;
-            margin-bottom: 2px;
             display: flex;
             align-items: center;
 
-            img {
-              height: 10px;
+            &:before {
+              content: '';
               width: 10px;
-              margin-right: 3px;
+              height: 10px;
+              margin-right: 7px;
+              background-size: 100%;
+            }
+
+            &.option-yes {
+              &:before {
+                background-image: url(../img/svg/сlothes-fitting-yes.svg);
+              }
+            }
+  
+            &.option-no {
+              &:before {
+                background-image: url(../img/svg/сlothes-fitting-no.svg);
+              }
+            }
+            
+            &.option-warning {
+              &:before {
+                height: 12px;
+                width: 14px;
+                background-image: url(../img/svg/сlothes-fitting-warning.svg)
+              }
             }
           }
         }
@@ -896,18 +930,16 @@ main {
     }
 
     &-free {
-      margin-top: 20px;
+      margin-top: 15px;
 
       p {
-        font: normal 12px/16px $font-ubuntu;
+        font: normal 12px/16px $font-roboto;
 
         span {
-          display: block;
-          color: #0079bf;
+          color: $primary;
           font: normal 14px/25px $font-roboto;
-          letter-spacing: 1px;
           text-transform: uppercase;
-          margin-left: 0;
+          margin-right: 5px;
         }
       }
 
@@ -1025,7 +1057,7 @@ main {
       border-color: transparent;
     }
     &.active {
-      border-bottom: 2px solid #0079bf;
+      border-bottom: 2px solid $primary;
     }
   }
 }

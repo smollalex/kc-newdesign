@@ -139,8 +139,28 @@ const config =  {
     }),
     
     new HtmlWebpackPlugin({
-      filename: 'delivery-payment.html',
-      template: `src/templates/${version}/delivery-payment.pug`
+      filename: 'delivery.html',
+      template: `src/templates/${version}/delivery.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'payment.html',
+      template: `src/templates/${version}/payment.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'refund.html',
+      template: `src/templates/${version}/refund.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'tracking.html',
+      template: `src/templates/${version}/tracking.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: `src/templates/${version}/about.pug`
     }),
 
     
