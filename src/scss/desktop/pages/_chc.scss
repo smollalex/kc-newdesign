@@ -685,4 +685,18 @@
       }
     }
   }
+
+  &-vacantion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px 50px -10px;
+
+    &-item {
+      height: 75px;
+      background-color: #ddd;
+      flex-basis: 75px;
+      margin: 5px;
+    }
+  }
 }
