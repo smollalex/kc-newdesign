@@ -1,8 +1,3 @@
-require ('../layout/header');
-require ('../layout/footer');
-
-require ('@zeitiger/elevatezoom/jquery.elevatezoom');
-
 function getProductPhotoSlider(){
  
   $('.product-slider').owlCarousel({

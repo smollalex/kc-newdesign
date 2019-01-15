@@ -33,6 +33,7 @@ function menuHover(){
 $(document).ready(function(){
 
 	// City panel
+	/*
 	$('body').on('click', function(e){
 		e.preventDefault;
 		if (e.target.closest('.header-item--city .header-item-title')) {
@@ -41,6 +42,7 @@ $(document).ready(function(){
 			$('body').removeClass("city-panel--opened");
 		}
 	});
+	*/
 
 	// Header items
 	/* 

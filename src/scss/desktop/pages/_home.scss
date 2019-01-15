@@ -673,24 +673,24 @@
               &.action {
                 &--like {
                   span {
-                    background-image: url("../img/svg/like.svg");
+                    background-image: url("#{$PATH}/svg/like.svg");
                   }
 
                   &:hover, &:focus {
                     span {
-                      background-image: url("../img/svg/like_green.svg");
+                      background-image: url("#{$PATH}/svg/like_green.svg");
                     }
                   }
                 }
   
                 &--dislake {
                   span {
-                    background-image: url("../img/svg/dislike.svg");
+                    background-image: url("#{$PATH}/svg/dislike.svg");
                   }
 
                   &:hover, &:focus {
                     span {
-                      background-image: url("../img/svg/like_red.svg");
+                      background-image: url("#{$PATH}/svg/like_red.svg");
                     }
                   }
                 }

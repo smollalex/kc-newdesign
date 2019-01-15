@@ -15590,87 +15590,6 @@ body::-webkit-scrollbar-thumb {
       .breadcrumb-link:hover svg, .breadcrumb-link:focus svg {
         fill: #00b3ff; }
 
-.city-panel {
-  position: absolute;
-  z-index: 1100;
-  width: 100%;
-  padding: 30px 0 40px;
-  color: white;
-  background: #3fb1ff;
-  font-weight: 400;
-  transition: 0.5s;
-  transform: translateY(-110%); }
-  @media (max-width: 991.98px) {
-    .city-panel {
-      padding-left: 30px;
-      padding-right: 30px; } }
-  .city-panel-close {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    bottom: -25px;
-    left: 50%;
-    margin-left: -35px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
-    background-color: #3fb0ff;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-radius: 50%; }
-    .city-panel-close svg {
-      transform: rotate(90deg);
-      fill: #fff;
-      width: 70px;
-      margin-top: 10px; }
-  .city-panel .h5 {
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: normal;
-    margin-bottom: 15px; }
-  .city-panel .city-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; }
-    .city-panel .city-list span {
-      width: 25%;
-      line-height: 26px;
-      cursor: pointer;
-      font-weight: 300;
-      font-size: 14px; }
-      @media (max-width: 991.98px) {
-        .city-panel .city-list span {
-          width: 50%; } }
-      .city-panel .city-list span:hover, .city-panel .city-list span:focus {
-        text-decoration: underline; }
-  .city-panel .city-input {
-    margin-bottom: 40px; }
-    .city-panel .city-input input {
-      width: 100%;
-      margin-top: 5px;
-      padding-left: 5px;
-      line-height: 35px;
-      background: white;
-      border: 0;
-      box-sizing: border-box; }
-
-body.city-panel--opened {
-  overflow-y: hidden; }
-  body.city-panel--opened:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #2b485d69;
-    -webkit-backdrop-filter: blur(20px);
-    z-index: 1050;
-    overflow-y: hidden; }
-  body.city-panel--opened .city-panel {
-    transform: translateY(0); }
-
 .card {
   display: flex;
   flex-direction: column;
@@ -16119,6 +16038,52 @@ body.city-panel--opened {
 .modal + .modal-backdrop {
   background: rgba(2, 23, 33, 0.58);
   opacity: 1; }
+
+@media (min-width: 992px) {
+  .modal-city .modal-dialog {
+    max-width: 1000px; } }
+
+@media (max-width: 991.98px) {
+  .modal-city .modal-dialog {
+    max-width: calc(100% - 100px); } }
+
+.modal-city .modal-content {
+  padding: 30px;
+  color: white;
+  background: #3fb1ff; }
+
+.modal-city .h5 {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: normal;
+  margin-bottom: 15px; }
+
+.modal-city .city-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .modal-city .city-list span {
+    width: 25%;
+    line-height: 26px;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 14px; }
+    @media (max-width: 991.98px) {
+      .modal-city .city-list span {
+        width: 50%; } }
+    .modal-city .city-list span:hover, .modal-city .city-list span:focus {
+      text-decoration: underline; }
+
+.modal-city .city-input {
+  margin-bottom: 40px; }
+  .modal-city .city-input input {
+    width: 100%;
+    margin-top: 5px;
+    padding-left: 10px;
+    line-height: 35px;
+    background: white;
+    border: 0;
+    box-sizing: border-box; }
 
 @media (min-width: 992px) {
   .modal-product-preview .modal-dialog {
@@ -16889,8 +16854,10 @@ body.menu--opened {
     flex-direction: column;
     margin-bottom: 25px; }
     .footer-hours-work-title {
-      font-size: 15px;
-      margin-bottom: 10px; }
+      font-size: 19px;
+      margin-bottom: 10px;
+      border-top: 1px solid #fff3;
+      padding-top: 17px; }
     .footer-hours-work-text {
       font-size: 13px;
       line-height: 16px;
@@ -17041,8 +17008,8 @@ body.menu--opened {
         color: #1a63be; }
   .footer-partners {
     width: 100%;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid #fff3;
+    border-bottom: 1px solid #fff3;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -18767,7 +18734,7 @@ body.menu--opened {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 250px;
+  height: 140px;
   background-color: #0079bf;
   padding: 0 65px;
   justify-content: flex-end;
@@ -18889,7 +18856,8 @@ body.menu--opened {
             color: #00b3ff; }
       .delivery-item-content-features li {
         list-style: none;
-        line-height: 21px;
+        line-height: 16px;
+        margin-bottom: 7px;
         position: relative;
         color: #939292;
         display: flex;
@@ -18905,7 +18873,7 @@ body.menu--opened {
         .delivery-item-content-features li.list-no:before {
           background-image: url(../img/svg/сlothes-fitting-no.svg); }
         .delivery-item-content-features li.list-warning:before {
-          height: 12px;
+          height: 10px;
           width: 14px;
           background-image: url(../img/svg/сlothes-fitting-warning.svg); }
         .delivery-item-content-features li a {
@@ -19236,10 +19204,45 @@ body.menu--opened {
       max-width: 80%; }
 
 .about-vacantion {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 -10px 50px -10px; }
+  position: relative; }
+  .about-vacantion-title {
+    background-color: #fff;
+    max-width: 415px;
+    height: 160px;
+    position: absolute;
+    top: 90px;
+    left: 258px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .about-vacantion-title h3 {
+      margin: 0 auto;
+      line-height: normal;
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 27px;
+      text-align: center; }
+    .about-vacantion-title p {
+      line-height: normal;
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
+      margin: 10px 0 15px; }
+    .about-vacantion-title a {
+      padding: 0 20px;
+      line-height: 36px;
+      color: #fff;
+      font-size: 13px;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      background: #3fb1ff;
+      font-family: Ubuntu; }
+  .about-vacantion-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px 50px -10px; }
   .about-vacantion-item {
     height: 75px;
     background-color: #ddd;

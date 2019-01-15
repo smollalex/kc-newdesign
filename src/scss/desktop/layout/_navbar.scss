@@ -341,23 +341,23 @@
               background-position: no-repeat;
     
               &.winter {
-                background-image: url(../img/svg/season-winter.svg);
+                background-image: url(#{$PATH}/svg/season-winter.svg);
               }
               
               &.summer {
-                background-image: url(../img/svg/season-summer.svg);
+                background-image: url(#{$PATH}/svg/season-summer.svg);
               }
               
               &.autumn-spring {
-                background-image: url(../img/svg/season-autumn-spring.svg);
+                background-image: url(#{$PATH}/svg/season-autumn-spring.svg);
               }
               
               &.star {
-                background-image: url(../img/svg/product-new.svg);
+                background-image: url(#{$PATH}/svg/product-new.svg);
               }
               
               &.discount {
-                background-image: url(../img/svg/product-sale.svg);
+                background-image: url(#{$PATH}/svg/product-sale.svg);
               }
               
               &.h {
@@ -381,12 +381,12 @@
               }
               
               &.big-size {
-                background: url(../img/ic/ic-big-size.png);
+                background: url(#{$PATH}/ic/ic-big-size.png);
                 background-size: 13px 13px;
               }
               
               &.small-size {
-                background: url(../img/ic/ic-small-size.png);
+                background: url(#{$PATH}/ic/ic-small-size.png);
                 background-size: 13px 13px;
               }
             }

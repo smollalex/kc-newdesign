@@ -294,7 +294,7 @@ main {
             }
           }
           &-close {
-            background: url(../img/svg/close.svg);
+            background: url(#{$PATH}/svg/close.svg);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -907,13 +907,13 @@ main {
 
             &.option-yes {
               &:before {
-                background-image: url(../img/svg/сlothes-fitting-yes.svg);
+                background-image: url(#{$PATH}/svg/сlothes-fitting-yes.svg);
               }
             }
   
             &.option-no {
               &:before {
-                background-image: url(../img/svg/сlothes-fitting-no.svg);
+                background-image: url(#{$PATH}/svg/сlothes-fitting-no.svg);
               }
             }
             
@@ -921,7 +921,7 @@ main {
               &:before {
                 height: 12px;
                 width: 14px;
-                background-image: url(../img/svg/сlothes-fitting-warning.svg)
+                background-image: url(#{$PATH}/svg/сlothes-fitting-warning.svg)
               }
             }
           }

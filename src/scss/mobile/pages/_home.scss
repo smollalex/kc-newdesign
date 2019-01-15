@@ -497,21 +497,21 @@
       width: 20px;
       height: 20px;
       &--like {
-        background: url("/img/svg/like.svg");
+        background: url(#{$PATH}/svg/like.svg");
         background-size: 100%;
       }
       &--dislike {
-        background: url("/img/svg/dislike.svg");
+        background: url(#{$PATH}/svg/dislike.svg");
         background-size: 100%;
       }
     }
     &:hover, &:focus {
       .reviews__action--span--like {
-        background: url("/img/svg/like_green.svg");
+        background: url(#{$PATH}/svg/like_green.svg");
         background-size: 100%;
       }
       .reviews__action--span--dislike {
-        background: url("/img/svg/like_red.svg");
+        background: url(#{$PATH}/svg/like_red.svg");
         background-size: 100%;
       }
     }
@@ -540,7 +540,7 @@
       justify-content: center;
       margin-left: 4px;
       padding-top: 2px;
-      background: url("/img/star-bg.png");
+      background: url(#{$PATH}/star-bg.png");
       background-size: cover;
       height: 16px;
       width: 16px;
@@ -677,7 +677,7 @@
       justify-content: center;
       margin-left: 4px;
       padding-top: 2px;
-      background: url("/img/star-bg.png");
+      background: url(#{$PATH}/star-bg.png");
       background-size: cover;
       height: 16px;
       width: 16px;

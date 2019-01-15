@@ -9,11 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const config =  {
 
   entry: {
-    common: `./src/js/${version}/common.js`,
-    home: `./src/js/${version}/pages/home.js`,
-    card: `./src/js/${version}/pages/product.js`,
-    category: `./src/js/${version}/pages/category.js`,
-    chc: `./src/js/${version}/pages/chc.js`,
+    app: `./src/js/${version}/app.js`,
     style: `./src/scss/${version}.scss`
   },
 

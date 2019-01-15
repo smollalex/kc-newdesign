@@ -1,6 +1,3 @@
-require ('../layout/header');
-require ('../layout/footer');
-
 $(document).ready(function(){
 
   // Card
