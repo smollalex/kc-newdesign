@@ -25183,8 +25183,8 @@ $(document).ready(function () {
 
 	// New product slider
 	$('#new-products-slider, #actual-discount-slider').owlCarousel({
-		loop: true,
-		nav: false,
+		loop: false,
+		nav: true,
 		mouseDrag: true,
 		dots: false,
 		lazyLoad: true,
@@ -25196,17 +25196,17 @@ $(document).ready(function () {
 			0: {
 				items: 3
 			},
-			844: {
+			768: {
 				items: 4
 			},
 			991: {
 				items: 2
 			},
 			1024: {
-				items: 3
+				items: 5
 			},
 			1280: {
-				items: 4
+				items: 5
 			}
 		}
 	});

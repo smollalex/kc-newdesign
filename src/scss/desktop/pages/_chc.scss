@@ -2,13 +2,12 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 140px;
+  height: 250px;
   background-color: $primary;
   padding: 0 65px;
-  justify-content: flex-end;
+  justify-content: center;
   color: #fff;
   margin-bottom: 50px;
-  padding-bottom: 50px;
 
   h1 {
     font-size: 34px;
@@ -535,28 +534,31 @@
 .about {
 
   .page-header {
-    background-image: url(#{$PATH}/about-banner.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    align-items: center;
+    background-image: url(#{$PATH}/about-banner2.jpg);
+    background-position: 90% 0;
+    background-size: 50%;
+    height: 250px;
+    align-items: baseline;
     justify-content: center;
     color: #333;
-    padding: 0;
+    padding: 0 65px;
+    background-repeat: no-repeat;
+    background-color: #ecf2f6;
 
     h1 {
       margin-bottom: 15px;
     }
     p {
-      max-width: 380px;
-      text-align: center;
-      line-height: 22px;
+      max-width: 420px;
+      line-height: 24px;
       font-weight: 300;
+      font-size: 16px;
     }
   }
 
 
   &-success {
+    margin: 0 0 50px 0;
 
     h2 {
       max-width: 410px;
@@ -580,7 +582,7 @@
       font-weight: 300;
       position: relative;
       padding: 0;
-      width: 250px;
+      width: 25%;
 
       span {
 
@@ -592,12 +594,12 @@
         letter-spacing: -3.5px;
       }
 
-      &:before {
+      /* &:before {
         content: '';
         display: block;
         width: 40px;
         height: 40px;
-        border-left: 1px solid $primary;
+        border-left: 1px solid $primary-second;
         position: absolute;
         right: -35px;
         top: 20px;
@@ -607,18 +609,18 @@
         display: block;
         width: 40px;
         height: 40px;
-        border-top: 1px solid $primary;
+        border-top: 1px solid $primary-second;
         position: absolute;
         top: 40px;
         right: -15px;
-      }
+      } 
 
       &:last-child {
         padding-right: 0;
         &:before, &:after {
           display: none;
         }
-      }
+      }*/
     }
     &-total {
       text-align: center;
@@ -629,15 +631,15 @@
       max-width: 650px;
       margin: auto;
 
-      &:before {
+      /* &:before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        border-top: 1px solid #0079bf;
+        border-top: 1px solid $primary-second;
       }
-
+ */
       h3 {
         font-size: 58px;
         line-height: 58px;
@@ -651,10 +653,10 @@
 
   &-collection {
     margin: 50px 0;
-    padding: 40px;
+    padding-top: 40px;
     text-align: center;
     line-height: normal;
-    background: #eef2f5;
+    border-top: 1px solid #f4f9fe;
 
     h3 {
       margin: 0 auto;
@@ -689,14 +691,15 @@
 
   &-vacantion {
     position: relative;
-    
+    margin: 50px 0;
+
     &-title {
       background-color: #fff;
-      max-width: 415px;
+      max-width: 418px;
       height: 160px;
       position: absolute;
       top: 90px;
-      left: 258px;
+      left: 255px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -733,7 +736,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 0 -10px 50px -10px;
+      margin: 0 -10px;
     }
 
     &-item {
@@ -741,6 +744,88 @@
       background-color: #ddd;
       flex-basis: 75px;
       margin: 5px;
+    }
+  }
+
+  &-delivery {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    background-color: #ecf2f6;
+
+    > div {
+      width: 50%;
+      padding: 0 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+    }
+
+    > img {
+      width: 50%;
+    }
+
+    h3 {
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 27px;
+    }
+    p {
+      line-height: normal;
+      font-size: 14px;
+      font-weight: 300;
+      margin: 10px 0 15px;
+    }
+    a {
+      padding: 0 20px;
+      line-height: 36px;
+      color: #fff;
+      font-size: 13px;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      background: #3fb1ff;
+      font-family: Ubuntu;
+    }
+  }
+
+  &-shops {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+    background-color: #ebf2f5;
+    
+    > div {
+      width: 50%;
+      padding: 0 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+    }
+
+    > img {
+      width: 50%;
+    }
+
+    h3 {
+      font-size: 23px;
+      font-weight: 300;
+      line-height: 27px;
+    }
+    p {
+      line-height: normal;
+      font-size: 14px;
+      font-weight: 300;
+      margin: 10px 0 15px;
+    }
+    a {
+      padding: 0 20px;
+      line-height: 36px;
+      color: #fff;
+      font-size: 13px;
+      text-transform: uppercase;
+      border: 1px solid transparent;
+      background: #3fb1ff;
+      font-family: Ubuntu;
     }
   }
 }

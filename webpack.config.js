@@ -158,6 +158,11 @@ const config =  {
       filename: 'about.html',
       template: `src/templates/${version}/about.pug`
     }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'about-sale.html',
+      template: `src/templates/${version}/about-sale.pug`
+    }),
 
     
 

@@ -120,6 +120,7 @@
 
   &-write {
     display: flex;
+    align-items: center;
     position: relative;
     margin-bottom: 30px;
 
@@ -132,7 +133,7 @@
     }
 
     img {
-      height: 15px;
+      height: 24px;
       margin-right: 8px;
     }
   }

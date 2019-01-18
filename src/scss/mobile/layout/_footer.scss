@@ -1,5 +1,5 @@
 .footer {
-  background: #155dbc url("#{$PATH}/footer-bg.png") no-repeat 50%;
+  background: #155dbc url(#{$PATH}/footer-bg.png) no-repeat 50%;
   color: white;
   padding: 30px 0 40px;
   .wrapper {
@@ -44,7 +44,7 @@
           padding-left: 1px;
         }
         &.active {
-          background: ur#{$PATH}/radio.png) no-repeat;
+          background: url(#{$PATH}/radio.png) no-repeat;
           &:before {
             display: none;
           }
@@ -165,7 +165,7 @@
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
-    &__img {}
+
     &__text {
       font-size: 13px;
       line-height: 16px;

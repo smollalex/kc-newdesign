@@ -12,7 +12,6 @@
     position: relative;
     color: #333333;
     padding: 0 10px;
-    
 
     @include media-breakpoint-up(xl) {
       padding: 0 15px;
@@ -50,6 +49,7 @@
     }
 
     &-content {
+      width: 100%;
       display: none;
       font-size: 13px;
       line-height: 16px;
@@ -87,7 +87,7 @@
       }
     }
 
-    &--active, &:hover, &:focus {
+    &.active, &:hover, &:focus {
       background: #00b3ff;
       color: white;
       outline: none;
@@ -188,7 +188,7 @@
           }
         }
       }
-      &.header-item--active, &:hover, &:focus {
+      &.active, &:hover, &:focus {
         .header-item {
           &-title {
             &-text {
@@ -228,10 +228,7 @@
     }
 
     &--city {
-      min-width: 130px;
-      padding-right: 0;
-      flex-direction: column;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
 
       @include media-breakpoint-down(md) {
@@ -239,76 +236,104 @@
         min-width: auto;
       }
 
-      .header-item {
-        &-title {
-
-          &:hover, &:focus {
-            outline: none;
-
-            .header-item-title-text {
-              color: #00b3ff;
-            }
-            .header-item-title-icon  {
-              transform: rotate(90deg);
-
-              svg {
-                fill: #00b3ff;
-              }
-            }
-          }
-          
-          &-icon {
-            margin-right: -4px;
-            width: 20px;
-            height: 20px;
-            align-self: baseline;
-            min-width: auto;
-            transform: rotate(-90deg);
-
-            svg {
-              fill: #666;
-            }
-          }
-          
-          &-text {
-            display: flex;
-            flex-direction: column;
-            font-size: 14px;
-            border: none;
-            background: transparent;
-            text-align: left;
-            margin-left: auto;
-            cursor: pointer;
-
-            span {
-              font-family: "Roboto Condensed", sans-serif;
-              font-size: 11px;
-              margin-top: 3px;
-              text-transform: lowercase;
-              color: #666666;
-            }
-          }
+      &:not(.active):hover, &:not(.active):focus {
+        background: none;
+        .header-item-content {
+          display: none;
         }
+        .header-item-title-icon {
+          color: inherit;
 
-        &-link {
-          font-size: 11px;
-          color: #86909c;
-          border-bottom: 1px dashed#86909c;
-
-          &:hover, &:focus {
-            color: #00b3ff;
-            border-color: #00b3ff;
+          svg {
+            fill: inherit;
           }
         }
       }
 
-      &.header-item--active, &:hover, &:focus {
-        &.header-item {
-          background: none;
+      .header-item {
+
+        &-link {
+
+          &-city {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            cursor: pointer;
+            color: #333;
+           
+            
+            svg {
+              margin-right: 2px;
+              width: 14px;
+              height: 15px;
+              align-self: baseline;
+              min-width: auto;
+              fill: #333;
+              margin-top: -2px;
+            }
+
+            &:hover, &:focus {
+              color: #00b3ff;
+
+              svg {
+                fill:#00b3ff; 
+              }
+            }
+          } 
+          &-point {
+            font-size: 11px;
+            color: #86909c;
+            border-bottom: 1px dashed #86909c;
+            margin-left: 10px;
+            
+            &:hover, &:focus {
+              color: #00b3ff;
+              border-color: #00b3ff;
+            }
+          }   
         }
-        .header-item-title-text, .header-item-title-icon svg {
-          color: #333;
-          fill: #666;
+      }
+
+      &.active {
+        .header-item-title {
+          background-color: #01b2ff;
+          a {
+            color: #fff;
+            border-color: #fff;
+
+            svg {
+              fill: #fff;
+            }
+          }
+        }
+        .header-item-content {
+          background-color: #01b2ff;
+          padding-top: 0;
+        
+          p {
+            margin-bottom: 10px;
+          }
+
+          &-links {
+            display: flex;
+            align-self: center;
+
+            a {
+              border: 1px solid #fff;
+              padding: 5px 10px;
+              transition: .4s;
+              margin-right: 10px;
+
+              &:hover, &:focus {
+                background-color: #fff;
+                color: #02b1ff;
+              }
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
         }
       }
     }
