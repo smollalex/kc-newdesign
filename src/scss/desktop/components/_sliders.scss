@@ -4,9 +4,6 @@
 
       // Home main top slider
       &-home {
-        .owl-item img {
-          width: 100%;
-        }
         
         .owl-nav {
           position: absolute;
@@ -92,6 +89,62 @@
                 background: #0079bf;
               }
             }
+          }
+        }
+      }
+
+      // Cards
+      &-card {
+        .owl-item {
+          padding: 0 0 40px 0;
+        }
+
+        .owl-nav {
+          position: absolute;
+          top: 50%;
+          width: 100%;
+          margin-top: -55px;
+          height: 50px;
+
+          .owl-prev, .owl-next {
+            position: absolute;
+            width: 45px;
+            height: 45px;
+            border-radius: 45px;
+            transition: .4s;
+
+            svg {
+              width: 100%;
+              height: 100%;
+              fill: #deecf5;
+            }
+
+            &:hover {
+              background-color: #cbdce3;
+
+              svg  {
+                fill: #fff;
+              }
+            }
+          }
+
+          .disabled {
+            opacity: 0;
+          }
+        }
+        .owl-prev {
+          left: -60px;
+
+          @include media-breakpoint-down(lg) {
+            left: 0;
+          }
+        }
+        .owl-next {
+          right: -60px;
+          transform: rotate(180deg);
+          
+          @include media-breakpoint-down(lg) {
+            right: 0;
           }
         }
       }
@@ -302,6 +355,99 @@
             margin: auto;
             max-height: 500px;
             width: auto;
+          }
+        }
+      }
+
+      // Trends
+      &-trends {
+        .owl-item img {
+          width: 100%;
+        }
+        
+        .owl-nav {
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          top: calc(50% - 22px);
+          width: 100%;
+          padding: 0 30px;
+          margin-top: 0;
+      
+          &.disabled {
+            display: none !important;
+          }         
+ 
+          [class^="owl-"] {
+            width: 45px;
+            height: 45px;
+            background-color: #cbdce3;
+            border: none;
+            border-radius: 50%;
+            padding: 0;
+            opacity: 0.7;
+
+            svg {
+              width: 100%;
+              height: 100%;
+              fill: #fff;
+            }
+
+            &:hover, &:focus {
+              outline: none;
+              opacity: 1;
+
+              svg {
+                fill: #fff;
+              }
+            }
+
+          }
+          .owl-prev {
+
+          }
+          .owl-next {
+            transform: rotate(180deg);
+          }
+        }
+
+        .owl-dots {
+          display: flex;
+          position: absolute;
+          bottom: 30px;
+          width: 100%;
+          justify-content: center;
+          
+          .owl-dot {
+            border: 1px solid transparent;
+            background: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            margin: 0 2px;
+            
+            &:hover, &:focus {
+              outline: none;
+            }
+            
+            span {
+              display: flex;
+              border-radius: 50%;
+              background: #85c8e6;
+              height: 6px;
+              width: 6px;
+              margin: 3px 4px;
+            }
+            
+            &.active {
+             
+              span {
+                background: #0079bf;
+              }
+            }
           }
         }
       }

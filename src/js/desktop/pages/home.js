@@ -17,7 +17,6 @@ $(document).ready(function(){
 
 	// Brands home slider
 	$('#brands-slider').owlCarousel({
-		loop: true,
 		nav: true,
 		mouseDrag: true,
 		dots: true,
@@ -60,13 +59,10 @@ $(document).ready(function(){
 				items: 3
 			},
 			768: {
-				items: 4
-			},
-			991: {
-				items: 2
+				items: 3
 			},
 			1024: {
-				items: 5
+				items: 4
 			},
 			1280: {
 				items: 5
@@ -87,7 +83,7 @@ $(document).ready(function(){
 	});
 
 	$trends_slider_1.owlCarousel({
-		loop: true,
+		loop: false,
 		mouseDrag: true,
 		touchDrag: true,
 		dots: true,
@@ -119,7 +115,7 @@ $(document).ready(function(){
 	$trends_slider_2.owlCarousel({
 		animateOut: 'fadeOut',
 		animateIn: 'fadeIn',
-		loop: true,
+		loop: false,
 		nav: false,
 		mouseDrag: false,
 		touchDrag: false,

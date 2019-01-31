@@ -1,39 +1,50 @@
 .modal {
+
   &-dialog {
 
   }
+
   &-content {
     border: none;
     border-radius: 0;
-    
+    background-color: #f5f9fe;
 
     .close {
       position: absolute;
       right: 20px;
-      top: 18px;
+      top: 15px;
+      z-index: 1090;
+      padding: 0;
+      margin: 0;
     }
   }
-  &-header {
 
+  &-header {
+    padding: 25px 25px 0 25px;
+    border: none;
   }
+
+  &-body {
+    padding: 25px;
+  }
+  
+  &-footer {
+    padding: 0 25px 25px 25px;
+  }
+
+  &-backdrop {
+    background: rgba(2, 23, 33, 0.58);
+    opacity: 1;
+  }
+
   &-title {
     font-size: 20px;
-    color: $primary;
+    color: #444;
     margin: 0;
     text-align: center;
     margin: auto;
   }
-  &-body {
 
-  }
-  &-footer {
-
-  }
-
-  & +.modal-backdrop {
-    background: rgba(2, 23, 33, 0.58);
-    opacity: 1;
-  }
 
   // Modal city
   &-city {
@@ -47,12 +58,9 @@
       }
     }
 
-    .modal-content {
-      padding: 30px;
-      color: white;
-      background: #3fb1ff;
+    .modal-body {
+      padding: 45px;
     }
-    
     
     .h5 {
       text-transform: uppercase;
@@ -65,8 +73,8 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      margin-top: 23px;
-      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      margin-top: 17px;
+      border-top: 1px solid #e4eef9;
       padding-top: 20px;
   
       span {
@@ -91,11 +99,11 @@
   
       input {
         width: 100%;
-        margin-top: 5px;
-        padding-left: 10px;
-        line-height: 35px;
+        padding: 0 15px;
+        height: 45px;
+        line-height: 45px;
         background: white;
-        border: 0;
+        border: 1px solid #e4eef9;
         box-sizing: border-box;
       }
     }
@@ -113,10 +121,11 @@
       }
     }
     .modal-body {
-      padding: 0;
+      
     }
     .modal-content {
-      padding: 30px 50px 30px 40px;
+      padding: 0px 30px 10px 20px;
+      background-color: #fff;
     }
   }
 
@@ -135,6 +144,208 @@
     }
     .modal-body {
       padding: 0;
+    }
+
+
+    .pickup-point-map {
+      height: 550px;
+      margin-top: 20px;
+    
+      #delivery-map {
+        background-color: #8c8c8c;
+        height: 100%;
+      }
+    
+      .nav-pickup-point {
+        flex-direction: column;
+        margin-left: 15px;
+        overflow-y: auto;
+        display: flex;
+        flex-wrap: nowrap;
+        list-style: decimal;
+        padding: 20px 20px 20px 35px;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        width: 270px;
+        background-color: #f4f9fe;
+        bottom: 20px;
+    
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+          background: #f6f9fe;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #afcde6;
+          border-radius: 20px;
+          outline: 1px solid slategrey;
+        }
+    
+        .nav-item {
+          margin-bottom: 15px;
+    
+          > div {
+            padding-top: 10px;
+            margin-left: 5px;
+          }
+        }
+        .nav-link {
+          font-size: 15px;
+          font-weight: 300;
+          display: inline-block;
+          padding: 0;
+          position: relative;
+          margin-left: 5px;
+          
+          svg {
+            position: absolute;
+            right: -20px;
+            width: 20px;
+            height: 20px;
+            top: -3px;
+            fill: #3f4247;
+          }
+    
+          &[aria-expanded="false"] {
+            svg {
+              transform: rotate(-90deg);
+            }
+          }
+    
+          &[aria-expanded="true"] {
+            svg {
+              transform: rotate(90deg);
+            }
+          }
+    
+        }
+        .collapsing {
+          display: flex;
+          flex-direction: column;
+        }
+        .collapse {
+          flex-direction: column;
+          
+          &.show {
+            display: flex;
+          }
+        }
+    
+        span {
+          font-size: 14px;
+          margin-bottom: 5px;
+          color: $primary;
+        }
+      }
+    }
+
+  }
+
+  // Modal testimonial
+  &-testimonial {
+    .modal-header {
+      border-bottom: 0;
+    }
+    .modal-body {
+      
+    }
+    .modal-footer {
+      border-top: 0;
+      
+    }
+    .modal-dialog {
+      @include media-breakpoint-up(lg){
+        max-width: 630px;
+      }
+      @include media-breakpoint-down(md){
+        max-width: calc(100% - 100px)
+      }
+    }
+
+    .testimonial  {
+      &-rating {
+        padding: 31px 25px;
+        background-color: #ffffff;
+        border: 1px solid #e4eef9;
+
+        &-item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          
+          &:last-child {
+            margin-bottom: 0;
+          }
+    
+          > span {
+            width: 90px;
+            font-size: 14px;
+            color: #495057ad;
+            text-align: right;
+            padding-right: 20px;
+          }
+    
+          .fa-star {
+            &:before {
+              content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='#ffdb00' d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'></path></svg>");
+            }
+          
+            &-o:before {
+              content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='#dddddd' d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'></path></svg>");
+            }
+          }
+        }
+      }
+    }
+    
+  }
+
+  // Signin
+  &-signin {
+    .modal-body {
+      padding: 45px 100px;
+    }
+
+    [type="radio"]:not(checked) + label:before {
+      border-color: #ccd6de;
+    }
+
+    [type="radio"]:checked + label:before {
+      border-color: $primary-second;
+    }
+    [type="radio"]:checked + label:after {
+      background-color: $primary-second;
+    }
+
+    a {
+      font-size: 13px;
+      font-family: $font-ubuntu;
+      color: $primary;
+      border-bottom: 1px dashed $primary;
+
+      &:hover, &:focus {
+        color: $primary-second;
+        border-color: $primary-second;
+      }
+    }
+  }
+
+  // Signup
+  &-signup {
+    .modal-body {
+      padding: 45px 100px;
+    }
+    [type="checkbox"]:not(checked) + label:before {
+      border-color: #ccd6de;
+    }
+
+    [type="checkbox"]:checked + label:before {
+      border-color: $primary-second;
+    }
+    [type="checkbox"]:checked + label:after {
+      background-color: $primary-second;
     }
   }
 }

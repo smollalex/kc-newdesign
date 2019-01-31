@@ -24755,6 +24755,116 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 /***/ }),
 
+/***/ "./node_modules/starrr/dist/starrr.js":
+/*!********************************************!*\
+  !*** ./node_modules/starrr/dist/starrr.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var slice = [].slice;
+
+(function ($, window) {
+  var Starrr;
+  window.Starrr = Starrr = function () {
+    Starrr.prototype.defaults = {
+      rating: void 0,
+      max: 5,
+      readOnly: false,
+      emptyClass: 'fa fa-star-o',
+      fullClass: 'fa fa-star',
+      change: function change(e, value) {}
+    };
+
+    function Starrr($el, options) {
+      this.options = $.extend({}, this.defaults, options);
+      this.$el = $el;
+      this.createStars();
+      this.syncRating();
+      if (this.options.readOnly) {
+        return;
+      }
+      this.$el.on('mouseover.starrr', 'a', function (_this) {
+        return function (e) {
+          return _this.syncRating(_this.getStars().index(e.currentTarget) + 1);
+        };
+      }(this));
+      this.$el.on('mouseout.starrr', function (_this) {
+        return function () {
+          return _this.syncRating();
+        };
+      }(this));
+      this.$el.on('click.starrr', 'a', function (_this) {
+        return function (e) {
+          e.preventDefault();
+          return _this.setRating(_this.getStars().index(e.currentTarget) + 1);
+        };
+      }(this));
+      this.$el.on('starrr:change', this.options.change);
+    }
+
+    Starrr.prototype.getStars = function () {
+      return this.$el.find('a');
+    };
+
+    Starrr.prototype.createStars = function () {
+      var j, ref, results;
+      results = [];
+      for (j = 1, ref = this.options.max; 1 <= ref ? j <= ref : j >= ref; 1 <= ref ? j++ : j--) {
+        results.push(this.$el.append("<a href='#' />"));
+      }
+      return results;
+    };
+
+    Starrr.prototype.setRating = function (rating) {
+      if (this.options.rating === rating) {
+        rating = void 0;
+      }
+      this.options.rating = rating;
+      this.syncRating();
+      return this.$el.trigger('starrr:change', rating);
+    };
+
+    Starrr.prototype.getRating = function () {
+      return this.options.rating;
+    };
+
+    Starrr.prototype.syncRating = function (rating) {
+      var $stars, i, j, ref, results;
+      rating || (rating = this.options.rating);
+      $stars = this.getStars();
+      results = [];
+      for (i = j = 1, ref = this.options.max; 1 <= ref ? j <= ref : j >= ref; i = 1 <= ref ? ++j : --j) {
+        results.push($stars.eq(i - 1).removeClass(rating >= i ? this.options.emptyClass : this.options.fullClass).addClass(rating >= i ? this.options.fullClass : this.options.emptyClass));
+      }
+      return results;
+    };
+
+    return Starrr;
+  }();
+  return $.fn.extend({
+    starrr: function starrr() {
+      var args, option;
+      option = arguments[0], args = 2 <= arguments.length ? slice.call(arguments, 1) : [];
+      return this.each(function () {
+        var data;
+        data = $(this).data('starrr');
+        if (!data) {
+          $(this).data('starrr', data = new Starrr($(this), option));
+        }
+        if (typeof option === 'string') {
+          return data[option].apply(data, args);
+        }
+      });
+    }
+  });
+})(window.jQuery, window);
+
+/***/ }),
+
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!***********************************!*\
   !*** (webpack)/buildin/global.js ***!
@@ -24835,12 +24945,15 @@ module.exports = function (module) {
 "use strict";
 
 
+__webpack_require__(/*! ../../scss/desktop.scss */ "./src/scss/desktop.scss");
+
 window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 __webpack_require__(/*! popper.js/dist/popper.min */ "./node_modules/popper.js/dist/popper.min.js");
 __webpack_require__(/*! bootstrap/dist/js/bootstrap.min */ "./node_modules/bootstrap/dist/js/bootstrap.min.js");
 __webpack_require__(/*! owl.carousel/dist/owl.carousel */ "./node_modules/owl.carousel/dist/owl.carousel.js");
 __webpack_require__(/*! jquery-hoverintent/jquery.hoverIntent */ "./node_modules/jquery-hoverintent/jquery.hoverIntent.js");
 __webpack_require__(/*! select2/dist/js/select2 */ "./node_modules/select2/dist/js/select2.js");
+__webpack_require__(/*! starrr/dist/starrr */ "./node_modules/starrr/dist/starrr.js");
 __webpack_require__(/*! @zeitiger/elevatezoom/jquery.elevatezoom */ "./node_modules/@zeitiger/elevatezoom/jquery.elevatezoom.js");
 
 __webpack_require__(/*! ./layout/header.js */ "./src/js/desktop/layout/header.js");
@@ -24850,6 +24963,27 @@ __webpack_require__(/*! ./pages/home.js */ "./src/js/desktop/pages/home.js");
 __webpack_require__(/*! ./pages/category.js */ "./src/js/desktop/pages/category.js");
 __webpack_require__(/*! ./pages/product.js */ "./src/js/desktop/pages/product.js");
 __webpack_require__(/*! ./pages/chc.js */ "./src/js/desktop/pages/chc.js");
+__webpack_require__(/*! ./layout/card.js */ "./src/js/desktop/layout/card.js");
+
+/***/ }),
+
+/***/ "./src/js/desktop/layout/card.js":
+/*!***************************************!*\
+  !*** ./src/js/desktop/layout/card.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+$(document).ready(function () {
+  $(".card").on('mouseover', function () {
+    $(this).find('.card-img').attr('src', $(this).find('.card-img').data('second-src'));
+  }).on('mouseout', function () {
+    $(this).find('.card-img').attr('src', $(this).find('.card-img').data('first-src'));
+  });
+});
 
 /***/ }),
 
@@ -24918,6 +25052,39 @@ function menuHover() {
 	});
 }
 
+function navbarIconsHover() {
+	$('.navbar-icons > .nav-item').hoverIntent({
+		over: function over() {
+			if ($(this).find('.nav-wrap').length) {
+				$('.navbar-overlay').first().show();
+			}
+			$(this).addClass('active');
+		},
+		out: function out() {
+			if ($(this).find('.nav-wrap').length) {
+				$('.navbar-overlay').first().hide();
+			}
+			$('.navbar-icons > .nav-item').removeClass('active');
+		},
+		timeout: 50
+	});
+}
+
+function getSigninType() {
+	$('[name="signin-radio"]').on('change', function () {
+		switch ($(this).val()) {
+			case 'phone':
+				$('.form-group--phone').show();
+				$('.form-group--email').hide();
+				break;
+			case 'email':
+				$('.form-group--phone').hide();
+				$('.form-group--email').show();
+				break;
+		}
+	});
+}
+
 $(document).ready(function () {
 
 	// City panel
@@ -24946,6 +25113,12 @@ $(document).ready(function () {
 
 	// Menu hover intent
 	menuHover();
+
+	// Change sign in type
+	getSigninType();
+
+	// Navbar-icons hover intent
+	navbarIconsHover();
 });
 
 $(window).on('scroll', function (event) {
@@ -25132,6 +25305,10 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('select').select2();
+
+  $('.starrr').starrr({
+    rating: 0
+  });
 });
 
 /***/ }),
@@ -25161,7 +25338,6 @@ $(document).ready(function () {
 
 	// Brands home slider
 	$('#brands-slider').owlCarousel({
-		loop: true,
 		nav: true,
 		mouseDrag: true,
 		dots: true,
@@ -25197,13 +25373,10 @@ $(document).ready(function () {
 				items: 3
 			},
 			768: {
-				items: 4
-			},
-			991: {
-				items: 2
+				items: 3
 			},
 			1024: {
-				items: 5
+				items: 4
 			},
 			1280: {
 				items: 5
@@ -25223,7 +25396,7 @@ $(document).ready(function () {
 	});
 
 	$trends_slider_1.owlCarousel({
-		loop: true,
+		loop: false,
 		mouseDrag: true,
 		touchDrag: true,
 		dots: true,
@@ -25252,7 +25425,7 @@ $(document).ready(function () {
 	$trends_slider_2.owlCarousel({
 		animateOut: 'fadeOut',
 		animateIn: 'fadeIn',
-		loop: true,
+		loop: false,
 		nav: false,
 		mouseDrag: false,
 		touchDrag: false,
@@ -25435,6 +25608,17 @@ $(document).ready(function () {
 		navText: ['<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>', '<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>']
 	});
 });
+
+/***/ }),
+
+/***/ "./src/scss/desktop.scss":
+/*!*******************************!*\
+  !*** ./src/scss/desktop.scss ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 

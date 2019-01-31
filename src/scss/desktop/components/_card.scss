@@ -1,3 +1,6 @@
+$type-new: $primary-second;
+$type-sale:#f69781;
+
 .card {
   display: flex;
   flex-direction: column;
@@ -6,7 +9,7 @@
   background-color: #fff;
   border: 1px solid #f3f9fe;
   border-radius: 0;
-  min-width: 200px;
+  min-width: 241px;
   transition: .4s;
   
   &:hover, &:focus {
@@ -24,73 +27,46 @@
   }
 
   &--new {
-    /*
-    &:hover, &:focus {
-      border-color: #01b2ff;
-      
-      .card-extra-info {
-        border-color: #01b2ff;
-      }
-    }
-*/
     .card-type {
-      background-color: #72e6aa;
+      background-color: $type-new;
+
+      &:after {
+        border-top-color: $type-new;
+      }
     }
   }
   &--sale {
-    /*
-    &:hover, &:focus {
-      border-color: #f69781;
+    .card-type {
+      background-color: $type-sale;
 
-      .card-extra-info {
-        border-color: #f69781;
+      &:after {
+        border-top-color: $type-sale;
       }
     }
-
-    */
-    .card-type {
-      background-color: #f69781;
-    }
-  }
-  &--promo {
-    
-    &:hover, &:focus {
-      //border-color: #fb4545;;
-
-      .card-extra-info {
-        //border-color: #fb4545;
-      }
-    }
-
-    .card-type {
-      //background-color: #fb4545;;
-    }
-    
   }
 
   &-img {
-    margin: auto;
     max-width: 234px;
+    margin: 2px auto 5px;
+    border-radius: 0;
   }
 
   &-title {
-    font-size: 14px;
-    font-weight: 300;
-    color: #444444;
     text-align: center;
-    text-transform: uppercase;
-    border-bottom: 1px solid #f3f9fe;
-    margin-bottom: 6px;
-    padding-bottom: 4px;
-    margin-top:  auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
 
     &-name {
-      
+      font-size: 13px;
+      font-weight: 300;
+      color: #9a9da0;
     }
 
     &-brand {
       font-weight: 400;
-      padding-left: 3px;
+      font-size: 17px;
+      line-height: 26px;
     }
   }
 
@@ -134,11 +110,11 @@
 
   &-type {
     position: absolute;
-    top: -1px;
+    top: 2px;
     right: 15px;
     display: block;
     width: 50px;
-    height: 50px;
+    height: 35px;
     background-size: cover;
     text-align: center;
 
@@ -146,11 +122,11 @@
       content: '';
       width: 0;
       height: 0;
-      border-bottom: 14px solid #fff;
-      border-left: 56px solid transparent;
       position: absolute;
       right: 0;
-      bottom: 0;
+      top: 35px;
+      border-top: 15px solid;
+      border-right: 50px solid transparent;
     }
     
     span {
@@ -169,22 +145,22 @@
     top: 60px;
     right: 15px;
     display: none;
-    font-size: 11px;
+    font-size: 12px;
     height: 135px;
 
     &--three-col {
-      width: 81px;
+      width: 75px;
     }
     &--two-col {
-      width: 54px;
+      width: 50px;
     }
     &--one-col {
-      width: 27px;
+      width: 25px;
     }
 
     span {
-      width: 27px;
-      line-height: 27px;
+      width: 25px;
+      line-height: 25px;
       text-align: center;
       box-shadow: 0 0 1px 0px #c0cbd8;
       background: white;
@@ -214,7 +190,7 @@
     position: absolute;
     left: -1px;
     right: -1px;
-    top: 72px;
+    top: 71px;
     padding: 10px 0;
     justify-content: center;
     display: flex;
@@ -271,7 +247,7 @@
     padding: 0 15px;
     background-color: #fff;
     width: 100%;
-    height: 35px;
+    height: 50px;
     
     &-link {
       margin: auto;

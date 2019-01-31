@@ -71,8 +71,10 @@ footer.footer
             label(for='subscribe-gender-male') Мужчинам
         .footer-subscribe-email
           .form-group
-            input(type='email', placeholder='Ваша эл. почта')
-            button(type='submit') Подписаться
+            .input-group
+              input.form-control(type='email', placeholder='Ваша эл. почта')
+              .input-group-append
+                button.btn(type='submit') Подписаться
         .footer-subscribe-confirm
           .form-group
             input(id='subscribe-confirm', name='subscribe-confirm', type='checkbox')

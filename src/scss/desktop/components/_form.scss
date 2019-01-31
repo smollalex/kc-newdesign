@@ -1,75 +1,210 @@
-// Custom checkbox
-.checkbox {
-    
-  [type="checkbox"] {
-    vertical-align: top;
-    margin: 0;
-    width: 14px;
-    height: 14px;
+.form-control::-webkit-input-placeholder {
+  color: #495057ad;
+}
 
-    &:not(checked) {
-      position: absolute;
-      opacity: 0;
+.form-control::-moz-placeholder {
+  color: #495057ad;
+}
 
-      & + label {
-        position: relative;
-        padding: 0 0 0 20px;
-        display: flex;
-        align-items: center;
+.form-control:-moz-placeholder {
+  color: #495057ad;
+}
 
-        &:before {
-          content: '';
-          left: 0;
-          top: 0;
-          position: absolute;
-          border: 1px solid #d9e0ea;;
-          width: 14px;
-          height: 14px;
-        }
+.form-control:-ms-input-placeholder {
+  color: #495057ad;
+}
 
-        span {
-          color: #778190;
-        }
-      }
+.form-control:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-control:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.form-control:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.form-control:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-control {
+  height: 45px;
+  border-radius: 0;
+  border-color: #e4eef9;
+  font-size: 13px;
+  font-family: $font-ubuntu;
+}
+
+.control-label {
+  font-size: 13px;
+  font-family: $font-ubuntu;
+}
+.textarea.form-control {
+  padding-top: 15px;
+}
+
+.input-group-append {
+  .btn {
+    border-color: #97a4b0;
+    background-color: #97a4b0;
+    color: white;
+
+    &:hover {
+      background: #00b3ff;
+      color: white;
+      border: 1px solid #00b3ff;
     }
+  }
+}
 
-    &:checked {
-      & + label {
+.btn {
+  display: inline-flex;
+  font-size: 13px;
+  height: 45px;
+  padding: 0 22px;
+  justify-content: center;
+  font-family: "Ubuntu", sans-serif;
+  align-items: center;
+  color: #333333;
+  text-transform: lowercase;
+  border: 1px solid #333333;
+  transition: .4s;
+  border-radius: 0;
 
-        &:before {
-          border-color: #02b1ff;
-        }
+  &:hover {
+    background: #00b3ff;
+    color: white;
+    border: 1px solid #00b3ff;
+  }
+}
 
-        &:after {
-          content: '';
-          left: 3px;
-          top: 3px;
-          position: absolute;
-          background-color: #02b1ff;
-          width: 8px;
-          height: 8px;
-        }
+button {
+  &:hover, &:focus {
+    outline: none;
+  }
+}
 
-        span {
-          color: #000;
-        }
-      }
-    }
+
+[type="checkbox"] {
+  vertical-align: top;
+  margin: 0;
+  width: 14px;
+  height: 14px;
+
+  &:not(checked) {
+    position: absolute;
+    opacity: 0;
 
     & + label {
-      cursor: pointer;
+      position: relative;
+      padding: 0 0 0 20px;
+
+      &:before {
+        content: '';
+        left: 0;
+        top: 0;
+        position: absolute;
+        border: 1px solid #d9e0ea;;
+        width: 14px;
+        height: 14px;
+      }
 
       span {
-        font-size: 14px;
-        line-height: 16px;
-        font-weight: 300;
-        padding-left: 3px;
-      }
-
-      svg, img {
-        width: 16px;
-        height: 16px;
+        color: #778190;
       }
     }
+  }
+
+  &:checked {
+    & + label {
+
+      &:before {
+        border-color: #fff;
+      }
+
+      &:after {
+        content: '';
+        left: 3px;
+        top: 3px;
+        position: absolute;
+        background-color: #fff;
+        width: 8px;
+        height: 8px;
+      }
+
+      span {
+        color: #000;
+      }
+    }
+  }
+
+  & + label {
+    cursor: pointer;
+
+    span {
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 300;
+      padding-left: 3px;
+    }
+
+    svg, img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+[type="radio"] {
+  vertical-align: top;
+  margin: 0;
+  width: 13px;
+  height: 13px;
+
+  &:not(checked) {
+    position: absolute;
+    opacity: 0;
+
+    & + label {
+      position: relative;
+      padding: 0 0 0 20px;
+
+      &:before {
+        content: '';
+        left: 0;
+        position: absolute;
+        border: 1px solid white;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  &:checked {
+
+    & + label {
+
+      &:after {
+        content: '';
+        left: 3px;
+        position: absolute;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  & + label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    height: 14px;
+    font-family: "Ubuntu", sans-serif;
   }
 }

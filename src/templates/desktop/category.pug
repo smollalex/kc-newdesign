@@ -17,8 +17,9 @@ html(lang='ru')
         section.category-list.sticky-top
           h3.category-list-title Женская обувь
           include shared/category-list
-          img(src="img/category-last-size-baner.jpg", alt="", style="width: 100%; margin-top: 30px;")
+          img(src="img/banners/category-last-size-baner.jpg", alt="", style="width: 100%; margin-top: 15px;")
         section.category-catalog
+          
           .category-filters.sticky-top
             .category-filters-top
               h1.category-filters-top-title Новинки 2018 зимней обуви Ara
@@ -69,8 +70,6 @@ html(lang='ru')
               include shared/cards
               include shared/cards
             .category-tags
-              .category-tags-title 
-                span Возможно Вы ищете
               .category-tags-content
                 a.tag-item(href='javascript:;') Кожаная
                 a.tag-item(href='javascript:;') Больших размеров
@@ -82,8 +81,6 @@ html(lang='ru')
               include shared/cards
               include shared/cards
             .category-tags
-              .category-tags-title 
-                span Возможно Вы ищете
               .category-tags-content
                 a.tag-item(href='javascript:;') Кожаная
                 a.tag-item(href='javascript:;') Больших размеров
@@ -95,6 +92,4 @@ html(lang='ru')
               include shared/cards
               include shared/cards
   include shared/footer
-  include shared/modal/product-preview
-  include shared/modal/pickup-point
-  include shared/modal/city
+  include shared/modal/allmodals

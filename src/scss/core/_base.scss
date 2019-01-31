@@ -22,42 +22,6 @@ body {
   margin-top: 4rem !important;
 }
 
-input::-webkit-input-placeholder {
-  color: #bbbbbb;
-  font-size: 12px;
-}
-
-input::-moz-placeholder {
-  color: #bbbbbb;
-  font-size: 12px;
-}
-
-input:-moz-placeholder {
-  color: #bbbbbb;
-  font-size: 12px;
-}
-
-input:-ms-input-placeholder {
-  color: #bbbbbb;
-  font-size: 12px;
-}
-
-input:focus::-webkit-input-placeholder {
-  color: transparent;
-}
-
-input:focus::-moz-placeholder {
-  color: transparent;
-}
-
-input:focus:-moz-placeholder {
-  color: transparent;
-}
-
-input:focus:-ms-input-placeholder {
-  color: transparent;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -70,13 +34,12 @@ a:hover, a:focus {
   border-color: inherit;
 }
 
-button {
-  &:hover, &:focus {
-    outline: none;
-  }
-}
+
 
 .flex-row {
   display: flex;
   flex-direction: row;
 }
+
+
+

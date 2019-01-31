@@ -10,20 +10,13 @@ const config =  {
 
   entry: {
     app: `./src/js/${version}/app.js`,
-    style: `./src/scss/${version}.scss`
   },
 
   output: {
     path: path.resolve(__dirname, `dist/${version}`),
     filename: 'js/[name].js'
   },
- 
-  devServer: {
-    contentBase: path.resolve(__dirname, `dist/${version}`),
-    overlay: true,
-    port: 9000
-  },
- 
+
   module: {
     rules: [
 
@@ -162,6 +155,26 @@ const config =  {
     new HtmlWebpackPlugin({
       filename: 'about-sale.html',
       template: `src/templates/${version}/about-sale.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'about-certification.html',
+      template: `src/templates/${version}/about-certification.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'about-promo.html',
+      template: `src/templates/${version}/about-promo.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'about-testimonials.html',
+      template: `src/templates/${version}/about-testimonials.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'fitting.html',
+      template: `src/templates/${version}/fitting.pug`
     }),
 
     

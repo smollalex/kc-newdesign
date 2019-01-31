@@ -30,6 +30,39 @@ function menuHover(){
 	});
 }
 
+function navbarIconsHover(){
+	$('.navbar-icons > .nav-item').hoverIntent({
+		over: function (){
+			if ($(this).find('.nav-wrap').length) {
+				$('.navbar-overlay').first().show();
+			}
+			$(this).addClass('active');
+		}, 
+		out: function (){
+			if ($(this).find('.nav-wrap').length) {
+				$('.navbar-overlay').first().hide();
+			}
+			$('.navbar-icons > .nav-item').removeClass('active');
+		},
+		timeout: 50
+	});
+}
+
+function getSigninType(){
+	$('[name="signin-radio"]').on('change', function(){
+		switch($(this).val()) {
+			case 'phone':
+				$('.form-group--phone').show();
+				$('.form-group--email').hide();
+				break;
+			case 'email':
+				$('.form-group--phone').hide();
+				$('.form-group--email').show();
+				break;
+		}
+	});
+}
+
 $(document).ready(function(){
 
 	// City panel
@@ -58,7 +91,12 @@ $(document).ready(function(){
 
 	// Menu hover intent
   menuHover();
-  
+	
+	// Change sign in type
+	getSigninType();
+
+	// Navbar-icons hover intent
+	navbarIconsHover();
 });
 
 
