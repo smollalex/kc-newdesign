@@ -33,47 +33,24 @@ html(lang='ru')
           .col-sm-9
             .about-promo
               .promo-item
-                .row
-                  .col-md-6
-                    .promo-item-content
-                      h3.promo-title Дополнительная скидка 10% на всю коллекцию по промокоду
-                        span DUTIKI10
-                      .promo-timer
-                        .promo-timer-content
-                          svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64', xml:space='preserve')
-                            path(d='M32,4.043c-7.29,0-13.939,2.804-18.924,7.394L8.834,7.196l2.828-2.828c0.586-0.586,0.588-1.536,0.002-2.122 s-1.537-0.585-2.123,0l-7.777,7.778c-0.586,0.586-0.586,1.536,0,2.122s1.535,0.585,2.121,0l2.828-2.828l4.242,4.243 c0.009,0.009,0.022,0.012,0.032,0.021C6.67,18.5,4.043,24.94,4.043,32c0,15.402,12.506,27.957,27.957,27.957 S59.957,47.402,59.957,32C59.957,16.549,47.402,4.043,32,4.043z M32,56.045C18.722,56.045,7.953,45.23,7.953,32 C7.953,18.722,18.722,7.955,32,7.955S56.045,18.722,56.045,32C56.045,45.278,45.278,56.045,32,56.045z M41.995,33.304 c0,1.11-0.869,1.979-1.979,1.979h-9.319c-1.11,0-1.979-0.869-1.979-1.979V19.833c0-1.111,0.869-1.98,1.979-1.98 s1.979,0.869,1.979,1.98v11.492h7.34C41.126,31.324,41.995,32.193,41.995,33.304z')
-                          span 2
-                            span д
-                          span 6
-                            span ч
-                          span 1
-                            span м
-                        span.promo-timer-title До окончания акции
-                      a.promo-more(href="category.html") Перейти к покупкам
-                  .col-md-6
-                    .banner.banner-2
-                      img(src="img/banners/trends/IMG_67021.jpg")
-              .promo-item
-                .row
-                  .col-md-6
-                    .promo-item-content
-                      h3.promo-title Дополнительная скадика 10% на обувь от Финских брендов
-                        span FIN10
-                      .promo-timer
-                        .promo-timer-content
-                          svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64', xml:space='preserve')
-                            path(d='M32,4.043c-7.29,0-13.939,2.804-18.924,7.394L8.834,7.196l2.828-2.828c0.586-0.586,0.588-1.536,0.002-2.122 s-1.537-0.585-2.123,0l-7.777,7.778c-0.586,0.586-0.586,1.536,0,2.122s1.535,0.585,2.121,0l2.828-2.828l4.242,4.243 c0.009,0.009,0.022,0.012,0.032,0.021C6.67,18.5,4.043,24.94,4.043,32c0,15.402,12.506,27.957,27.957,27.957 S59.957,47.402,59.957,32C59.957,16.549,47.402,4.043,32,4.043z M32,56.045C18.722,56.045,7.953,45.23,7.953,32 C7.953,18.722,18.722,7.955,32,7.955S56.045,18.722,56.045,32C56.045,45.278,45.278,56.045,32,56.045z M41.995,33.304 c0,1.11-0.869,1.979-1.979,1.979h-9.319c-1.11,0-1.979-0.869-1.979-1.979V19.833c0-1.111,0.869-1.98,1.979-1.98 s1.979,0.869,1.979,1.98v11.492h7.34C41.126,31.324,41.995,32.193,41.995,33.304z')
-                          span 2
-                            span д
-                          span 6
-                            span ч
-                          span 1
-                            span м
-                        span.promo-timer-title До окончания акции
-                      a.promo-more(href="") Перейти к покупкам
-                  .col-md-6
-                    .banner.banner-2
-                      img(src="img/banners/trends/IMG_02231.JPG")
+                .promo-item-banner
+                  .banner.banner-2
+                    img(src="img/banners/trends/IMG_67021.jpg")
+                .promo-item-content
+                  h3.promo-title Дополнительная скидка 10% на всю коллекцию по промокоду
+                    span DUTIKI10
+                  .promo-item-content-inner
+                    .promo-timer
+                      .promo-timer-numbers
+                        span 02
+                        span 06
+                        span 45
+                      .promo-timer-helpers
+                        span дня
+                        span часа
+                        span минут
+                    a.btn(href="category.html") Перейти к покупкам
+              
           .col-sm-3
             .chc-navbar
               include shared/chc-navbar-about

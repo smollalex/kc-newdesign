@@ -165,6 +165,10 @@
       flex-direction: column;
       transition: .4s;
 
+      &.active  {
+        border-color: $primary-second;
+      }
+
       @include media-breakpoint-down(md) {
         width: 100%;
       }
@@ -176,7 +180,6 @@
       &-header {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         border-bottom: 1px solid #e9eff7;
         padding-bottom: 15px;
         margin-top: -10px;
@@ -191,14 +194,32 @@
           }
         }
 
-        
-
         &-select {
-          border-bottom: 1px dashed $primary;
-          color: $primary;
+          align-items: center;
+          display: flex;
+          padding-right: 3px;
 
-          &:hover, &:focus {
-            color: $primary-second;
+          [type="radio"]:not(checked) {
+            & + label {
+              color: #96a4b4;
+              
+              &:before {
+                border-color: #96a4b4;
+              }
+            }
+            
+          }
+          [type="radio"]:checked {
+            & + label {
+              color: #333;
+    
+              &:before {
+                border-color: #0079bf;
+              }
+            }
+            & + label:after {
+              background-color: #0079bf;
+            }
           }
         }
       }
@@ -694,19 +715,29 @@
   }
 
   &-promo {
+    
     .promo {
 
       &-item {
-        padding: 0 0 0 65px;
         border: 1px solid #f4f9fe;
         margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+
+        &-banner {
+
+        }
 
         &-content {
           display: flex;
           flex-direction: column;
           height: 100%;
           justify-content: center;
-          padding-right: 50px;
+          padding: 0 50px;
+
+          &-inner {
+            display: flex;
+          }
         }
       }
       
@@ -714,7 +745,7 @@
         font-size: 19px;
         font-weight: 300;
         line-height: 25px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         
         span {
           font-weight: 500;
@@ -723,69 +754,65 @@
       }
 
       &-timer {
-        padding: 7px 0;
         display: flex;
         flex-direction: column;
-        width: 167px;
-        border: 1px solid #ff423c;
         text-align: center;
         justify-content: center;
+        margin-right: 10px;
 
-        &-title {
-          font-size: 11px;
-          color: #ff423c;
-        }
-
-        &-content {
+        &-numbers {
           display: flex;
-          align-items: center;
-          color: #ff423c;
-          font-size: 12px;
-          line-height: 16px;
-          height: 30px;
-          justify-content: center;
 
-          svg {
-            width: 16px;
-            height: 16px;
-            margin-right: 5px;
-            fill: #ff423c;
-          }
-
-          > span {
-            font-size: 18px;
-            color: #ff423c;
+          span {
+            font-size: 20px;
+            font-weight: 300;
+            color: #ffffff;
             display: flex;
             align-items: baseline;
-            border-right: 1px solid #ff423c91;
-            padding: 0 5px 0 0;
-            margin: 0 5px 0 0;
-
-            span {
-              margin-left: 2px;
-              font-size: 16px;
+            padding: 0 10px;
+            margin: 0 20px 0 0;
+            background-color: #01b2ff;
+            height: 45px;
+            line-height: 45px;
+            position: relative;
+  
+            &:before {
+              content: '';
+              position: absolute;
+              height: 23px;
+              width: 100%;
+              left: 0;
+              background-color: #ecf2f64d;
+            }
+            &:after {
+              color: #02b1ff;
+              content: ':';
+              position: absolute;
+              right: -12px;
             }
 
             &:last-child {
-              border: none;
+              &:after {
+                display: none;
+              }
             }
           }
         }
-      }
 
-      &-more {
-        font-family: Ubuntu;
-        border: 1px solid #01b2ff;
-        padding: 10px 20px;
-        color: #01b2ff;
-        font-size: 13px;
-        line-height: 20px;
-        margin: 15px auto 0 0;
-        transition: .4s;
+        &-helpers {
+          display: flex;
 
-        &:hover, &:focus {
-          background-color: #01b2ff;
-          color: #fff;
+          span {
+            width: 40px;
+            padding: 4px 0 0 0;
+            margin: 0 20px 0 0;
+            font-weight: 300;
+            opacity: 0.6;  
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
         }
       }
     }

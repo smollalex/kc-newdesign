@@ -1,5 +1,5 @@
 main {
-  @media (min-width: 1025px) {
+  /* @media (min-width: 1025px) {
     .col-lg-9 {
       flex: 0 0 80%;
       max-width: 80%;
@@ -8,7 +8,7 @@ main {
       flex: 0 0 20%;
       max-width: 20%;
     }
-  }
+  } */
 }
 
 .product {
@@ -138,22 +138,23 @@ main {
     }
 
     &-price {
-      font-size: 25px;
+      font-size: 20px;
+      font-weight: 300;
       line-height: 25px;
       margin: 20px 0 10px;
       display: flex;
       align-items: center;
 
       small {
-        font-size: 20px;
-        margin-left: 4px;
+        font-size: 0.8em;
+        margin-left: 2px;
       }
 
       .price {
         color: #333;
         display: flex;
-        align-items: baseline;;
-        margin-right: 7px;
+        align-items: baseline;
+        margin-right: 10px;
         position: relative;
 
         &--sale {
@@ -197,33 +198,31 @@ main {
           .price-badge-discount {
             filter: grayscale(1);
             opacity: .5;
-            display: none;
+
           }
         }
 
         &-badge-discount {
           color: #fff;
           display: inline-block;
-          height: 27px;
-          line-height: 26px;
+          height: 20px;
+          line-height: 20px;
           border-radius: 0 4px 4px 0;
           position: relative;
-          padding: 0 7px 0 0;
-          margin-left: 15px;
+          padding: 0 3px 0 0;
+          margin-left: 12px;
           font-size: 12px;
           font-family: Ubuntu;
-          position: absolute;
-          right: -43px;
-          top: -13px;
+          top: -4px;
 
           &:before {
             content: '';
-            width: 19px;
-            height: 19px;
+            width: 14px;
+            height: 14px;
             display: inline-block;
             position: absolute;
-            left: -10px;
-            top: 4px;
+            left: -7px;
+            top: 3px;
             border-top-left-radius: 6px;
             transform: rotate(-45deg);
             z-index: -1;
@@ -879,21 +878,21 @@ main {
           &-date {
             font-size: 13px;
             line-height: 19px;
-            color: #939292;
+            color: #777;
             display: flex;
             align-items: center;
           }
           &-point {
             font-size: 13px;
             line-height: 19px;
-            color: #939292;
+            color: #777;
             display: flex;
             align-items: center;
           }
           &-option {
             font-size: 13px;
             line-height: 19px;
-            color: #939292;
+            color: #777;
             display: flex;
             align-items: center;
 

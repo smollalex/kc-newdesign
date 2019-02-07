@@ -1,0 +1,158 @@
+doctype html
+html(lang='ru')
+  head
+    title Интернет магазин обуви
+    meta(charset='UTF-8')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  body
+    include shared/city-panel
+    include shared/header
+    include shared/nav
+    
+    section.breadcrumb
+      .container-fluid
+        ul.breadcrumb-list
+          li.breadcrumb-item.breadcrumb-item--home
+            a.breadcrumb-link(href='javascript:;')
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+              </svg>
+          li.breadcrumb-item
+            a.breadcrumb-link(href='javascript:;') Корзина
+    main.cart
+      .container-fluid
+        section.page-header
+          .steps
+            .item.active
+              span 1
+              div
+                h3 Корзина
+                p Убедитесь в правильном выборе
+            .item
+              span 2
+              div
+                h3 Доставка и оплата
+                p Выбирете способ доставки и оплаты
+            .item
+              span 3
+              div
+                h3 Оформление
+                p Введите контактные данные
+        .row
+          .col-lg-8
+            .cart-items
+              .cart-item
+                .cart-item-img
+                  img(src="img/category/1.jpg", alt="")
+                .cart-item-info
+                  .cart-item-info-title Кроссовки
+                    span Tommaris
+                  .cart-item-info-category Женская обувь
+                  .cart-item-info-articul Артикул:
+                    span 81203
+                  .cart-item-info-size Размер:
+                    span 44  
+                .cart-item-actions
+                  .input-group
+                    .input-group-prepend
+                      button#button-addon1.btn(type='button') -
+                    input.form-control(type='text', placeholder='', aria-label='', aria-describedby='button-addon1')
+                    .input-group-append
+                      button#button-addon2.btn(type='button') +
+                  a.btn.btn-block.mt-3(href="") Удалить
+                .cart-item-price
+                  .price.price--through
+                    b 5790
+                    small ₽
+                  .price.price--sale.price--through
+                    b 4990
+                    small ₽
+                    span.price-badge-discount -10%
+                  .price.price--promo
+                    b 2990
+                    small ₽
+                    span.price-badge-discount -33%
+              .cart-item
+                .cart-item-img
+                  img(src="img/category/2.jpg", alt="")
+                .cart-item-info
+                  .cart-item-info-title Кроссовки
+                    span Tommaris
+                  .cart-item-info-category Женская обувь
+                  .cart-item-info-articul Артикул:
+                    span 81203
+                  .cart-item-info-size Размер:
+                    span 44  
+                .cart-item-actions
+                  .input-group
+                    .input-group-prepend
+                      button#button-addon1.btn(type='button') -
+                    input.form-control(type='text', placeholder='', aria-label='', aria-describedby='button-addon1')
+                    .input-group-append
+                      button#button-addon2.btn(type='button') +
+                  a.btn.btn-block.mt-3(href="") Удалить
+                .cart-item-price
+                  .price.price
+                    b 5790
+                    small ₽
+              .cart-item
+                .cart-item-img
+                  img(src="img/category/3.jpg", alt="")
+                .cart-item-info
+                  .cart-item-info-title Кроссовки
+                    span Tommaris
+                  .cart-item-info-category Женская обувь
+                  .cart-item-info-articul Артикул:
+                    span 81203
+                  .cart-item-info-size Размер:
+                    span 44  
+                .cart-item-actions
+                  .input-group
+                    .input-group-prepend
+                      button#button-addon1.btn(type='button') -
+                    input.form-control(type='text', placeholder='', aria-label='', aria-describedby='button-addon1')
+                    .input-group-append
+                      button#button-addon2.btn(type='button') +
+                  a.btn.btn-block.mt-3(href="") Удалить
+                .cart-item-price
+                  .price.price
+                    b 5790
+                    small ₽
+           
+          .col-lg-4
+          
+            .sticky-top
+
+              .cart-promocode
+                span.cart-promocode-title Есть промокод?
+                .input-group
+                  input.form-control(type='text', placeholder='Промокод', aria-label='', aria-describedby='')
+                  .input-group-append
+                    button#button-addon2.btn(type='button') Применить
+
+              .cart-total
+                .cart-total-heading Данные о заказе
+                
+                .cart-total-items
+                  .cart-total-item
+                    span Товаров в корзине:
+                    span 
+                    span 3
+                  .cart-total-item
+                    span Итого без скидки:
+                    span
+                    span 12909 ₽
+                  .cart-total-item
+                    span Скидка:
+                    span
+                    span 1109 ₽
+                  .cart-total-item
+                    span ИТОГО К ОПЛАТЕ:
+                    span
+                    span 10109 ₽
+                a.btn(href="#") Далее
+  
+  include shared/footer
+  include shared/modal/allmodals

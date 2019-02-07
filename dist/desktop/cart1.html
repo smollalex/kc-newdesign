@@ -491,65 +491,129 @@
           <li class="breadcrumb-item breadcrumb-item--home"><a class="breadcrumb-link" href="javascript:;"><svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
 <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
 </svg></a></li>
-          <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">О компании</a></li>
-          <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Акции и скидки</a></li>
+          <li class="breadcrumb-item"><a class="breadcrumb-link" href="javascript:;">Корзина</a></li>
         </ul>
       </div>
     </section>
-    <main class="about">
+    <main class="cart">
       <div class="container-fluid">
         <section class="page-header">
-          <h1>Акции и скидки</h1>
-          <p>Для получения скидки по промокоду скопируйте его и вставьте в поле "Промокод" в корзине. Скидка распространяется на товары, представленные на данной странице. Акции действительны в указанные сроки проведения.</p>
+          <div class="steps">
+            <div class="item active"><span>1</span>
+              <div>
+                <h3>Корзина</h3>
+                <p>Убедитесь в правильном выборе</p>
+              </div>
+            </div>
+            <div class="item"><span>2</span>
+              <div>
+                <h3>Доставка и оплата</h3>
+                <p>Выбирете способ доставки и оплаты</p>
+              </div>
+            </div>
+            <div class="item"><span>3</span>
+              <div>
+                <h3>Оформление</h3>
+                <p>Введите контактные данные</p>
+              </div>
+            </div>
+          </div>
         </section>
         <div class="row">
-          <div class="col-sm-9">
-            <div class="about-promo">
-              <div class="promo-item">
-                <div class="promo-item-banner">
-                  <div class="banner banner-2"><img src="img/banners/trends/IMG_67021.jpg"></div>
+          <div class="col-lg-8">
+            <div class="cart-items">
+              <div class="cart-item">
+                <div class="cart-item-img"><img src="img/category/1.jpg" alt=""></div>
+                <div class="cart-item-info">
+                  <div class="cart-item-info-title">Кроссовки<span>Tommaris</span></div>
+                  <div class="cart-item-info-category">Женская обувь</div>
+                  <div class="cart-item-info-articul">Артикул:<span>81203</span></div>
+                  <div class="cart-item-info-size">Размер:<span>44  </span></div>
                 </div>
-                <div class="promo-item-content">
-                  <h3 class="promo-title">Дополнительная скидка 10% на всю коллекцию по промокоду<span>DUTIKI10</span></h3>
-                  <div class="promo-item-content-inner">
-                    <div class="promo-timer">
-                      <div class="promo-timer-numbers"><span>02</span><span>06</span><span>45</span></div>
-                      <div class="promo-timer-helpers"><span>дня</span><span>часа</span><span>минут</span></div>
-                    </div><a class="btn" href="category.html">Перейти к покупкам</a>
-                  </div>
+                <div class="cart-item-actions">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <button class="btn" id="button-addon1" type="button">-</button>
+                    </div>
+                    <input class="form-control" type="text" placeholder="" aria-label="" aria-describedby="button-addon1">
+                    <div class="input-group-append">
+                      <button class="btn" id="button-addon2" type="button">+</button>
+                    </div>
+                  </div><a class="btn btn-block mt-3" href="">Удалить</a>
+                </div>
+                <div class="cart-item-price">
+                  <div class="price price--through"><b>5790</b><small>₽</small></div>
+                  <div class="price price--sale price--through"><b>4990</b><small>₽</small><span class="price-badge-discount">-10%</span></div>
+                  <div class="price price--promo"><b>2990</b><small>₽</small><span class="price-badge-discount">-33%</span></div>
+                </div>
+              </div>
+              <div class="cart-item">
+                <div class="cart-item-img"><img src="img/category/2.jpg" alt=""></div>
+                <div class="cart-item-info">
+                  <div class="cart-item-info-title">Кроссовки<span>Tommaris</span></div>
+                  <div class="cart-item-info-category">Женская обувь</div>
+                  <div class="cart-item-info-articul">Артикул:<span>81203</span></div>
+                  <div class="cart-item-info-size">Размер:<span>44  </span></div>
+                </div>
+                <div class="cart-item-actions">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <button class="btn" id="button-addon1" type="button">-</button>
+                    </div>
+                    <input class="form-control" type="text" placeholder="" aria-label="" aria-describedby="button-addon1">
+                    <div class="input-group-append">
+                      <button class="btn" id="button-addon2" type="button">+</button>
+                    </div>
+                  </div><a class="btn btn-block mt-3" href="">Удалить</a>
+                </div>
+                <div class="cart-item-price">
+                  <div class="price price"><b>5790</b><small>₽</small></div>
+                </div>
+              </div>
+              <div class="cart-item">
+                <div class="cart-item-img"><img src="img/category/3.jpg" alt=""></div>
+                <div class="cart-item-info">
+                  <div class="cart-item-info-title">Кроссовки<span>Tommaris</span></div>
+                  <div class="cart-item-info-category">Женская обувь</div>
+                  <div class="cart-item-info-articul">Артикул:<span>81203</span></div>
+                  <div class="cart-item-info-size">Размер:<span>44  </span></div>
+                </div>
+                <div class="cart-item-actions">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <button class="btn" id="button-addon1" type="button">-</button>
+                    </div>
+                    <input class="form-control" type="text" placeholder="" aria-label="" aria-describedby="button-addon1">
+                    <div class="input-group-append">
+                      <button class="btn" id="button-addon2" type="button">+</button>
+                    </div>
+                  </div><a class="btn btn-block mt-3" href="">Удалить</a>
+                </div>
+                <div class="cart-item-price">
+                  <div class="price price"><b>5790</b><small>₽</small></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="chc-navbar">
-<h3>Компания</h3>
-<ul class="nav">
-  <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
-  <li class="nav-item"><a class="nav-link" href="about-certification.html">Сертификаты</a></li>
-  <li class="nav-item"><a class="nav-link" href="about-news.html">Тренды и новости</a></li>
-  <li class="nav-item"><a class="nav-link" href="about-promo.html">Акции и скидки</a></li>
-  <li class="nav-item"><a class="nav-link" href="about-sale.html">Система скидок</a></li>
-  <li class="nav-item"><a class="nav-link" href="about-testimonials.html">Отзывы</a></li>
-  <li class="nav-item"><a class="nav-link" href="about-partners.html">Наши партнёры</a></li>
-  <li class="nav-item"><a class="nav-link" href="about-offer.html">Оферта</a></li>
-  <li class="nav-item"><a class="nav-link" href="about-vacation.html">Вакансии</a></li>
-  <li class="nav-item"><a class="nav-link" href="about-contacts.html">Контакты</a></li>
-</ul>
-<h3>Для новых клиентов</h3>
-<ul class="nav">
-  <li class="nav-item"><a class="nav-link" href="#">Как зарегистрироваться</a></li>
-  <li class="nav-item"><a class="nav-link" href="#">Как вернуть товар</a></li>
-  <li class="nav-item"><a class="nav-link" href="#">Как сделать заказ</a></li>
-  <li class="nav-item"><a class="nav-link" href="#">Как примерить обувь</a></li>
-</ul>
-<h3>Доставка и оплата</h3>
-<ul class="nav">
-  <li class="nav-item"><a class="nav-link" href="delivery.html">Доставка</a></li>
-  <li class="nav-item"><a class="nav-link" href="payment.html">Оплата</a></li>
-  <li class="nav-item"><a class="nav-link" href="refund.html">Возврат товара</a></li>
-  <li class="nav-item"><a class="nav-link" href="tracking.html">Отслеживание заказа</a></li>
-</ul>
+          <div class="col-lg-4">
+            <div class="sticky-top">
+              <div class="cart-promocode"><span class="cart-promocode-title">Есть промокод?</span>
+                <div class="input-group">
+                  <input class="form-control" type="text" placeholder="Промокод" aria-label="" aria-describedby="">
+                  <div class="input-group-append">
+                    <button class="btn" id="button-addon2" type="button">Применить</button>
+                  </div>
+                </div>
+              </div>
+              <div class="cart-total">
+                <div class="cart-total-heading">Данные о заказе</div>
+                <div class="cart-total-items">
+                  <div class="cart-total-item"><span>Товаров в корзине:</span><span> </span><span>3</span></div>
+                  <div class="cart-total-item"><span>Итого без скидки:</span><span></span><span>12909 ₽</span></div>
+                  <div class="cart-total-item"><span>Скидка:</span><span></span><span>1109 ₽</span></div>
+                  <div class="cart-total-item"><span>ИТОГО К ОПЛАТЕ:</span><span></span><span>10109 ₽</span></div>
+                </div><a class="btn" href="#">Далее</a>
+              </div>
             </div>
           </div>
         </div>

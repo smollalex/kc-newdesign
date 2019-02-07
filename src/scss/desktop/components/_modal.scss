@@ -348,4 +348,35 @@
       background-color: $primary-second;
     }
   }
+
+  // Order
+  &-order {
+    .modal-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        max-width: 70px;
+        margin: auto;
+      }
+    }
+    .modal-title {
+      margin: 10px 0;
+    }
+    p {
+      line-height: 22px;
+      color: #333;
+
+      a {
+        color: #0079be;
+        border-bottom: 1px dashed;
+      }
+    }
+    
+    .btn {
+      margin-top: 20px;
+    }
+  }
+
 }

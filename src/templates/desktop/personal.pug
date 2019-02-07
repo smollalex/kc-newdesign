@@ -1,0 +1,46 @@
+doctype html
+html(lang='ru')
+  head
+    title Интернет магазин обуви
+    meta(charset='UTF-8')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  body
+    include shared/city-panel
+    include shared/header
+    include shared/nav
+    
+    section.breadcrumb
+      .container-fluid
+        ul.breadcrumb-list
+          li.breadcrumb-item.breadcrumb-item--home
+            a.breadcrumb-link(href='javascript:;')
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+              </svg>
+          li.breadcrumb-item
+            a.breadcrumb-link(href='javascript:;') Личный кабинет
+    
+    main.tracking
+      .container-fluid
+        section.page-header
+          h1 Личный кабинет
+        .row
+          .col-sm-3
+            ul.nav.nav-tabs.flex-column
+              li.nav-item
+                a.nav-link.active(id="personal-orders-tab", data-toggle="tab", href="#personal-orders", role="tab", aria-controls="personal-orders", aria-selected="true") Заказы
+              li.nav-item
+                a.nav-link(id="personal-profile-tab", data-toggle="tab", href="#personal-profile", role="tab", aria-controls="personal-profile", aria-selected="false") Профиль
+              li.nav-item
+                a.nav-link(id="personal-subscribe-tab", data-toggle="tab", href="#personal-subscribe", role="tab", aria-controls="personal-subscribe", aria-selected="false") Подписка
+              
+          .col-sm-9
+              #myTabContent.tab-content
+                #personal-orders.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='personal-orders-tab') 1
+                #personal-profile.tab-pane.fade(role='tabpanel', aria-labelledby='personal-profile-tab') 2
+                #personal-subscribe.tab-pane.fade(role='tabpanel', aria-labelledby='personal-subscribe-tab') 3
+
+  include shared/footer
+  include shared/modal/allmodals

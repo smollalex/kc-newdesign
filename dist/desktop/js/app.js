@@ -25039,14 +25039,14 @@ function menuHover() {
 				$('.navbar-overlay').first().show();
 			}
 			$(this).addClass('active');
-			//$('body').addClass('menu--opened');
+			$('body').addClass('menu--opened');
 		},
 		out: function out() {
 			if ($(this).find('.nav-wrap').length) {
 				$('.navbar-overlay').first().hide();
 			}
 			$('.navbar-nav > .nav-item').removeClass('active');
-			//$('body').removeClass('menu--opened');
+			$('body').removeClass('menu--opened');
 		},
 		timeout: 50
 	});
@@ -25059,12 +25059,14 @@ function navbarIconsHover() {
 				$('.navbar-overlay').first().show();
 			}
 			$(this).addClass('active');
+			$('body').addClass('menu--opened');
 		},
 		out: function out() {
 			if ($(this).find('.nav-wrap').length) {
 				$('.navbar-overlay').first().hide();
 			}
 			$('.navbar-icons > .nav-item').removeClass('active');
+			$('body').removeClass('menu--opened');
 		},
 		timeout: 50
 	});
