@@ -25,7 +25,8 @@
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.14.5",
     "select2": "^4.0.6-rc.1",
-    "starrr": "^2.0.4"
+    "starrr": "^2.0.4",
+    "waypoints": "^4.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

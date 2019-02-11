@@ -714,110 +714,6 @@
     }
   }
 
-  &-promo {
-    
-    .promo {
-
-      &-item {
-        border: 1px solid #f4f9fe;
-        margin-bottom: 40px;
-        display: flex;
-        align-items: center;
-
-        &-banner {
-
-        }
-
-        &-content {
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          justify-content: center;
-          padding: 0 50px;
-
-          &-inner {
-            display: flex;
-          }
-        }
-      }
-      
-      &-title {
-        font-size: 19px;
-        font-weight: 300;
-        line-height: 25px;
-        margin-bottom: 30px;
-        
-        span {
-          font-weight: 500;
-          padding-left: 6px;
-        }
-      }
-
-      &-timer {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        margin-right: 10px;
-
-        &-numbers {
-          display: flex;
-
-          span {
-            font-size: 20px;
-            font-weight: 300;
-            color: #ffffff;
-            display: flex;
-            align-items: baseline;
-            padding: 0 10px;
-            margin: 0 20px 0 0;
-            background-color: #01b2ff;
-            height: 45px;
-            line-height: 45px;
-            position: relative;
-  
-            &:before {
-              content: '';
-              position: absolute;
-              height: 23px;
-              width: 100%;
-              left: 0;
-              background-color: #ecf2f64d;
-            }
-            &:after {
-              color: #02b1ff;
-              content: ':';
-              position: absolute;
-              right: -12px;
-            }
-
-            &:last-child {
-              &:after {
-                display: none;
-              }
-            }
-          }
-        }
-
-        &-helpers {
-          display: flex;
-
-          span {
-            width: 40px;
-            padding: 4px 0 0 0;
-            margin: 0 20px 0 0;
-            font-weight: 300;
-            opacity: 0.6;  
-
-            &:last-child {
-              margin-right: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-
   &-sale {
     h3 {
       font-size: 23px;
@@ -1043,6 +939,114 @@
 
       p {
         margin-right: 10px;
+      }
+    }
+  }
+}
+
+.promo {
+
+  &-item {
+    border: 1px solid #f4f9fe;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+    &-banner {
+      .banner {
+        height: 200px;
+
+        img {
+          width: 300px;
+          height: auto;
+        }
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center;
+      padding: 0 50px;
+
+      &-inner {
+        display: flex;
+      }
+    }
+  }
+  
+  &-title {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 30px;
+    
+    span {
+      font-weight: 500;
+      padding-left: 6px;
+    }
+  }
+
+  &-timer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-right: 10px;
+
+    &-numbers {
+      display: flex;
+
+      span {
+        font-size: 20px;
+        font-weight: 300;
+        color: #ffffff;
+        display: flex;
+        align-items: baseline;
+        padding: 0 10px;
+        margin: 0 20px 0 0;
+        background-color: #01b2ff;
+        height: 45px;
+        line-height: 45px;
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          height: 23px;
+          width: 100%;
+          left: 0;
+          background-color: #ecf2f64d;
+        }
+        &:after {
+          color: #02b1ff;
+          content: ':';
+          position: absolute;
+          right: -12px;
+        }
+
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-helpers {
+      display: flex;
+
+      span {
+        width: 40px;
+        padding: 4px 0 0 0;
+        margin: 0 20px 0 0;
+        font-weight: 300;
+        opacity: 0.6;  
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }

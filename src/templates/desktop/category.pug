@@ -14,12 +14,30 @@ html(lang='ru')
     
     main.category
       .container-fluid
-        section.category-list.sticky-top
+        section.category-list
           h3.category-list-title Женская обувь
           include shared/category-list
           img(src="img/banners/category-last-size-baner.jpg", alt="", style="width: 100%; margin-top: 15px;")
         section.category-catalog
-          
+          .promo-item
+            .promo-item-banner
+              .banner.banner-2
+                img(src="img/banners/trends/IMG_2766.jpg")
+            .promo-item-content
+              h3.promo-title Дополнительная скидка 10% на всю коллекцию по промокоду
+                span DUTIKI10
+              .promo-item-content-inner
+                .promo-timer
+                  .promo-timer-numbers
+                    span 02
+                    span 06
+                    span 45
+                  .promo-timer-helpers
+                    span дня
+                    span часа
+                    span минут
+                a.btn(href="category.html") Применить промокод: 
+                  span.up KROSS300
           .category-filters.sticky-top
             .category-filters-top
               h1.category-filters-top-title Новинки 2018 зимней обуви Ara
@@ -90,6 +108,7 @@ html(lang='ru')
                 a.tag-item(href='javascript:;') Итальянская
             .category-content-chunk
               include shared/cards
-              include shared/cards
+
+
   include shared/footer
   include shared/modal/allmodals

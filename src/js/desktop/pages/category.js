@@ -20,22 +20,55 @@ $(document).ready(function(){
 	});
 
 
-  /**
-   * 
-   */
-  function getStickyCategoryList(){
-    let windowWidth = $(window).width(),
-        headerHeight = $('header').outerHeight() + $('nav').outerHeight(),
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-    if (scrollTop >= headerHeight) {
-      $('nav.navbar').addClass('sticky-top');
-    } else {
-      $('nav.navbar').removeClass('sticky-top');
-    }
-  }
 
   
+  var lastScrollTop = 0;
+  const header = $('.header').outerHeight(true) + $('.navbar').outerHeight(true) + $('.breadcrumb').outerHeight(true),
+        footer = $('footer').outerHeight(true),
+        category_list = $('.category-list').outerHeight(true),
+        category_filters = $('.category-filters').outerHeight(true),
+        category_content = $('.category-content').outerHeight(true),
+        main = $('main').outerHeight(true),
+        window_height =$(window).height();
+
+  $(window).on('scroll', function(){
+    var st = $(this).scrollTop();
+    console.log(st);
+
+    
+    $('.category-list').removeClass('position-fixed');
+
+    if (st > lastScrollTop){
+      
+      if (st >=  header + category_list - window_height) {
+        $('.category-list').addClass('position-fixed');
+        $('.category-list').css({'bottom': '15px', 'top': 'auto'});
+      }
+
+      if (st >= (header + main) - window_height) {
+        $('.category-list').removeClass('position-fixed');
+        $('.category-list').css({'margin-top': `${main - category_list - 17}px`});
+      }
+    
+    } else {
+     /*  $('.category-list').removeClass('position-fixed');
+      $('.category-list').css({'top': 'auto', 'bottom': 'auto', 'margin-top': `${main - category_list - 17}px`});
+       */
+      /* if (st <= (window_height - footer - (main - category_list))) {
+        $('.category-list').addClass('position-fixed');
+        $('.category-list').css({'top': '15px', 'bottom': 'auto', 'margin-top': '0'});
+      }
+      if (st <= header) {
+        $('.category-list').removeClass('position-fixed');
+        
+      } */
+    }
+
+    lastScrollTop = st;
+  });
+
+  
+
   /**
    * 
    * @param {*} i 
