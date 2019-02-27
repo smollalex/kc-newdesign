@@ -49,9 +49,8 @@ html(lang='ru')
                 h3 Оформление
                 p Введите контактные данные
         .row
-          .col-lg-8
-           
-             .cart-contacts
+          .col-lg-9
+            .cart-contacts
               .form-horizontal
                 .form-group.row
                   label.col-form-label.col-lg-3(for='') Ф.И.О. 
@@ -94,49 +93,43 @@ html(lang='ru')
                   label.col-form-label.col-lg-3(for='') Комментарий к заказу
                   .col-lg-8
                     textarea.form-control(name='contact-comment', placeholder='', rows='5', cols='')
-          
-          
-          .col-lg-4
-          
-            .sticky-top
+          .col-lg-3
+            .cart-total.sticky-top
+              .cart-total-heading Данные о заказе
+              .cart-total-items
+                .cart-total-item
+                  span Товаров в корзине:
+                  span 
+                  span 3
+                .cart-total-item
+                  span Итого без скидки:
+                  span
+                  span 12909 ₽
+                .cart-total-item
+                  span Скидка:
+                  span
+                  span 1109 ₽
+                .cart-total-item
+                  span Доставка (Курьером)
+                  span
+                  span 200 ₽
+                .cart-total-item-text
+                  p г. Омск, Омская обл.
+                  p На Фрунзе (ул. Фрунзе, 101, оф. 32)
+                .cart-total-item
+                  span ИТОГО К ОПЛАТЕ:
+                  span
+                  span 10109 ₽
 
-              .cart-total
-                .cart-total-heading Данные о заказе
-                
-                .cart-total-items
-                  .cart-total-item
-                    span Товаров в корзине:
-                    span 
-                    span 3
-                  .cart-total-item
-                    span Итого без скидки:
-                    span
-                    span 12909 ₽
-                  .cart-total-item
-                    span Скидка:
-                    span
-                    span 1109 ₽
-                  .cart-total-item
-                    span Доставка (Курьером)
-                    span
-                    span 200 ₽
-                  .cart-total-item-text
-                    p г. Омск, Омская обл.
-                    p На Фрунзе (ул. Фрунзе, 101, оф. 32)
-                  .cart-total-item
-                    span ИТОГО К ОПЛАТЕ:
-                    span
-                    span 10109 ₽
+              a.btn.mb-3(href="#") Оформить заказ
 
-                a.btn(href="#") Оформить заказ
-
-                .cart-total-accept
-                  input#accept-by-order(name='accept-by-order', type='checkbox', checked)
-                  label(for='accept-by-order') Нажимая на кнопку «Оформить заказ», вы принимаете условия 
-                    a(href="") Публичной оферты
-                .cart-total-accept
-                  input#subscribe-by-order(name='subscribe-by-order', type='checkbox', checked)
-                  label(for='subscribe-by-order') Подписка на рассылку всех акций и уникальных предложений
+              .cart-total-accept
+                input#accept-by-order(name='accept-by-order', type='checkbox', checked)
+                label(for='accept-by-order') Нажимая на кнопку «Оформить заказ», вы принимаете условия 
+                  a(href="") Публичной оферты
+              .cart-total-accept
+                input#subscribe-by-order(name='subscribe-by-order', type='checkbox', checked)
+                label(for='subscribe-by-order') Подписка на рассылку всех акций и уникальных предложений
   
   include shared/footer
   include shared/modal/allmodals

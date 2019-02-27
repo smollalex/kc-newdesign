@@ -45,7 +45,7 @@ html(lang='ru')
                 h3 Оформление
                 p Введите контактные данные
         .row
-          .col-lg-8
+          .col-lg-9
             .cart-delivery.delivery
               .delivery-type
                 .delivery-type-header
@@ -130,37 +130,32 @@ html(lang='ru')
                       li.list-no Частичный выкуп не доступен
                         a(href="#") ?
                       li.list-warning Почта России взимает дополнительную комиссию за денежный перевод
+          .col-lg-3
+            .cart-total.sticky-top
+              .cart-total-heading Данные о заказе
+              .cart-total-items
+                .cart-total-item
+                  span Товаров в корзине:
+                  span 
+                  span 3
+                .cart-total-item
+                  span Итого без скидки:
+                  span
+                  span 12909 ₽
+                .cart-total-item
+                  span Скидка:
+                  span
+                  span 1109 ₽
+                .cart-total-item
+                  span Доставка (Курьером)
+                  span
+                  span 200 ₽
+                .cart-total-item
+                  span ИТОГО К ОПЛАТЕ:
+                  span
+                  span 10109 ₽
 
-          .col-lg-4
-          
-            .sticky-top
-
-              .cart-total
-                .cart-total-heading Данные о заказе
-                
-                .cart-total-items
-                  .cart-total-item
-                    span Товаров в корзине:
-                    span 
-                    span 3
-                  .cart-total-item
-                    span Итого без скидки:
-                    span
-                    span 12909 ₽
-                  .cart-total-item
-                    span Скидка:
-                    span
-                    span 1109 ₽
-                  .cart-total-item
-                    span Доставка (Курьером)
-                    span
-                    span 200 ₽
-                  .cart-total-item
-                    span ИТОГО К ОПЛАТЕ:
-                    span
-                    span 10109 ₽
-
-                a.btn(href="#") Далее
+              a.btn(href="#") Далее
   
   include shared/footer
   include shared/modal/allmodals

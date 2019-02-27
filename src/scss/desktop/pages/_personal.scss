@@ -1,0 +1,243 @@
+.personal {
+  padding-bottom: 50px;
+
+  h1 {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: normal;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e3eff7;
+    text-align: center;
+    margin-top: -30px;
+    color: #0079bf;
+  }
+
+  .nav-tabs {
+    border: none;
+    border-right: 1px solid #e3eff7;
+
+    
+    .nav-item {
+
+      
+      &:last-child {
+        .nav-link {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .nav-link {
+      padding: 0;
+      border: none;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+      align-items: center;
+      display: flex;
+
+      &-icon {
+        min-width: 50px;
+        height: 50px;
+        border: 1px solid #e9eff7;
+        border-radius: 100%;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          fill: $primary;
+        }
+      }
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+
+        span {
+          &:first-child {
+
+          }
+          &:last-child {
+            font-size: 14px;
+            font-weight: 300;
+            opacity: 0.6;
+          }
+        }
+      }
+      &.active {
+        border: none;
+        
+        .nav-link-icon {
+          background-color: #01b2ff;
+          border: #02b1ff;
+
+          svg {
+            fill: #fff;
+          }
+        }
+        .nav-link-text {
+          span {
+            &:first-child {
+              color: #01b2ff;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .tab-pane {
+    
+  }
+
+  table {
+    thead {
+      background-color: #f5f9fe;
+      
+      th {
+        vertical-align: bottom;
+        border: none;
+        border-bottom: 2px solid #e3eff7;
+        color: #99adbb;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 20px 0 15px 12px;
+
+        &:first-child {
+          padding-left: 20px;
+        }
+      }
+    }
+
+    tbody {
+
+      tr {
+        cursor: pointer;
+
+        &:hover, &:focus {
+          background-color: #f5f9fe;
+        }
+        
+        &:first-child {
+          cursor: default;
+
+          &:hover, &:focus {
+            background: none;
+          }
+
+          td {
+            border: none;
+          }
+        }
+      }
+
+      td {
+        border: none;
+        border-bottom: 1px solid #f5f9fe;
+
+        &.status-delivery {
+          color: $primary-second;
+        }
+        &.status-wait {
+          color: #f5a005;
+        }
+        &.status-done {
+          color: #31c319;
+        }
+        &.status-archive {
+          color: #919294;
+        }
+        &.status-canceled {
+          color: #e53366;
+        }
+
+        &:first-child {
+          padding-left: 20px;
+        }
+
+        a {
+          font-family: Ubuntu;
+          font-size: 13px;
+          border-bottom: 1px dashed;
+          color: $primary;
+          font-weight: 400;
+          padding-bottom: 3px;
+
+          &:hover, &:focus {
+            color: $primary-second;
+            border-color: $primary-second;
+          }
+        }
+      }
+    }
+  }
+
+  &-discount-card {
+    
+    &-text {
+      padding-left: 40px;
+      margin-top: -20px;
+      
+      .item {
+        display: flex;
+        align-items: center;
+        
+        span {
+
+          &:first-child {
+            line-height: 24px;
+            min-width: 100px;
+            color: #96a4b0;
+            font-weight: 300;
+          }
+          &:last-child {
+            color: #000;
+            font-size: 17px;
+          } 
+        }
+      }
+    }
+  }
+
+  &-form {
+    
+    .col-form-label {
+      line-height: 45px;
+      padding-top: 0;
+      padding-bottom: 0;
+      text-align: right;
+      color: #96a4b0;
+      font-weight: 300;
+    }
+    .input-group {
+      .btn {
+        padding: 12px;
+  
+        svg {
+          fill: #ffffff;
+          width: 20px;
+        }
+      }
+    }
+    [type="checkbox"]:not(checked) + label:before {
+      border-color: #d9e0ea;
+    }
+    [type="checkbox"]:checked + label:before {
+      border-color: $primary-second;
+    }
+    [type="checkbox"]:checked + label:after {
+      background-color: $primary-second;
+    }
+  }
+
+  &-subscribe {
+    padding: 20px 30px;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}

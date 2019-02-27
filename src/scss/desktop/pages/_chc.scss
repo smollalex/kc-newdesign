@@ -951,7 +951,8 @@
     display: flex;
     align-items: center;
     width: 100%;
-    
+    margin-bottom: 30px;
+
     &-banner {
       .banner {
         height: 200px;
@@ -987,7 +988,11 @@
       padding-left: 6px;
     }
   }
-
+  &-disabled {
+    opacity: 0.6;
+    font-size: 15px;
+    font-weight: 300;
+  }
   &-timer {
     display: flex;
     flex-direction: column;
@@ -1006,7 +1011,7 @@
         align-items: baseline;
         padding: 0 10px;
         margin: 0 20px 0 0;
-        background-color: #01b2ff;
+        background-color: #ff423c;
         height: 45px;
         line-height: 45px;
         position: relative;

@@ -41,7 +41,7 @@ html(lang='ru')
                 h3 Оформление
                 p Введите контактные данные
         .row
-          .col-lg-8
+          .col-lg-9
             .cart-items
               .cart-item
                 .cart-item-img
@@ -120,39 +120,33 @@ html(lang='ru')
                   .price.price
                     b 5790
                     small ₽
-           
-          .col-lg-4
-          
-            .sticky-top
-
-              .cart-promocode
-                span.cart-promocode-title Есть промокод?
-                .input-group
-                  input.form-control(type='text', placeholder='Промокод', aria-label='', aria-describedby='')
-                  .input-group-append
-                    button#button-addon2.btn(type='button') Применить
-
-              .cart-total
-                .cart-total-heading Данные о заказе
-                
-                .cart-total-items
-                  .cart-total-item
-                    span Товаров в корзине:
-                    span 
-                    span 3
-                  .cart-total-item
-                    span Итого без скидки:
-                    span
-                    span 12909 ₽
-                  .cart-total-item
-                    span Скидка:
-                    span
-                    span 1109 ₽
-                  .cart-total-item
-                    span ИТОГО К ОПЛАТЕ:
-                    span
-                    span 10109 ₽
-                a.btn(href="#") Далее
+          .col-lg-3
+            .cart-promocode
+              span.cart-promocode-title Есть промокод?
+              .input-group
+                input.form-control(type='text', placeholder='Промокод', aria-label='', aria-describedby='')
+                .input-group-append
+                  button#button-addon2.btn(type='button') Применить
+            .cart-total.sticky-top
+              .cart-total-heading Данные о заказе
+              .cart-total-items
+                .cart-total-item
+                  span Товаров в корзине:
+                  span 
+                  span 3
+                .cart-total-item
+                  span Итого без скидки:
+                  span
+                  span 12909 ₽
+                .cart-total-item
+                  span Скидка:
+                  span
+                  span 1109 ₽
+                .cart-total-item
+                  span ИТОГО К ОПЛАТЕ:
+                  span
+                  span 10109 ₽
+              a.btn(href="#") Далее
   
   include shared/footer
   include shared/modal/allmodals

@@ -138,12 +138,9 @@ main {
     }
 
     &-price {
-      font-size: 20px;
-      font-weight: 300;
-      line-height: 25px;
       margin: 20px 0 10px;
       display: flex;
-      align-items: center;
+      align-items: baseline;
 
       small {
         font-size: 0.8em;
@@ -156,6 +153,9 @@ main {
         align-items: baseline;
         margin-right: 10px;
         position: relative;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 25px;
 
         &--sale {
           .price-badge-discount {
@@ -182,7 +182,8 @@ main {
         }
         &--through {
           color: #7b808473;
-          
+          font-size: 18px;
+
           b {
             position: relative;
             &:before {
@@ -191,7 +192,7 @@ main {
               border-top: 1px solid;
               position: absolute;
               width: 100%;
-              top: 55%;
+              top: 49%;
             }
           }
 
