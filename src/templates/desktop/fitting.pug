@@ -24,13 +24,19 @@ html(lang='ru')
             a.breadcrumb-link(href='javascript:;') Примерка перед покупкой
     
     main.fitting
+      section.page-header
+        h1 Примерка перед покупкой
+      
       .container-fluid
-        section.page-header
-          h1 Воспользуйтесь  услугой «Доставка с примеркой»
-          p Если вы сомневаетесь в размере, либо не можете сделать выбор между моделями
+ 
         .row
+          .col-sm-3
+            .chc-navbar
+              include shared/chc-navbar-help
+              include shared/chc-navbar-delivery
+              include shared/chc-navbar-about
+
           .col-sm-9
-            
             .fitting-item
               .fitting-item-header
                 .fitting-item-header-icon
@@ -69,10 +75,6 @@ html(lang='ru')
                 p Не подошедшие товары оставьте курьеру, либо сотруднику выдачи
                 
 
-          .col-sm-3
-            .chc-navbar
-              include shared/chc-navbar-help
-              include shared/chc-navbar-delivery
-              include shared/chc-navbar-about
+          
   include shared/footer
   include shared/modal/allmodals

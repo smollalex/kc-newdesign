@@ -37,13 +37,18 @@
   font-size: 13px;
   font-family: $font-ubuntu;
 }
-
-.control-label {
-  font-size: 13px;
-  font-family: $font-ubuntu;
-}
 .textarea.form-control {
   padding-top: 15px;
+}
+
+
+.col-form-label {
+  padding: 0;
+  color: #96a4b0;
+  text-align: right;
+  line-height: 45px;
+  padding: 0;
+  padding-right: 10px;
 }
 
 .input-group-append, .input-group-prepend {
@@ -73,22 +78,18 @@
   border: 1px solid #333333;
   transition: .4s;
   border-radius: 0;
+  background: none;
 
-  &:hover {
+  &:hover, &:focus {
     background: #00b3ff;
     color: white;
     border: 1px solid #00b3ff;
+    outline: none;
   }
 
   .up {
     text-transform: uppercase;
     padding: 0 5px;
-  }
-}
-
-button {
-  &:hover, &:focus {
-    outline: none;
   }
 }
 
@@ -99,59 +100,14 @@ button {
   width: 14px;
   height: 14px;
 
-  &:not(checked) {
-    position: absolute;
-    opacity: 0;
-
-    & + label {
-      position: relative;
-      padding: 0 0 0 20px;
-
-      &:before {
-        content: '';
-        left: 0;
-        top: 0;
-        position: absolute;
-        border: 1px solid #d9e0ea;;
-        width: 14px;
-        height: 14px;
-      }
-
-      span {
-        color: #778190;
-      }
-    }
-  }
-
-  &:checked {
-    & + label {
-
-      &:before {
-        border-color: #fff;
-      }
-
-      &:after {
-        content: '';
-        left: 3px;
-        top: 3px;
-        position: absolute;
-        background-color: #fff;
-        width: 8px;
-        height: 8px;
-      }
-
-      span {
-        color: #000;
-      }
-    }
-  }
-
   & + label {
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    height: 14px;
+    font: 14px/18px $font-ubuntu;
 
     span {
-      font-size: 14px;
-      line-height: 16px;
       font-weight: 300;
       padding-left: 3px;
     }
@@ -159,6 +115,57 @@ button {
     svg, img {
       width: 16px;
       height: 16px;
+    }
+  }
+
+  &:not(checked) {
+    position: absolute;
+    opacity: 0;
+
+    & + label {
+      position: relative;
+      padding: 0 0 0 20px;
+      line-height: normal;
+      color: #00000078;
+
+      &:before {
+        content: '';
+        left: 0;
+        top: 0;
+        position: absolute;
+        border: 1px solid #d9e0ea;
+        width: 14px;
+        height: 14px;
+      }
+
+      span {
+        color: #00000078;
+      }
+    }
+  }
+
+  &:checked {
+    & + label {
+      color: #000;
+      
+      &:before {
+        border-color: $primary-second;
+      }
+
+      &:after {
+        content: '';
+        left: 2px;
+        top: -4px;
+        position: absolute;
+        background-image: url(../img/svg/check-blue.svg);
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+      }
+
+      span {
+        color: #000;
+      }
     }
   }
 }
@@ -169,6 +176,24 @@ button {
   width: 13px;
   height: 13px;
 
+  & + label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    height: 14px;
+    font: 14px/18px $font-ubuntu;
+
+    span {
+      font-weight: 300;
+      padding-left: 3px;
+    }
+
+    svg, img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
   &:not(checked) {
     position: absolute;
     opacity: 0;
@@ -176,12 +201,14 @@ button {
     & + label {
       position: relative;
       padding: 0 0 0 20px;
+      line-height: normal;
+      color: #00000078;
 
       &:before {
         content: '';
         left: 0;
         position: absolute;
-        border: 1px solid white;
+        border: 1px solid #d9e0ea;
         border-radius: 50%;
         width: 14px;
         height: 14px;
@@ -192,24 +219,81 @@ button {
   &:checked {
 
     & + label {
+      cursor: pointer;
+      color: #000;
+
+      &:before {
+        border-color: $primary-second;
+      }
 
       &:after {
         content: '';
         left: 3px;
         position: absolute;
-        background-color: #fff;
+        background-color: $primary-second;
         border-radius: 50%;
         width: 8px;
         height: 8px;
       }
+
+      span {
+        color: #000;
+      }
     }
+  } 
+}
+
+.custom-file {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 0;
+
+  &-input {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 45px;
+    margin: 0;
+    opacity: 0;
+    font-size: 13px;
+    font-family: "Ubuntu", sans-serif;
+    line-height: 45px;
   }
 
-  & + label {
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    height: 14px;
+  &-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    height: 45px;
+    padding: 0 15px;
+    line-height: 45px;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #e3eef9;
+    border-radius: 0;
+    font-size: 13px;
     font-family: "Ubuntu", sans-serif;
+
+    &::after {
+      position: absolute;
+      top: -1px;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      display: block;
+      height: 45px;
+      padding: 0 20px;
+      line-height: 45px;
+      color: #95a4b0;
+      content: "Файл";
+      border: none;
+      border-radius: 0;
+      background-color: #97a4b0;
+      color: white;
+    }
   }
 }

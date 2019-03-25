@@ -14,7 +14,34 @@
     }
   }
 
-  
+  [type="radio"]:not(checked) + label, [type="checkbox"]:not(checked) + label {
+    color: #b2cceb;
+
+    &:before {
+      border-color: #b2cceb;
+    }
+  }
+  [type="radio"]:checked + label {
+    color: #fff;
+    
+    &:before {
+      border-color: #fff;
+    }
+    &:after {
+      background-color: #fff;
+    }
+  }
+
+  [type="checkbox"]:checked + label {
+    color: #fff;
+    &:before {
+      border-color: #fff;
+    }
+    &:after {
+      background-image: url(../img/svg/check-white.svg);
+    }
+  }
+
 
   &-block {
     
@@ -158,8 +185,6 @@
 
       .form-group {
         margin-right: 10px;
-
-        
       }
     }
 
@@ -171,17 +196,14 @@
 
     &-confirm {
       label {
-        position: relative;
-        padding-left: 16px;
-        font-size: 12px;
-        cursor: pointer;
-        font-family: "Ubuntu", sans-serif;
-        line-height: 14px;
-        color: #b2cceb;
+        display: block;
+        font-size: 13px;
       }
+
       a {
         display: inline;
         color: white;
+        border-bottom: 1px dashed #fff;
       }
     }
   }
@@ -297,6 +319,7 @@
 
         img {
           margin: 0 10px;
+          max-height: 30px;
           @include media-breakpoint-down(md) {
             order: 2;
           }
@@ -332,4 +355,6 @@
       }
     }
   }
+
+
 }

@@ -161,6 +161,10 @@ const config =  {
       filename: 'about-certification.html',
       template: `src/templates/${version}/about-certification.pug`
     }),
+    new HtmlWebpackPlugin({
+      filename: 'about-offer.html',
+      template: `src/templates/${version}/about-offer.pug`
+    }),
     
     new HtmlWebpackPlugin({
       filename: 'about-promo.html',
@@ -171,7 +175,14 @@ const config =  {
       filename: 'about-testimonials.html',
       template: `src/templates/${version}/about-testimonials.pug`
     }),
-    
+    new HtmlWebpackPlugin({
+      filename: 'about-contacts.html',
+      template: `src/templates/${version}/about-contacts.pug`
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'about-vacantion.html',
+      template: `src/templates/${version}/about-vacantion.pug`
+    }),
     new HtmlWebpackPlugin({
       filename: 'fitting.html',
       template: `src/templates/${version}/fitting.pug`
@@ -198,6 +209,7 @@ const config =  {
       filename: 'cart4.html',
       template: `src/templates/${version}/cart4.pug`
     }),
+
 
     
 

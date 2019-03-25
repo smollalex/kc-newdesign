@@ -22,7 +22,7 @@ html(lang='ru')
           .promo-item
             .promo-item-banner
               .banner.banner-2
-                img(src="img/banners/trends/IMG_2766.jpg")
+                img(src="img/banners/main/reiker-2.jpg")
             .promo-item-content
               h3.promo-title Дополнительная скидка 10% на всю коллекцию по промокоду
                 span DUTIKI10
@@ -36,8 +36,8 @@ html(lang='ru')
                     span дня
                     span часа
                     span минут
-                a.btn(href="category.html") Применить промокод: 
-                  span.up KROSS300
+                a.btn.ml-auto(href="category.html") Применить промокод: 
+                  span.up DUTIKI10
           .category-filters.sticky-top
             .category-filters-top
               h1.category-filters-top-title Новинки 2018 зимней обуви Ara
@@ -84,9 +84,8 @@ html(lang='ru')
                 .category-filters-items(style="margin: 0;margin-left: -3px;width: 100%;")
                   include shared/category-filters-other
           .category-content
-            .category-content-chunk
-              include shared/cards
-              include shared/cards
+            include shared/cards
+            include shared/cards
             .category-tags
               .category-tags-content
                 a.tag-item(href='javascript:;') Кожаная
@@ -95,9 +94,8 @@ html(lang='ru')
                 a.tag-item(href='javascript:;') Весна-лето
                 a.tag-item(href='javascript:;') Летняя
                 a.tag-item(href='javascript:;') Итальянская
-            .category-content-chunk
-              include shared/cards
-              include shared/cards
+            include shared/cards
+            include shared/cards
             .category-tags
               .category-tags-content
                 a.tag-item(href='javascript:;') Кожаная
@@ -106,9 +104,16 @@ html(lang='ru')
                 a.tag-item(href='javascript:;') Весна-лето
                 a.tag-item(href='javascript:;') Летняя
                 a.tag-item(href='javascript:;') Итальянская
-            .category-content-chunk
-              include shared/cards
+            include shared/cards
+          ul.pagination
+            li.page-item.active
+              a.page-link(href='#') 1
+            li.page-item
+              a.page-link(href='#') 2
+            li.page-item
+              a.page-link(href='#') 3
 
+  
 
   include shared/footer
   include shared/modal/allmodals

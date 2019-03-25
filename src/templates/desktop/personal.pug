@@ -21,117 +21,529 @@ html(lang='ru')
           li.breadcrumb-item
             a.breadcrumb-link(href='javascript:;') Личный кабинет
     main.personal
-      .container-fluid
+      .page-header
         h1 Личный кабинет
+
+      .container-fluid
         .row
-          .col-sm-3
+          .col-md-3.col-lg-2
             ul.nav.nav-tabs.flex-column
               li.nav-item
-                a.nav-link.active(id="personal-orders-tab", data-toggle="tab", href="#personal-orders", role="tab", aria-controls="personal-orders", aria-selected="true")
-                  .nav-link-icon
-                    svg(style='width: 45px', version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64', xml:space='preserve')
-                      path(d='M42.654,19.021c2.805,0,5.086,2.281,5.086,5.084c0,2.804-2.281,5.086-5.086,5.086 c-2.804,0-5.085-2.282-5.085-5.086C37.569,21.302,39.851,19.021,42.654,19.021 M42.654,18.021c-3.363,0-6.085,2.724-6.085,6.084 c0,3.361,2.722,6.086,6.085,6.086c3.361,0,6.086-2.725,6.086-6.086C48.74,20.745,46.016,18.021,42.654,18.021L42.654,18.021z M45.057,22.145c0.191,0.05,0.342,0.199,0.393,0.391c0.05,0.191-0.003,0.395-0.144,0.535l-2.653,2.657 c-0.103,0.105-0.242,0.165-0.39,0.167c-0.149-0.004-0.288-0.064-0.393-0.173l-1.487-1.505c-0.214-0.217-0.21-0.564,0.003-0.777 c0.219-0.214,0.564-0.211,0.779,0.006l1.098,1.108l2.261-2.261C44.659,22.151,44.866,22.095,45.057,22.145z M14.49,28.187 c-0.429-2.138,0.002-4.694,1.337-6.936c0.692-1.162,1.588-2.184,2.659-3.039c0.252-0.201,0.61-0.2,0.86,0.003 c3.844,3.11,7.232,6.74,10.071,10.789l4.586,6.543c0.016,0.022,0.03,0.048,0.043,0.071c0.665,1.245,2.407,2.186,4.052,2.186 c1.158,0,2.493-0.447,3.174-1.062c0.151-0.139,0.356-0.2,0.56-0.17c2.61,0.384,4.527,1.928,5.439,2.814 c1.356,1.319,2.232,2.854,2.232,3.913c0,1.871-2.398,2.282-3.187,2.418c-1.587,0.274-3.72,0.329-6.433,0.329h-5.617 c-1.901,0-3.635-1.147-4.417-2.926c-1.699-3.864-4.305-7.315-7.557-10.024l-0.063,0.102c-0.675,1.395-1.033,2.948-1.033,4.497v7.665 c0,0.379-0.307,0.687-0.687,0.687h-2.747c-0.381,0-0.688-0.308-0.688-0.687v-8.48c0-2.051-0.568-4.315-1.782-6.49 c-0.372-0.667-0.642-1.401-0.8-2.182C14.492,28.201,14.492,28.194,14.49,28.187z M21.209,32.24 c-1.537-1.154-3.189-2.143-4.932-2.951c0.309,0.678,1.945,3.164,2.152,6.93c0.014,0.232,0.021,0.455,0.021,0.661v7.793h1.374v-6.978 C19.824,35.547,20.467,33.44,21.209,32.24z M15.777,27.569c6.857,2.847,12.355,8.234,15.331,14.999 c0.562,1.278,1.802,2.104,3.159,2.104h5.617c2.644,0,4.709-0.052,6.199-0.309c0.934-0.16,2.046-0.476,2.046-1.064 c0-0.577-0.624-1.769-1.816-2.929c-0.758-0.737-2.31-1.994-4.388-2.391c-0.957,0.715-2.473,1.197-3.827,1.197 c-2.133,0-4.329-1.207-5.243-2.874l-4.563-6.511c-2.656-3.789-5.807-7.203-9.371-10.151c-0.758,0.674-1.399,1.45-1.913,2.313 C15.903,23.807,15.527,25.879,15.777,27.569z')
-                  .nav-link-text
-                    span Заказы
-                    span История заказов, возврат товара
+                a.nav-link.active(id="personal-orders-tab", data-toggle="tab", href="#personal-orders", role="tab", aria-controls="personal-orders", aria-selected="true") Заказы
               li.nav-item
-                a.nav-link(id="personal-profile-tab", data-toggle="tab", href="#personal-profile", role="tab", aria-controls="personal-profile", aria-selected="false")
-                  .nav-link-icon
-                    svg(style='width: 20px', aria-hidden='true', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
-                      path(d='M360 352h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0 128h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm-168-32c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80zm0-128c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48 21.5-48 48-48zM512 64H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64zM272 480H112v-15.1c0-7 2.1-13.8 6-19.6 5.6-8.3 15.8-13.2 27.3-13.2 12.4 0 20.8 7 46.8 7 25.9 0 34.3-7 46.8-7 11.5 0 21.7 5 27.3 13.2 3.9 5.8 6 12.6 6 19.6V480zm272-32c0 17.6-14.4 32-32 32H304v-15.1c0-13.9-4.2-26.8-11.4-37.5-12.1-17.9-32.7-27.4-53.8-27.4-19.5 0-24.4 7-46.8 7s-27.3-7-46.8-7c-21.2 0-41.8 9.4-53.8 27.4C84.2 438.1 80 451 80 464.9V480H64c-17.6 0-32-14.4-32-32V192h512v256zm0-288H32v-32c0-17.6 14.4-32 32-32h448c17.6 0 32 14.4 32 32v32z')
-                  .nav-link-text
-                    span Профиль
-                    span Дисконтная карта, пароль, телефон
+                a.nav-link(id="personal-likes-tab", data-toggle="tab", href="#personal-likes", role="tab", aria-controls="personal-likes", aria-selected="true") Избранное
               li.nav-item
-                a.nav-link(id="personal-subscribe-tab", data-toggle="tab", href="#personal-subscribe", role="tab", aria-controls="personal-subscribe", aria-selected="false")
-                  .nav-link-icon
-                    svg(style='width: 20px', aria-hidden='true', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512')
-                      path(d='M352 248v-16c0-4.42-3.58-8-8-8H168c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h176c4.42 0 8-3.58 8-8zm-184-56h176c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8H168c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8zm326.59-27.48c-1.98-1.63-22.19-17.91-46.59-37.53V96c0-17.67-14.33-32-32-32h-46.47c-4.13-3.31-7.71-6.16-10.2-8.14C337.23 38.19 299.44 0 256 0c-43.21 0-80.64 37.72-103.34 55.86-2.53 2.01-6.1 4.87-10.2 8.14H96c-17.67 0-32 14.33-32 32v30.98c-24.52 19.71-44.75 36.01-46.48 37.43A48.002 48.002 0 0 0 0 201.48V464c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V201.51c0-14.31-6.38-27.88-17.41-36.99zM256 32c21.77 0 44.64 16.72 63.14 32H192.9c18.53-15.27 41.42-32 63.1-32zM96 96h320v173.35c-32.33 26-65.3 52.44-86.59 69.34-16.85 13.43-50.19 45.68-73.41 45.31-23.21.38-56.56-31.88-73.41-45.32-21.29-16.9-54.24-43.33-86.59-69.34V96zM32 201.48c0-4.8 2.13-9.31 5.84-12.36 1.24-1.02 11.62-9.38 26.16-21.08v75.55c-11.53-9.28-22.51-18.13-32-25.78v-16.33zM480 464c0 8.82-7.18 16-16 16H48c-8.82 0-16-7.18-16-16V258.91c42.75 34.44 99.31 79.92 130.68 104.82 20.49 16.36 56.74 52.53 93.32 52.26 36.45.26 72.27-35.46 93.31-52.26C380.72 338.8 437.24 293.34 480 258.9V464zm0-246.19c-9.62 7.75-20.27 16.34-32 25.79v-75.54c14.44 11.62 24.8 19.97 26.2 21.12 3.69 3.05 5.8 7.54 5.8 12.33v16.3z')
-                  .nav-link-text
-                    span Подписка
-                    span Настройка рассылок
-          .col-sm-9
+                a.nav-link(id="personal-profile-tab", data-toggle="tab", href="#personal-profile", role="tab", aria-controls="personal-profile", aria-selected="false") Профиль
+              li.nav-item
+                a.nav-link(id="personal-subscribe-tab", data-toggle="tab", href="#personal-subscribe", role="tab", aria-controls="personal-subscribe", aria-selected="false") Подписка
+          .col-md-8.col-lg-10
               #myTabContent.tab-content
                 #personal-orders.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='personal-orders-tab')
-                  table.table#orders-table
-                    thead
-                      tr
-                        th номер
-                        th дата
-                        th сумма
-                        th статус
-                        th дейтсвие
-                    tbody
-                      tr
-                        td
-                        td
-                        td
-                        td
-                        td
-                      tr
-                        td 77063
-                        td 31.01.2019
-                        td 9 590 ₽
-                        td.status-delivery В пути
-                        td
-                          a(href="#") Отследить
-                      tr
-                        td 425523
-                        td 31.01.2019
-                        td 9 590 ₽
-                        td.status-wait Ожидает получения
-                        td
-                          a(href="#", data-toggle='modal', data-target='#pickupPoint') Пункты самовывоза
-                      tr
-                        td 753211
-                        td 31.01.2019
-                        td 9 590 ₽
-                        td.status-done Доставлен
-                        td
-                          a(href="#") Вернуть
-                      tr
-                        td 753211
-                        td 31.01.2019
-                        td 9 590 ₽
-                        td.status-archive В архиве
-                        td
-                      tr
-                        td 753211
-                        td 31.01.2019
-                        td 9 590 ₽
-                        td.status-canceled Отменён
-                        td 
+                  .order
+                    .order-header
+                      .order-header-icon(data-toggle='collapse', href='#order-121441', role='button', aria-expanded='false', aria-controls='order-121441')
+                          <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>
+                      .order-header-center
+                        .order-header-title
+                          span Заказ 
+                          | №121441
+                          span от
+                          | 19.03.2019
+                          span на сумму
+                          | 1500 ₽
+                        .order-header-img
+                          img.order-item-img(src='https://kc-shoes.ru/image/cache/data/products/1538643847-606989-234x338.JPG')  
+                          img.order-item-img(src='./img/category/1.jpg')
+                          img.order-item-img(src='./img/category/3.jpg')
+                          img.order-item-img(src='./img/category/5.jpg')
+                      .order-header-status
+                        span.order-status--done
+                          svg(aria-hidden='true', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512')
+                            path(fill='', d='M435.848 83.466L172.804 346.51l-96.652-96.652c-4.686-4.686-12.284-4.686-16.971 0l-28.284 28.284c-4.686 4.686-4.686 12.284 0 16.971l133.421 133.421c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-28.284-28.284c-4.686-4.686-12.284-4.686-16.97 0z')
+                          | завершён
+                    #order-121441.collapse.order-body
+                      .order-details
+                        h5 Дата доставки 14.03.2019, 20:00 - 23:00
+                        .row
+                          .col-sm-7
+                            .order-delivery-item
+                              span Получатель
+                              div
+                                span Евгений Криводуб 
+                                span +79503325909 
+                                span take2mars@gmail.com
+                            .order-delivery-item
+                              span Способ доставки
+                              div
+                                span Доставка курьером
+                            .order-delivery-item
+                              span Адрес доставки
+                              div
+                                span г. Омск, Омская обл., ул. Фрунзе, 101, оф. 32
+                                a(href="") Показать на карте
+                            .order-delivery-item
+                              span Время работы пункта самовывоза
+                              div
+                                span пн-вс: 10:00-21:00;
+                            .order-delivery-item
+                              span Способ оплаты
+                              div
+                                span Наличными или банковской картой
+                          .col-sm-5
+                            .order-details-item
+                              span Товаров в заказе:
+                              span
+                              span 1
+                            .order-details-item
+                              span Общая стоимость:
+                              span
+                              span 1500 ₽
+                            .order-details-item
+                              span Скидка по промокоду:
+                              span
+                              span 100 ₽
+                            .order-details-item
+                              span Общая скидка:
+                              span
+                              span 100 ₽
+                            .order-details-item
+                              span Доставка (Курьером)
+                              span
+                              span 200 ₽
+                            .order-details-item.order-details-item--total
+                              span ИТОГО К ОПЛАТЕ:
+                              span
+                              span 1600 ₽
+                      .order-items
+                        .order-item.not-redeemed
+                          .order-item-img
+                            img(src='https://kc-shoes.ru/image/cache/data/products/1538643847-606989-234x338.JPG')
+                          .order-item-text
+                            span.order-item-title Резиновые сапоги 
+                              span Caprice
+                            .order-item-options
+                              .order-item-option Артикул
+                                span 23123002
+                              .order-item-option Размер
+                                span 37
+                              .order-item-option Цвет
+                                span Бежевый
+                          .order-item-price 1500 ₽
+                            .not-redeemed Не выкуплен
+                              span Не подошёл размер
+                          .order-item-action
+                            a(href="#", data-toggle="modal", data-target="#testimonial-product") Оставить отзыв
+                        .order-item
+                          .order-item-img
+                            img(src='./img/category/1.jpg')
+                          .order-item-text
+                            span.order-item-title Женские кроссовки 
+                              span Tamaris
+                            .order-item-options
+                              .order-item-option Артикул
+                                span 23123002
+                              .order-item-option Размер
+                                span 37
+                              .order-item-option Цвет
+                                span Бежевый
+                          .order-item-price 3990 ₽
+                            .redeemed Выкуплен
+                          .order-item-action
+                            a(href="#", data-toggle="modal", data-target="#testimonial-product") Оставить отзыв
+                            .order-refund
+                              .checkbox
+                                input.check-to-refund(name='check-to-refund', type='checkbox')
+                                label(for='check-to-refund') Вернуть
+                              .order-refund-reason
+                                select.form-control(name="")
+                                  option(value="refund-reason-1") Не подошёл размер
+                                  option(value="refund-reason-2") Не понравился стиль
+                                  option(value="refund-reason-3") Обнаружен деффект
+                                  option(value="refund-reason-4") Другая причина
+                              .order-refund-reason-other(style="display: none;")
+                                input.form-control(type="text")     
+                        .order-item
+                          .order-item-img
+                            img(src='./img/category/3.jpg')
+                          .order-item-text
+                            span.order-item-title Женские кроссовки 
+                              span Tamaris
+                            .order-item-options
+                              .order-item-option Артикул
+                                span 23123002
+                              .order-item-option Размер
+                                span 37
+                              .order-item-option Цвет
+                                span Бежевый
+                          .order-item-price 3990 ₽
+                            .redeemed Выкуплен
+                          .order-item-action
+                            a(href="#", data-toggle="modal", data-target="#testimonial-product") Оставить отзыв
+                            .order-refund
+                              .checkbox
+                                input.check-to-refund(name='check-to-refund', type='checkbox')
+                                label(for='check-to-refund') Вернуть
+                              .order-refund-reason
+                                select.form-control(name="")
+                                  option(value="refund-reason-1") Не подошёл размер
+                                  option(value="refund-reason-2") Не понравился стиль
+                                  option(value="refund-reason-3") Обнаружен деффект
+                                  option(value="refund-reason-4") Другая причина
+                              .order-refund-reason-other(style="display: none;")
+                                input.form-control(type="text")     
+                        .order-item
+                          .order-item-img
+                            img(src='./img/category/5.jpg')
+                          .order-item-text
+                            span.order-item-title Женские кроссовки  
+                              span Tamaris
+                            .order-item-options
+                              .order-item-option Артикул
+                                span 23123002
+                              .order-item-option Размер
+                                span 37
+                              .order-item-option Цвет
+                                span Бежевый
+                          .order-item-price 3990 ₽
+                            .redeemed Выкуплен
+                          .order-item-action
+                            a(href="#", data-toggle="modal", data-target="#testimonial-product") Оставить отзыв
+                            .order-refund
+                              .checkbox
+                                input.check-to-refund(name='check-to-refund', type='checkbox')
+                                label(for='check-to-refund') Вернуть
+                              .order-refund-reason
+                                select.form-control(name="")
+                                  option(value="refund-reason-1") Не подошёл размер
+                                  option(value="refund-reason-2") Не понравился стиль
+                                  option(value="refund-reason-3") Обнаружен деффект
+                                  option(value="refund-reason-4") Другая причина
+                              .order-refund-reason-other(style="display: none;")
+                                input.form-control(type="text")  
+                      .order-refund-wrap(style="display: none")
+                        a.btn.order-refund-btn(href="#", data-toggle="modal", data-target="#refund", disabled) Оформить возврат
+                  .order
+                    .order-header
+                      .order-header-icon(data-toggle='collapse', href='#order-31234123', role='button', aria-expanded='false', aria-controls='order-31234123')
+                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>
+                      .order-header-center
+                        .order-header-title
+                          span Заказ
+                          | №31234123
+                          span от
+                          | 19.03.2019
+                          span на сумму
+                          | 12500 ₽
+                        .order-header-img
+                          img.order-item-img(src='./img/category/1.jpg')
+                          img.order-item-img(src='./img/category/3.jpg')
+                      .order-header-status
+                        span.order-status--in-process
+                          svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512')
+                            path(fill='', d='M288 32c0 17.673-14.327 32-32 32s-32-14.327-32-32 14.327-32 32-32 32 14.327 32 32zm-32 416c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm256-192c0-17.673-14.327-32-32-32s-32 14.327-32 32 14.327 32 32 32 32-14.327 32-32zm-448 0c0-17.673-14.327-32-32-32S0 238.327 0 256s14.327 32 32 32 32-14.327 32-32zm33.608 126.392c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm316.784 0c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zM97.608 65.608c-17.673 0-32 14.327-32 32 0 17.673 14.327 32 32 32s32-14.327 32-32c0-17.673-14.327-32-32-32z')
+                          | в обработке
+                        a.btn(href="#") Отменить заказ
+                    #order-31234123.collapse.order-body
+                      .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+                        img.alert-icon(src='img/svg/сlothes-fitting-warning.svg', alt='')
+                        p Когда Ваш заказ поступит в пункт выдачи, вам придет СМС уведомление.
+                        button.close(type='button', data-dismiss='alert', aria-label='Close')
+                          svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+                            path(fill='', d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+                      .order-details
+                        h5 Дата доставки 14.03.2019, 20:00 - 23:00
+                        .row
+                          .col-sm-7 
+                            .order-delivery-item
+                              span Получатель
+                              div
+                                span Евгений Криводуб 
+                                span +79503325909 
+                                span take2mars@gmail.com
+                            .order-delivery-item
+                              span Способ доставки
+                              div
+                                span Доставка курьером
+                            .order-delivery-item
+                              span Адрес доставки
+                              div
+                                span г. Омск, Омская обл., ул. Фрунзе, 101, оф. 32
+                                a(href="") Показать на карте
+                            .order-delivery-item
+                              span Время работы пункта самовывоза
+                              div
+                                span пн-вс: 10:00-21:00;
+                            .order-delivery-item
+                              span Способ оплаты
+                              div
+                                span Наличными или банковской картой
+                          .col-sm-5
+                            .order-details-item
+                              span Товаров в заказе:
+                              span
+                              span 3
+                            .order-details-item
+                              span Общая стоимость:
+                              span
+                              span 12909 ₽
+                            .order-details-item
+                              span Скидка КС:
+                              span
+                              span 1109 ₽
+                            .order-details-item
+                              span Скидка по промокоду:
+                              span
+                              span 109 ₽
+                            .order-details-item
+                              span Общая скидка:
+                              span
+                              span 1218 ₽
+                            .order-details-item
+                              span Доставка (Курьером)
+                              span
+                              span 200 ₽
+                            .order-details-item.order-details-item--total
+                              span ИТОГО К ОПЛАТЕ:
+                              span
+                              span 10109 ₽
+                      .order-items
+                        .order-item
+                          .order-item-img
+                            img(src='./img/category/1.jpg')
+                          .order-item-text
+                            span.order-item-title Женские кроссовки 
+                              span Tamaris
+                            .order-item-options
+                              .order-item-option Артикул
+                                span 23123002
+                              .order-item-option Размер
+                                span 37
+                              .order-item-option Цвет
+                                span Бежевый
+                          .order-item-price 3990 ₽
+                          .order-item-action
+                        .order-item
+                          .order-item-img
+                            img(src='./img/category/3.jpg')
+                          .order-item-text
+                            span.order-item-title Женские кроссовки  
+                              span Tamaris
+                            .order-item-options
+                              .order-item-option Артикул
+                                span 23123002
+                              .order-item-option Размер
+                                span 37
+                              .order-item-option Цвет
+                                span Бежевый
+                          .order-item-price 3990 ₽
+                          .order-item-action
+                      .order-map
+                  .order
+                    .order-header
+                      .order-header-icon(data-toggle='collapse', href='#order-112123', role='button', aria-expanded='false', aria-controls='order-112123')
+                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>
+                      .order-header-center
+                        .order-header-title
+                          span Заказ
+                          | №112123
+                          span от
+                          | 19.03.2019
+                          span на сумму
+                          | 2300 ₽
+                        .order-header-img
+                          img.order-item-img(src='./img/category/2.jpg')
+                          img.order-item-img(src='./img/category/4.jpg')
+                      .order-header-status
+                        span.order-status--canceled
+                          svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 320 512')
+                            path(fill='', d='M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z')
+                          | отменён
+                    #order-112123.collapse.order-body
+                      .order-details
+                        .row
+                          .col-sm-7
+                            .order-delivery-item
+                              span Получатель
+                              div
+                                span Евгений Криводуб 
+                                span +79503325909 
+                                span take2mars@gmail.com
+                            .order-delivery-item
+                              span Способ доставки
+                              div
+                                span Доставка курьером
+                            .order-delivery-item
+                              span Адрес доставки
+                              div
+                                span г. Омск, Омская обл., ул. Фрунзе, 101, оф. 32
+                                a(href="") Показать на карте
+                            .order-delivery-item
+                              span Время работы пункта самовывоза
+                              div
+                                span пн-вс: 10:00-21:00;
+                            .order-delivery-item
+                              span Способ оплаты
+                              div
+                                span Наличными или банковской картой
+                          .col-sm-5
+                            .order-details-item
+                              span Товаров в заказе:
+                              span
+                              span 3
+                            .order-details-item
+                              span Общая стоимость:
+                              span
+                              span 12909 ₽
+                            .order-details-item
+                              span Скидка КС:
+                              span
+                              span 1109 ₽
+                            .order-details-item
+                              span Скидка по промокоду:
+                              span
+                              span 109 ₽
+                            .order-details-item
+                              span Общая скидка:
+                              span
+                              span 1218 ₽
+                            .order-details-item
+                              span Доставка (Курьером)
+                              span
+                              span 200 ₽
+                            .order-details-item.order-details-item--total
+                              span ИТОГО К ОПЛАТЕ:
+                              span
+                              span 10109 ₽
+                      .order-items
+                        .order-item
+                          .order-item-img
+                            img(src='./img/category/2.jpg')
+                          .order-item-text
+                            span.order-item-title Женские кроссовки 
+                              span Tamaris
+                            .order-item-options
+                              .order-item-option Артикул
+                                span 23123002
+                              .order-item-option Размер
+                                span 37
+                              .order-item-option Цвет
+                                span Бежевый
+                          .order-item-price 3990 ₽
+                          .order-item-action
+                        .order-item
+                          .order-item-img
+                            img(src='./img/category/4.jpg')
+                          .order-item-text
+                            span.order-item-title Женские кроссовки  
+                              span Tamaris
+                            .order-item-options
+                              .order-item-option Артикул
+                                span 23123002
+                              .order-item-option Размер
+                                span 37
+                              .order-item-option Цвет
+                                span Бежевый
+                          .order-item-price 3990 ₽
+                          .order-item-action
+                #personal-likes.tab-pane.fade(role='tabpanel', aria-labelledby='personal-likes-tab')
+                  .category-content
+                    a.card.card--new(href='#')
+                      img.card-img(src='./img/category/1.jpg',  data-first-src="./img/category/1.jpg", data-second-src="./img/category/1_1.jpg")
+                      .card-title
+                        span.card-title-brand Tamaris
+                        span.card-title-name Женские кроссовки
+                      .card-price
+                        span 2990
+                          span ₽
+                      .card-type
+                        span New
+                      .card-size.card-size--two-col
+                        span 36
+                        span 36.5
+                        span 37.5
+                        span 38
+                        span 38.5
+                        span 39
+                      .card-extra-info  
+                        .card-preview
+                          span.card-preview-link
+                            <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                              <path d="M53.617,49.705l-9.885-9.675c2.581-2.919,4.157-6.72,4.157-10.884c0-9.164-7.579-16.62-16.896-16.62 c-9.316,0-16.896,7.456-16.896,16.62s7.58,16.619,16.896,16.619c3.63,0,6.989-1.144,9.746-3.067l10.079,9.865 c0.39,0.381,0.895,0.571,1.399,0.571c0.519,0,1.038-0.201,1.429-0.602C54.42,51.744,54.406,50.478,53.617,49.705z M17.147,29.146 c0-7.502,6.211-13.605,13.846-13.605c7.635,0,13.846,6.103,13.846,13.605s-6.211,13.604-13.846,13.604 C23.359,42.751,17.147,36.648,17.147,29.146z M37,30h-5v5h-2v-5h-5v-2h5v-5h2v5h5V30z"/>
+                            </svg>
+                            span Быстрый просмотр
+                          .card-preview-add-to-like.active
+                            svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512')
+                              path(fill='', d='M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z')
+                    a.card.card--new(href='#')
+                      img.card-img(src='./img/category/2.jpg',  data-first-src="./img/category/2.jpg", data-second-src="./img/category/2_2.jpg")
+                      .card-title
+                        span.card-title-brand Tamaris
+                        span.card-title-name Женские кроссовки
+                      .card-price
+                        span 5990
+                          span ₽
+                      .card-type
+                        span New
+                      .card-size.card-size--two-col
+                        span 36
+                        span 36.5
+                        span 37.5
+                        span 38
+                        span 38.5
+                        span 39
+                      .card-extra-info  
+                        .card-preview
+                          span.card-preview-link
+                            <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                              <path d="M53.617,49.705l-9.885-9.675c2.581-2.919,4.157-6.72,4.157-10.884c0-9.164-7.579-16.62-16.896-16.62 c-9.316,0-16.896,7.456-16.896,16.62s7.58,16.619,16.896,16.619c3.63,0,6.989-1.144,9.746-3.067l10.079,9.865 c0.39,0.381,0.895,0.571,1.399,0.571c0.519,0,1.038-0.201,1.429-0.602C54.42,51.744,54.406,50.478,53.617,49.705z M17.147,29.146 c0-7.502,6.211-13.605,13.846-13.605c7.635,0,13.846,6.103,13.846,13.605s-6.211,13.604-13.846,13.604 C23.359,42.751,17.147,36.648,17.147,29.146z M37,30h-5v5h-2v-5h-5v-2h5v-5h2v5h5V30z"/>
+                            </svg>
+                            span Быстрый просмотр
+                          .card-preview-add-to-like.active
+                            svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512')
+                              path(fill='', d='M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z')
                 #personal-profile.tab-pane.fade(role='tabpanel', aria-labelledby='personal-profile-tab')
                   .row
                     .col-8
                       form.personal-form
                         .form-group.row
                           label.col-sm-3.col-form-label(for='fio') Ф.И.О.
-                          .col-sm-9
-                            .input-group
-                              input#fio.form-control(type='text', value='Иванов Иван Иванович')
-                              .input-group-append
-                                button(class="btn", type="button")
-                                  svg(aria-hidden='true', focusable='false', data-prefix='fal', data-icon='edit', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
-                                    path(d='M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z')
+                          .col-sm-6
+                            input#fio.form-control(type='text', value='Иванов Иван Иванович')
                         .form-group.row
                           label.col-sm-3.col-form-label(for='phone') Телефон
-                          .col-sm-6
-                            .input-group
-                              input#phone.form-control(type='text', value='+7 (999) 999 99 99')
-                              .input-group-append
-                                button(class="btn", type="button")
-                                  svg(aria-hidden='true', focusable='false', data-prefix='fal', data-icon='edit', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
-                                    path(d='M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z')
+                          .col-sm-4
+                            input#phone.form-control(type='text', value='+7 (999) 999 99 99')
                         .form-group.row
                           label.col-sm-3.col-form-label(for='email') E-mail
-                          .col-sm-7
-                            .input-group
-                              input#email.form-control(type='text', value='your@email.ru')
-                              .input-group-append
-                                button(class="btn", type="button")
-                                  svg(aria-hidden='true', focusable='false', data-prefix='fal', data-icon='edit', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
-                                    path(d='M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z')
+                          .col-sm-6
+                            input#email.form-control(type='text', value='your@email.ru')
+                        .form-group.row
+                          label.col-sm-3.col-form-label(for='') Город
+                          .col-lg-5
+                            input.form-control(type='text', value='')
+                          .col-lg-3  
+                            .cart-contacts-city
+                              svg(role="img", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 384 512")
+                                path(fill="", d="M192 96c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64zm0-256C85.961 0 0 85.961 0 192c0 77.413 26.97 99.031 172.268 309.67 9.534 13.772 29.929 13.774 39.465 0C357.03 291.031 384 269.413 384 192 384 85.961 298.039 0 192 0zm0 473.931C52.705 272.488 32 256.494 32 192c0-42.738 16.643-82.917 46.863-113.137S149.262 32 192 32s82.917 16.643 113.137 46.863S352 149.262 352 192c0 64.49-20.692 80.47-160 281.931z")
+                              a(href="") Изменить
+                        .form-group.row
+                          label.col-sm-3.col-form-label(for='') Улица
+                          .col-lg-7
+                            input.form-control(name='', type='text', placeholder='')
+                        .form-group.row
+                          label.col-sm-3.col-form-label(for='') Индекс
+                          .col-lg-4
+                            input.form-control(name='', type='text', placeholder='')
+                        .form-group.row
+                          label.col-sm-3.col-form-label(for='') Дом
+                          .col-lg-2
+                            input.form-control(name='', type='text', placeholder='')
+                          label.col-form-label.pr-0(for='') Корпус
+                          .col-lg-2
+                            input.form-control(name='', type='text', placeholder='')
+                          label.col-form-label.pr-0(for='') Квартира
+                          .col-lg-2
+                            input.form-control(name='', type='text', placeholder='')
                         .form-group.row
                           label.col-sm-3.col-form-label(for='password') Пароль
                           .col-sm-5
@@ -145,17 +557,22 @@ html(lang='ru')
                             a.btn(href="") Сохранить
                     .col-4
                       .personal-discount-card
-                        img(src="./img/bonus-img.png", alt="")
+                        .personal-discount-card-header
+                          span Номер карты:
+                          span 1000001149450
                         .personal-discount-card-text
                           .item
-                            span Номер карты:
-                            span 1000001149450
+                            span Потрачено 
+                            span 1400 ₽
                           .item
-                            span Накопления: 
-                            span 1400 ₽ 
-                          .item
-                            span Скидка:
+                            span Номинал
                             span 5 %
+                          .item
+                            span До 10%
+                            span 10000 ₽
+                          .item
+                            span Бонусы
+                            span 300
                 #personal-subscribe.tab-pane.fade(role='tabpanel', aria-labelledby='personal-subscribe-tab')
                   .row
                     .col-6
@@ -165,10 +582,10 @@ html(lang='ru')
                         form.personal-form.mt-4
                           .form-group
                             input.form-control(id='personal-subscribe-sms', name='personal-subscribe-sms', type='checkbox')
-                            label.control-label(for='personal-subscribe-sms') SMS рассылка
+                            label.col-form-label(for='personal-subscribe-sms') SMS рассылка
                           .form-group
                             input.form-control(id='personal-subscribe-email', name='personal-subscribe-email', type='checkbox')
-                            label.control-label(for='personal-subscribe-email') E-mail рассылка
+                            label.col-form-label(for='personal-subscribe-email') E-mail рассылка
                           a.btn.mt-4(href="") Сохранить 
                     .col-6
                       img(src="img/personal-subscribe.jpg", alt="")  

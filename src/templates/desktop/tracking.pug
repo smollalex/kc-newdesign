@@ -27,8 +27,13 @@ html(lang='ru')
         section.page-header
           h1 Отслеживание товара
         .row
+          .col-sm-3
+            .chc-navbar
+              include shared/chc-navbar-delivery
+              include shared/chc-navbar-help
+              include shared/chc-navbar-about
+
           .col-sm-9
-            
             .alert.alert-warning.alert-dismissible.fade.show(role='alert')
               img.alert-icon(src="img/svg/сlothes-fitting-warning.svg", alt="")
               p Если вам не пришло СМС-сообщение с кодомо отправления, пожалуйста сообщите нам 
@@ -45,10 +50,6 @@ html(lang='ru')
                   input.form-control(type='email', placeholder='Введите номер отправления')
                   .input-group-append
                     button.btn(type='submit') Отследить
-          .col-sm-3
-            .chc-navbar
-              include shared/chc-navbar-delivery
-              include shared/chc-navbar-help
-              include shared/chc-navbar-about
+          
   include shared/footer
   include shared/modal/allmodals

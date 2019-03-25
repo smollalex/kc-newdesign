@@ -1,0 +1,123 @@
+#refund.modal.modal-refund.fade(tabindex='-1', role='dialog', aria-labelledby='refundTitle', aria-hidden='true')
+  .modal-dialog.modal-lg.modal-dialog-centered(role='document')
+    .modal-content
+      .modal-header
+        h5.modal-title.m-auto Возврат - Заказ №77063
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true')
+            svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+              path(fill='', d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+      .modal-body
+        .row.no-gutters
+          .col-lg-8
+            form(action="")
+              .form-group.row
+                label.col-sm-3.col-form-label(for='') Способ возврата
+                .col-sm-7
+                  select.refund-type.form-control
+                    option(value="refund-type-1") Почтовым переводом
+                    option(value="refund-type-2") Банковским переводом
+              .refund-type-1
+                .form-group.row
+                  label.col-sm-3.col-form-label(for='') Получатель
+                  .col-sm-6
+                    input.form-control(type='text', value='')
+                .form-group.row
+                  label.col-sm-3.col-form-label(for='') E-mail
+                  .col-sm-6
+                    input.form-control(type='text', value='')
+                .form-group.row
+                  label.col-sm-3.col-form-label(for='') Город
+                  .col-lg-5
+                    input.form-control(type='text', value='')
+                  .col-lg-3  
+                    .cart-contacts-city
+                      svg(role="img", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 384 512")
+                        path(fill="", d="M192 96c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64zm0-256C85.961 0 0 85.961 0 192c0 77.413 26.97 99.031 172.268 309.67 9.534 13.772 29.929 13.774 39.465 0C357.03 291.031 384 269.413 384 192 384 85.961 298.039 0 192 0zm0 473.931C52.705 272.488 32 256.494 32 192c0-42.738 16.643-82.917 46.863-113.137S149.262 32 192 32s82.917 16.643 113.137 46.863S352 149.262 352 192c0 64.49-20.692 80.47-160 281.931z")
+                      a(href="") Изменить
+                .form-group.row
+                  label.col-sm-3.col-form-label(for='') Улица
+                  .col-lg-7
+                    input.form-control(name='', type='text', placeholder='')
+                .form-group.row
+                  label.col-sm-3.col-form-label(for='') Индекс
+                  .col-lg-4
+                    input.form-control(name='', type='text', placeholder='')
+                .form-group.row
+                  label.col-sm-3.col-form-label(for='') Дом
+                  .col-lg-2
+                    input.form-control(name='', type='text', placeholder='')
+                  label.col-form-label.pr-0(for='') Корпус
+                  .col-lg-2
+                    input.form-control(name='', type='text', placeholder='')
+                  label.col-form-label.pr-0(for='') Квартира
+                  .col-lg-2
+                    input.form-control(name='', type='text', placeholder='')
+              .refund-type-2(style="display: none;")
+                .form-group.row
+                  label.col-sm-4.col-form-label(for='') Владелец счёта
+                  .col-sm-6
+                    input.form-control(type='text', value='Иванов Иван Иванович')
+                .form-group.row
+                  label.col-sm-4.col-form-label(for='') E-mail
+                  .col-sm-6
+                    input.form-control(type='text', value='example@mail.ru')
+                .form-group.row
+                  label.col-sm-4.col-form-label(for='') БИК
+                  .col-sm-6
+                    input.form-control(type='text', value='')
+                .form-group.row
+                  label.col-sm-4.col-form-label(for='') ИНН банка
+                  .col-sm-6
+                    input.form-control(type='text', value='')
+                .form-group.row
+                  label.col-sm-4.col-form-label(for='') Банк
+                  .col-sm-6
+                    input.form-control(type='text', value='')
+                .form-group.row
+                  label.col-sm-4.col-form-label(for='') Кор. счёт
+                  .col-sm-6
+                    input.form-control(type='text', value='')
+                .form-group.row
+                  label.col-sm-4.col-form-label(for='') Расчётный счёт
+                  .col-sm-6
+                    input.form-control(type='text', value='')
+                .form-group.row
+                  label.col-sm-4.col-form-label(for='') Лицевой счёт
+                  .col-sm-6
+                    input.form-control(type='text', value='')
+                .form-group.row
+                  label.col-sm-4.col-form-label(for='') Номер карты
+                  .col-sm-6
+                    input.form-control(type='text', value='')
+          .col-lg-4
+            .refund-total
+              .item
+                span.item-title Кроссовки
+                  span Tommaris
+                span.item-price 5790 ₽
+                span.item-reason Не подошло по размеру
+              .item
+                span.item-title Кроссовки
+                  span Tommaris
+                span.item-price 5790 ₽
+                span.item-reason Не подошло по размеру
+            .refund-features
+              .refund-features-img
+                img(src="img/svg/clock.png", alt="")
+              p Срок перевода составляет не более 10 дней с даты поступления товара на склад.
+            .refund-features
+              .refund-features-img
+                img(src="img/svg/blank_order.png", alt="")
+              div
+                p БИК банка всегда состоит из 9 цифр.
+                p Если в ваших реквизитах указан счёт, начинающийся на 40817, впишите его в графу Лицевой счёт.
+                p В случае, если в реквизитах указан расчётный счёт банка, начинающийся на 30232810, его нужно вписать в графу Расчётный счёт, а номер лицевого счёта или карты в соответствующие графыю
+        .refund-confirm
+          .checkbox
+            input(name='', type='checkbox', checked="checked")
+            label(for='') Настоящим, в соответствии с ч. 2 ст. 158 ГУ РФ, я даю ИП Куксгаус ЛН предварительное согласие на обработку и использрвание моих персональных данных, согласно ст. 3 ФЗ "О персональных данных" ль 27.07.2006, в целях, определённых Уставом Оператора, без ограничения срока действия. Согласно п. 5 ст. 21 Закона, настоящее согласие может быть отозвано только при условии письменного уведомления Оператора не менее чем за 180 дней до предполагаемой даты прекращения использования данных Оператором.
+      .modal-footer
+        button.btn.ml-auto(type="button") Оформить
+
+        

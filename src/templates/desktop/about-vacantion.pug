@@ -1,0 +1,197 @@
+doctype html
+html(lang='ru')
+  head
+    title Интернет магазин обуви
+    meta(charset='UTF-8')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+  body
+    include shared/city-panel
+    include shared/header
+    include shared/nav
+    
+    section.breadcrumb
+      .container-fluid
+        ul.breadcrumb-list
+          li.breadcrumb-item.breadcrumb-item--home
+            a.breadcrumb-link(href='javascript:;')
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+              </svg>
+          li.breadcrumb-item
+            a.breadcrumb-link(href='javascript:;') О компании
+          li.breadcrumb-item
+            a.breadcrumb-link(href='javascript:;') Вакансии
+    
+    main.about
+      .container-fluid
+        section.page-header
+          h1 Вакансии
+        .row.about-vacantion
+          .col-sm-3
+            .chc-navbar
+              include shared/chc-navbar-about
+              include shared/chc-navbar-help
+              include shared/chc-navbar-delivery
+          .col-sm-9
+            .page-header-sub
+              form(action="", class="", style="width: 100%")
+                .row
+                  .col-6
+                    .form-group
+                      select(name="", class="form-control")
+                        option(value="vacantion-1")  Директолог, специалист по контекстной рекламе
+                        option(value="vacantion-1")  Оператор call-центра
+                        option(value="vacantion-1")  Продавец-консультант
+                    .row
+                      .col-6
+                        .form-group.mb-0
+                          .custom-file
+                            input#customFile.custom-file-input(type='file')
+                            label.custom-file-label(for='customFile') Резюме
+                      .col-6
+                        .form-group.mb-0
+                          .custom-file
+                            input#customFile.custom-file-input(type='file')
+                            label.custom-file-label(for='customFile') Фото
+                  .col-5.offset-1
+                    a.btn.mb-3(href="") Откликнуться на вакансию
+                    .form-group
+                      input(id='request-vacantion', name='request-vacantion', type='checkbox', class="form-control", checked)
+                      label(for='request-vacantion')
+                        | нажимая «Откликнуться на вакансию», вы соглашаетесь с 
+                        a(href='javascript:;') правилами обработки персональных данных
+            
+            #vacantion-accordion
+              .vacantion-item
+                #vacantion-heading1(href="#", data-toggle='collapse', data-target='#vacantion-1', aria-expanded='false', aria-controls='', class='vacantion-item-header') 
+                  span 1
+                  | Директолог, специалист по контекстной рекламе
+                #vacantion-1.collapse(data-parent="#vacantion-accordion", aria-labelledby="vacantion-heading1", class="vacantion-item-body")
+                  
+                  .vacantion-item-option
+                    span заработная плата:
+                    ul
+                      li 25 000 - 60 000 руб.
+                  
+                  .vacantion-item-option
+                    span обязанности:
+                    ul
+                      li Создание, ведение и оптимизация рекламных кампаний в Яндекс.Директ, РСЯ, Google.Adwords, КМС
+                      li Ежедневная оптимизация рекламных кампаний
+                      li Подготовка отчетности по эффективности рекламных кампаний
+                      li Постоянный поиск новых возможностей для повышения эффективности рекламных кампаний
+                      li Настройка и ведение ретаргетинговых рекламных кампаний
+                      li Составление семантических ядер, кластеризация. Написание и А/В тестирование объявлений
+                    
+                  .vacantion-item-option
+                    span требования:
+                    ul
+                      li опыт работы - от 1 год
+                      li Умение анализировать эффективность кампаний,
+                      li Хорошее знание MS Excel, опыт работы с большими таблицами, умение вносить массовые изменения в таблицы, работа с формулами
+                      li Понимание работы ретаргетинга и практический навык настройки
+                      li Грамотный русский язык
+                      li Усидчивость, внимательность
+                      li Желание развиваться в сфере контекстной рекламы, аналитике
+                      li Выполнение работ удаленно не рассматривается!
+                    
+                  .vacantion-item-option
+                    span условия:
+                    ul
+                      li График работы 5/2, с 9-00 до 18-00
+                      li Выплата з/п 2-а раза в месяц
+                      li Офис в центре города
+                      li Возможность обучаться и повышать профессиональный уровень на внутрикорпоративных мероприятиях и семинарах компании "Яндекс"
+                      li Молодой, позитивный и дружный коллектив
+                      li Различные варианты карьерного роста до руководителя отдела.
+                      li Отсутствие дресс-кода и лишних формальностей, открытость руководства.
+              
+              .vacantion-item
+                #vacantion-heading2(href="#", data-toggle='collapse', data-target='#vacantion-2', aria-expanded='false', aria-controls='', class='vacantion-item-header') 
+                  span 2
+                  | Оператор call-центра
+                #vacantion-2.collapse(data-parent="#vacantion-accordion", aria-labelledby="vacantion-heading2", class="vacantion-item-body")
+                  
+                  .vacantion-item-option
+                    span заработная плата:
+                    ul
+                      li 20.000 - 24.000 руб.
+                  
+                  .vacantion-item-option
+                    span обязанности:
+                    ul
+                      li Прозвон клиентов по имеющимся заказам
+                      li Прием заказов по телефону, помощь клиенту в их оформление
+                      li Консультация по возникшим вопросам клиентов
+                   
+                  .vacantion-item-option
+                    span требования:
+                    ul
+                      li Хорошая дикция
+                      li Грамотная речь
+                      li Внимательность
+                    
+                  .vacantion-item-option
+                    span условия:
+                    ul
+                      li Работа в офисе
+                      li В молодом дружном коллективе
+                      li За своим рабочим местом с компьютером
+                      li Карьерный рост
+                  .vacantion-item-option
+                    span дополнительно для наших сотрудников:
+                    ul
+                      li Мотивационные программы
+                      li Корпоративные мероприятия
+                      li Обучение и тренинги внутри компании
+  
+              .vacantion-item
+                #vacantion-heading3(href="#", data-toggle='collapse', data-target='#vacantion-3', aria-expanded='false', aria-controls='', class='vacantion-item-header') 
+                  span 3
+                  | Продавец-консультант
+                #vacantion-3.collapse(data-parent="#vacantion-accordion", aria-labelledby="vacantion-heading3", class="vacantion-item-body")
+                  
+                  .vacantion-item-option
+                    span заработная плата:
+                    ul
+                      li 20.000 - 24.000 руб.
+                  
+                  .vacantion-item-option
+                    span обязанности:
+                    ul
+                      li Консультирование покупателей в торговом зале
+                      li Умение легко и с интересом общаться с покупателями и искренне помогать им в выборе товара
+                      li Выкладка и оформление витрин в соответствии с правилами мерчендайзинга
+                      li Работа с товаром: приём, обработка и размещение
+                      li Поддержание чистоты и порядка в торговом зале
+                   
+                  .vacantion-item-option
+                    span требования:
+                    ul
+                      li Опыт в торговле желателен, но также рассматриваем кандидатов без опыта работы
+                      li Доброжелательность и коммуникабельность
+                      li Желание расти профессионально
+                      li Интерес к моде
+                      li Обучаемость
+                    
+                  .vacantion-item-option
+                    span условия:
+                    ul
+                      li Работа в престижной компании
+                      li Дружный коллектив
+                      li Обучение и тренинги внутри компании
+                      li Карьерный рост
+                      li Стабильный доход
+                      li Корпоративная форма
+
+                  .vacantion-item-option
+                    span дополнительно для наших сотрудников:
+                    ul
+                      li Мотивационные программы
+                      li Корпоративные мероприятия
+                      li Обучение и тренинги внутри компании
+  
+  include shared/footer
+  include shared/modal/allmodals

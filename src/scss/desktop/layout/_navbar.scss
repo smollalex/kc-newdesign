@@ -685,7 +685,6 @@
       }
 
       &-cart {
-        
 
         .nav-wrap {
           display: none;
@@ -694,12 +693,11 @@
           border: 1px solid #e9eff7;
           width: 290px;
           padding: 0;
-          z-index: 1040;
+          z-index: 1030;
           right: 0;
           top: 85px;
           @include box-shadow();
-
-          
+          margin-right: -30px;
           
           &:after {
             content: '';

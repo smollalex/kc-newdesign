@@ -28,12 +28,23 @@ html(lang='ru')
       .container-fluid
         section.page-header
           h1 Отзывы
-          .about-testimonials-total
-            p 433 отзыва
-            p Общая оценка - 4.5
-          a(href="", data-toggle="modal", data-target="#testimonial", class="btn") Оставить свой отзыв
         .row
+          .col-sm-3
+            .chc-navbar
+              include shared/chc-navbar-about
+              include shared/chc-navbar-help
+              include shared/chc-navbar-delivery
           .col-sm-9
+            .page-header-sub.row.no-gutters
+              .col-9
+                p
+                  span Всего отзывов: 
+                    b 433
+                  span Общая оценка: 
+                    b 4.5
+              .col-3
+                a(href="", data-toggle="modal", data-target="#testimonial", class="btn btn-block") Оставить свой отзыв
+              
             .about-testimonials
               .testimonial-item
                 .testimonial-item-header
@@ -99,10 +110,6 @@ html(lang='ru')
                 .testimonial-item-content
                   p.testimonial-item-content-text Заказываю обувь в данной компании уже 3 раза. Качество обуви на высоте. Доставка до Москвы очень оперативная. Скидки в черную пятницу были отличные. Буду и дальше пользоваться услугами данного магазина. Огромное спасибо!
                   p.testimonial-item-content-answer Алевтина, мы дорожим своими клиентами и признательны вам за позитивный отзыв оставленный на нашем сайте. Носите обувь в удовольствие и прекрасного вам настроение в предстоящем зимнем сезоне. С уважением, команда КС-Немецкая обувь.
-          .col-sm-3
-            .chc-navbar
-              include shared/chc-navbar-about
-              include shared/chc-navbar-help
-              include shared/chc-navbar-delivery
+          
   include shared/footer
   include shared/modal/allmodals

@@ -154,7 +154,6 @@ main {
         margin-right: 10px;
         position: relative;
         font-size: 20px;
-        font-weight: 300;
         line-height: 25px;
 
         &--sale {
@@ -182,7 +181,8 @@ main {
         }
         &--through {
           color: #7b808473;
-          font-size: 18px;
+          font-size: 20px;
+          font-weight: 300;
 
           b {
             position: relative;
@@ -206,18 +206,18 @@ main {
         &-badge-discount {
           color: #fff;
           display: inline-block;
-          height: 20px;
-          line-height: 20px;
-          border-radius: 0 4px 4px 0;
+          height: 22px;
+          line-height: 22px;
+          border-radius: 4px;
           position: relative;
-          padding: 0 3px 0 0;
-          margin-left: 12px;
+          padding: 0 5px;
+          margin-right: 10px;
           font-size: 12px;
           font-family: Ubuntu;
-          top: -4px;
+          top: -10px;
 
           &:before {
-            content: '';
+            //content: '';
             width: 14px;
             height: 14px;
             display: inline-block;
@@ -272,13 +272,11 @@ main {
         align-items: center;
         z-index: 1010;
         right: 100%;
-        width: 220px;
         top: 0;
         background: white;
-        padding: 20px;
+        padding: 20px 30px;
         border: 1px solid $border-color;
         margin-right: 20px;
-        font-family: $font-ubuntu;
 
         .cpipc {
           &-price {
@@ -286,7 +284,6 @@ main {
             line-height: 25px;
             margin-bottom: 10px;
             color: #333;
-            font-family: $font-roboto;
 
             small {
               font-size: 20px;
@@ -308,11 +305,11 @@ main {
             border: none;
           }
           &-text {
-            font-size: 12px;
+            font-size: 13px;
             color: #333333;
-            line-height: 16px;
+            line-height: 18px;
             text-align: center;
-            margin-bottom: 10px;
+            margin: 0px 0 20px 0;
 
             span {
               font-weight: 700;

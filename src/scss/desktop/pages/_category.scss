@@ -1,5 +1,5 @@
 .category {
-  padding: 0;
+  padding: 20px 0 0 0;
   
   .container-fluid {
     display: flex;
@@ -25,57 +25,16 @@
     }
 
     &-title {
-      font-size: 19px;
-      margin-bottom: 20px;
-      color: #777;
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #333;
     }
 
     ul {
       
       .nav {
 
-        &-list {
-          &-sub {
-            display: none;
-            flex-direction: column;
-            margin: 10px 0;
-
-            .nav-item {
-              margin-bottom: 3px;
-            }
-            .nav-link {
-              font-size: 14px;
-              font-weight: 300;
-              border: none;
-            }
-          }
-        }
-
         &-item {
-          margin-bottom: 8px;
-
-          &.active {
-            
-            > .nav-link {
-              border-color: $primary-second;
-              color: $primary-second;
-            }
-
-            .nav-list-sub {
-              display: block;
-              border-right: none;
-
-              .nav-link {
-                color: #777;
-
-                &:hover, &:focus {
-                  color: $primary-second;
-                  text-decoration: underline;
-                }
-              }
-            }
-          }
-
           span {
             font-size: 12px;
             font-weight: 300;
@@ -83,21 +42,68 @@
             padding-left: 6px;
           }
         }
+
         &-link {
-          font-size: 15px;
+          transition: .5s;
+          font-size: 14px;
           line-height: 20px;
+          font-weight: 300;
           display: inline-flex;
           align-items: flex-start;
           text-transform: none;
-          //color: #778190;
           padding: 0;
-          border-bottom: 1px solid #e9eff7;
+          border-bottom: 1px solid $border-color;
           height: 100%;
-          
+          margin-bottom: 8px;
+          text-decoration: none;
+          color: #333;
+
           &:hover, &:focus {
-            text-decoration: none;
             border-color: $primary-second;
             color: $primary-second;
+          }
+        }
+
+        &-list {
+          
+          &-sub {
+            display: none;
+            flex-direction: column;
+            margin: 10px 10px 20px 10px;
+
+            .nav-item {
+              
+            }
+            .nav-link {
+              
+            }
+          }
+        }
+
+        &-item {
+          &.active {
+            
+            > .nav-link {
+              color: #000;
+              border-color: #000;
+  
+              span {
+                color: #000;
+              }
+            }
+  
+            .nav-list-sub {
+              display: block;
+              border-right: none;
+  
+              .nav-link {
+                color: #777;
+  
+                &:hover, &:focus {
+                  color: $primary-second;
+                }
+              }
+            }
           }
         }
       }
@@ -111,7 +117,6 @@
 
     &-top {
       display: flex;
-      align-items: baseline;
       flex-wrap: wrap;
       margin-bottom: 5px;
 
@@ -125,13 +130,14 @@
       &-count {
         padding-left: 7px;
         font-weight: 300;
-        font-size: 14px;
       }
 
       &-sort {
         display: flex;
         align-items: center;
-        margin-left: auto;
+        padding-left: 10px;
+        border-left: 1px solid #e9eff7;
+        margin-left: 10px;
         
         @include media-breakpoint-down(md) {
           margin-top: 10px;
@@ -183,7 +189,6 @@
       padding: 5px 0 10px 0;
       display: flex;
       flex-wrap: wrap;
-      border-bottom: 3px solid #e3eff7;
 
       a[data-toggle="collapse"] {
         border: none;
@@ -228,23 +233,7 @@
       .collapse {
         width: 100%;
       }
-      
-      /*
-      &::-webkit-scrollbar {
-        height: 4px;
-      }
-      
-      &::-webkit-scrollbar-track {
-        background: #f6f9fe;
-      }
-      
-      &::-webkit-scrollbar-thumb {
-        background-color: #afcde6;
-        border-radius: 20px;
-        outline: 1px solid slategrey;
-      }
-      */
-
+     
       .dropdown {
         margin: 3px;
         display: flex;
@@ -263,6 +252,7 @@
           align-items: center;
           transition: 0.3s;
           font-weight: 300;
+          outline: none;
 
           .filter-count {
             display: none;
@@ -323,18 +313,15 @@
           border-radius: 0;
           padding: 20px;
           z-index: 1030;
-
-          &.show {
-           /*  position: fixed !important;
-            transform: none !important; */
-          }
   
           @include box-shadow();
   
           &-list {
-            max-height: 202px;
+            min-height: 70px;
+            max-height: 260px;
             overflow-y: auto;
             margin-bottom: 20px;
+            padding-top: 2px;
   
             &::-webkit-scrollbar {
               width: 4px;
@@ -369,7 +356,7 @@
   
         &-item {
           padding: 0;
-          margin-bottom: 7px;
+          margin-bottom: 10px;
   
           &:last-child {
             margin-bottom: 0;
@@ -385,7 +372,6 @@
             border-color: #01b2ff;
           }
           [type="checkbox"]:checked + label:after {
-            background-color: #01b2ff;
           }
   
           &-icon {
@@ -468,6 +454,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: auto;
+    padding-bottom: 50px;
 
     @include media-breakpoint-down(md) {
       width: 100%;
@@ -475,16 +462,13 @@
   }
 
   &-content {
-    
-    &-chunk {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 -8px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
 
     .card {
       flex-basis: calc(25% - 16px);
-      margin: 8px;
+      margin: 8px 8px 36px 8px;
       min-width: 200px;
 
       @include media-breakpoint-down(lg){
@@ -501,7 +485,8 @@
   &-tags {
     padding: 20px 0;
     background-color: #f5f9fe;
-    margin: 20px 0;
+    margin: 20px 0 50px;
+    min-width: 100%;
 
 
     &-title {

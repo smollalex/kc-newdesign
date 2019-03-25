@@ -23,11 +23,17 @@ html(lang='ru')
             a.breadcrumb-link(href='javascript:;') О нас
     main.about
       .container-fluid
-        section.page-header
+        .page-header
           h1 О нас
-          p Мы - одна из крупнейших обувных компаний России, специализирующаяся на продаже качественной и комфортной обуви мировых европейских производителей, занимающая лидирующие позиции в своем сегменте.
         .row
+          .col-sm-3
+            .chc-navbar
+              include shared/chc-navbar-about
+              include shared/chc-navbar-help
+              include shared/chc-navbar-delivery
           .col-sm-9
+            .about-header
+              p Мы - одна из крупнейших обувных компаний России, специализирующаяся на продаже качественной и комфортной обуви мировых европейских производителей.
             .about-success
               h2 Наш успех складывается из предоставления лучшего для вас
               .about-success-items
@@ -52,7 +58,7 @@ html(lang='ru')
               div
                 h3 Сеть фирменных магазинов
                 p text
-                a(href="") Магазины на карте
+                a.btn(href="") Магазины на карте
             .about-collection
               h3 Отбираем лучшие коллекции для вас
               p следим за последними тенденциями моды на лучших мировых выставках
@@ -69,7 +75,7 @@ html(lang='ru')
               .about-vacantion-title
                 h3 Каждый наш сотрудник — это профессионал своего дела
                 p готовый сделать все возможное чтобы вы остались довольны
-                a(href="") КАРЬЕРА В «КС-НЕМЕЦКАЯ ОБУВЬ»
+                a.btn(href="") КАРЬЕРА В «КС-НЕМЕЦКАЯ ОБУВЬ»
               .about-vacantion-items
                 .about-vacantion-item
                   img(src="", alt="")
@@ -163,13 +169,9 @@ html(lang='ru')
               div
                 h3 Мы доставляем удовольствие!
                 p Своя курьерская доставка с грамотно построенной логистикой привезёт заказ в удобное для вас время с возможностью примерки и частичного выкупа.
-                a(href="") Подробнее о доставке
+                a.btn(href="") Подробнее о доставке
               img(src="img/about-courier.jpg", alt="")
-          .col-sm-3
-            .chc-navbar
-              include shared/chc-navbar-about
-              include shared/chc-navbar-help
-              include shared/chc-navbar-delivery
+          
   include shared/footer
   include shared/modal/pickup-point
   include shared/modal/city

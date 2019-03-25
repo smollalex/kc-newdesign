@@ -28,13 +28,18 @@ html(lang='ru')
       .container-fluid
         section.page-header
           h1 Сертификаты
-        .row
-          .col-sm-9
-            .about-certification
+        .row.about-certification
           .col-sm-3
             .chc-navbar
               include shared/chc-navbar-about
               include shared/chc-navbar-help
               include shared/chc-navbar-delivery
+          .col-sm-9
+            .row
+              .col-6
+                img.img-fluid(src="img/certificate-rieker.jpg", alt="")
+              .col-6
+                img.img-fluid(src="img/certificate-ara.jpg", alt="")
+          
   include shared/footer
   include shared/modal/allmodals

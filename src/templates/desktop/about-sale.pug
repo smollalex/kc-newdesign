@@ -28,8 +28,12 @@ html(lang='ru')
       .container-fluid
         section.page-header
           h1 Система скидок
-          p Покупай больше — плати меньше!
         .row
+          .col-sm-3
+            .chc-navbar
+              include shared/chc-navbar-about
+              include shared/chc-navbar-help
+              include shared/chc-navbar-delivery
           .col-sm-9
             .about-sale
               .about-sale-item
@@ -39,7 +43,7 @@ html(lang='ru')
                 .about-sale-item-content
                 .row
                   .col-5
-                    img(src="img/IMG_67021.jpg", alt="", style="margin: 20px 0 0 37px")
+                    img(src="img/bonus-img.png", alt="", style="margin: 20px 0 0 37px")
                   .col-4
                     table.table.table-bordered(style="margin-top: 40px;")
                       tbody
@@ -65,10 +69,6 @@ html(lang='ru')
                   h3 Как происходит накопление
                 .about-sale-item-content
                   p В интернет магазине: накопление производится автоматически только выкупленных товаров, при статусе заказа "Завершен". Накопления могут занять до 30 дней в зависимости от того, какой способ доставки Вы выбрали.                  p В офлайн магазине: накопления производятся автоматически на следующий день после покупки.
-          .col-sm-3
-            .chc-navbar
-              include shared/chc-navbar-about
-              include shared/chc-navbar-help
-              include shared/chc-navbar-delivery
+          
   include shared/footer
   include shared/modal/allmodals

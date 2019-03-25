@@ -28,8 +28,12 @@ html(lang='ru')
       .container-fluid
         section.page-header
           h1 Акции и скидки
-          p Для получения скидки по промокоду скопируйте его и вставьте в поле "Промокод" в корзине. Скидка распространяется на товары, представленные на данной странице. Акции действительны в указанные сроки проведения.
         .row
+          .col-sm-3
+            .chc-navbar
+              include shared/chc-navbar-about
+              include shared/chc-navbar-help
+              include shared/chc-navbar-delivery
           .col-sm-9
             .promo-item
               .promo-item-banner
@@ -77,10 +81,6 @@ html(lang='ru')
  
                 .promo-item-content-inner
                   .promo-disabled Акция закончена 12.12.12
-          .col-sm-3
-            .chc-navbar
-              include shared/chc-navbar-about
-              include shared/chc-navbar-help
-              include shared/chc-navbar-delivery
+          
   include shared/footer
   include shared/modal/allmodals

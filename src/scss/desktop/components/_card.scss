@@ -7,7 +7,7 @@ $type-sale:#f69781;
   position: relative;
   padding: 0 0 10px 0;
   background-color: #fff;
-  border: 1px solid #f3f9fe;
+  border: 1px solid transparent;
   border-radius: 0;
   min-width: 241px;
   transition: .4s;
@@ -60,13 +60,13 @@ $type-sale:#f69781;
     &-name {
       font-size: 13px;
       font-weight: 300;
-      color: #9a9da0;
+      opacity: 0.6;
     }
 
     &-brand {
-      font-weight: 400;
-      font-size: 17px;
-      line-height: 26px;
+      font-size: 14px;
+      line-height: 21px;
+      text-transform: uppercase;
     }
   }
 
@@ -77,13 +77,13 @@ $type-sale:#f69781;
     justify-content: center;
 
     span {
-      font-size: 16px;
-      font-weight: 400;
+      font-size: 20px;
+      line-height: 25px;
       margin: 0 5px;
       position: relative;
       
       span {
-        font-size: .9em;
+        font-size: .8em;
         margin: 0 0 0 2px;
       }
     }
@@ -92,18 +92,24 @@ $type-sale:#f69781;
       
       &--through {
         opacity: .5;
+        font-size: 16px;
+
         &:before {
           content: '';
           display: block;
           border-top: 1px solid;
           position: absolute;
           width: 100%;
-          top: 55%;
+          top: 46%;
         }
       }
   
       &--sale {
-        color: #333;
+        color: #fc9882;;
+      }
+
+      &--promo {
+        color: #fb4545;
       }
     }
   }
@@ -190,14 +196,22 @@ $type-sale:#f69781;
     position: absolute;
     left: -1px;
     right: -1px;
-    top: 71px;
-    padding: 10px 0;
-    justify-content: center;
+    top: 83px;
     display: flex;
-    flex-wrap: wrap;
-    background-color: #fb4545;
+    background-color: #ffffff;
     color: #fff;
+    border: 1px solid #e9eff7;
+    border-top: 0;
     @include box-shadow();
+
+    > div {
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #fb4545;
+      margin: 2px;
+      padding: 10px 0;
+    }
 
     &-title {
       width: 100%;
@@ -206,7 +220,6 @@ $type-sale:#f69781;
       text-align: center;
       color: white;
       margin-bottom: 7px;
-      display: none;
     }
     
     &-timer {
@@ -226,6 +239,7 @@ $type-sale:#f69781;
         margin-right: 5px;
       }
     }
+
     &-price {
       font-family: Ubuntu;
       font-size: 12px;
@@ -280,11 +294,20 @@ $type-sale:#f69781;
       height: 30px;
       border: 2px solid #f5f9fe;
       margin-left: 0;
+      display: flex;
 
       svg {
         fill: #3fb1ff;
         width: 100%;
         height: 100%;
+      }
+
+      &.active {
+        svg {
+          width: 60%;
+          margin: auto;
+          fill: #3fb1ff;
+        }
       }
 
       &:hover, &:focus {

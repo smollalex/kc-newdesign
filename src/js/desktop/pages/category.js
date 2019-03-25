@@ -20,18 +20,6 @@ $(document).ready(function(){
 	});
 
 
- 
-
-  
- 
-  
-
-  /**
-   * 
-   * @param {*} i 
-   * @param {*} count 
-   * @param {*} item 
-   */
   function getFilterCount(i, count, item) {
     let filter_count = parseInt(count.text());
     filter_count = filter_count + i;

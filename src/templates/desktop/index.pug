@@ -17,7 +17,7 @@ html(lang='ru')
 				section.main
 					#main-slider.owl-carousel.owl-theme-home
 						.item(style='background-image: url(img/banners/main/main-bg-4.jpg)')
-						
+						.item(style='background-image: url(img/banners/main/main-bg-4.jpg)')
 				
 				section.brands
 					//h3.section-title Топ бренды
@@ -58,14 +58,25 @@ html(lang='ru')
 				section.banners
 					.row.mb-4
 						.col-md-6.col-lg-4
-							.banner.banner-2(style='background-image: url(img/banners/trends/IMG_67021.jpg)')
+							.banner.banner-2.mb-5(style='background-image: url(img/banners/main/left.jpg)')
+								.banner-text-badge.banner-text-badge--discount
+									span -5%
+									span Promo
 								a.banner-button(href='#') Смотреть
+								.banner-text
+									span Резиновые сапоги
+									span Дополнительная скидка
 						.col-md-6.col-lg-4
-							.banner.banner-2(style='background-image: url(img/banners/trends/IMG_2718.jpg)')
-								a.banner-button(href='#') Смотреть
+							.banner.banner-300.mb-5(style='background-image: url(img/banners/main/300.jpg)')
+								a.banner-button(href='#') Перейти к покупкам
 						.col-lg-4.d-md-none.d-lg-block
-							.banner.banner-2(style='background-image: url(img/banners/trends/IMG_02231.JPG)')
+							.banner.banner-2.mb-5(style='background-image: url(img/banners/main/right.jpg)')
+								.banner-text-badge.banner-text-badge--brand
+									span NEW`19
 								a.banner-button(href='#') Смотреть
+								.banner-text
+									span Carpice
+									span Новая коллекция
 					.row
 						.col-md-6.col-lg-8
 							.banner.banner-2(style='background-image: url(img/banners/trends/IMG_67021111.jpg)')

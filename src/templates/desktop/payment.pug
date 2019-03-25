@@ -27,9 +27,13 @@ html(lang='ru')
         section.page-header
           h1 Оплата
         .row
+          .col-sm-3
+            .chc-navbar
+              include shared/chc-navbar-delivery
+              include shared/chc-navbar-help
+              include shared/chc-navbar-about
+
           .col-sm-9
-            
-              
             .alert.alert-warning.alert-dismissible.fade.show(role='alert')
               img.alert-icon(src="img/svg/сlothes-fitting-warning.svg", alt="")
               p Предоплата производится в 
@@ -54,7 +58,6 @@ html(lang='ru')
                   p 1. Введите данные банковской карты: номер, срок действия, имя и фамилию, а также 3 цифры с оборотной стороны (код CVV/CVC). Не забудьте указать email: на него придет информация о платеже.
                   p 2. Если для вашей карты включена дополнительная защита 3-D Secure, вы будете перенаправлены на сайт банка для подтверждения платежа.
                   p 3. Готово! Чтобы вернуться в магазин, нажмите на ссылку под чеком.
-            
             .payment-item
               .payment-item-type
                 .payment-item-type-icon
@@ -66,7 +69,6 @@ html(lang='ru')
                   svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
                     polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
                 #payment-2.collapse(aria-labelledby="headingTwo")
-                  
             .payment-item
               .payment-item-type
                 .payment-item-type-icon
@@ -78,14 +80,7 @@ html(lang='ru')
                   svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
                     polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
                 #payment-3.collapse(aria-labelledby="headingThree")
-                  
-            
-
-          .col-sm-3
-            .chc-navbar
-              include shared/chc-navbar-delivery
-              include shared/chc-navbar-help
-              include shared/chc-navbar-about
+         
 
   include shared/footer
   include shared/modal/allmodals

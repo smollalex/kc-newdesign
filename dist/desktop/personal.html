@@ -497,92 +497,365 @@
       </div>
     </section>
     <main class="personal">
-      <div class="container-fluid">
+      <div class="page-header">
         <h1>Личный кабинет</h1>
+      </div>
+      <div class="container-fluid">
         <div class="row">
-          <div class="col-sm-3">
+          <div class="col-md-3 col-lg-2">
             <ul class="nav nav-tabs flex-column">
-              <li class="nav-item"><a class="nav-link active" id="personal-orders-tab" data-toggle="tab" href="#personal-orders" role="tab" aria-controls="personal-orders" aria-selected="true">
-                  <div class="nav-link-icon">
-                    <svg style="width: 45px" version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                      <path d="M42.654,19.021c2.805,0,5.086,2.281,5.086,5.084c0,2.804-2.281,5.086-5.086,5.086 c-2.804,0-5.085-2.282-5.085-5.086C37.569,21.302,39.851,19.021,42.654,19.021 M42.654,18.021c-3.363,0-6.085,2.724-6.085,6.084 c0,3.361,2.722,6.086,6.085,6.086c3.361,0,6.086-2.725,6.086-6.086C48.74,20.745,46.016,18.021,42.654,18.021L42.654,18.021z M45.057,22.145c0.191,0.05,0.342,0.199,0.393,0.391c0.05,0.191-0.003,0.395-0.144,0.535l-2.653,2.657 c-0.103,0.105-0.242,0.165-0.39,0.167c-0.149-0.004-0.288-0.064-0.393-0.173l-1.487-1.505c-0.214-0.217-0.21-0.564,0.003-0.777 c0.219-0.214,0.564-0.211,0.779,0.006l1.098,1.108l2.261-2.261C44.659,22.151,44.866,22.095,45.057,22.145z M14.49,28.187 c-0.429-2.138,0.002-4.694,1.337-6.936c0.692-1.162,1.588-2.184,2.659-3.039c0.252-0.201,0.61-0.2,0.86,0.003 c3.844,3.11,7.232,6.74,10.071,10.789l4.586,6.543c0.016,0.022,0.03,0.048,0.043,0.071c0.665,1.245,2.407,2.186,4.052,2.186 c1.158,0,2.493-0.447,3.174-1.062c0.151-0.139,0.356-0.2,0.56-0.17c2.61,0.384,4.527,1.928,5.439,2.814 c1.356,1.319,2.232,2.854,2.232,3.913c0,1.871-2.398,2.282-3.187,2.418c-1.587,0.274-3.72,0.329-6.433,0.329h-5.617 c-1.901,0-3.635-1.147-4.417-2.926c-1.699-3.864-4.305-7.315-7.557-10.024l-0.063,0.102c-0.675,1.395-1.033,2.948-1.033,4.497v7.665 c0,0.379-0.307,0.687-0.687,0.687h-2.747c-0.381,0-0.688-0.308-0.688-0.687v-8.48c0-2.051-0.568-4.315-1.782-6.49 c-0.372-0.667-0.642-1.401-0.8-2.182C14.492,28.201,14.492,28.194,14.49,28.187z M21.209,32.24 c-1.537-1.154-3.189-2.143-4.932-2.951c0.309,0.678,1.945,3.164,2.152,6.93c0.014,0.232,0.021,0.455,0.021,0.661v7.793h1.374v-6.978 C19.824,35.547,20.467,33.44,21.209,32.24z M15.777,27.569c6.857,2.847,12.355,8.234,15.331,14.999 c0.562,1.278,1.802,2.104,3.159,2.104h5.617c2.644,0,4.709-0.052,6.199-0.309c0.934-0.16,2.046-0.476,2.046-1.064 c0-0.577-0.624-1.769-1.816-2.929c-0.758-0.737-2.31-1.994-4.388-2.391c-0.957,0.715-2.473,1.197-3.827,1.197 c-2.133,0-4.329-1.207-5.243-2.874l-4.563-6.511c-2.656-3.789-5.807-7.203-9.371-10.151c-0.758,0.674-1.399,1.45-1.913,2.313 C15.903,23.807,15.527,25.879,15.777,27.569z"></path>
-                    </svg>
-                  </div>
-                  <div class="nav-link-text"><span>Заказы</span><span>История заказов, возврат товара</span></div></a></li>
-              <li class="nav-item"><a class="nav-link" id="personal-profile-tab" data-toggle="tab" href="#personal-profile" role="tab" aria-controls="personal-profile" aria-selected="false">
-                  <div class="nav-link-icon">
-                    <svg style="width: 20px" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                      <path d="M360 352h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0-64h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm0 128h112c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H360c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8zm-168-32c44.2 0 80-35.8 80-80s-35.8-80-80-80-80 35.8-80 80 35.8 80 80 80zm0-128c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48 21.5-48 48-48zM512 64H64C28.7 64 0 92.7 0 128v320c0 35.3 28.7 64 64 64h448c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64zM272 480H112v-15.1c0-7 2.1-13.8 6-19.6 5.6-8.3 15.8-13.2 27.3-13.2 12.4 0 20.8 7 46.8 7 25.9 0 34.3-7 46.8-7 11.5 0 21.7 5 27.3 13.2 3.9 5.8 6 12.6 6 19.6V480zm272-32c0 17.6-14.4 32-32 32H304v-15.1c0-13.9-4.2-26.8-11.4-37.5-12.1-17.9-32.7-27.4-53.8-27.4-19.5 0-24.4 7-46.8 7s-27.3-7-46.8-7c-21.2 0-41.8 9.4-53.8 27.4C84.2 438.1 80 451 80 464.9V480H64c-17.6 0-32-14.4-32-32V192h512v256zm0-288H32v-32c0-17.6 14.4-32 32-32h448c17.6 0 32 14.4 32 32v32z"></path>
-                    </svg>
-                  </div>
-                  <div class="nav-link-text"><span>Профиль</span><span>Дисконтная карта, пароль, телефон</span></div></a></li>
-              <li class="nav-item"><a class="nav-link" id="personal-subscribe-tab" data-toggle="tab" href="#personal-subscribe" role="tab" aria-controls="personal-subscribe" aria-selected="false">
-                  <div class="nav-link-icon">
-                    <svg style="width: 20px" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                      <path d="M352 248v-16c0-4.42-3.58-8-8-8H168c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h176c4.42 0 8-3.58 8-8zm-184-56h176c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8H168c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8zm326.59-27.48c-1.98-1.63-22.19-17.91-46.59-37.53V96c0-17.67-14.33-32-32-32h-46.47c-4.13-3.31-7.71-6.16-10.2-8.14C337.23 38.19 299.44 0 256 0c-43.21 0-80.64 37.72-103.34 55.86-2.53 2.01-6.1 4.87-10.2 8.14H96c-17.67 0-32 14.33-32 32v30.98c-24.52 19.71-44.75 36.01-46.48 37.43A48.002 48.002 0 0 0 0 201.48V464c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V201.51c0-14.31-6.38-27.88-17.41-36.99zM256 32c21.77 0 44.64 16.72 63.14 32H192.9c18.53-15.27 41.42-32 63.1-32zM96 96h320v173.35c-32.33 26-65.3 52.44-86.59 69.34-16.85 13.43-50.19 45.68-73.41 45.31-23.21.38-56.56-31.88-73.41-45.32-21.29-16.9-54.24-43.33-86.59-69.34V96zM32 201.48c0-4.8 2.13-9.31 5.84-12.36 1.24-1.02 11.62-9.38 26.16-21.08v75.55c-11.53-9.28-22.51-18.13-32-25.78v-16.33zM480 464c0 8.82-7.18 16-16 16H48c-8.82 0-16-7.18-16-16V258.91c42.75 34.44 99.31 79.92 130.68 104.82 20.49 16.36 56.74 52.53 93.32 52.26 36.45.26 72.27-35.46 93.31-52.26C380.72 338.8 437.24 293.34 480 258.9V464zm0-246.19c-9.62 7.75-20.27 16.34-32 25.79v-75.54c14.44 11.62 24.8 19.97 26.2 21.12 3.69 3.05 5.8 7.54 5.8 12.33v16.3z"></path>
-                    </svg>
-                  </div>
-                  <div class="nav-link-text"><span>Подписка</span><span>Настройка рассылок</span></div></a></li>
+              <li class="nav-item"><a class="nav-link active" id="personal-orders-tab" data-toggle="tab" href="#personal-orders" role="tab" aria-controls="personal-orders" aria-selected="true">Заказы</a></li>
+              <li class="nav-item"><a class="nav-link" id="personal-likes-tab" data-toggle="tab" href="#personal-likes" role="tab" aria-controls="personal-likes" aria-selected="true">Избранное</a></li>
+              <li class="nav-item"><a class="nav-link" id="personal-profile-tab" data-toggle="tab" href="#personal-profile" role="tab" aria-controls="personal-profile" aria-selected="false">Профиль</a></li>
+              <li class="nav-item"><a class="nav-link" id="personal-subscribe-tab" data-toggle="tab" href="#personal-subscribe" role="tab" aria-controls="personal-subscribe" aria-selected="false">Подписка</a></li>
             </ul>
           </div>
-          <div class="col-sm-9">
+          <div class="col-md-8 col-lg-10">
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="personal-orders" role="tabpanel" aria-labelledby="personal-orders-tab">
-                <table class="table" id="orders-table">
-                  <thead>
-                    <tr>
-                      <th>номер</th>
-                      <th>дата</th>
-                      <th>сумма</th>
-                      <th>статус</th>
-                      <th>дейтсвие</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>77063</td>
-                      <td>31.01.2019</td>
-                      <td>9 590 ₽</td>
-                      <td class="status-delivery">В пути</td>
-                      <td><a href="#">Отследить</a></td>
-                    </tr>
-                    <tr>
-                      <td>425523</td>
-                      <td>31.01.2019</td>
-                      <td>9 590 ₽</td>
-                      <td class="status-wait">Ожидает получения</td>
-                      <td><a href="#" data-toggle="modal" data-target="#pickupPoint">Пункты самовывоза</a></td>
-                    </tr>
-                    <tr>
-                      <td>753211</td>
-                      <td>31.01.2019</td>
-                      <td>9 590 ₽</td>
-                      <td class="status-done">Доставлен</td>
-                      <td><a href="#">Вернуть</a></td>
-                    </tr>
-                    <tr>
-                      <td>753211</td>
-                      <td>31.01.2019</td>
-                      <td>9 590 ₽</td>
-                      <td class="status-archive">В архиве</td>
-                      <td></td>
-                    </tr>
-                    <tr>
-                      <td>753211</td>
-                      <td>31.01.2019</td>
-                      <td>9 590 ₽</td>
-                      <td class="status-canceled">Отменён</td>
-                      <td> </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="order">
+                  <div class="order-header">
+                    <div class="order-header-icon" data-toggle="collapse" href="#order-121441" role="button" aria-expanded="false" aria-controls="order-121441"><svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg></div>
+                    <div class="order-header-center">
+                      <div class="order-header-title"><span>Заказ </span>№121441<span>от</span>19.03.2019<span>на сумму</span>1500 ₽</div>
+                      <div class="order-header-img"><img class="order-item-img" src="https://kc-shoes.ru/image/cache/data/products/1538643847-606989-234x338.JPG"><img class="order-item-img" src="./img/category/1.jpg"><img class="order-item-img" src="./img/category/3.jpg"><img class="order-item-img" src="./img/category/5.jpg"></div>
+                    </div>
+                    <div class="order-header-status"><span class="order-status--done">
+                        <svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="" d="M435.848 83.466L172.804 346.51l-96.652-96.652c-4.686-4.686-12.284-4.686-16.971 0l-28.284 28.284c-4.686 4.686-4.686 12.284 0 16.971l133.421 133.421c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-28.284-28.284c-4.686-4.686-12.284-4.686-16.97 0z"></path>
+                        </svg>завершён</span></div>
+                  </div>
+                  <div class="collapse order-body" id="order-121441">
+                    <div class="order-details">
+                      <h5>Дата доставки 14.03.2019, 20:00 - 23:00</h5>
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="order-delivery-item"><span>Получатель</span>
+                            <div><span>Евгений Криводуб </span><span>+79503325909 </span><span>take2mars@gmail.com</span></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Способ доставки</span>
+                            <div><span>Доставка курьером</span></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Адрес доставки</span>
+                            <div><span>г. Омск, Омская обл., ул. Фрунзе, 101, оф. 32</span><a href="">Показать на карте</a></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Время работы пункта самовывоза</span>
+                            <div><span>пн-вс: 10:00-21:00;</span></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Способ оплаты</span>
+                            <div><span>Наличными или банковской картой</span></div>
+                          </div>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="order-details-item"><span>Товаров в заказе:</span><span></span><span>1</span></div>
+                          <div class="order-details-item"><span>Общая стоимость:</span><span></span><span>1500 ₽</span></div>
+                          <div class="order-details-item"><span>Скидка по промокоду:</span><span></span><span>100 ₽</span></div>
+                          <div class="order-details-item"><span>Общая скидка:</span><span></span><span>100 ₽</span></div>
+                          <div class="order-details-item"><span>Доставка (Курьером)</span><span></span><span>200 ₽</span></div>
+                          <div class="order-details-item order-details-item--total"><span>ИТОГО К ОПЛАТЕ:</span><span></span><span>1600 ₽</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order-items">
+                      <div class="order-item not-redeemed">
+                        <div class="order-item-img"><img src="https://kc-shoes.ru/image/cache/data/products/1538643847-606989-234x338.JPG"></div>
+                        <div class="order-item-text"><span class="order-item-title">Резиновые сапоги <span>Caprice</span></span>
+                          <div class="order-item-options">
+                            <div class="order-item-option">Артикул<span>23123002</span></div>
+                            <div class="order-item-option">Размер<span>37</span></div>
+                            <div class="order-item-option">Цвет<span>Бежевый</span></div>
+                          </div>
+                        </div>
+                        <div class="order-item-price">1500 ₽
+                          <div class="not-redeemed">Не выкуплен<span>Не подошёл размер</span></div>
+                        </div>
+                        <div class="order-item-action"><a href="#" data-toggle="modal" data-target="#testimonial-product">Оставить отзыв</a></div>
+                      </div>
+                      <div class="order-item">
+                        <div class="order-item-img"><img src="./img/category/1.jpg"></div>
+                        <div class="order-item-text"><span class="order-item-title">Женские кроссовки <span>Tamaris</span></span>
+                          <div class="order-item-options">
+                            <div class="order-item-option">Артикул<span>23123002</span></div>
+                            <div class="order-item-option">Размер<span>37</span></div>
+                            <div class="order-item-option">Цвет<span>Бежевый</span></div>
+                          </div>
+                        </div>
+                        <div class="order-item-price">3990 ₽
+                          <div class="redeemed">Выкуплен</div>
+                        </div>
+                        <div class="order-item-action"><a href="#" data-toggle="modal" data-target="#testimonial-product">Оставить отзыв</a>
+                          <div class="order-refund">
+                            <div class="checkbox">
+                              <input class="check-to-refund" name="check-to-refund" type="checkbox">
+                              <label for="check-to-refund">Вернуть</label>
+                            </div>
+                            <div class="order-refund-reason">
+                              <select class="form-control" name="">
+                                <option value="refund-reason-1">Не подошёл размер</option>
+                                <option value="refund-reason-2">Не понравился стиль</option>
+                                <option value="refund-reason-3">Обнаружен деффект</option>
+                                <option value="refund-reason-4">Другая причина</option>
+                              </select>
+                            </div>
+                            <div class="order-refund-reason-other" style="display: none;">
+                              <input class="form-control" type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order-item">
+                        <div class="order-item-img"><img src="./img/category/3.jpg"></div>
+                        <div class="order-item-text"><span class="order-item-title">Женские кроссовки <span>Tamaris</span></span>
+                          <div class="order-item-options">
+                            <div class="order-item-option">Артикул<span>23123002</span></div>
+                            <div class="order-item-option">Размер<span>37</span></div>
+                            <div class="order-item-option">Цвет<span>Бежевый</span></div>
+                          </div>
+                        </div>
+                        <div class="order-item-price">3990 ₽
+                          <div class="redeemed">Выкуплен</div>
+                        </div>
+                        <div class="order-item-action"><a href="#" data-toggle="modal" data-target="#testimonial-product">Оставить отзыв</a>
+                          <div class="order-refund">
+                            <div class="checkbox">
+                              <input class="check-to-refund" name="check-to-refund" type="checkbox">
+                              <label for="check-to-refund">Вернуть</label>
+                            </div>
+                            <div class="order-refund-reason">
+                              <select class="form-control" name="">
+                                <option value="refund-reason-1">Не подошёл размер</option>
+                                <option value="refund-reason-2">Не понравился стиль</option>
+                                <option value="refund-reason-3">Обнаружен деффект</option>
+                                <option value="refund-reason-4">Другая причина</option>
+                              </select>
+                            </div>
+                            <div class="order-refund-reason-other" style="display: none;">
+                              <input class="form-control" type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order-item">
+                        <div class="order-item-img"><img src="./img/category/5.jpg"></div>
+                        <div class="order-item-text"><span class="order-item-title">Женские кроссовки  <span>Tamaris</span></span>
+                          <div class="order-item-options">
+                            <div class="order-item-option">Артикул<span>23123002</span></div>
+                            <div class="order-item-option">Размер<span>37</span></div>
+                            <div class="order-item-option">Цвет<span>Бежевый</span></div>
+                          </div>
+                        </div>
+                        <div class="order-item-price">3990 ₽
+                          <div class="redeemed">Выкуплен</div>
+                        </div>
+                        <div class="order-item-action"><a href="#" data-toggle="modal" data-target="#testimonial-product">Оставить отзыв</a>
+                          <div class="order-refund">
+                            <div class="checkbox">
+                              <input class="check-to-refund" name="check-to-refund" type="checkbox">
+                              <label for="check-to-refund">Вернуть</label>
+                            </div>
+                            <div class="order-refund-reason">
+                              <select class="form-control" name="">
+                                <option value="refund-reason-1">Не подошёл размер</option>
+                                <option value="refund-reason-2">Не понравился стиль</option>
+                                <option value="refund-reason-3">Обнаружен деффект</option>
+                                <option value="refund-reason-4">Другая причина</option>
+                              </select>
+                            </div>
+                            <div class="order-refund-reason-other" style="display: none;">
+                              <input class="form-control" type="text">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order-refund-wrap" style="display: none"><a class="btn order-refund-btn" href="#" data-toggle="modal" data-target="#refund" disabled>Оформить возврат</a></div>
+                  </div>
+                </div>
+                <div class="order">
+                  <div class="order-header">
+                    <div class="order-header-icon" data-toggle="collapse" href="#order-31234123" role="button" aria-expanded="false" aria-controls="order-31234123"><svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg></div>
+                    <div class="order-header-center">
+                      <div class="order-header-title"><span>Заказ</span>№31234123<span>от</span>19.03.2019<span>на сумму</span>12500 ₽</div>
+                      <div class="order-header-img"><img class="order-item-img" src="./img/category/1.jpg"><img class="order-item-img" src="./img/category/3.jpg"></div>
+                    </div>
+                    <div class="order-header-status"><span class="order-status--in-process">
+                        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                          <path fill="" d="M288 32c0 17.673-14.327 32-32 32s-32-14.327-32-32 14.327-32 32-32 32 14.327 32 32zm-32 416c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm256-192c0-17.673-14.327-32-32-32s-32 14.327-32 32 14.327 32 32 32 32-14.327 32-32zm-448 0c0-17.673-14.327-32-32-32S0 238.327 0 256s14.327 32 32 32 32-14.327 32-32zm33.608 126.392c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm316.784 0c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zM97.608 65.608c-17.673 0-32 14.327-32 32 0 17.673 14.327 32 32 32s32-14.327 32-32c0-17.673-14.327-32-32-32z"></path>
+                        </svg>в обработке</span><a class="btn" href="#">Отменить заказ</a></div>
+                  </div>
+                  <div class="collapse order-body" id="order-31234123">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert"><img class="alert-icon" src="img/svg/сlothes-fitting-warning.svg" alt="">
+                      <p>Когда Ваш заказ поступит в пункт выдачи, вам придет СМС уведомление.</p>
+                      <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+                        <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
+                          <path fill="" d="M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z"></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="order-details">
+                      <h5>Дата доставки 14.03.2019, 20:00 - 23:00</h5>
+                      <div class="row">
+                        <div class="col-sm-7"> 
+                          <div class="order-delivery-item"><span>Получатель</span>
+                            <div><span>Евгений Криводуб </span><span>+79503325909 </span><span>take2mars@gmail.com</span></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Способ доставки</span>
+                            <div><span>Доставка курьером</span></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Адрес доставки</span>
+                            <div><span>г. Омск, Омская обл., ул. Фрунзе, 101, оф. 32</span><a href="">Показать на карте</a></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Время работы пункта самовывоза</span>
+                            <div><span>пн-вс: 10:00-21:00;</span></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Способ оплаты</span>
+                            <div><span>Наличными или банковской картой</span></div>
+                          </div>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="order-details-item"><span>Товаров в заказе:</span><span></span><span>3</span></div>
+                          <div class="order-details-item"><span>Общая стоимость:</span><span></span><span>12909 ₽</span></div>
+                          <div class="order-details-item"><span>Скидка КС:</span><span></span><span>1109 ₽</span></div>
+                          <div class="order-details-item"><span>Скидка по промокоду:</span><span></span><span>109 ₽</span></div>
+                          <div class="order-details-item"><span>Общая скидка:</span><span></span><span>1218 ₽</span></div>
+                          <div class="order-details-item"><span>Доставка (Курьером)</span><span></span><span>200 ₽</span></div>
+                          <div class="order-details-item order-details-item--total"><span>ИТОГО К ОПЛАТЕ:</span><span></span><span>10109 ₽</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order-items">
+                      <div class="order-item">
+                        <div class="order-item-img"><img src="./img/category/1.jpg"></div>
+                        <div class="order-item-text"><span class="order-item-title">Женские кроссовки <span>Tamaris</span></span>
+                          <div class="order-item-options">
+                            <div class="order-item-option">Артикул<span>23123002</span></div>
+                            <div class="order-item-option">Размер<span>37</span></div>
+                            <div class="order-item-option">Цвет<span>Бежевый</span></div>
+                          </div>
+                        </div>
+                        <div class="order-item-price">3990 ₽</div>
+                        <div class="order-item-action"></div>
+                      </div>
+                      <div class="order-item">
+                        <div class="order-item-img"><img src="./img/category/3.jpg"></div>
+                        <div class="order-item-text"><span class="order-item-title">Женские кроссовки  <span>Tamaris</span></span>
+                          <div class="order-item-options">
+                            <div class="order-item-option">Артикул<span>23123002</span></div>
+                            <div class="order-item-option">Размер<span>37</span></div>
+                            <div class="order-item-option">Цвет<span>Бежевый</span></div>
+                          </div>
+                        </div>
+                        <div class="order-item-price">3990 ₽</div>
+                        <div class="order-item-action"></div>
+                      </div>
+                    </div>
+                    <div class="order-map"></div>
+                  </div>
+                </div>
+                <div class="order">
+                  <div class="order-header">
+                    <div class="order-header-icon" data-toggle="collapse" href="#order-112123" role="button" aria-expanded="false" aria-controls="order-112123"><svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg></div>
+                    <div class="order-header-center">
+                      <div class="order-header-title"><span>Заказ</span>№112123<span>от</span>19.03.2019<span>на сумму</span>2300 ₽</div>
+                      <div class="order-header-img"><img class="order-item-img" src="./img/category/2.jpg"><img class="order-item-img" src="./img/category/4.jpg"></div>
+                    </div>
+                    <div class="order-header-status"><span class="order-status--canceled">
+                        <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                          <path fill="" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z"></path>
+                        </svg>отменён</span></div>
+                  </div>
+                  <div class="collapse order-body" id="order-112123">
+                    <div class="order-details">
+                      <div class="row">
+                        <div class="col-sm-7">
+                          <div class="order-delivery-item"><span>Получатель</span>
+                            <div><span>Евгений Криводуб </span><span>+79503325909 </span><span>take2mars@gmail.com</span></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Способ доставки</span>
+                            <div><span>Доставка курьером</span></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Адрес доставки</span>
+                            <div><span>г. Омск, Омская обл., ул. Фрунзе, 101, оф. 32</span><a href="">Показать на карте</a></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Время работы пункта самовывоза</span>
+                            <div><span>пн-вс: 10:00-21:00;</span></div>
+                          </div>
+                          <div class="order-delivery-item"><span>Способ оплаты</span>
+                            <div><span>Наличными или банковской картой</span></div>
+                          </div>
+                        </div>
+                        <div class="col-sm-5">
+                          <div class="order-details-item"><span>Товаров в заказе:</span><span></span><span>3</span></div>
+                          <div class="order-details-item"><span>Общая стоимость:</span><span></span><span>12909 ₽</span></div>
+                          <div class="order-details-item"><span>Скидка КС:</span><span></span><span>1109 ₽</span></div>
+                          <div class="order-details-item"><span>Скидка по промокоду:</span><span></span><span>109 ₽</span></div>
+                          <div class="order-details-item"><span>Общая скидка:</span><span></span><span>1218 ₽</span></div>
+                          <div class="order-details-item"><span>Доставка (Курьером)</span><span></span><span>200 ₽</span></div>
+                          <div class="order-details-item order-details-item--total"><span>ИТОГО К ОПЛАТЕ:</span><span></span><span>10109 ₽</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="order-items">
+                      <div class="order-item">
+                        <div class="order-item-img"><img src="./img/category/2.jpg"></div>
+                        <div class="order-item-text"><span class="order-item-title">Женские кроссовки <span>Tamaris</span></span>
+                          <div class="order-item-options">
+                            <div class="order-item-option">Артикул<span>23123002</span></div>
+                            <div class="order-item-option">Размер<span>37</span></div>
+                            <div class="order-item-option">Цвет<span>Бежевый</span></div>
+                          </div>
+                        </div>
+                        <div class="order-item-price">3990 ₽</div>
+                        <div class="order-item-action"></div>
+                      </div>
+                      <div class="order-item">
+                        <div class="order-item-img"><img src="./img/category/4.jpg"></div>
+                        <div class="order-item-text"><span class="order-item-title">Женские кроссовки  <span>Tamaris</span></span>
+                          <div class="order-item-options">
+                            <div class="order-item-option">Артикул<span>23123002</span></div>
+                            <div class="order-item-option">Размер<span>37</span></div>
+                            <div class="order-item-option">Цвет<span>Бежевый</span></div>
+                          </div>
+                        </div>
+                        <div class="order-item-price">3990 ₽</div>
+                        <div class="order-item-action"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="personal-likes" role="tabpanel" aria-labelledby="personal-likes-tab">
+                <div class="category-content"><a class="card card--new" href="#"><img class="card-img" src="./img/category/1.jpg" data-first-src="./img/category/1.jpg" data-second-src="./img/category/1_1.jpg">
+                    <div class="card-title"><span class="card-title-brand">Tamaris</span><span class="card-title-name">Женские кроссовки</span></div>
+                    <div class="card-price"><span>2990<span>₽</span></span></div>
+                    <div class="card-type"><span>New</span></div>
+                    <div class="card-size card-size--two-col"><span>36</span><span>36.5</span><span>37.5</span><span>38</span><span>38.5</span><span>39</span></div>
+                    <div class="card-extra-info"> 
+                      <div class="card-preview"><span class="card-preview-link"><svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<path d="M53.617,49.705l-9.885-9.675c2.581-2.919,4.157-6.72,4.157-10.884c0-9.164-7.579-16.62-16.896-16.62 c-9.316,0-16.896,7.456-16.896,16.62s7.58,16.619,16.896,16.619c3.63,0,6.989-1.144,9.746-3.067l10.079,9.865 c0.39,0.381,0.895,0.571,1.399,0.571c0.519,0,1.038-0.201,1.429-0.602C54.42,51.744,54.406,50.478,53.617,49.705z M17.147,29.146 c0-7.502,6.211-13.605,13.846-13.605c7.635,0,13.846,6.103,13.846,13.605s-6.211,13.604-13.846,13.604 C23.359,42.751,17.147,36.648,17.147,29.146z M37,30h-5v5h-2v-5h-5v-2h5v-5h2v5h5V30z"/>
+</svg><span>Быстрый просмотр</span></span>
+                        <div class="card-preview-add-to-like active">
+                          <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div></a><a class="card card--new" href="#"><img class="card-img" src="./img/category/2.jpg" data-first-src="./img/category/2.jpg" data-second-src="./img/category/2_2.jpg">
+                    <div class="card-title"><span class="card-title-brand">Tamaris</span><span class="card-title-name">Женские кроссовки</span></div>
+                    <div class="card-price"><span>5990<span>₽</span></span></div>
+                    <div class="card-type"><span>New</span></div>
+                    <div class="card-size card-size--two-col"><span>36</span><span>36.5</span><span>37.5</span><span>38</span><span>38.5</span><span>39</span></div>
+                    <div class="card-extra-info"> 
+                      <div class="card-preview"><span class="card-preview-link"><svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<path d="M53.617,49.705l-9.885-9.675c2.581-2.919,4.157-6.72,4.157-10.884c0-9.164-7.579-16.62-16.896-16.62 c-9.316,0-16.896,7.456-16.896,16.62s7.58,16.619,16.896,16.619c3.63,0,6.989-1.144,9.746-3.067l10.079,9.865 c0.39,0.381,0.895,0.571,1.399,0.571c0.519,0,1.038-0.201,1.429-0.602C54.42,51.744,54.406,50.478,53.617,49.705z M17.147,29.146 c0-7.502,6.211-13.605,13.846-13.605c7.635,0,13.846,6.103,13.846,13.605s-6.211,13.604-13.846,13.604 C23.359,42.751,17.147,36.648,17.147,29.146z M37,30h-5v5h-2v-5h-5v-2h5v-5h2v5h5V30z"/>
+</svg><span>Быстрый просмотр</span></span>
+                        <div class="card-preview-add-to-like active">
+                          <svg aria-hidden="true" focusable="false" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+                          </svg>
+                        </div>
+                      </div>
+                    </div></a></div>
               </div>
               <div class="tab-pane fade" id="personal-profile" role="tabpanel" aria-labelledby="personal-profile-tab">
                 <div class="row">
@@ -590,47 +863,59 @@
                     <form class="personal-form">
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label" for="fio">Ф.И.О.</label>
-                        <div class="col-sm-9">
-                          <div class="input-group">
-                            <input class="form-control" id="fio" type="text" value="Иванов Иван Иванович">
-                            <div class="input-group-append">
-                              <button class="btn" type="button">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="edit" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                  <path d="M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z"></path>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
+                        <div class="col-sm-6">
+                          <input class="form-control" id="fio" type="text" value="Иванов Иван Иванович">
                         </div>
                       </div>
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label" for="phone">Телефон</label>
-                        <div class="col-sm-6">
-                          <div class="input-group">
-                            <input class="form-control" id="phone" type="text" value="+7 (999) 999 99 99">
-                            <div class="input-group-append">
-                              <button class="btn" type="button">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="edit" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                  <path d="M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z"></path>
-                                </svg>
-                              </button>
-                            </div>
-                          </div>
+                        <div class="col-sm-4">
+                          <input class="form-control" id="phone" type="text" value="+7 (999) 999 99 99">
                         </div>
                       </div>
                       <div class="form-group row">
                         <label class="col-sm-3 col-form-label" for="email">E-mail</label>
-                        <div class="col-sm-7">
-                          <div class="input-group">
-                            <input class="form-control" id="email" type="text" value="your@email.ru">
-                            <div class="input-group-append">
-                              <button class="btn" type="button">
-                                <svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="edit" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                                  <path d="M417.8 315.5l20-20c3.8-3.8 10.2-1.1 10.2 4.2V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h292.3c5.3 0 8 6.5 4.2 10.2l-20 20c-1.1 1.1-2.7 1.8-4.2 1.8H48c-8.8 0-16 7.2-16 16v352c0 8.8 7.2 16 16 16h352c8.8 0 16-7.2 16-16V319.7c0-1.6.6-3.1 1.8-4.2zm145.9-191.2L251.2 436.8l-99.9 11.1c-13.4 1.5-24.7-9.8-23.2-23.2l11.1-99.9L451.7 12.3c16.4-16.4 43-16.4 59.4 0l52.6 52.6c16.4 16.4 16.4 43 0 59.4zm-93.6 48.4L403.4 106 169.8 339.5l-8.3 75.1 75.1-8.3 233.5-233.6zm71-85.2l-52.6-52.6c-3.8-3.8-10.2-4-14.1 0L426 83.3l66.7 66.7 48.4-48.4c3.9-3.8 3.9-10.2 0-14.1z"></path>
-                                </svg>
-                              </button>
-                            </div>
+                        <div class="col-sm-6">
+                          <input class="form-control" id="email" type="text" value="your@email.ru">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="">Город</label>
+                        <div class="col-lg-5">
+                          <input class="form-control" type="text" value="">
+                        </div>
+                        <div class="col-lg-3"> 
+                          <div class="cart-contacts-city">
+                            <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                              <path fill="" d="M192 96c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64zm0-256C85.961 0 0 85.961 0 192c0 77.413 26.97 99.031 172.268 309.67 9.534 13.772 29.929 13.774 39.465 0C357.03 291.031 384 269.413 384 192 384 85.961 298.039 0 192 0zm0 473.931C52.705 272.488 32 256.494 32 192c0-42.738 16.643-82.917 46.863-113.137S149.262 32 192 32s82.917 16.643 113.137 46.863S352 149.262 352 192c0 64.49-20.692 80.47-160 281.931z"></path>
+                            </svg><a href="">Изменить</a>
                           </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="">Улица</label>
+                        <div class="col-lg-7">
+                          <input class="form-control" name="" type="text" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="">Индекс</label>
+                        <div class="col-lg-4">
+                          <input class="form-control" name="" type="text" placeholder="">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label" for="">Дом</label>
+                        <div class="col-lg-2">
+                          <input class="form-control" name="" type="text" placeholder="">
+                        </div>
+                        <label class="col-form-label pr-0" for="">Корпус</label>
+                        <div class="col-lg-2">
+                          <input class="form-control" name="" type="text" placeholder="">
+                        </div>
+                        <label class="col-form-label pr-0" for="">Квартира</label>
+                        <div class="col-lg-2">
+                          <input class="form-control" name="" type="text" placeholder="">
                         </div>
                       </div>
                       <div class="form-group row">
@@ -651,11 +936,13 @@
                     </form>
                   </div>
                   <div class="col-4">
-                    <div class="personal-discount-card"><img src="./img/bonus-img.png" alt="">
+                    <div class="personal-discount-card">
+                      <div class="personal-discount-card-header"><span>Номер карты:</span><span>1000001149450</span></div>
                       <div class="personal-discount-card-text">
-                        <div class="item"><span>Номер карты:</span><span>1000001149450</span></div>
-                        <div class="item"><span>Накопления: </span><span>1400 ₽ </span></div>
-                        <div class="item"><span>Скидка:</span><span>5 %</span></div>
+                        <div class="item"><span>Потрачено </span><span>1400 ₽</span></div>
+                        <div class="item"><span>Номинал</span><span>5 %</span></div>
+                        <div class="item"><span>До 10%</span><span>10000 ₽</span></div>
+                        <div class="item"><span>Бонусы</span><span>300</span></div>
                       </div>
                     </div>
                   </div>
@@ -670,11 +957,11 @@
                       <form class="personal-form mt-4">
                         <div class="form-group">
                           <input class="form-control" id="personal-subscribe-sms" name="personal-subscribe-sms" type="checkbox">
-                          <label class="control-label" for="personal-subscribe-sms">SMS рассылка</label>
+                          <label class="col-form-label" for="personal-subscribe-sms">SMS рассылка</label>
                         </div>
                         <div class="form-group">
                           <input class="form-control" id="personal-subscribe-email" name="personal-subscribe-email" type="checkbox">
-                          <label class="control-label" for="personal-subscribe-email">E-mail рассылка</label>
+                          <label class="col-form-label" for="personal-subscribe-email">E-mail рассылка</label>
                         </div><a class="btn mt-4" href="">Сохранить </a>
                       </form>
                     </div>
@@ -776,7 +1063,7 @@
       </div>
       <div class="footer-partners-our"> 
         <div><span>Наши партнёры</span></div>
-        <div><img src="img/halva.png"><span>Вы можете оплачивать заказы банковскими картами или наличными при получении</span><img src="img/mastercard.png"><img src="img/visa.png"><img src="img/yandex-money.png"><img src="img/webmoney.png"></div>
+        <div><img src="img/halva.png"><span>Вы можете оплачивать заказы банковскими картами или наличными при получении</span><img src="img/mastercard.svg"><img src="img/visa.svg"><img src="img/yandex.svg"><img src="img/webmoney.svg"></div>
       </div>
     </div>
   </div>
@@ -784,6 +1071,7 @@
     <div class="footer-copyright"><span class="footer-copyright-text">© 2010-2019 kc-shoes</span><a class="footer-copyright-link" href="index-mobile.html">Мобильная версия</a></div>
   </div>
 </footer>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <div class="modal modal-product-preview fade" id="productPreview" tabindex="-1" role="dialog" aria-labelledby="productPreviewTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -806,7 +1094,7 @@
                 -->
               </div>
               <div class="product-info-price">
-                <div class="price">5790<small>руб.</small></div>
+                <div class="price">5790<small>₽</small></div>
               </div>
               <div class="product-info-size"><span class="product-info-size-title">Размеры</span>
                 <div>
@@ -878,65 +1166,81 @@
             </svg></span></button>
       </div>
       <div class="modal-body">
-        <div class="pickup-point-map">
-          <div id="delivery-map"></div>
-          <ol class="nav nav-pickup-point" id="pickup-point-accordion">
-            <li class="nav-item"><a class="nav-link" id="heading1" href="#" data-toggle="collapse" data-target="#point-1" aria-expanded="true" aria-controls="point-1">На Фрунзе
-                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-                  <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
-                </svg></a>
-              <div class="collapse show" id="point-1" data-parent="#pickup-point-accordion" aria-labelledby="heading1"><span>ул. Фрунзе, 101, оф. 32</span><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
-            </li>
-            <li class="nav-item"><a class="nav-link" id="heading2" href="#" data-toggle="collapse" data-target="#point-2" aria-expanded="false" aria-controls="point-2">На Пражской
-                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-                  <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
-                </svg></a>
-              <div class="collapse" id="point-2" data-parent="#pickup-point-accordion" aria-labelledby="heading2"><span>ул. Фрунзе, 101, оф. 32</span><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
-            </li>
-            <li class="nav-item"><a class="nav-link" id="heading3" href="#" data-toggle="collapse" data-target="#point-3" aria-expanded="false" aria-controls="point-3">Марьина Роща
-                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-                  <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
-                </svg></a>
-              <div class="collapse" id="point-3" data-parent="#pickup-point-accordion" aria-labelledby="heading3"><span>ул. Фрунзе, 101, оф. 32</span><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
-            </li>
-            <li class="nav-item"><a class="nav-link" id="heading4" href="#" data-toggle="collapse" data-target="#point-4" aria-expanded="false" aria-controls="point-4">Южная
-                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-                  <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
-                </svg></a>
-              <div class="collapse" id="point-4" data-parent="#pickup-point-accordion" aria-labelledby="heading4"><span>ул. Фрунзе, 101, оф. 32</span><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
-            </li>
-            <li class="nav-item"><a class="nav-link" id="heading5" href="#" data-toggle="collapse" data-target="#point-5" aria-expanded="false" aria-controls="point-5">26-ти Бакинских комиссаров
-                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-                  <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
-                </svg></a>
-              <div class="collapse" id="point-5" data-parent="#pickup-point-accordion" aria-labelledby="heading5"><span>ул. Фрунзе, 101, оф. 32</span><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
-            </li>
-            <li class="nav-item"><a class="nav-link" id="heading6" href="#" data-toggle="collapse" data-target="#point-6" aria-expanded="false" aria-controls="point-6">Тушино
-                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-                  <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
-                </svg></a>
-              <div class="collapse" id="point-6" data-parent="#pickup-point-accordion" aria-labelledby="heading6"><span>ул. Фрунзе, 101, оф. 32</span><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
-            </li>
-            <li class="nav-item"><a class="nav-link" id="heading7" href="#" data-toggle="collapse" data-target="#point-7" aria-expanded="false" aria-controls="point-7">Аннино
-                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-                  <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
-                </svg></a>
-              <div class="collapse" id="point-7" data-parent="#pickup-point-accordion" aria-labelledby="heading7"><span>ул. Фрунзе, 101, оф. 32</span><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
-            </li>
-            <li class="nav-item"><a class="nav-link" id="heading8" href="#" data-toggle="collapse" data-target="#point-8" aria-expanded="false" aria-controls="point-8">Проспект Мира
-                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-                  <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
-                </svg></a>
-              <div class="collapse" id="point-8" data-parent="#pickup-point-accordion" aria-labelledby="heading8"><span>ул. Фрунзе, 101, оф. 32</span><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
-            </li>
-            <li class="nav-item"><a class="nav-link" id="heading9" href="#" data-toggle="collapse" data-target="#point-9" aria-expanded="false" aria-controls="point-9">На Братиславской
-                <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
-                  <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
-                </svg></a>
-              <div class="collapse" id="point-9" data-parent="#pickup-point-accordion" aria-labelledby="heading9"><span>ул. Фрунзе, 101, оф. 32</span><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
-            </li>
-          </ol>
-        </div>
+        <div class="map" id="map2" data-lat="54.989342" data-lng="73.368212"></div>
+        <ol class="nav nav-pickup-point" id="pickup-point-accordion">
+          <li class="nav-item" data-address="г. Омск ул. Ленина, 22"><a class="nav-link" id="pickup-point-heading1" href="#" data-toggle="collapse" data-target="#pickup-point-1" aria-expanded="true" aria-controls="point-1">ул. Ленина, 22
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse show" id="pickup-point-1" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading1"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+          <li class="nav-item" data-address="г. Омск ул. Лермонтова, 20"><a class="nav-link" id="pickup-point-heading2" href="#" data-toggle="collapse" data-target="#pickup-point-2" aria-expanded="false" aria-controls="point-2">ул. Лермонтова, 20 / пр. Маркса, 1
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse" id="pickup-point-2" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading2"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+          <li class="nav-item" data-address="г. Омск пр. Маркса, 16"> <a class="nav-link" id="pickup-point-heading3" href="#" data-toggle="collapse" data-target="#pickup-point-3" aria-expanded="false" aria-controls="point-3">пр. Карла Маркса, 16 Фирменный магазин «ARA»
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse" id="pickup-point-3" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading3"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+          <li class="nav-item" data-address="г. Омск пр. Карла Маркса, 24"><a class="nav-link" id="pickup-point-heading3" href="#" data-toggle="collapse" data-target="#pickup-point-4" aria-expanded="false" aria-controls="point-4">пр. Карла Маркса, 24 (ТВЦ «Каскад»), бутик 204, 2 этаж
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse" id="pickup-point-4" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading4"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+          <li class="nav-item" data-address="г. Омск пр. Карла Маркса, 24"><a class="nav-link" id="pickup-point-heading3" href="#" data-toggle="collapse" data-target="#pickup-point-5" aria-expanded="false" aria-controls="point-5">пр. Карла Маркса, 24 (ТВЦ «Каскад»), бутик 208, 2 этаж
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse" id="pickup-point-5" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading5"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+          <li class="nav-item" data-address="г. Омск ул. Фрунзе, 101"><a class="nav-link" id="pickup-point-heading3" href="#" data-toggle="collapse" data-target="#pickup-point-6" aria-expanded="false" aria-controls="point-6">ул. Фрунзе, 101
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse" id="pickup-point-6" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading6"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+          <li class="nav-item" data-address="г. Омск пр. Мира, 60"><a class="nav-link" id="pickup-point-heading3" href="#" data-toggle="collapse" data-target="#pickup-point-7" aria-expanded="false" aria-controls="point-7">пр. Мира, 60
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse" id="pickup-point-7" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading7"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+          <li class="nav-item" data-address="г. Омск пр. Мира, 62"><a class="nav-link" id="pickup-point-heading3" href="#" data-toggle="collapse" data-target="#pickup-point-8" aria-expanded="false" aria-controls="point-8">пр. Мира, 62
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse" id="pickup-point-8" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading8"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+          <li class="nav-item" data-address="г. Омск ул. Кирова, 7"><a class="nav-link" id="pickup-point-heading3" href="#" data-toggle="collapse" data-target="#pickup-point-9" aria-expanded="false" aria-controls="point-9">ул. Кирова, 7
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse" id="pickup-point-9" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading9"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+          <li class="nav-item" data-address="г. Омск пр. Мира, 38"><a class="nav-link" id="pickup-point-heading3" href="#" data-toggle="collapse" data-target="#pickup-point-10" aria-expanded="false" aria-controls="point-10">пр. Мира, 38
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse" id="pickup-point-10" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading10"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+          <li class="nav-item" data-address="г. Омск ул.70 лет Октября, 25, к.2"><a class="nav-link" id="pickup-point-heading3" href="#" data-toggle="collapse" data-target="#pickup-point-11" aria-expanded="false" aria-controls="point-11">ул. 70 лет Октября, 25, к.2, бутик 197, 1 этаж, ТЦ "Континент-2"
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse" id="pickup-point-11" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading11"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+          <li class="nav-item" data-address="г. Омск Бульвар Архитекторов 14/3"><a class="nav-link" id="pickup-point-heading3" href="#" data-toggle="collapse" data-target="#pickup-point-12" aria-expanded="false" aria-controls="point-12">Бульвар Архитекторов 14/3
+              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                <polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "></polygon>
+              </svg></a>
+            <div class="collapse" id="pickup-point-12" data-parent="#pickup-point-accordion" aria-labelledby="pickup-point-heading12"><span>8(3812)66-66-05</span><span>пн-пт 9:00-19:00</span></div>
+          </li>
+        </ol>
       </div>
     </div>
   </div>
@@ -945,25 +1249,58 @@
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
-          <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
+          <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xli.nav-itemnk="http://www.w3.org/1999/xli.nav-itemnk" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
             <path fill="" d="M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z"></path>
           </svg></span></button>
       <div class="modal-body">
         <div class="row">
           <div class="col-md-7 col-lg-8 col-xl-8">
             <div class="h5">Выберите свой город</div>
-            <div class="city-list"><span data-city="Москва" data-region="Московская" data-id-region="5000000000000" data-id-city="7700000000000">Москва</span><span data-city="Белгород" data-region="Белгородская" data-id-region="3100000000000" data-id-city="3100000100000">Белгород</span><span data-city="Калининград" data-region="Калининградская" data-id-region="3900000000000" data-id-city="3900000100000">Калининград</span><span data-city="Нижний Новгород" data-region="Нижегородская" data-id-region="5200000000000" data-id-city="5200000100000">Нижний Новгород</span><span data-city="Смоленск" data-region="Смоленская" data-id-region="6700000000000" data-id-city="6700000300000">Смоленск</span><span data-city="Челябинск" data-region="Челябинская" data-id-region="7400000000000" data-id-city="7400000100000">Челябинск</span><span data-city="Екатеринбург" data-region="Свердловская" data-id-region="6600000000000" data-id-city="6600000100000">Екатеринбург</span><span data-city="Брянск" data-region="Брянская" data-id-region="3200000000000" data-id-city="3200000100000">Брянск</span><span data-city="Киров" data-region="Кировская" data-id-region="4300000000000" data-id-city="4300000100000">Киров</span><span data-city="Пермь" data-region="Пермский" data-id-region="5900000000000" data-id-city="5900000100000">Пермь</span><span data-city="Саратов" data-region="Саратовская" data-id-region="6400000000000" data-id-city="6400000100000">Саратов</span><span data-city="Ярославль" data-region="Ярославская" data-id-region="7600000000000" data-id-city="7600000100000">Ярославль</span><span data-city="Краснодар" data-region="Краснодарский" data-id-region="2300000000000" data-id-city="2300000100000">Краснодар</span><span data-city="Владивосток" data-region="Приморский" data-id-region="2500000000000" data-id-city="2500000100000">Владивосток</span><span data-city="Красноярск" data-region="Красноярский" data-id-region="2400000000000" data-id-city="2400000100000">Красноярск</span><span data-city="Ростов-на-Дону" data-region="Ростовская" data-id-region="6100000000000" data-id-city="6100000100000">Ростов-на-Дону</span><span data-city="Томск" data-region="Томская" data-id-region="7000000000000" data-id-city="7000000100000">Томск</span><span data-city="Санкт-Петербург" data-region="Ленинградская" data-id-region="4700000000000" data-id-city="7800000000000">Санкт-Петербург</span><span data-city="Волгоград" data-region="Волгоградская" data-id-region="3400000000000" data-id-city="3400000100000">Волгоград</span><span data-city="Курск" data-region="Курская" data-id-region="4600000000000" data-id-city="4600000100000">Курск</span><span data-city="Рязань" data-region="Рязанская" data-id-region="6200000000000" data-id-city="6200000100000">Рязань</span><span data-city="Тюмень" data-region="Тюменская" data-id-region="7200000000000" data-id-city="7200000100000">Тюмень</span><span data-city="Новосибирск" data-region="Новосибирская" data-id-region="5400000000000" data-id-city="5400000100000">Новосибирск</span><span data-city="Воронеж" data-region="Воронежская" data-id-region="3600000000000" data-id-city="3600000100000">Воронеж</span><span data-city="Липецк" data-region="Липецкая" data-id-region="4800000000000" data-id-city="4800000100000">Липецк</span><span data-city="Самара" data-region="Самарская" data-id-region="6300000000000" data-id-city="6300000100000">Самара</span><span data-city="Уфа" data-region="Башкортостан" data-id-region="0200000000000" data-id-city="0200000100000">Уфа</span><span data-city="Омск" data-region="Омская" data-id-region="5500000000000" data-id-city="5500000100000">Омск</span><span data-city="Казань" data-region="Татарстан" data-id-region="1600000000000" data-id-city="1600000100000">Казань</span><span data-city="Мурманск" data-region="Мурманская" data-id-region="5100000000000" data-id-city="5100000100000">Мурманск</span><span data-city="Симферополь" data-region="Крым" data-id-region="9100000000000" data-id-city="9100000700000">Симферополь</span><span data-city="Ханты-Мансийск" data-region="Ханты-Мансийский Автономный округ - Югра" data-id-region="8600000000000" data-id-city="8600000100000">Ханты-Мансийск</span></div>
+            <ul class="city-list">
+              <li class="nav-item"><span data-city="Москва" data-region="Московская" data-id-region="5000000000000" data-id-city="7700000000000">Москва</span></li>
+              <li class="nav-item"><span data-city="Белгород" data-region="Белгородская" data-id-region="3100000000000" data-id-city="3100000100000">Белгород</span></li>
+              <li class="nav-item"><span data-city="Калининград" data-region="Калининградская" data-id-region="3900000000000" data-id-city="3900000100000">Калининград</span></li>
+              <li class="nav-item"><span data-city="Нижний Новгород" data-region="Нижегородская" data-id-region="5200000000000" data-id-city="5200000100000">Нижний Новгород</span></li>
+              <li class="nav-item"><span data-city="Смоленск" data-region="Смоленская" data-id-region="6700000000000" data-id-city="6700000300000">Смоленск</span></li>
+              <li class="nav-item"><span data-city="Челябинск" data-region="Челябинская" data-id-region="7400000000000" data-id-city="7400000100000">Челябинск</span></li>
+              <li class="nav-item"><span data-city="Екатеринбург" data-region="Свердловская" data-id-region="6600000000000" data-id-city="6600000100000">Екатеринбург</span></li>
+              <li class="nav-item"><span data-city="Брянск" data-region="Брянская" data-id-region="3200000000000" data-id-city="3200000100000">Брянск</span></li>
+              <li class="nav-item"><span data-city="Киров" data-region="Кировская" data-id-region="4300000000000" data-id-city="4300000100000">Киров</span></li>
+              <li class="nav-item"><span data-city="Пермь" data-region="Пермский" data-id-region="5900000000000" data-id-city="5900000100000">Пермь</span></li>
+              <li class="nav-item"><span data-city="Саратов" data-region="Саратовская" data-id-region="6400000000000" data-id-city="6400000100000">Саратов</span></li>
+              <li class="nav-item"><span data-city="Ярославль" data-region="Ярославская" data-id-region="7600000000000" data-id-city="7600000100000">Ярославль</span></li>
+              <li class="nav-item"><span data-city="Краснодар" data-region="Краснодарский" data-id-region="2300000000000" data-id-city="2300000100000">Краснодар</span></li>
+              <li class="nav-item"><span data-city="Владивосток" data-region="Приморский" data-id-region="2500000000000" data-id-city="2500000100000">Владивосток</span></li>
+              <li class="nav-item"><span data-city="Красноярск" data-region="Красноярский" data-id-region="2400000000000" data-id-city="2400000100000">Красноярск</span></li>
+              <li class="nav-item"><span data-city="Ростов-на-Дону" data-region="Ростовская" data-id-region="6100000000000" data-id-city="6100000100000">Ростов-на-Дону</span></li>
+              <li class="nav-item"><span data-city="Томск" data-region="Томская" data-id-region="7000000000000" data-id-city="7000000100000">Томск</span></li>
+              <li class="nav-item"><span data-city="Санкт-Петербург" data-region="Ленинградская" data-id-region="4700000000000" data-id-city="7800000000000">Санкт-Петербург</span></li>
+              <li class="nav-item"><span data-city="Волгоград" data-region="Волгоградская" data-id-region="3400000000000" data-id-city="3400000100000">Волгоград</span></li>
+              <li class="nav-item"><span data-city="Курск" data-region="Курская" data-id-region="4600000000000" data-id-city="4600000100000">Курск</span></li>
+              <li class="nav-item"><span data-city="Рязань" data-region="Рязанская" data-id-region="6200000000000" data-id-city="6200000100000">Рязань</span></li>
+              <li class="nav-item"><span data-city="Тюмень" data-region="Тюменская" data-id-region="7200000000000" data-id-city="7200000100000">Тюмень</span></li>
+              <li class="nav-item"><span data-city="Новосибирск" data-region="Новосибирская" data-id-region="5400000000000" data-id-city="5400000100000">Новосибирск</span></li>
+              <li class="nav-item"><span data-city="Воронеж" data-region="Воронежская" data-id-region="3600000000000" data-id-city="3600000100000">Воронеж</span></li>
+              <li class="nav-item"><span data-city="Липецк" data-region="Липецкая" data-id-region="4800000000000" data-id-city="4800000100000">Липецк</span></li>
+              <li class="nav-item"><span data-city="Самара" data-region="Самарская" data-id-region="6300000000000" data-id-city="6300000100000">Самара</span></li>
+              <li class="nav-item"><span data-city="Уфа" data-region="Башкортостан" data-id-region="0200000000000" data-id-city="0200000100000">Уфа</span></li>
+              <li class="nav-item active"><span data-city="Омск" data-region="Омская" data-id-region="5500000000000" data-id-city="5500000100000">Омск</span></li>
+              <li class="nav-item"><span data-city="Казань" data-region="Татарстан" data-id-region="1600000000000" data-id-city="1600000100000">Казань</span></li>
+              <li class="nav-item"><span data-city="Мурманск" data-region="Мурманская" data-id-region="5100000000000" data-id-city="5100000100000">Мурманск</span></li>
+              <li class="nav-item"><span data-city="Симферополь" data-region="Крым" data-id-region="9100000000000" data-id-city="9100000700000">Симферополь</span></li>
+              <li class="nav-item"><span data-city="Ханты-Мансийск" data-region="Ханты-Мансийский Автономный округ - Югра" data-id-region="8600000000000" data-id-city="8600000100000">Ханты-Мансийск</span></li>
+            </ul>
           </div>
           <div class="col-md-5 col-lg-4 col-xl-4">
             <div class="city-input">
               <div class="h5">Введите область / край</div>
-              <input class="form-control" id="ModalinputRegion" type="text" name="region" placeholder="Введите первые буквы и выберите из списка" value="" autocomplete="off">
-              <input id="ModalinputRegionId" type="hidden" name="regionId" value="">
+              <input class="nav-itemnputRegion form-control" id="Modali" type="text" name="region" placeholder="Введите первые буквы и выберите из списка" value="" autocomplete="off">
+              <input class="nav-itemnputRegionId" id="Modali" type="hidden" name="regionId" value="">
             </div>
             <div class="city-input">
               <div class="h5">Введите город / поселок</div>
-              <input class="form-control" id="ModalinputCity" type="text" name="city" placeholder="Введите первые буквы и выберите из списка" value="" autocomplete="off">
-              <input id="ModalinputCityId" type="hidden" name="cityId" value="">
+              <input class="nav-itemnputCity form-control" id="Modali" type="text" name="city" placeholder="Введите первые буквы и выберите из списка" value="" autocomplete="off">
+              <input class="nav-itemnputCityId" id="Modali" type="hidden" name="cityId" value="">
             </div>
           </div>
         </div>
@@ -986,11 +1323,11 @@
           <div class="form-inline mb-3">
             <div class="form-group mr-3">
               <input class="form-control" id="signin-phone-radio" name="signin-radio" type="radio" checked="checked" value="phone">
-              <label class="control-label" for="signin-phone-radio">По номеру телефона</label>
+              <label class="col-form-label" for="signin-phone-radio">По номеру телефона</label>
             </div>
             <div class="form-group">
               <input class="form-control" id="signin-email-radio" name="signin-radio" type="radio" value="email">
-              <label class="control-label" for="signin-email-radio">По E-mail</label>
+              <label class="col-form-label" for="signin-email-radio">По E-mail</label>
             </div>
           </div>
           <div class="signin-type">
@@ -1043,7 +1380,7 @@
           </div>
           <div class="form-group">
             <input class="form-control" id="signup-subscribe" name="signup-subscribe" type="checkbox" checked="checked">
-            <label class="control-label" for="signup-subscribe">Подписка на новости</label>
+            <label class="col-form-label" for="signup-subscribe">Подписка на новости</label>
           </div><a class="btn ml-auto mt-3" href="#">Зарегистрироваться</a>
         </form>
       </div>
@@ -1170,6 +1507,250 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal-refund fade" id="refund" tabindex="-1" role="dialog" aria-labelledby="refundTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title m-auto">Возврат - Заказ №77063</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+            <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
+              <path fill="" d="M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z"></path>
+            </svg></span></button>
+      </div>
+      <div class="modal-body">
+        <div class="row no-gutters">
+          <div class="col-lg-8">
+            <form action="">
+              <div class="form-group row">
+                <label class="col-sm-3 col-form-label" for="">Способ возврата</label>
+                <div class="col-sm-7">
+                  <select class="refund-type form-control">
+                    <option value="refund-type-1">Почтовым переводом</option>
+                    <option value="refund-type-2">Банковским переводом</option>
+                  </select>
+                </div>
+              </div>
+              <div class="refund-type-1">
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label" for="">Получатель</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" value="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label" for="">E-mail</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" value="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label" for="">Город</label>
+                  <div class="col-lg-5">
+                    <input class="form-control" type="text" value="">
+                  </div>
+                  <div class="col-lg-3"> 
+                    <div class="cart-contacts-city">
+                      <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <path fill="" d="M192 96c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64zm0-256C85.961 0 0 85.961 0 192c0 77.413 26.97 99.031 172.268 309.67 9.534 13.772 29.929 13.774 39.465 0C357.03 291.031 384 269.413 384 192 384 85.961 298.039 0 192 0zm0 473.931C52.705 272.488 32 256.494 32 192c0-42.738 16.643-82.917 46.863-113.137S149.262 32 192 32s82.917 16.643 113.137 46.863S352 149.262 352 192c0 64.49-20.692 80.47-160 281.931z"></path>
+                      </svg><a href="">Изменить</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label" for="">Улица</label>
+                  <div class="col-lg-7">
+                    <input class="form-control" name="" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label" for="">Индекс</label>
+                  <div class="col-lg-4">
+                    <input class="form-control" name="" type="text" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-3 col-form-label" for="">Дом</label>
+                  <div class="col-lg-2">
+                    <input class="form-control" name="" type="text" placeholder="">
+                  </div>
+                  <label class="col-form-label pr-0" for="">Корпус</label>
+                  <div class="col-lg-2">
+                    <input class="form-control" name="" type="text" placeholder="">
+                  </div>
+                  <label class="col-form-label pr-0" for="">Квартира</label>
+                  <div class="col-lg-2">
+                    <input class="form-control" name="" type="text" placeholder="">
+                  </div>
+                </div>
+              </div>
+              <div class="refund-type-2" style="display: none;">
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label" for="">Владелец счёта</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" value="Иванов Иван Иванович">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label" for="">E-mail</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" value="example@mail.ru">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label" for="">БИК</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" value="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label" for="">ИНН банка</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" value="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label" for="">Банк</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" value="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label" for="">Кор. счёт</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" value="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label" for="">Расчётный счёт</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" value="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label" for="">Лицевой счёт</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" value="">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-sm-4 col-form-label" for="">Номер карты</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="text" value="">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-4">
+            <div class="refund-total">
+              <div class="item"><span class="item-title">Кроссовки<span>Tommaris</span></span><span class="item-price">5790 ₽</span><span class="item-reason">Не подошло по размеру</span></div>
+              <div class="item"><span class="item-title">Кроссовки<span>Tommaris</span></span><span class="item-price">5790 ₽</span><span class="item-reason">Не подошло по размеру</span></div>
+            </div>
+            <div class="refund-features">
+              <div class="refund-features-img"><img src="img/svg/clock.png" alt=""></div>
+              <p>Срок перевода составляет не более 10 дней с даты поступления товара на склад.</p>
+            </div>
+            <div class="refund-features">
+              <div class="refund-features-img"><img src="img/svg/blank_order.png" alt=""></div>
+              <div>
+                <p>БИК банка всегда состоит из 9 цифр.</p>
+                <p>Если в ваших реквизитах указан счёт, начинающийся на 40817, впишите его в графу Лицевой счёт.</p>
+                <p>В случае, если в реквизитах указан расчётный счёт банка, начинающийся на 30232810, его нужно вписать в графу Расчётный счёт, а номер лицевого счёта или карты в соответствующие графыю</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="refund-confirm">
+          <div class="checkbox">
+            <input name="" type="checkbox" checked="checked">
+            <label for="">Настоящим, в соответствии с ч. 2 ст. 158 ГУ РФ, я даю ИП Куксгаус ЛН предварительное согласие на обработку и использрвание моих персональных данных, согласно ст. 3 ФЗ "О персональных данных" ль 27.07.2006, в целях, определённых Уставом Оператора, без ограничения срока действия. Согласно п. 5 ст. 21 Закона, настоящее согласие может быть отозвано только при условии письменного уведомления Оператора не менее чем за 180 дней до предполагаемой даты прекращения использования данных Оператором.</label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn ml-auto" type="button">Оформить</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal-write-to-us fade" id="write-to-us" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+  <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Написать нам</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+            <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
+              <path fill="" d="M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z"></path>
+            </svg></span></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Ваше Имя">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Ваш Email">
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Ваш город">
+          </div>
+          <div class="form-group mb-0">
+            <textarea class="form-control" name="" cols="10" rows="5" placeholder="Ваше сообщение"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div style="width: 304px;height: 78px;margin-right: auto;background-color: #ddd;"></div><a class="btn mt-auto" href="">Написать</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal modal-testimonial fade" id="testimonial-product" tabindex="-1" role="dialog" aria-labelledby="Title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Оставьте свой отзыв о товаре</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">
+            <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve">
+              <path fill="" d="M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z"></path>
+            </svg></span></button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-group">
+                <input class="form-control" type="text" placeholder="Ваше Имя">
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text" placeholder="Ваш Email">
+              </div>
+            </div>
+            <div class="col-6 pl-0">
+              <div class="testimonial-rating">
+                <div class="testimonial-rating-item"><span>Качество</span>
+                  <div class="starrr"></div>
+                </div>
+                <div class="testimonial-rating-item"><span>Внешний вид</span>
+                  <div class="starrr"></div>
+                </div>
+                <div class="testimonial-rating-item"><span>Цена</span>
+                  <div class="starrr"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group mb-0">
+            <textarea class="form-control mt-3" name="" cols="10" rows="5" placeholder="Ваш отзыв"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <div style="width: 304px;height: 78px;margin-right: auto;background-color: #ddd;"></div><a class="btn mt-auto" href="">Оставить отзыв  </a>
       </div>
     </div>
   </div>

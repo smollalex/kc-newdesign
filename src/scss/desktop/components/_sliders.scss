@@ -77,16 +77,16 @@
             span {
               display: flex;
               border-radius: 50%;
-              background: #85c8e6;
-              height: 6px;
-              width: 6px;
-              margin: 3px 4px;
+              height: 9px;
+              width: 9px;
+              border: 2px solid #01b2ff;
             }
             
             &.active {
              
               span {
-                background: #0079bf;
+                background: #01b2ff;
+                border-color: #01b2ff;
               }
             }
           }
@@ -96,7 +96,7 @@
       // Cards
       &-card {
         .owl-item {
-          padding: 0 0 40px 0;
+          padding: 0 0 70px 0;
         }
 
         .owl-nav {
@@ -214,6 +214,7 @@
             &.active {
               border: none;
               border-top: 2px solid $primary;
+              outline: none;
             }
           }
         }
@@ -449,6 +450,28 @@
               }
             }
           }
+        }
+      }
+
+      // Order items
+      &-order {
+        padding: 0;
+
+        .owl-nav {
+          position: absolute;
+          top: 50%;
+          margin-top: -32px;
+          left: 0px;
+          width: 100%;
+        }
+        .owl-prev {
+          left: -30px;
+          position: absolute;
+        }
+        .owl-next {
+          right: -20px;
+          position: absolute;
+          transform: rotate(180deg);
         }
       }
     }

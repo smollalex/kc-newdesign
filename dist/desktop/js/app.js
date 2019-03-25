@@ -25267,15 +25267,65 @@ $(document).ready(function () {
 "use strict";
 
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 $(document).ready(function () {
 
-	$('[name="subscribe-gender"], [name="subscribe-confirm"]').on('click', function () {
-		$('[name="subscribe-gender"]').removeAttr('checked');
-		$(this).attr('checked', 'checked');
-	});
-	$('[name="subscribe-confirm"]').on('click', function () {
-		$(this).attr('checked', !$(this).attr('checked'));
-	});
+  $('[name="subscribe-gender"], [name="subscribe-confirm"]').on('click', function () {
+    $('[name="subscribe-gender"]').removeAttr('checked');
+    $(this).attr('checked', 'checked');
+  });
+  $('[name="subscribe-confirm"]').on('click', function () {
+    $(this).attr('checked', !$(this).attr('checked'));
+  });
+
+  (function () {
+
+    function init() {
+      var mapElement = $('#map2'),
+          zoom = _typeof(mapElement.data('zoom')) !== ( true ? 'undefined' : undefined) && mapElement.data('zoom') !== false ? mapElement.data('zoom') : 12;
+      var myMap = new ymaps.Map('map2', {
+        center: [mapElement.data('lat'), mapElement.data('lng')],
+        zoom: zoom,
+        controls: []
+      }, {
+        searchControlProvider: 'yandex#search'
+      });
+
+      myMap.behaviors.disable('scrollZoom');
+
+      if ($('[data-address]').length) {
+
+        $('.nav-pickup-point li').each(function () {
+          var address = $(this).attr('data-address');
+
+          ymaps.geocode(address, { results: 1 }).then(function (res) {
+            var firstGeoObject = res.geoObjects.get(0),
+                coords = firstGeoObject.geometry.getCoordinates(),
+                bounds = firstGeoObject.properties.get('boundedBy');
+
+            myMap.geoObjects.add(new ymaps.Placemark(coords, {}, {
+              preset: 'islands#dotIcon',
+              iconColor: '#1e98ff'
+            }));
+          });
+        });
+
+        $('.nav-pickup-point li').on('click', function () {
+          var address = $(this).attr('data-address');
+
+          ymaps.geocode(address, { results: 1 }).then(function (res) {
+            var firstGeoObject = res.geoObjects.get(0),
+                coords = firstGeoObject.geometry.getCoordinates();
+
+            myMap.setZoom(17);
+            myMap.panTo(coords, { flying: true, duration: 1000 });
+          });
+        });
+      }
+    }
+    ymaps.ready(init);
+  })();
 });
 
 /***/ }),
@@ -25430,12 +25480,6 @@ $(document).ready(function () {
     }
   });
 
-  /**
-   * 
-   * @param {*} i 
-   * @param {*} count 
-   * @param {*} item 
-   */
   function getFilterCount(i, count, item) {
     var filter_count = parseInt(count.text());
     filter_count = filter_count + i;
@@ -25560,12 +25604,64 @@ $(document).ready(function () {
 "use strict";
 
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 $(document).ready(function () {
-  $('select').select2();
+  $('select').select2({
+    minimumResultsForSearch: -1
+  });
 
   $('.starrr').starrr({
     rating: 0
   });
+
+  (function () {
+
+    function init() {
+      var mapElement = $('#map'),
+          zoom = _typeof(mapElement.data('zoom')) !== ( true ? 'undefined' : undefined) && mapElement.data('zoom') !== false ? mapElement.data('zoom') : 12;
+      var myMap = new ymaps.Map('map', {
+        center: [mapElement.data('lat'), mapElement.data('lng')],
+        zoom: zoom,
+        controls: []
+      }, {
+        searchControlProvider: 'yandex#search'
+      });
+
+      myMap.behaviors.disable('scrollZoom');
+
+      if ($('[data-address]').length) {
+
+        $('.nav-shops li').each(function () {
+          var address = $(this).attr('data-address');
+
+          ymaps.geocode(address, { results: 1 }).then(function (res) {
+            var firstGeoObject = res.geoObjects.get(0),
+                coords = firstGeoObject.geometry.getCoordinates(),
+                bounds = firstGeoObject.properties.get('boundedBy');
+
+            myMap.geoObjects.add(new ymaps.Placemark(coords, {}, {
+              preset: 'islands#dotIcon',
+              iconColor: '#1e98ff'
+            }));
+          });
+        });
+
+        $('.nav-shops li').on('click', function () {
+          var address = $(this).attr('data-address');
+
+          ymaps.geocode(address, { results: 1 }).then(function (res) {
+            var firstGeoObject = res.geoObjects.get(0),
+                coords = firstGeoObject.geometry.getCoordinates();
+
+            myMap.setZoom(17);
+            myMap.panTo(coords, { flying: true, duration: 1000 });
+          });
+        });
+      }
+    }
+    ymaps.ready(init);
+  })();
 });
 
 /***/ }),
@@ -25723,9 +25819,70 @@ $(document).ready(function () {
 
 
 $(document).ready(function () {
-  $('#orders-table tr').on('click', function (e) {
-    if ($(e.target).prop("tagName") == 'TD') {
-      $('#order').modal('show');
+
+  // Order items slider
+  $('.order-slider').owlCarousel({
+    loop: false,
+    nav: false,
+    mouseDrag: true,
+    dots: false,
+    lazyLoad: true,
+    slideBy: 1,
+    margin: 10,
+    stagePadding: 1,
+    navText: ['<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>', '<svg version="1.1" id="" xmlns="http:/www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>'],
+    responsive: {
+      414: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1024: {
+        items: 3
+      },
+      1280: {
+        items: 4
+      }
+    }
+  });
+
+  // Show reason of refund
+  $('.order-refund .checkbox label').on('click', function () {
+    if ($(this).prev().attr('checked') === 'checked') {
+      $(this).closest('.order-refund').find('.order-refund-reason').show();
+      if ($(this).closest('.order-refund').find('select.form-control').val() === 'refund-reason-4') {
+        $(this).closest('.order-refund').find('.order-refund-reason-other').show();
+      }
+    } else {
+      $(this).closest('.order-refund').find('.order-refund-reason').hide();
+      $(this).closest('.order-refund').find('.order-refund-reason-other').hide();
+    }
+
+    if ($('[name="check-to-refund"][checked="checked"]').length > 0) {
+      $('.order-refund-wrap').css('display', 'flex');
+    } else {
+      $('.order-refund-wrap').css('display', 'none');
+    }
+  });
+
+  // Toggle for other field reason
+  $('.order-refund-reason select').on('change', function () {
+    if ($(this).val() === 'refund-reason-4') {
+      $(this).closest('.order-refund').find('.order-refund-reason-other').show();
+    } else {
+      $(this).closest('.order-refund').find('.order-refund-reason-other').hide();
+    }
+  });
+
+  // Toggle refund type
+  $('.refund-type').on('change', function () {
+    if ($(this).val() === 'refund-type-1') {
+      $('.refund-type-1').show();
+      $('.refund-type-2').hide();
+    } else {
+      $('.refund-type-2').show();
+      $('.refund-type-1').hide();
     }
   });
 });

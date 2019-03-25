@@ -29,11 +29,122 @@ html(lang='ru')
         section.page-header
           h1 Контакты
         .row
-          .col-sm-9
           .col-sm-3
             .chc-navbar
               include shared/chc-navbar-about
               include shared/chc-navbar-help
               include shared/chc-navbar-delivery
+          .col-sm-9
+            .page-header-sub.row.no-gutters
+              .col-5
+                h2 Москва
+                p 
+                  svg(role="img", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 384 512")
+                    path(fill="", d="M192 96c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64zm0-256C85.961 0 0 85.961 0 192c0 77.413 26.97 99.031 172.268 309.67 9.534 13.772 29.929 13.774 39.465 0C357.03 291.031 384 269.413 384 192 384 85.961 298.039 0 192 0zm0 473.931C52.705 272.488 32 256.494 32 192c0-42.738 16.643-82.917 46.863-113.137S149.262 32 192 32s82.917 16.643 113.137 46.863S352 149.262 352 192c0 64.49-20.692 80.47-160 281.931z")
+                  | 123056, г. Москва, ул. Грузинский Вал, 11 с. 4, оф. 7
+                p 
+                  svg(role="img", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 384 512")
+                    path(fill="", d="M192 96c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64zm0-256C85.961 0 0 85.961 0 192c0 77.413 26.97 99.031 172.268 309.67 9.534 13.772 29.929 13.774 39.465 0C357.03 291.031 384 269.413 384 192 384 85.961 298.039 0 192 0zm0 473.931C52.705 272.488 32 256.494 32 192c0-42.738 16.643-82.917 46.863-113.137S149.262 32 192 32s82.917 16.643 113.137 46.863S352 149.262 352 192c0 64.49-20.692 80.47-160 281.931z")
+                  | 8-800-700-27-68,  8-499-130-85-12
+              .col-5  
+                h2 Омск
+                p 
+                  svg(role="img", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 384 512")
+                    path(fill="", d="M192 96c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64zm0-256C85.961 0 0 85.961 0 192c0 77.413 26.97 99.031 172.268 309.67 9.534 13.772 29.929 13.774 39.465 0C357.03 291.031 384 269.413 384 192 384 85.961 298.039 0 192 0zm0 473.931C52.705 272.488 32 256.494 32 192c0-42.738 16.643-82.917 46.863-113.137S149.262 32 192 32s82.917 16.643 113.137 46.863S352 149.262 352 192c0 64.49-20.692 80.47-160 281.931z")
+                  |  644007, г. Омск, ул. Фрунзе, 101
+                p 
+                  svg(role="img", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 384 512")
+                    path(fill="", d="M192 96c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64zm0-256C85.961 0 0 85.961 0 192c0 77.413 26.97 99.031 172.268 309.67 9.534 13.772 29.929 13.774 39.465 0C357.03 291.031 384 269.413 384 192 384 85.961 298.039 0 192 0zm0 473.931C52.705 272.488 32 256.494 32 192c0-42.738 16.643-82.917 46.863-113.137S149.262 32 192 32s82.917 16.643 113.137 46.863S352 149.262 352 192c0 64.49-20.692 80.47-160 281.931z")
+                  | 8-800-700-27-68, 8 (3812) 66-66-05
+              .col-2
+                a(href="", data-toggle="modal", data-target="#write-to-us", class="btn btn-block") Написать нам
+            .about-contacts
+              #map.map(data-lat="54.989342", data-lng="73.368212")
+              ol.nav.nav-shops#shops-accordion
+                li.nav-item(data-address='г. Омск ул. Ленина, 22')
+                  a#shop-heading1.nav-link(href="#", data-toggle='collapse', data-target='#shop-1', aria-expanded='true', aria-controls='shop-1') ул. Ленина, 22
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-1.collapse.show(data-parent="#shops-accordion", aria-labelledby="shop-heading1")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+                li.nav-item(data-address='г. Омск ул. Лермонтова, 20')
+                  a#shop-heading2.nav-link(href="#", data-toggle='collapse', data-target='#shop-2', aria-expanded='false', aria-controls='shop-2') ул. Лермонтова, 20 / пр. Маркса, 1
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-2.collapse(data-parent="#shops-accordion", aria-labelledby="shop-heading2")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+                li.nav-item(data-address='г. Омск пр. Маркса, 16') 
+                  a#shop-heading3.nav-link(href="#", data-toggle='collapse', data-target='#shop-3', aria-expanded='false', aria-controls='shop-3') пр. Карла Маркса, 16 Фирменный магазин «ARA»
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-3.collapse(data-parent="#shops-accordion", aria-labelledby="shop-heading3")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+                li.nav-item(data-address='г. Омск пр. Карла Маркса, 24')
+                  a#shop-heading3.nav-link(href="#", data-toggle='collapse', data-target='#shop-4', aria-expanded='false', aria-controls='shop-4') пр. Карла Маркса, 24 (ТВЦ «Каскад»), бутик 204, 2 этаж
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-4.collapse(data-parent="#shops-accordion", aria-labelledby="shop-heading4")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+                li.nav-item(data-address='г. Омск пр. Карла Маркса, 24')
+                  a#shop-heading3.nav-link(href="#", data-toggle='collapse', data-target='#shop-5', aria-expanded='false', aria-controls='shop-5') пр. Карла Маркса, 24 (ТВЦ «Каскад»), бутик 208, 2 этаж
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-5.collapse(data-parent="#shops-accordion", aria-labelledby="shop-heading5")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+                li.nav-item(data-address='г. Омск ул. Фрунзе, 101')
+                  a#shop-heading3.nav-link(href="#", data-toggle='collapse', data-target='#shop-6', aria-expanded='false', aria-controls='shop-6') ул. Фрунзе, 101
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-6.collapse(data-parent="#shops-accordion", aria-labelledby="shop-heading6")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+                li.nav-item(data-address='г. Омск пр. Мира, 60')
+                  a#shop-heading3.nav-link(href="#", data-toggle='collapse', data-target='#shop-7', aria-expanded='false', aria-controls='shop-7') пр. Мира, 60
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-7.collapse(data-parent="#shops-accordion", aria-labelledby="shop-heading7")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+                li.nav-item(data-address='г. Омск пр. Мира, 62')
+                  a#shop-heading3.nav-link(href="#", data-toggle='collapse', data-target='#shop-8', aria-expanded='false', aria-controls='shop-8') пр. Мира, 62
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-8.collapse(data-parent="#shops-accordion", aria-labelledby="shop-heading8")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+                li.nav-item(data-address='г. Омск ул. Кирова, 7')
+                  a#shop-heading3.nav-link(href="#", data-toggle='collapse', data-target='#shop-9', aria-expanded='false', aria-controls='shop-9') ул. Кирова, 7
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-9.collapse(data-parent="#shops-accordion", aria-labelledby="shop-heading9")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+                li.nav-item(data-address='г. Омск пр. Мира, 38')
+                  a#shop-heading3.nav-link(href="#", data-toggle='collapse', data-target='#shop-10', aria-expanded='false', aria-controls='shop-10') пр. Мира, 38
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-10.collapse(data-parent="#shops-accordion", aria-labelledby="shop-heading10")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+                li.nav-item(data-address='г. Омск ул.70 лет Октября, 25, к.2')
+                  a#shop-heading3.nav-link(href="#", data-toggle='collapse', data-target='#shop-11', aria-expanded='false', aria-controls='shop-11') ул. 70 лет Октября, 25, к.2, бутик 197, 1 этаж, ТЦ "Континент-2"
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-11.collapse(data-parent="#shops-accordion", aria-labelledby="shop-heading11")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+                li.nav-item(data-address='г. Омск Бульвар Архитекторов 14/3')
+                  a#shop-heading3.nav-link(href="#", data-toggle='collapse', data-target='#shop-12', aria-expanded='false', aria-controls='shop-12') Бульвар Архитекторов 14/3
+                    svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                      polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+                  #shop-12.collapse(data-parent="#shops-accordion", aria-labelledby="shop-heading12")
+                    span 8(3812)66-66-05
+                    span пн-пт 9:00-19:00
+          
   include shared/footer
   include shared/modal/allmodals
