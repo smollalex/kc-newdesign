@@ -52,7 +52,7 @@ html(lang='ru')
                 h3 Выберите способ доставки
                 .flex-row
                   .cart-delivery-option
-                    input(id='delivery-type-1', name='delivery-type', type='radio')
+                    input(id='delivery-type-1', name='delivery-type', type='radio', checked)
                     label(for='delivery-type-1') Курьером
                   .cart-delivery-option
                     input(id='delivery-type-2', name='delivery-type', type='radio')
@@ -60,7 +60,9 @@ html(lang='ru')
                   .cart-delivery-option
                     input(id='delivery-type-3', name='delivery-type', type='radio')
                     label(for='delivery-type-3') Почтой России
-              
+                ul.cart-delivery-features
+                  li.list-time Доставка 2-4 дня
+                  li.list-warning Заказ до 5-и пар
               .cart-delivery-section
                 h3 Выберите службу доставки
                 .flex-row
@@ -70,7 +72,6 @@ html(lang='ru')
                   .cart-delivery-option
                     input(id='delivery-service-2', name='delivery-service', type='radio')
                     label(for='delivery-service-2') Курьером СДЭК
-              
               .cart-delivery-section
                 h3 Укажите адрес доставки
                 .cart-delivery-adress
@@ -110,22 +111,25 @@ html(lang='ru')
                       label.col-form-label.col-lg-1(for='') Квартира
                       .col-lg-2
                         input.form-control(name='contact-house-3', type='text', placeholder='')
-              
               .cart-delivery-section
                 h3 Выберите способ оплаты
                 .cart-delivery-payment
-                  .cart-delivery-option
-                    input(id='delivery-payment-1', name='delivery-payment', type='radio')
-                    label(for='delivery-payment-1') Оплата при получении - 200 ₽
-                    
-                  .cart-delivery-option
-                    input(id='delivery-payment-2', name='delivery-payment', type='radio')
-                    label(for='delivery-payment-2') Предоплата - бесплатно
-
-                  .cart-delivery-payment-note
-                    p Оплатить товар Вы можете наличными или по банковской карте
-                    p Предоплата производится в личном кабинете после подтверждения заказа менеджером КС
-
+                  .flex-row
+                    .cart-delivery-option
+                      input(id='delivery-payment-1', name='delivery-payment', type='radio')
+                      label(for='delivery-payment-1') Оплата при получении - 200 ₽
+                    .cart-delivery-option
+                      input(id='delivery-payment-2', name='delivery-payment', type='radio', checked)
+                      label(for='delivery-payment-2') Предоплата - бесплатно
+                  ul.cart-delivery-features
+                    li.list-payment Оплата наличными или по карте
+                    li.list-payment Предоплата производится в личном кабинете после подтверждения заказа менеджером КС
+                    li.list-yes
+                      | Доступна примерка
+                      a(href='#') ?
+                    li.list-yes
+                      | Доступен частичный выкуп
+                      a(href='#') ?
               .cart-delivery-section
                 h3 Проверьте свои контактные данные
                 .cart-delivery-contact
@@ -169,16 +173,7 @@ html(lang='ru')
                   span 200 ₽
                 .cart-total-item-adress
                   span Омская обл, Омск, Фрунзе ул 101
-                ul.delivery-type-item-features
-                  li.list-time Доставка 2-4 дня
-                  li.list-warning Заказ до 5-и пар
-                  li.list-yes
-                    | Доступна примерка
-                    a(href='#') ?
-                  li.list-yes
-                    | Доступен частичный выкуп
-                    a(href='#') ?
-                  li.list-payment Оплата наличными или по карте
+                
 
                 .cart-total-item
                   span ИТОГО К ОПЛАТЕ:

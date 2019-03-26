@@ -530,7 +530,7 @@
                 <h3>Выберите способ доставки</h3>
                 <div class="flex-row">
                   <div class="cart-delivery-option">
-                    <input id="delivery-type-1" name="delivery-type" type="radio">
+                    <input id="delivery-type-1" name="delivery-type" type="radio" checked>
                     <label for="delivery-type-1">Курьером</label>
                   </div>
                   <div class="cart-delivery-option">
@@ -542,6 +542,10 @@
                     <label for="delivery-type-3">Почтой России</label>
                   </div>
                 </div>
+                <ul class="cart-delivery-features">
+                  <li class="list-time">Доставка 2-4 дня</li>
+                  <li class="list-warning">Заказ до 5-и пар</li>
+                </ul>
               </div>
               <div class="cart-delivery-section">
                 <h3>Выберите службу доставки</h3>
@@ -613,18 +617,22 @@
               <div class="cart-delivery-section">
                 <h3>Выберите способ оплаты</h3>
                 <div class="cart-delivery-payment">
-                  <div class="cart-delivery-option">
-                    <input id="delivery-payment-1" name="delivery-payment" type="radio">
-                    <label for="delivery-payment-1">Оплата при получении - 200 ₽</label>
+                  <div class="flex-row">
+                    <div class="cart-delivery-option">
+                      <input id="delivery-payment-1" name="delivery-payment" type="radio">
+                      <label for="delivery-payment-1">Оплата при получении - 200 ₽</label>
+                    </div>
+                    <div class="cart-delivery-option">
+                      <input id="delivery-payment-2" name="delivery-payment" type="radio" checked>
+                      <label for="delivery-payment-2">Предоплата - бесплатно</label>
+                    </div>
                   </div>
-                  <div class="cart-delivery-option">
-                    <input id="delivery-payment-2" name="delivery-payment" type="radio">
-                    <label for="delivery-payment-2">Предоплата - бесплатно</label>
-                  </div>
-                  <div class="cart-delivery-payment-note">
-                    <p>Оплатить товар Вы можете наличными или по банковской карте</p>
-                    <p>Предоплата производится в личном кабинете после подтверждения заказа менеджером КС</p>
-                  </div>
+                  <ul class="cart-delivery-features">
+                    <li class="list-payment">Оплата наличными или по карте</li>
+                    <li class="list-payment">Предоплата производится в личном кабинете после подтверждения заказа менеджером КС</li>
+                    <li class="list-yes">Доступна примерка<a href="#">?</a></li>
+                    <li class="list-yes">Доступен частичный выкуп<a href="#">?</a></li>
+                  </ul>
                 </div>
               </div>
               <div class="cart-delivery-section">
@@ -659,13 +667,6 @@
                 <div class="cart-total-item"><span>Ваша скидка:</span><span></span><span>1218 ₽</span></div>
                 <div class="cart-total-item"><span>Доставка (Курьером)</span><span></span><span>200 ₽</span></div>
                 <div class="cart-total-item-adress"><span>Омская обл, Омск, Фрунзе ул 101</span></div>
-                <ul class="delivery-type-item-features">
-                  <li class="list-time">Доставка 2-4 дня</li>
-                  <li class="list-warning">Заказ до 5-и пар</li>
-                  <li class="list-yes">Доступна примерка<a href="#">?</a></li>
-                  <li class="list-yes">Доступен частичный выкуп<a href="#">?</a></li>
-                  <li class="list-payment">Оплата наличными или по карте</li>
-                </ul>
                 <div class="cart-total-item"><span>ИТОГО К ОПЛАТЕ:</span><span></span><span>10109 ₽</span></div>
               </div><a class="btn mb-3" href="#">Оформить заказ</a>
               <div class="cart-total-accept">

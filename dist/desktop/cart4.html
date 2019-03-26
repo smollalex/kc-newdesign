@@ -1,9 +1,8 @@
 <head><link href="css/style.css" rel="stylesheet"></head>Html Webpack Plugin:
 <pre>
   Error: Child compilation failed:
-  Module build failed (from ./node_modules/pug-loader/index.js):
-  Error: ENOENT: no such file or directory, open 'C:\OSPanel\domains\kc-shoes.new-design\src\templates\desktop\cart4.pug':
-  Error: ENOENT: no such file or directory, open 'C:\OSPanel\domains\kc-shoes.new-design\src\templates\desktop\cart4.pug'
+  Entry module not found: Error: Can't resolve 'C:\OSPanel\domains\kc-shoes.new-design\src\templates\desktop\cart4.pug' in 'C:\OSPanel\domains\kc-shoes.new-design':
+  Error: Can't resolve 'C:\OSPanel\domains\kc-shoes.new-design\src\templates\desktop\cart4.pug' in 'C:\OSPanel\domains\kc-shoes.new-design'
   
   - compiler.js:79 childCompiler.runAsChild
     [kc-shoes.new-design]/[html-webpack-plugin]/lib/compiler.js:79:16
@@ -63,10 +62,38 @@
   - Compilation.js:1093 _addModuleChain
     [kc-shoes.new-design]/[webpack]/lib/Compilation.js:1093:12
   
-  - Compilation.js:1005 processModuleDependencies.err
-    [kc-shoes.new-design]/[webpack]/lib/Compilation.js:1005:9
+  - Compilation.js:945 errorAndCallback.bail.err
+    [kc-shoes.new-design]/[webpack]/lib/Compilation.js:945:6
   
-  - next_tick.js:61 process._tickCallback
-    internal/process/next_tick.js:61:11
+  - Compilation.js:978 moduleFactory.create
+    [kc-shoes.new-design]/[webpack]/lib/Compilation.js:978:14
+  
+  - NormalModuleFactory.js:397 factory
+    [kc-shoes.new-design]/[webpack]/lib/NormalModuleFactory.js:397:22
+  
+  - NormalModuleFactory.js:130 resolver
+    [kc-shoes.new-design]/[webpack]/lib/NormalModuleFactory.js:130:21
+  
+  - NormalModuleFactory.js:224 asyncLib.parallel
+    [kc-shoes.new-design]/[webpack]/lib/NormalModuleFactory.js:224:22
+  
+  - async.js:2825 
+    [kc-shoes.new-design]/[neo-async]/async.js:2825:7
+  
+  - async.js:6886 
+    [kc-shoes.new-design]/[neo-async]/async.js:6886:13
+  
+  - NormalModuleFactory.js:214 normalResolver.resolve
+    [kc-shoes.new-design]/[webpack]/lib/NormalModuleFactory.js:214:25
+  
+  - Resolver.js:184 doResolve
+    [kc-shoes.new-design]/[enhanced-resolve]/lib/Resolver.js:184:12
+  
+  - Resolver.js:238 hook.callAsync
+    [kc-shoes.new-design]/[enhanced-resolve]/lib/Resolver.js:238:5
+  
+  
+  - UnsafeCachePlugin.js:37 resolver.doResolve
+    [kc-shoes.new-design]/[enhanced-resolve]/lib/UnsafeCachePlugin.js:37:5
   
 </pre><script type="text/javascript" src="js/app.js"></script>

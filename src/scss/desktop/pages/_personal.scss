@@ -443,7 +443,13 @@
   &-item {
     display: flex;
     align-items: flex-start;
+    border-bottom: 1px solid #e8eff7;
+    padding: 10px 0 20px 0;
 
+    &:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
 
     &.not-redeemed {
       .order-item-img, .order-item-text {
