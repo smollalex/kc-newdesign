@@ -77,9 +77,13 @@
           .col-md-5.col-lg-4.col-xl-4
             .city-input
               .h5 Введите область / край
-              input#Modali.nav-itemnputRegion.form-control(type='text', name='region', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
-              input#Modali.nav-itemnputRegionId(type='hidden', name='regionId', value='')
+              .form-group
+                input#Modali.is-invalid.form-control(type='text', name='region', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
+                input#Modali(type='hidden', name='regionId', value='')
+                .invalid-feedback Please provide a valid city
             .city-input
               .h5 Введите город / поселок
-              input#Modali.nav-itemnputCity.form-control(type='text', name='city', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
-              input#Modali.nav-itemnputCityId(type='hidden', name='cityId', value='')
+              .form-group
+                input#Modali.is-invalid.form-control(type='text', name='city', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
+                input#Modali.nav-itemnputCityId(type='hidden', name='cityId', value='')
+                .invalid-feedback Please provide a valid city

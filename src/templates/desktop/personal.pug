@@ -508,19 +508,23 @@ html(lang='ru')
                         .form-group.row
                           label.col-sm-3.col-form-label(for='fio') Ф.И.О.
                           .col-sm-6
-                            input#fio.form-control(type='text', value='Иванов Иван Иванович')
+                            input#fio.form-control.is-valid(type='text', value='Иванов Иван Иванович')
+                            .valid-feedback Valid city
                         .form-group.row
                           label.col-sm-3.col-form-label(for='phone') Телефон
                           .col-sm-4
-                            input#phone.form-control(type='text', value='+7 (999) 999 99 99')
+                            input#phone.form-control.is-invalid(type='text', value='+7 (999) 999 99 99')
+                            .invalid-feedback Please provide a valid city
                         .form-group.row
                           label.col-sm-3.col-form-label(for='email') E-mail
                           .col-sm-6
                             input#email.form-control(type='text', value='your@email.ru')
+                            .invalid-feedback Please provide a valid city
                         .form-group.row
                           label.col-sm-3.col-form-label(for='') Город
                           .col-lg-5
                             input.form-control(type='text', value='')
+                            .invalid-feedback Please provide a valid city
                           .col-lg-3  
                             .cart-contacts-city
                               svg(role="img", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 384 512")
@@ -530,10 +534,12 @@ html(lang='ru')
                           label.col-sm-3.col-form-label(for='') Улица
                           .col-lg-7
                             input.form-control(name='', type='text', placeholder='')
+                            .invalid-feedback Please provide a valid city
                         .form-group.row
                           label.col-sm-3.col-form-label(for='') Индекс
                           .col-lg-4
                             input.form-control(name='', type='text', placeholder='')
+                            .invalid-feedback Please provide a valid city
                         .form-group.row
                           label.col-sm-3.col-form-label(for='') Дом
                           .col-lg-2
@@ -548,10 +554,12 @@ html(lang='ru')
                           label.col-sm-3.col-form-label(for='password') Пароль
                           .col-sm-5
                             input#password.form-control(type='password', value='')
+                            .invalid-feedback Please provide a valid city
                         .form-group.row
                           label.col-sm-3.col-form-label(for='password2') Подтвердить пароль
                           .col-sm-5
                             input#password2.form-control(type='password', value='')
+                            .invalid-feedback Please provide a valid city
                         .form-group.row
                           .col-sm-5.offset-3
                             a.btn(href="") Сохранить

@@ -720,7 +720,7 @@
       </div>
       <div class="footer-partners-our"> 
         <div><span>Наши партнёры</span></div>
-        <div><img src="img/halva.png"><span>Вы можете оплачивать заказы банковскими картами или наличными при получении</span><img src="img/mastercard.svg"><img src="img/visa.svg"><img src="img/yandex.svg"><img src="img/webmoney.svg"></div>
+        <div><img src="img/halva.png"><span>Вы можете оплачивать заказы банковскими картами или наличными при получении</span><img src="img/mastercard.png"><img src="img/visa.png"><img src="img/yandex.png"><img src="img/webmoney.png"></div>
       </div>
     </div>
   </div>
@@ -868,13 +868,19 @@
           <div class="col-md-5 col-lg-4 col-xl-4">
             <div class="city-input">
               <div class="h5">Введите область / край</div>
-              <input class="nav-itemnputRegion form-control" id="Modali" type="text" name="region" placeholder="Введите первые буквы и выберите из списка" value="" autocomplete="off">
-              <input class="nav-itemnputRegionId" id="Modali" type="hidden" name="regionId" value="">
+              <div class="form-group">
+                <input class="is-invalid form-control" id="Modali" type="text" name="region" placeholder="Введите первые буквы и выберите из списка" value="" autocomplete="off">
+                <input id="Modali" type="hidden" name="regionId" value="">
+                <div class="invalid-feedback">Please provide a valid city</div>
+              </div>
             </div>
             <div class="city-input">
               <div class="h5">Введите город / поселок</div>
-              <input class="nav-itemnputCity form-control" id="Modali" type="text" name="city" placeholder="Введите первые буквы и выберите из списка" value="" autocomplete="off">
-              <input class="nav-itemnputCityId" id="Modali" type="hidden" name="cityId" value="">
+              <div class="form-group">
+                <input class="is-invalid form-control" id="Modali" type="text" name="city" placeholder="Введите первые буквы и выберите из списка" value="" autocomplete="off">
+                <input class="nav-itemnputCityId" id="Modali" type="hidden" name="cityId" value="">
+                <div class="invalid-feedback">Please provide a valid city</div>
+              </div>
             </div>
           </div>
         </div>

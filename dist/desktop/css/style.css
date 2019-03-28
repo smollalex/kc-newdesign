@@ -15503,6 +15503,9 @@ body::-webkit-scrollbar-thumb {
 .textarea.form-control {
   padding-top: 15px; }
 
+.form-group {
+  margin-bottom: 1.5rem; }
+
 .col-form-label {
   padding: 0;
   color: #96a4b0;
@@ -15690,6 +15693,21 @@ body::-webkit-scrollbar-thumb {
       border-radius: 0;
       background-color: #97a4b0;
       color: white; }
+
+.invalid-feedback, .valid-feedback {
+  font-family: Ubuntu;
+  font-size: 12px;
+  line-height: 12px;
+  padding-left: 13px;
+  margin-top: 5px;
+  height: 12px;
+  position: absolute; }
+
+.invalid-feedback {
+  color: #f54944; }
+
+.valid-feedback {
+  color: green; }
 
 .breadcrumb {
   background: white;
@@ -16369,14 +16387,6 @@ body::-webkit-scrollbar-thumb {
 
 .modal-city .city-input {
   margin-bottom: 40px; }
-  .modal-city .city-input input {
-    width: 100%;
-    padding: 0 15px;
-    height: 45px;
-    line-height: 45px;
-    background: white;
-    border: 1px solid #e4eef9;
-    box-sizing: border-box; }
 
 @media (min-width: 992px) {
   .modal-product-preview .modal-dialog {
@@ -16531,9 +16541,6 @@ body::-webkit-scrollbar-thumb {
 
 .modal-signup [type="checkbox"]:checked + label:before {
   border-color: #00b3ff; }
-
-.modal-signup [type="checkbox"]:checked + label:after {
-  background-color: #00b3ff; }
 
 @media (min-width: 992px) {
   .modal-order .modal-dialog {
@@ -20581,7 +20588,7 @@ main {
           margin-left: 7px;
           font-size: 12px;
           font-family: Ubuntu;
-          top: -4px;
+          top: -10px;
           z-index: 1; }
           .cart-item-price .price-badge-discount:before {
             width: 14px;

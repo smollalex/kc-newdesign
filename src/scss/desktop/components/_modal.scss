@@ -113,16 +113,6 @@
     
     .city-input {
       margin-bottom: 40px;
-  
-      input {
-        width: 100%;
-        padding: 0 15px;
-        height: 45px;
-        line-height: 45px;
-        background: white;
-        border: 1px solid #e4eef9;
-        box-sizing: border-box;
-      }
     }
   }
   
@@ -355,9 +345,6 @@
 
     [type="checkbox"]:checked + label:before {
       border-color: $primary-second;
-    }
-    [type="checkbox"]:checked + label:after {
-      background-color: $primary-second;
     }
   }
 

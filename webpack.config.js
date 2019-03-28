@@ -205,13 +205,7 @@ const config =  {
       filename: 'cart3.html',
       template: `src/templates/${version}/cart3.pug`
     }),
-    new HtmlWebpackPlugin({
-      filename: 'cart4.html',
-      template: `src/templates/${version}/cart4.pug`
-    }),
-
-
-    
+   
 
     new CopyWebpackPlugin([
       {

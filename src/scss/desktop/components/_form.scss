@@ -42,6 +42,10 @@
 }
 
 
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
 .col-form-label {
   padding: 0;
   color: #96a4b0;
@@ -296,4 +300,20 @@
       color: white;
     }
   }
+}
+
+.invalid-feedback, .valid-feedback {
+  font-family: Ubuntu;
+  font-size: 12px;
+  line-height: 12px;
+  padding-left: 13px;
+  margin-top: 5px;
+  height: 12px;
+  position: absolute;
+}
+.invalid-feedback {
+  color: #f54944;
+}
+.valid-feedback {
+  color: green;
 }
