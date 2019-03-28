@@ -15499,12 +15499,11 @@ body::-webkit-scrollbar-thumb {
   border-color: #e4eef9;
   font-size: 13px;
   font-family: "Ubuntu", sans-serif; }
+  .form-control.is-invalid {
+    color: #ef6976; }
 
 .textarea.form-control {
   padding-top: 15px; }
-
-.form-group {
-  margin-bottom: 1.5rem; }
 
 .col-form-label {
   padding: 0;
@@ -15695,13 +15694,12 @@ body::-webkit-scrollbar-thumb {
       color: white; }
 
 .invalid-feedback, .valid-feedback {
-  font-family: Ubuntu;
+  font-family: "Ubuntu", sans-serif;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 18px;
   padding-left: 13px;
   margin-top: 5px;
-  height: 12px;
-  position: absolute; }
+  height: 12px; }
 
 .invalid-feedback {
   color: #f54944; }

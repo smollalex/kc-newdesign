@@ -10,7 +10,8 @@
       .modal-body
         form.form-signup(action="")
           .form-group
-            input.form-control(id="signup-fio", type="text", placeholder="Ф.И.О.", name='signup-fio') 
+            input.form-control.is-invalid(id="signup-fio", type="text", placeholder="Ф.И.О.", name='signup-fio') 
+            .invalid-feedback You must agree before submitting.
           .form-group
             input.form-control(id="signup-phone", type="text", placeholder="Телефон", name='signup-phone') 
           .form-group

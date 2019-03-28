@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet"></head>
   <body>
-<div class="city-panel" id="city-panel"></div>
 <header class="header">
   <div class="container-fluid">
     <div class="header-item header-item--delivery">
@@ -1266,7 +1265,8 @@
       <div class="modal-body">
         <form class="form-signup" action="">
           <div class="form-group">
-            <input class="form-control" id="signup-fio" type="text" placeholder="Ф.И.О." name="signup-fio">
+            <input class="form-control is-invalid" id="signup-fio" type="text" placeholder="Ф.И.О." name="signup-fio">
+            <div class="invalid-feedback">You must agree before submitting.</div>
           </div>
           <div class="form-group">
             <input class="form-control" id="signup-phone" type="text" placeholder="Телефон" name="signup-phone">
