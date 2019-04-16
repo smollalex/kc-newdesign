@@ -17,7 +17,7 @@ $(document).ready(function(){
 
 	// Brands home slider
 	$('#brands-slider').owlCarousel({
-		nav: true,
+		nav: false,
 		mouseDrag: true,
 		dots: true,
 		slideBy: 5,
@@ -28,13 +28,13 @@ $(document).ready(function(){
 		],
 		responsive: {
 			0: {
-				items: 6
+				items: 2
+			},
+			415: {
+				items: 3
 			},
 			991: {
 				items: 7
-			},
-			1280: {
-				items: 8
 			}
 		}
 	});
@@ -56,7 +56,10 @@ $(document).ready(function(){
 		],
 		responsive: {
 			0: {
-				items: 3
+				items: 1
+			},
+			413: {
+				items: 2
 			},
 			768: {
 				items: 3
@@ -134,6 +137,9 @@ $(document).ready(function(){
 		lazyLoad: true,
 		responsive: {
 			0: {
+				items: 1
+			},
+			415: {
 				items: 2
 			},
 			991: {

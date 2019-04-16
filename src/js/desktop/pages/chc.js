@@ -55,5 +55,28 @@ $(document).ready(function(){
     ymaps.ready(init);
   })();
 
+  
+  // Typical slider for other product
+	$('#trend-slider').owlCarousel({
+		loop: true,
+		nav: false,
+		mouseDrag: true,
+		dots: true,
+		slideBy: 3,
+		lazyLoad: true,
+		items: 1,
+		margin: 10,
+		responsive: {
+			768: {
+				items: 3
+			},
+			768: {
+				items: 3
+			},
+			1280: {
+				items: 4
+			}
+		}
+	});
 
 });

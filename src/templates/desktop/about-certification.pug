@@ -1,44 +1,56 @@
-doctype html
-html(lang='ru')
-  head
-    title Интернет магазин обуви
-    meta(charset='UTF-8')
-    meta(name='description', content='')
-    meta(name='keywords', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-  body
-    include shared/header
-    include shared/nav
-    
-    section.breadcrumb
-      .container-fluid
-        ul.breadcrumb-list
-          li.breadcrumb-item.breadcrumb-item--home
-            a.breadcrumb-link(href='javascript:;')
-              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
-              </svg>
-          li.breadcrumb-item
-            a.breadcrumb-link(href='javascript:;') О компании
-          li.breadcrumb-item
-            a.breadcrumb-link(href='javascript:;') Сертификаты
-    
-    main.about
-      .container-fluid
-        section.page-header
-          h1 Сертификаты
-        .row.about-certification
-          .col-sm-3
-            .chc-navbar
-              include shared/chc-navbar-about
-              include shared/chc-navbar-help
-              include shared/chc-navbar-delivery
-          .col-sm-9
-            .row
-              .col-6
-                img.img-fluid(src="img/certificate-rieker.jpg", alt="")
-              .col-6
-                img.img-fluid(src="img/certificate-ara.jpg", alt="")
-          
-  include shared/footer
-  include shared/modal/allmodals
+include shared/header
+
+section.breadcrumb
+  .container-fluid
+    ul.breadcrumb-list
+      li.breadcrumb-item.breadcrumb-item--home
+        a.breadcrumb-link(href='javascript:;')
+          <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+            <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+          </svg>
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') О компании
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') Сертификаты
+
+main.about
+  .container-fluid
+    section.page-header
+      h1 
+        span Сертификаты
+    .row
+      .col-sm-3
+        .chc-navbar
+          include shared/chc-navbar-about
+          include shared/chc-navbar-help
+          include shared/chc-navbar-delivery
+      .col-sm-9
+        .about-certification
+          a(href="").certificat
+            svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 384 512')
+              path(fill='', d='M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zm-22.6 22.7c2.1 2.1 3.5 4.6 4.2 7.4H256V32.5c2.8.7 5.3 2.1 7.4 4.2l83.9 83.9zM336 480H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h176v104c0 13.3 10.7 24 24 24h104v304c0 8.8-7.2 16-16 16zm-48-244v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12z')
+            span ДЕКЛАРАЦИЯ О СООТВЕТСТВИИ НА КОЖАНУЮ ОБУВЬ NEW BALANCE
+          a(href="").certificat
+            svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 384 512')
+              path(fill='', d='M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zm-22.6 22.7c2.1 2.1 3.5 4.6 4.2 7.4H256V32.5c2.8.7 5.3 2.1 7.4 4.2l83.9 83.9zM336 480H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h176v104c0 13.3 10.7 24 24 24h104v304c0 8.8-7.2 16-16 16zm-48-244v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12z')
+            span ДЕКЛАРАЦИЯ О СООТВЕТСТВИИ НА КОЖАНУЮ ОБУВЬ NEW BALANCE
+          a(href="").certificat
+            svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 384 512')
+              path(fill='', d='M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zm-22.6 22.7c2.1 2.1 3.5 4.6 4.2 7.4H256V32.5c2.8.7 5.3 2.1 7.4 4.2l83.9 83.9zM336 480H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h176v104c0 13.3 10.7 24 24 24h104v304c0 8.8-7.2 16-16 16zm-48-244v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12z')
+            span ДЕКЛАРАЦИЯ О СООТВЕТСТВИИ НА КОЖАНУЮ ОБУВЬ NEW BALANCE
+          a(href="").certificat
+            svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 384 512')
+              path(fill='', d='M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zm-22.6 22.7c2.1 2.1 3.5 4.6 4.2 7.4H256V32.5c2.8.7 5.3 2.1 7.4 4.2l83.9 83.9zM336 480H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h176v104c0 13.3 10.7 24 24 24h104v304c0 8.8-7.2 16-16 16zm-48-244v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12z')
+            span ДЕКЛАРАЦИЯ О СООТВЕТСТВИИ НА КОЖАНУЮ ОБУВЬ NEW BALANCE
+          a(href="").certificat
+            svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 384 512')
+              path(fill='', d='M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zm-22.6 22.7c2.1 2.1 3.5 4.6 4.2 7.4H256V32.5c2.8.7 5.3 2.1 7.4 4.2l83.9 83.9zM336 480H48c-8.8 0-16-7.2-16-16V48c0-8.8 7.2-16 16-16h176v104c0 13.3 10.7 24 24 24h104v304c0 8.8-7.2 16-16 16zm-48-244v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm0 64v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12z')
+            span ДЕКЛАРАЦИЯ О СООТВЕТСТВИИ НА КОЖАНУЮ ОБУВЬ NEW BALANCE
+        //.row
+          .col-6
+            img.img-fluid(src="img/certificate-rieker.jpg", alt="")
+          .col-6
+            img.img-fluid(src="img/certificate-ara.jpg", alt="")
+      
+include shared/footer
+include shared/modal/allmodals

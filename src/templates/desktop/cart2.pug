@@ -1,193 +1,143 @@
-doctype html
-html(lang='ru')
-  head
-    title Интернет магазин обуви
-    meta(charset='UTF-8')
-    meta(name='description', content='')
-    meta(name='keywords', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-  body
-    include shared/header
-    include shared/nav
-    
-    section.breadcrumb
-      .container-fluid
-        ul.breadcrumb-list
-          li.breadcrumb-item.breadcrumb-item--home
-            a.breadcrumb-link(href='javascript:;')
-              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
-              </svg>
-          li.breadcrumb-item
-            a.breadcrumb-link(href='javascript:;') Корзина
-          li.breadcrumb-item
-            a.breadcrumb-link(href='javascript:;') Доставка и оплата
-    main.cart
-      .container-fluid
-        section.page-header
-          .steps
-            .item.done
+include shared/header
+
+section.breadcrumb
+  .container-fluid
+    ul.breadcrumb-list
+      li.breadcrumb-item.breadcrumb-item--home
+        a.breadcrumb-link(href='javascript:;')
+          <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+            <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+          </svg>
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') Корзина
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') Доставка и оплата
+main.cart
+  .container-fluid
+    section.page-header
+      h1 
+        span Доставка и оплата
+    .row
+      .col-md-10.offset-md-1.col-lg-8.offset-lg-0
+        .cart-delivery
+          .cart-delivery-section.active
+            h3
               span
-                svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64', xml:space='preserve')
-                  path(fill='#ffffff', d='M31.051,51c-1.197,0-2.397-0.428-3.354-1.293l-20.9-18.917c-2.047-1.853-2.205-5.015-0.352-7.062 c1.854-2.049,5.015-2.206,7.062-0.352l17.24,15.604l22.631-24.383c1.88-2.023,5.042-2.141,7.066-0.262 c2.023,1.879,2.141,5.042,0.262,7.066l-25.998,28C33.729,50.462,32.394,51,31.051,51z')
-              div
-                h3 Корзина
-                p Убедитесь в правильном выборе
-            .item.active
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                  <path fill="#ffffff" d="M31.051,51c-1.197,0-2.397-0.428-3.354-1.293l-20.9-18.917c-2.047-1.853-2.205-5.015-0.352-7.062 c1.854-2.049,5.015-2.206,7.062-0.352l17.24,15.604l22.631-24.383c1.88-2.023,5.042-2.141,7.066-0.262 c2.023,1.879,2.141,5.042,0.262,7.066l-25.998,28C33.729,50.462,32.394,51,31.051,51z"></path>
+                </svg>
+              | Выберите способ доставки
+            .flex-row
+              .cart-delivery-option
+                input(id='delivery-type-1', name='delivery-type', type='radio', checked)
+                label(for='delivery-type-1') Курьером
+              .cart-delivery-option
+                input(id='delivery-type-2', name='delivery-type', type='radio')
+                label(for='delivery-type-2') В пункт самовывоза
+              .cart-delivery-option
+                input(id='delivery-type-3', name='delivery-type', type='radio')
+                label(for='delivery-type-3') Почтой России
+            ul.cart-delivery-features
+              li.list-time Доставка 2-4 дня
+              li.list-warning Заказ до 5-и пар
+
+            .mt-5
+              h4 Укажите адрес доставки
+              .cart-delivery-adress
+                .cart-delivery-option
+                  input(id='delivery-adress-1', name='delivery-adress', type='radio')
+                  label(for='delivery-adress-1') Омская обл, Омск, Фрунзе ул 101
+                .cart-delivery-option
+                  input(id='delivery-adress-2', name='delivery-adress', type='radio')
+                  label(for='delivery-adress-2') Омская обл, Омск, ул Пушкина дом Колотушкина
+              a.link.mt-3(href="", data-toggle="modal", data-target="#new-adress") Добавить новый адрес
+
+            .mt-5
+              h4 Выберите пункт самовывоза
+              .cart-delivery-adress
+                form.form-horizontal
+                  .form-group.mb-0
+                    select.form-control(name='adress-pickup', type='text', placeholder='')
+                      option(value="") 
+                      
+          .cart-delivery-section
+            h3
               span 2
-              div
-                h3 Доставка и оплата
-                p Выбирете способ доставки и оплаты
-            .item
+              | Выберите способ оплаты
+            .cart-delivery-payment
+              .flex-row
+                .cart-delivery-option
+                  input(id='delivery-payment-1', name='delivery-payment', type='radio')
+                  label(for='delivery-payment-1') Оплата при получении - 200 ₽
+                .cart-delivery-option
+                  input(id='delivery-payment-2', name='delivery-payment', type='radio', checked)
+                  label(for='delivery-payment-2') Предоплата - бесплатно
+              ul.cart-delivery-features
+                li.list-payment Оплата наличными или по карте
+                li.list-payment Предоплата производится в личном кабинете после подтверждения заказа менеджером КС
+                li.list-yes
+                  | Доступна примерка
+                  a(href='#') ?
+                li.list-yes
+                  | Доступен частичный выкуп
+                  a(href='#') ?
+          .cart-delivery-section
+            h3 
               span 3
-              div
-                h3 Завершение
-                p Получите номер Вашего заказа
-        .row
-          .col-lg-8
-            .cart-delivery
-             
-              .cart-delivery-section
-                h3 Выберите способ доставки
-                .flex-row
-                  .cart-delivery-option
-                    input(id='delivery-type-1', name='delivery-type', type='radio', checked)
-                    label(for='delivery-type-1') Курьером
-                  .cart-delivery-option
-                    input(id='delivery-type-2', name='delivery-type', type='radio')
-                    label(for='delivery-type-2') В пункт самовывоза
-                  .cart-delivery-option
-                    input(id='delivery-type-3', name='delivery-type', type='radio')
-                    label(for='delivery-type-3') Почтой России
-                ul.cart-delivery-features
-                  li.list-time Доставка 2-4 дня
-                  li.list-warning Заказ до 5-и пар
-              .cart-delivery-section
-                h3 Выберите службу доставки
-                .flex-row
-                  .cart-delivery-option
-                    input(id='delivery-service-1', name='delivery-service', type='radio')
-                    label(for='delivery-service-1') Курьером КС
-                  .cart-delivery-option
-                    input(id='delivery-service-2', name='delivery-service', type='radio')
-                    label(for='delivery-service-2') Курьером СДЭК
-              .cart-delivery-section
-                h3 Укажите адрес доставки
-                .cart-delivery-adress
-                  .cart-delivery-option
-                    input(id='delivery-adress-1', name='delivery-adress', type='radio')
-                    label(for='delivery-adress-1') Омская обл, Омск, Фрунзе ул 101
-                  .cart-delivery-option
-                    input(id='delivery-adress-2', name='delivery-adress', type='radio')
-                    label(for='delivery-adress-2') Омская обл, Омск, ул Пушкина дом Колотушкина
-                
-                  a(href="") Добавить новый адрес
-                  form.form-horizontal
-                    .form-group.row
-                      label.col-form-label.col-lg-1(for='') Город
-                      .col-lg-6
-                        input.form-control(name='contact-city', type='text', placeholder='')
-                      .col-lg-2
-                        .cart-contacts-city
-                          svg(role="img", xmlns="http://www.w3.org/2000/svg", viewBox="0 0 384 512")
-                            path(fill="", d="M192 96c-52.935 0-96 43.065-96 96s43.065 96 96 96 96-43.065 96-96-43.065-96-96-96zm0 160c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64zm0-256C85.961 0 0 85.961 0 192c0 77.413 26.97 99.031 172.268 309.67 9.534 13.772 29.929 13.774 39.465 0C357.03 291.031 384 269.413 384 192 384 85.961 298.039 0 192 0zm0 473.931C52.705 272.488 32 256.494 32 192c0-42.738 16.643-82.917 46.863-113.137S149.262 32 192 32s82.917 16.643 113.137 46.863S352 149.262 352 192c0 64.49-20.692 80.47-160 281.931z")
-                          a(href="", data-toggle="modal", data-target="#city") Изменить
-                    .form-group.row
-                      label.col-form-label.col-lg-1(for='') Улица
-                      .col-lg-8
-                        input.form-control(name='contact-street', type='text', placeholder='')
-                    .form-group.row
-                      label.col-form-label.col-lg-1(for='') Индекс
-                      .col-lg-3
-                        input.form-control(name='contact-index', type='text', placeholder='')
-                    .form-group.row
-                      label.col-form-label.col-lg-1(for='') Дом
-                      .col-lg-2
-                        input.form-control(name='contact-house-1', type='text', placeholder='')
-                      label.col-form-label.col-lg-1(for='') Корпус
-                      .col-lg-2
-                        input.form-control(name='contact-house-2', type='text', placeholder='')
-                      label.col-form-label.col-lg-1(for='') Квартира
-                      .col-lg-2
-                        input.form-control(name='contact-house-3', type='text', placeholder='')
-              .cart-delivery-section
-                h3 Выберите способ оплаты
-                .cart-delivery-payment
-                  .flex-row
-                    .cart-delivery-option
-                      input(id='delivery-payment-1', name='delivery-payment', type='radio')
-                      label(for='delivery-payment-1') Оплата при получении - 200 ₽
-                    .cart-delivery-option
-                      input(id='delivery-payment-2', name='delivery-payment', type='radio', checked)
-                      label(for='delivery-payment-2') Предоплата - бесплатно
-                  ul.cart-delivery-features
-                    li.list-payment Оплата наличными или по карте
-                    li.list-payment Предоплата производится в личном кабинете после подтверждения заказа менеджером КС
-                    li.list-yes
-                      | Доступна примерка
-                      a(href='#') ?
-                    li.list-yes
-                      | Доступен частичный выкуп
-                      a(href='#') ?
-              .cart-delivery-section
-                h3 Проверьте свои контактные данные
-                .cart-delivery-contact
-                  form.form-horizontal
-                    .form-group.row
-                      label.col-form-label.col-lg-3(for='') Ваш телефон
-                      .col-lg-5
-                        input.form-control(name='', type='text', placeholder='')
-                    .form-group.row
-                      label.col-form-label.col-lg-3(for='') Ваш email
-                      .col-lg-5
-                        input.form-control(name='', type='text', placeholder='')
+              | Проверьте свои контактные данные
+            form.form-horizontal
+              .form-group.row
+                label.col-form-label.col-sm-2(for='') Ваш телефон
+                .col-sm-5
+                  input.form-control(name='', type='text', placeholder='')
+              .form-group.row
+                label.col-form-label.col-sm-2(for='') Ваш email
+                .col-sm-5
+                  input.form-control(name='', type='text', placeholder='')
+      .col-sm-10.offset-1.col-lg-4.offset-lg-0
+        .cart-total.sticky-top
+          .cart-total-heading Данные о заказе
+          .cart-total-items
+            .cart-total-item
+              span Товаров в корзине:
+              span 
+              span 3
+            .cart-total-item
+              span Общая стоимость:
+              span
+              span 12909 ₽
+            .cart-total-item
+              span Скидка КС:
+              span
+              span 1109 ₽
+            .cart-total-item
+              span Скидка по промокоду:
+              span
+              span 109 ₽
+            .cart-total-item
+              span Ваша скидка:
+              span
+              span 1218 ₽
+            .cart-total-item
+              span Доставка (Курьером)
+              span
+              span 200 ₽
+            .cart-total-item-adress
+              span Омская обл, Омск, Фрунзе ул 101
+            .cart-total-item
+              span ИТОГО К ОПЛАТЕ:
+              span
+              span 10109 ₽
 
-          .col-lg-4
-            .cart-total.sticky-top
-              .cart-total-heading Данные о заказе
-              .cart-total-items
-                .cart-total-item
-                  span Товаров в корзине:
-                  span 
-                  span 3
-                .cart-total-item
-                  span Общая стоимость:
-                  span
-                  span 12909 ₽
-                .cart-total-item
-                  span Скидка КС:
-                  span
-                  span 1109 ₽
-                .cart-total-item
-                  span Скидка по промокоду:
-                  span
-                  span 109 ₽
-                .cart-total-item
-                  span Ваша скидка:
-                  span
-                  span 1218 ₽
-                .cart-total-item
-                  span Доставка (Курьером)
-                  span
-                  span 200 ₽
-                .cart-total-item-adress
-                  span Омская обл, Омск, Фрунзе ул 101
-                
+          a.btn.mb-3(href="#") Оформить заказ
 
-                .cart-total-item
-                  span ИТОГО К ОПЛАТЕ:
-                  span
-                  span 10109 ₽
+          .cart-total-accept
+            input#accept-by-order(name='accept-by-order', type='checkbox', checked)
+            label(for='accept-by-order') Нажимая на кнопку «Оформить заказ», вы принимаете условия 
+              a(href="") Публичной оферты
+          .cart-total-accept
+            input#subscribe-by-order(name='subscribe-by-order', type='checkbox', checked)
+            label(for='subscribe-by-order') Подписка на рассылку всех акций и уникальных предложений
 
-              a.btn.mb-3(href="#") Оформить заказ
-
-              .cart-total-accept
-                input#accept-by-order(name='accept-by-order', type='checkbox', checked)
-                label(for='accept-by-order') Нажимая на кнопку «Оформить заказ», вы принимаете условия 
-                  a(href="") Публичной оферты
-              .cart-total-accept
-                input#subscribe-by-order(name='subscribe-by-order', type='checkbox', checked)
-                label(for='subscribe-by-order') Подписка на рассылку всех акций и уникальных предложений
-  
-  include shared/footer
-  include shared/modal/allmodals
+include shared/footer
+include shared/modal/allmodals

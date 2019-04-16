@@ -10,6 +10,7 @@
 @import '~hamburgers/_sass/hamburgers/hamburgers';
 @import '~select2/src/scss/core';
 @import '~starrr/dist/starrr.css';
+@import '~hamburgers/dist/hamburgers.css';
 
 // Core
 @import "core/core";
@@ -24,12 +25,59 @@
 @import "desktop/pages/pages";
 
 
-
 body {
-  min-width: 768px;
+  &.menu-open {
+    overflow-y: hidden;
+    
+    @include media-breakpoint-up(lg) {
+      padding-right: 7px;
+    }
+    
+    .navbar-overlay {
+      @include media-breakpoint-down(md) {
+        top: 147px;
+      }
+    }
+  }
+
+  &.menu-icons-open {
+    overflow-y: hidden;
+    
+    @include media-breakpoint-up(lg) {
+      padding-right: 7px;
+    }
+  
+    .navbar-overlay {
+      @include media-breakpoint-down(md) {
+        top: 85px;
+      }
+      @include media-breakpoint-down(xs) {
+        top: 58px;
+      }
+    }
+  }
+
+  &.mobile-menu-open {
+    overflow-y: hidden;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+  }
 }
 
 .container-fluid {
   max-width: 1280px;
   height: 100%;
+}
+
+.navbar-overlay {
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  background: rgb(2, 23, 33);
+  opacity: .5;
+  top: 85px;
+  z-index: 1030;
 }

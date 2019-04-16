@@ -1,85 +1,76 @@
-doctype html
-html(lang='ru')
-  head
-    title Интернет магазин обуви
-    meta(charset='UTF-8')
-    meta(name='description', content='')
-    meta(name='keywords', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-  body
-    include shared/header
-    include shared/nav
-    
-    section.breadcrumb
-      .container-fluid
-        ul.breadcrumb-list
-          li.breadcrumb-item.breadcrumb-item--home
-            a.breadcrumb-link(href='javascript:;')
-              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
-              </svg>
-          li.breadcrumb-item
-            a.breadcrumb-link(href='javascript:;') Оплата
-    
-    main.payment
-      .container-fluid
-        section.page-header
-          h1 Оплата
-        .row
-          .col-sm-3
-            .chc-navbar
-              include shared/chc-navbar-delivery
-              include shared/chc-navbar-help
-              include shared/chc-navbar-about
+include shared/header
 
-          .col-sm-9
-            .alert.alert-warning.alert-dismissible.fade.show(role='alert')
-              img.alert-icon(src="img/svg/сlothes-fitting-warning.svg", alt="")
-              p Предоплата производится в 
-                a(href="#") Личном кабинете
-                |, только после звонка менеджера
-              button.close(type='button', data-dismiss='alert', aria-label='Close')
-                svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
-                  path(fill='', d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+section.breadcrumb
+  .container-fluid
+    ul.breadcrumb-list
+      li.breadcrumb-item.breadcrumb-item--home
+        a.breadcrumb-link(href='javascript:;')
+          <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+            <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+          </svg>
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') Оплата
 
-            .payment-item
-              .payment-item-type
-                .payment-item-type-icon
-                  img(src="img/payment-credit-card.png", alt="")
-                h2.payment-item-type-title Расчет по банковской карте visa и mastercard
-              .payment-content  
-                a#headingOne.nav-link(href="#", data-toggle='collapse', data-target='#payment-1', aria-expanded='false', aria-controls='payment-1')
-                  span Инструкция
-                  svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
-                    polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
-                #payment-1.collapse(aria-labelledby="headingOne")
-                  h3 После оформления заказа вы попадете на страницу оплаты в сервисе «Яндекс.Деньги».
-                  p 1. Введите данные банковской карты: номер, срок действия, имя и фамилию, а также 3 цифры с оборотной стороны (код CVV/CVC). Не забудьте указать email: на него придет информация о платеже.
-                  p 2. Если для вашей карты включена дополнительная защита 3-D Secure, вы будете перенаправлены на сайт банка для подтверждения платежа.
-                  p 3. Готово! Чтобы вернуться в магазин, нажмите на ссылку под чеком.
-            .payment-item
-              .payment-item-type
-                .payment-item-type-icon
-                  img(src="img/payment-online-wallet.png", alt="")
-                h2.payment-item-type-title Через электронный кошелек Яндекс.Деньги или WebMoney
-              .payment-content  
-                a#headingTwo.nav-link(href="#", data-toggle='collapse', data-target='#payment-2', aria-expanded='false', aria-controls='payment-2')
-                  span Инструкция
-                  svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
-                    polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
-                #payment-2.collapse(aria-labelledby="headingTwo")
-            .payment-item
-              .payment-item-type
-                .payment-item-type-icon
-                  img(src="img/payment-terminal.png", alt="")
-                h2.payment-item-type-title Через терминал партнеров Яндекс.Деньги
-              .payment-content  
-                a#headingThree.nav-link(href="#", data-toggle='collapse', data-target='#payment-3', aria-expanded='false', aria-controls='payment-3')
-                  span Инструкция
-                  svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
-                    polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
-                #payment-3.collapse(aria-labelledby="headingThree")
-         
+main.payment
+  .container-fluid
+    section.page-header
+      h1
+        span Оплата
+    .row
+      .col-sm-3
+        .chc-navbar
+          include shared/chc-navbar-delivery
+          include shared/chc-navbar-help
+          include shared/chc-navbar-about
 
-  include shared/footer
-  include shared/modal/allmodals
+      .col-sm-9
+        .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+          img.alert-icon(src="img/svg/сlothes-fitting-warning.svg", alt="")
+          p Предоплата производится в 
+            a(href="#") Личном кабинете
+            |, только после звонка менеджера
+          button.close(type='button', data-dismiss='alert', aria-label='Close')
+            svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+              path(fill='', d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+
+        .payment-item
+          .payment-item-type
+            .payment-item-type-icon
+              img(src="img/payment-credit-card.png", alt="")
+            h2.payment-item-type-title Расчет по банковской карте visa и mastercard
+          .payment-content  
+            a#headingOne.nav-link(href="#", data-toggle='collapse', data-target='#payment-1', aria-expanded='false', aria-controls='payment-1')
+              span Инструкция
+              svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+            #payment-1.collapse(aria-labelledby="headingOne")
+              h3 После оформления заказа вы попадете на страницу оплаты в сервисе «Яндекс.Деньги».
+              p 1. Введите данные банковской карты: номер, срок действия, имя и фамилию, а также 3 цифры с оборотной стороны (код CVV/CVC). Не забудьте указать email: на него придет информация о платеже.
+              p 2. Если для вашей карты включена дополнительная защита 3-D Secure, вы будете перенаправлены на сайт банка для подтверждения платежа.
+              p 3. Готово! Чтобы вернуться в магазин, нажмите на ссылку под чеком.
+        .payment-item
+          .payment-item-type
+            .payment-item-type-icon
+              img(src="img/payment-online-wallet.png", alt="")
+            h2.payment-item-type-title Через электронный кошелек Яндекс.Деньги или WebMoney
+          .payment-content  
+            a#headingTwo.nav-link(href="#", data-toggle='collapse', data-target='#payment-2', aria-expanded='false', aria-controls='payment-2')
+              span Инструкция
+              svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+            #payment-2.collapse(aria-labelledby="headingTwo")
+        .payment-item
+          .payment-item-type
+            .payment-item-type-icon
+              img(src="img/payment-terminal.png", alt="")
+            h2.payment-item-type-title Через терминал партнеров Яндекс.Деньги
+          .payment-content  
+            a#headingThree.nav-link(href="#", data-toggle='collapse', data-target='#payment-3', aria-expanded='false', aria-controls='payment-3')
+              span Инструкция
+              svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+                polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
+            #payment-3.collapse(aria-labelledby="headingThree")
+      
+
+include shared/footer
+include shared/modal/allmodals

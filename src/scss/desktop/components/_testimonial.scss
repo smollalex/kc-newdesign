@@ -1,0 +1,192 @@
+.testimonial {
+     
+  &-item {
+    border: 1px solid #eaeff7;
+    padding: 30px 50px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px -15px #0000001f;
+    
+    @include media-breakpoint-down(md) {
+      padding: 20px;
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+        height: 58px;
+        width: 58px;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+
+      &-block {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        &:nth-child(3) {
+          margin-left: auto;
+        }
+
+        .name {
+          font-weight: 500;
+          font-size: 20px;
+          color: #333333;
+          margin-bottom: 6px;
+        }
+        .city {
+          color: #666666;
+        }
+        .date {
+          font-size: 10px;
+          margin-bottom: 6px;
+        }
+
+        .actions {
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+          justify-content: space-between;
+          line-height: 12px;
+          padding: 0 6px;
+
+          a {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+
+            span {
+              display: block;
+              width: 20px;
+              height: 20px;
+              background-size: 100%;
+            }
+
+            &.action {
+              &--like {
+                span {
+                  background-image: url("#{$PATH}/svg/like.svg");
+                }
+
+                &:hover, &:focus {
+                  span {
+                    background-image: url("#{$PATH}/svg/like_green.svg");
+                  }
+                }
+              }
+
+              &--dislake {
+                span {
+                  background-image: url("#{$PATH}/svg/dislike.svg");
+                }
+
+                &:hover, &:focus {
+                  span {
+                    background-image: url("#{$PATH}/svg/like_red.svg");
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-content {
+      padding: 0;
+
+      > span {
+        color: #0079bf;
+        font-size: 17px;
+        margin: 10px 10px 0 80px;
+        display: inline-block;
+        font-weight: 300;
+
+        @include media-breakpoint-down(md) {
+          margin-left: 30px;
+        }
+      }
+      
+      &-tags {
+        display: flex;
+        flex-wrap: wrap;
+          
+        .item {
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+          color: #333333;
+          margin-right: 10px;
+          border: none;
+          padding: 0;
+          
+          span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            font-size: 12px;
+            line-height: 18px;
+            color: #333333;
+            justify-content: center;
+            margin-left: 4px;
+            padding-top: 2px;
+            padding-left: 1px;
+            height: 20px;
+            width: 20px;
+
+            svg {
+              position: absolute;
+              fill: #ffdb00;
+              z-index: -1;
+              top: -2px;
+            }
+          }
+        }
+        
+      }
+
+      &-text {
+        line-height: 22px;
+        color: #333333;
+        margin-bottom: 10px;
+        font-size: 15px;
+        margin-top: 30px;
+      }
+
+      &-answer {
+        line-height: 22px;
+        font-size: 15px;
+        font-weight: 300;
+        color: #404040;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-top: 10px;
+        padding-left: 80px;
+
+        @include media-breakpoint-down(md) {
+          padding-left: 30px;
+        }
+      }
+
+      &-link {
+        margin-left: 6px;
+        border-bottom: 1px dotted $primary;
+        color: $primary;
+      }
+    }
+  }
+}

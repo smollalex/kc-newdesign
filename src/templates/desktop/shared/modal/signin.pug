@@ -2,7 +2,8 @@
   .modal-dialog.modal-md.modal-dialog-centered(role='document')
     .modal-content
       .modal-header
-        h5.modal-title Вход
+        h5.modal-title
+          span Вход
         button.close(type='button', data-dismiss='modal', aria-label='Close')
           span(aria-hidden='true')
             svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
@@ -10,10 +11,10 @@
       .modal-body
         form.form-signin(action="")
           .form-inline.mb-3
-            .form-group.mr-3
+            .form-group
               input.form-control(id='signin-phone-radio', name='signin-radio', type='radio', checked="checked", value="phone")
               label.col-form-label(for='signin-phone-radio') По номеру телефона
-            .form-group
+            .form-group.ml-3
               input.form-control(id='signin-email-radio', name='signin-radio', type='radio', value="email")
               label.col-form-label(for='signin-email-radio') По E-mail
           .signin-type
@@ -23,10 +24,25 @@
               input.form-control(id="signin-email", type="text", placeholder="Ваш email", name='sigin-email') 
           .form-group
             .input-group
-              input.form-control(id="signin-password", type="text", placeholder="Пароль", name='sigin-password') 
+              input.form-control(id="signin-password", type="password", placeholder="Пароль", name='sigin-password') 
+              .input-group-append--eye
+                svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
+                  path(fill='', d='M288 288a64 64 0 0 0 0-128c-1 0-1.88.24-2.85.29a47.5 47.5 0 0 1-60.86 60.86c0 1-.29 1.88-.29 2.85a64 64 0 0 0 64 64zm284.52-46.6C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 96a128 128 0 1 1-128 128A128.14 128.14 0 0 1 288 96zm0 320c-107.36 0-205.46-61.31-256-160a294.78 294.78 0 0 1 129.78-129.33C140.91 153.69 128 187.17 128 224a160 160 0 0 0 320 0c0-36.83-12.91-70.31-33.78-97.33A294.78 294.78 0 0 1 544 256c-50.53 98.69-148.64 160-256 160z')
               .input-group-append
                 button.btn(type='submit') Войти
           .form-group
             .flex-row
-              a(href="") Забыли пароль?
-              a.ml-auto(href="") Зарегистрироваться
+              a.link(href="") Забыли пароль?
+              a.link.ml-auto(href="") Зарегистрироваться
+        .signin-social
+          .signin-social-title 
+            span Через социальную сеть
+          .signin-social-items
+            a.signin-social-item.signin-social-item--vk(href='javascript:;')
+              i.fab.fa-vk(aria-hidden='true')
+            a.signin-social-item.signin-social-item--ok(href='javascript:;')
+              i.fab.fa-odnoklassniki(aria-hidden='true')
+            a.signin-social-item.signin-social-item--instagram(href='javascript:;')
+              i.fab.fa-instagram(aria-hidden='true')
+            a.signin-social-item.signin-social-item--fb(href='javascript:;')
+              i.fab.fa-facebook-f(aria-hidden='true')

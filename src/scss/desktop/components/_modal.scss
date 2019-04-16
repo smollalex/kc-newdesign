@@ -1,16 +1,26 @@
 .modal {
+  z-index: 1080;
+  
   &-content {
     border: none;
     border-radius: 0;
     background-color: #f5f9fe;
 
     .close {
+      height: 40px;
       position: absolute;
-      right: 20px;
-      top: 15px;
-      z-index: 1090;
-      padding: 0;
+      top: -40px;
+      background-color: #f4f9fe;
+      width: 40px;
+      opacity: 1;
+      right: 0;
       margin: 0;
+      padding: 0;
+      z-index: 2000;
+
+      @include media-breakpoint-down(xs) {
+        top: 0;
+      }
     }
   }
 
@@ -21,6 +31,10 @@
 
   &-body {
     padding: 25px;
+
+    @include media-breakpoint-down(xs) {
+      padding: 15px !important;
+    }
   }
   
   &-footer {
@@ -29,17 +43,23 @@
   }
 
   &-backdrop {
-    background: rgba(2, 23, 33, 0.58);
+    z-index: 1070;
+    background: rgb(2, 23, 33);
     opacity: 1;
   }
 
   &-title {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 300;
-    color: #444;
     margin: 0;
     text-align: center;
     margin: auto;
+
+    span {
+      background: -webkit-linear-gradient(right, #0079bf 0%, #01b2ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   &-dialog {
@@ -47,6 +67,7 @@
       transform: translate(0px, 0px);
     }
   }
+
 
   // Modal city
   &-city {
@@ -56,7 +77,10 @@
         max-width: 1000px;
       }
       @include media-breakpoint-down(md){
-        max-width: calc(100% - 100px)
+        max-width: calc(100% - 50px);
+      }
+      @include media-breakpoint-down(xs){
+        max-width: 100%;
       }
     }
 
@@ -113,10 +137,13 @@
     
     .city-input {
       margin-bottom: 40px;
+
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 0;
+      }
     }
   }
   
-
   // Modal product preview
   &-product-preview {
     .modal-dialog {
@@ -124,13 +151,20 @@
         max-width: 900px;
       }
       @include media-breakpoint-down(md){
-        max-width: calc(100% - 100px)
+        max-width: calc(100% - 50px)
+      }
+      @include media-breakpoint-down(xs) {
+        max-width: calc(100% - 10px);
       }
     }
 
     .modal-content {
       padding: 0px 30px 10px 20px;
       background-color: #fff;
+
+      @include media-breakpoint-down(xs) {
+        padding: 0;
+      }
     }
   }
 
@@ -141,7 +175,7 @@
         max-width: 1000px;
       }
       @include media-breakpoint-down(md){
-        max-width: calc(100% - 100px)
+        max-width: calc(100% - 50px)
       }
     }
     .modal-header {
@@ -262,7 +296,7 @@
         max-width: 630px;
       }
       @include media-breakpoint-down(md){
-        max-width: calc(100% - 100px)
+        max-width: calc(100% - 50px)
       }
     }
 
@@ -313,7 +347,6 @@
     [type="radio"]:not(checked) + label:before {
       border-color: #ccd6de;
     }
-
     [type="radio"]:checked + label:before {
       border-color: $primary-second;
     }
@@ -321,15 +354,104 @@
       background-color: $primary-second;
     }
 
-    a {
-      font-size: 13px;
-      font-family: $font-ubuntu;
-      color: $primary;
-      border-bottom: 1px dashed $primary;
+    .input-group-append--eye {
+      align-items: center;
+      width: 43px;
+      position: absolute;
+      right: 83px;
+      font-size: 14px;
+      display: flex;
+      height: 45px;
+      justify-content: center;
+      z-index: 1000;
+      cursor: pointer;
+      transition: .4s;
+      svg {
+        width: 20px;
+        fill: #d4dce2;
+      }
 
       &:hover, &:focus {
-        color: $primary-second;
-        border-color: $primary-second;
+        svg {
+          fill: $primary-second;
+        }
+      }
+    }
+
+    .signin-social {
+      
+      &-title {
+        text-align: center;
+        margin: 30px 0 20px 0;
+        position: relative;
+        
+        span {
+          position: relative;
+          font-family: $font-ubuntu;
+          background-color: #f4f9fe;
+          padding: 0 10px;
+          z-index: 1000;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          border-top: 1px solid #cfd8e1;
+          left: 0;
+          transform: translateY(10px);
+        }
+      }
+      &-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-item {
+        transition: .4s;
+        display: flex;
+        width: 35px;
+        height: 35px;
+        margin: 0 5px;
+        background: transparent;
+        color: #96a4b0;
+        border: 1px solid #96a4b0;
+        border-radius: 50%;
+        font-size: 17px;
+
+        &:hover {
+          color: white;
+        }
+
+        i {
+          margin: auto;
+        }
+
+        &--vk {
+          &:hover {
+            background: #4f76a1;
+            border-color: #4f76a1;
+          }
+        }
+        &--ok {
+          &:hover {
+            background: #f58220;
+            border-color: #f58220;
+          }
+        }
+        &--instagram {
+          &:hover {
+            background: #ce4e8b;
+            border-color: #ce4e8b;
+          }
+        }
+        &--fb {
+          &:hover {
+            background: #3c559b;
+            border-color: #3c559b;
+          }
+        }
       }
     }
   }
@@ -355,7 +477,7 @@
         max-width: 1000px;
       }
       @include media-breakpoint-down(md){
-        max-width: calc(100% - 100px)
+        max-width: calc(100% - 50px)
       }
     }
 
@@ -370,6 +492,45 @@
    .refund-step-next, .refund-step-prev {
      display: none;
    }
+   .modal-dialog {
+      @include media-breakpoint-up(lg){
+        max-width: 900px;
+      }
+    }
   }
 
+  // Trend
+  &-trend {
+    .modal-dialog {
+      @include media-breakpoint-up(lg){
+        max-width: 1050px;
+      }
+      @include media-breakpoint-down(md){
+        max-width: calc(100% - 50px)
+      }
+    }
+
+    .modal-content {
+      background-color: #fff;
+    }
+
+    .owl-carousel {
+      margin-top: 20px;
+    }
+    .owl-item {
+      padding: 0 !important;
+    }
+  }
+
+  // Trend
+  &-new-adress {
+    .modal-dialog {
+      @include media-breakpoint-up(lg){
+        max-width: 600px;
+      }
+      @include media-breakpoint-down(md){
+        max-width: calc(100% - 50px)
+      }
+    }
+  }
 }

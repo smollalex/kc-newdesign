@@ -79,7 +79,7 @@ $(document).ready(function(){
 
   // Tags slider
 	$('.tags-slider').owlCarousel({
-		loop: true,
+		loop: false,
 		nav: true,
 		mouseDrag: true,
 		touchDrag: true,

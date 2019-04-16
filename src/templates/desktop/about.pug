@@ -1,176 +1,165 @@
-doctype html
-html(lang='ru')
-  head
-    title Интернет магазин обуви
-    meta(charset='UTF-8')
-    meta(name='description', content='')
-    meta(name='keywords', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-  body
-    include shared/header
-    include shared/nav
-    
-    section.breadcrumb
-      .container-fluid
-        ul.breadcrumb-list
-          li.breadcrumb-item.breadcrumb-item--home
-            a.breadcrumb-link(href='javascript:;')
-              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
-              </svg>
-          li.breadcrumb-item
-            a.breadcrumb-link(href='javascript:;') О нас
-    main.about
-      .container-fluid
-        .page-header
-          h1 О нас
-        .row
-          .col-sm-3
-            .chc-navbar
-              include shared/chc-navbar-about
-              include shared/chc-navbar-help
-              include shared/chc-navbar-delivery
-          .col-sm-9
-            .about-header
-              p Мы - одна из крупнейших обувных компаний России, специализирующаяся на продаже качественной и комфортной обуви мировых европейских производителей.
-            .about-success
-              h2 Наш успех складывается из предоставления лучшего для вас
-              .about-success-items
-                .about-success-item
-                  span более
-                  h3 25 лет
-                  span на рынке
-                .about-success-item
-                  span более
-                  h3 10 000
-                  span посетителей в день
-                .about-success-item
-                  span более
-                  h3 100 000
-                  span качественных товаров
-                .about-success-item
-                  span более
-                  h3 1 000 000
-                  span довольных покупателей
-            .about-shops
-              img(src="img/shop4.jpg", alt="")
-              div
-                h3 Сеть фирменных магазинов
-                p text
-                a.btn(href="") Магазины на карте
-            .about-collection
-              h3 Отбираем лучшие коллекции для вас
-              p следим за последними тенденциями моды на лучших мировых выставках
-              .about-collection-items
-                .about-collection-item
-                  img(src="img/the_micam.png", alt="")
-                .about-collection-item
-                  img(src="img/izmailovo_shoes.png", alt="")
-                .about-collection-item
-                  img(src="img/gallery_shoes.png", alt="")
-                .about-collection-item
-                  img(src="img/euro_shoes.png", alt="")
-            .about-vacantion
-              .about-vacantion-title
-                h3 Каждый наш сотрудник — это профессионал своего дела
-                p готовый сделать все возможное чтобы вы остались довольны
-                a.btn(href="") КАРЬЕРА В «КС-НЕМЕЦКАЯ ОБУВЬ»
-              .about-vacantion-items
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-                .about-vacantion-item
-                  img(src="", alt="")
-            .about-delivery
-              div
-                h3 Мы доставляем удовольствие!
-                p Своя курьерская доставка с грамотно построенной логистикой привезёт заказ в удобное для вас время с возможностью примерки и частичного выкупа.
-                a.btn(href="") Подробнее о доставке
-              img(src="img/about-courier.jpg", alt="")
-          
-  include shared/footer
-  include shared/modal/pickup-point
-  include shared/modal/city
+include shared/header
+
+section.breadcrumb
+  .container-fluid
+    ul.breadcrumb-list
+      li.breadcrumb-item.breadcrumb-item--home
+        a.breadcrumb-link(href='javascript:;')
+          <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+            <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+          </svg>
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') О нас
+main.about
+  .container-fluid
+    .page-header
+      h1 
+        span О нас
+    .row
+      .col-sm-3
+        .chc-navbar
+          include shared/chc-navbar-about
+          include shared/chc-navbar-help
+          include shared/chc-navbar-delivery
+      .col-sm-9
+        .about-header
+          p Мы - одна из крупнейших обувных компаний России, специализирующаяся на продаже качественной и комфортной обуви мировых европейских производителей.
+        .about-success
+          h2 Наш успех складывается из предоставления лучшего для вас
+          .about-success-items
+            .about-success-item
+              span более
+              h3 25 лет
+              span на рынке
+            .about-success-item
+              span более
+              h3 10 000
+              span посетителей в день
+            .about-success-item
+              span более
+              h3 100 000
+              span качественных товаров
+            .about-success-item
+              span более
+              h3 1 000 000
+              span довольных покупателей
+        .about-shops
+          div
+            h2 Сеть фирменных магазинов
+            p text
+            a.btn.mt-3(href="") Магазины на карте
+        .about-collection
+          h2 Отбираем лучшие коллекции для вас
+          p следим за последними тенденциями моды на лучших мировых выставках
+          .about-collection-items
+            .about-collection-item
+              img(src="img/the_micam.png", alt="")
+            .about-collection-item
+              img(src="img/izmailovo_shoes.png", alt="")
+            .about-collection-item
+              img(src="img/gallery_shoes.png", alt="")
+            .about-collection-item
+              img(src="img/euro_shoes.png", alt="")
+        .about-vacantion
+          .about-vacantion-title
+            h2 Каждый наш сотрудник — это профессионал своего дела
+            p готовый сделать все возможное чтобы вы остались довольны
+            a.btn.mt-3(href="") КАРЬЕРА В «КС-НЕМЕЦКАЯ ОБУВЬ»
+          .about-vacantion-items
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+            .about-vacantion-item
+              img(src="", alt="")
+        .about-delivery
+          div
+            h2 Мы доставляем удовольствие!
+            p Своя курьерская доставка с грамотно построенной логистикой привезёт заказ в удобное для вас время с возможностью примерки и частичного выкупа.
+            a.btn.mt-3(href="") Подробнее о доставке
+      
+include shared/footer
+include shared/modal/pickup-point
+include shared/modal/city

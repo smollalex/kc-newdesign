@@ -1,0 +1,53 @@
+include shared/header
+
+section.breadcrumb
+  .container-fluid
+    ul.breadcrumb-list
+      li.breadcrumb-item.breadcrumb-item--home
+        a.breadcrumb-link(href='javascript:;')
+          <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+            <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+          </svg>
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') О компании
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') Новости и тренды
+
+main.about
+  .container-fluid
+    section.page-header
+      h1
+        span Новости и тренды
+    .row
+      .col-sm-3
+        .chc-navbar
+          include shared/chc-navbar-about
+          include shared/chc-navbar-help
+          include shared/chc-navbar-delivery
+      .col-sm-9
+        .row
+          .col-md-6.col-lg-4
+            .trend-card(style="background-image: url(https://kc-shoes.ru/image/data/trends/2019/Comfort-Flex_b.jpg)", data-target="#trend", data-toggle="modal")
+              h4.trend-card-title Технология Comfort Flex
+              p.trend-card-text Комфорт Флекс - технология, применяемая в обуви бренда ARA Чрезвычайно гибкая прекрасная стелька, превосходные амортизирующие свойства.
+          .col-md-6.col-lg-4
+            .trend-card(style="background-image: url(https://kc-shoes.ru/image/data/trends/2019/bordoi_q.jpg)")
+              h4.trend-card-title Элегантная женственность
+              p.trend-card-text Обувь цвета «бордо». В меру яркая и в меру сдержанная.
+          .col-md-6.col-lg-4
+            .trend-card(style="background-image: url(https://kc-shoes.ru/image/data/trends/2019/krosovki_q.jpg)")
+              h4.trend-card-title Универсальная модель
+              p.trend-card-text Спортивная обувь занимает все больше места в нашей жизни и гардеробе – сегодня ее покупают далеко не только для специальных занятий, но и просто для прогулок на свежем воздухе в комфортных условиях.
+          .col-md-6.col-lg-4
+            .trend-card(style="background-image: url(https://kc-shoes.ru/image/data/trends/2018/bezevii_q.jpg)")
+              h4.trend-card-title Бежевые тона
+              p.trend-card-text Для активных женщин есть много предложений вместительных сумок, подходящих к любому случаю и потребностям.
+          .col-md-6.col-lg-4
+            .trend-card(style="background-image: url(https://kc-shoes.ru/image/data/trends/2018/februa/botili_q.jpg)")
+              h4.trend-card-title Ботильоны
+              p.trend-card-text Идеальные по своим погодным параметрам, они подчеркивают женственность, чувство стиля и вкуса своей хозяйки.
+
+          
+        
+include shared/footer
+include shared/modal/allmodals

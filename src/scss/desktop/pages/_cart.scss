@@ -1,7 +1,7 @@
 .cart {
   padding-bottom: 50px;
 
-  .page-header {
+  .page-header-step {
     height: 150px;
     margin-bottom: 30px;
     display: flex;
@@ -150,16 +150,19 @@
   &-promocode {
     margin: 0 0 30px 50px;
     padding: 25px;
-    background-color: #fef4f4;
-    border: 1px solid #f9e8e8;
+    background-color: #f5f9fe;
+    border: 1px solid #e3eff7;
     
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+    }
+
     &-title {
       margin-bottom: 15px;
-      color: #333333;
+      color: #9da3a7;
       display: inline-block;
       text-transform: uppercase;
       font-size: 14px;
-      color: #da9d9d;
     }
 
     .form-control {
@@ -168,7 +171,6 @@
     }
     .btn {
       padding: 0 10px;
-      background-color: #efb9b9;
       border: none;
       color: #fff;
       height: 33px;
@@ -177,6 +179,10 @@
  
   &-items {
     width: 100%;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 30px;
+    }
   }
 
   &-item {
@@ -184,8 +190,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 3px solid #f4f9fe;
-    padding: 20px 50px;
+    border-top: 1px solid #f5f9fe;
+    padding: 0 0 20px 0;
     background-color: #fff;
   
     &:first-child {
@@ -215,7 +221,7 @@
       min-width: 300px;
 
       &-title {
-        font-size: 14px;
+        font-size: 18px;
         text-transform: uppercase;
         line-height: 21px;
         color: #333333;
@@ -255,32 +261,52 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      
+      margin-top: -7px;
+
       .input-group {
-        margin-right: 30px;
+        margin-right: 20px;
         width: 100px;
+        border-radius: 30px;
+        height: 30px;
       }
 
       .input-group-append, .input-group-prepend {
         .btn {
-          border-color: #97a4b0;
+          display: flex;
+          border-color: #98a7b2;
           background-color: #ffffff;
-          color: #75859c;
-          font-size: 14px;
-          padding: 0 12px;
-          height: 35px;
+          color: #98a7b2;
+          font-size: 18px;
+          padding: 0;
+          height: 30px;
+          width: 30px;
+          border-radius: 100%;
+          line-height: 30px;
+          transition: .5s;
+          font-family: Ubuntu;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+
+          &:hover, &:focus {
+            border-color: #41464a;
+            color: #41464a;
+          }
         }
       }
       .form-control {
-        height: 35px;
+        border: none;
+        text-align: center;
+        height: 30px;
       }
       .btn {
-        height: 35px;
+        height: 30px;
       }
 
       &-remove, &-like {
         display: flex;
-        height: 35px;
+        height: 30px;
         width: 30px;
         align-items: center;
         
@@ -314,10 +340,13 @@
     }
   
     &-price {
-      margin: 20px 0 0 0;
+      margin: 0 0 0 30px;
       text-align: right;
       display: flex;
       position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100px;
 
       .price {
         color: #333;
@@ -326,7 +355,9 @@
         position: relative;
         font-size: 20px;
         line-height: 25px;
-   
+        margin-bottom: 10px;
+        justify-content: flex-start;
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -348,9 +379,9 @@
           color: #333;
   
           .price-badge-discount {
-            background-color: #ff423c;
+            background-color: #f69781;
             &:before {
-              background-color: #ff423c;
+              background-color: #f69781;
             }
           }
   
@@ -376,8 +407,7 @@
           }
   
           .price-badge-discount {
-            filter: grayscale(1);
-            opacity: .5;
+            background-color: #f69781;
           }
         }
   
@@ -393,7 +423,7 @@
           margin-left: 7px;
           font-size: 12px;
           font-family: Ubuntu;
-          top: -10px;
+          top: -3px;
           z-index: 1;
   
           &:before {
@@ -419,9 +449,13 @@
     box-shadow: 0 0 20px -5px #0000001f;
     margin-left: 50px;
 
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+    }
+
     .btn {
-      background-color: $primary;
-      border-color: $primary;
+      background-color: $primary-second;
+      border: none;
       color: #fff;
       width: 100%;
       margin-top: 20px;
@@ -550,10 +584,11 @@
     }
   
     &-title {
-      font-size: 23px;
+      font-size: 36px;
       color: #444;
       text-align: center;
       margin: 30px auto;
+      font-weight: 300;
     }
   
     p {
@@ -574,8 +609,25 @@
   &-delivery {
 
     &-section {
-      padding: 40px 0 40px 50px;
-      border-top: 3px solid #f4f9fe;
+      padding: 0 0 40px 75px;
+      border: none;
+      position: relative;
+      
+      &:last-child {
+        &:before, &:after {
+          display: none;
+        }
+      }
+
+      &.active {
+        h3 span {
+          background-color: #00b3ff;
+
+          svg {
+            width: 20px;
+          }
+        }
+      }
 
       &:first-child {
         border: none;
@@ -583,13 +635,40 @@
     }
 
     h3 {
+      margin-left: -75px;
       font-size: 20px;
-      line-height: normal;
+      line-height: 1.5;
+      padding: 20px 20px;
+      background-color: #f5f9fe;
       margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+
+      span {
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 40px;
+        font-size: 20px;
+        margin-right: 15px;
+        background-color: transparent;
+        border: 1px solid #00b3ff;
+        color: #00b3ff;
+      }
+    }
+
+    h4 {
+      font-size: 18px;
+      line-height: normal;
+      margin-bottom: 20px;
     }
 
     &-option {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
 
       .flex-row & {
         margin-right: 30px;
@@ -598,17 +677,10 @@
     }
     
     &-adress {
-      
-      > a {
-        border-bottom: 1px dashed;
-        color: #0079c0;
-        padding-bottom: 2px;
-        margin-top: 20px;
-        display: inline-block;
-      }
-
       form {
-        margin-top: 30px;
+        margin-top: 10px;
+        background-color: #f5f9fe70;
+        padding: 20px;
       }
     }
 
@@ -702,4 +774,5 @@
       }
     }
   }
+
 }

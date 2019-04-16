@@ -25225,6 +25225,8 @@ __webpack_require__(/*! @zeitiger/elevatezoom/jquery.elevatezoom */ "./node_modu
 __webpack_require__(/*! waypoints/lib/jquery.waypoints.min.js */ "./node_modules/waypoints/lib/jquery.waypoints.min.js");
 __webpack_require__(/*! waypoints/lib/shortcuts/inview.min.js */ "./node_modules/waypoints/lib/shortcuts/inview.min.js");
 
+__webpack_require__(/*! ./libs/jquery.dlmenu.js */ "./src/js/desktop/libs/jquery.dlmenu.js");
+
 __webpack_require__(/*! ./layout/header.js */ "./src/js/desktop/layout/header.js");
 __webpack_require__(/*! ./layout/footer.js */ "./src/js/desktop/layout/footer.js");
 __webpack_require__(/*! ./layout/card.js */ "./src/js/desktop/layout/card.js");
@@ -25359,14 +25361,14 @@ function menuHover() {
 				$('.navbar-overlay').first().show();
 			}
 			$(this).addClass('active');
-			$('body').addClass('menu--opened');
+			$('body').addClass('menu-open');
 		},
 		out: function out() {
 			if ($(this).find('.nav-wrap').length) {
 				$('.navbar-overlay').first().hide();
 			}
 			$('.navbar-nav > .nav-item').removeClass('active');
-			$('body').removeClass('menu--opened');
+			$('body').removeClass('menu-open');
 		},
 		timeout: 50
 	});
@@ -25379,14 +25381,14 @@ function navbarIconsHover() {
 				$('.navbar-overlay').first().show();
 			}
 			$(this).addClass('active');
-			$('body').addClass('menu--opened');
+			$('body').addClass('menu-icons-open');
 		},
 		out: function out() {
 			if ($(this).find('.nav-wrap').length) {
 				$('.navbar-overlay').first().hide();
 			}
 			$('.navbar-icons > .nav-item').removeClass('active');
-			$('body').removeClass('menu--opened');
+			$('body').removeClass('menu-icons-open');
 		},
 		timeout: 50
 	});
@@ -25414,9 +25416,9 @@ $(document).ready(function () {
  $('body').on('click', function(e){
  	e.preventDefault;
  	if (e.target.closest('.header-item--city .header-item-title')) {
- 		$('body').addClass("city-panel--opened");
+ 		$('body').addClass("city-panel-open");
  	} else if (e.target.closest('.city-panel-close') || !(e.target.closest('.city-panel'))) {
- 		$('body').removeClass("city-panel--opened");
+ 		$('body').removeClass("city-panel-open");
  	}
  });
  */
@@ -25433,19 +25435,356 @@ $(document).ready(function () {
 	// Sticky header
 	// getStickyHeader();
 
-	// Menu hover intent
-	menuHover();
+
+	if ($(window).width() > 415) {
+
+		// Menu hover intent
+		menuHover();
+	}
+
+	// Navbar-icons hover intent
+	navbarIconsHover();
 
 	// Change sign in type
 	getSigninType();
 
-	// Navbar-icons hover intent
-	navbarIconsHover();
+	// Eye for password
+	$('.input-group-append--eye').on({
+		mouseenter: function mouseenter() {
+			$('#signin-password').attr('type', 'text');
+		},
+		mouseleave: function mouseleave() {
+			$('#signin-password').attr('type', 'password');
+		}
+	});
+
+	$('.btn').on('click', function (e) {
+		e.preventDefault();
+		if (!$(this).hasClass('progress-bar-striped')) {
+			$(this).addClass('progress-bar-striped progress-bar-animated');
+		} else {
+			$(this).removeClass('progress-bar-striped progress-bar-animated');
+		}
+	});
+
+	// MOBILE
+
+	if ($(window).width() < 415) {
+
+		// Mobile menu
+
+		var clearAllOpenCategoryMobileMenu = function clearAllOpenCategoryMobileMenu() {
+			$('.nav-list--active').each(function () {
+				$(this).removeClass('nav-list--active');
+			});
+			$('.nav-item--active').each(function () {
+				$(this).removeClass('nav-item--active');
+			});
+			$('.nav-list').removeClass('show');
+		};
+
+		// Mobile header features carousel
+		$('.header').find('.header-item--phone, .header-item--city').remove();
+		$('.header .owl-carousel').owlCarousel({
+			loop: true,
+			autoplay: true,
+			mouseDrag: true,
+			touchDrag: true,
+			dots: false,
+			nav: true,
+			items: 1,
+			lazyLoad: true,
+			navText: ['<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>', '<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>']
+		});
+
+		$('.hamburger').on('click', function () {
+			$(this).toggleClass('is-active');
+			$('body').toggleClass('mobile-menu-open');
+
+			var $root_nav_bar = $('.navbar-nav');
+			if ($root_nav_bar.hasClass('navbar-nav--active')) {
+				$root_nav_bar.removeClass('navbar-nav--active');
+				$('.nav-wrap').removeClass('show');
+				clearAllOpenCategoryMobileMenu();
+			}
+		});
+
+		$('.nav-link--expand').on('click', function () {
+			$(this).closest('.nav-list').toggleClass('nav-list--active');
+			$(this).closest('.nav-item').toggleClass('nav-item--active');
+			$(this).next().toggleClass('show');
+		});
+
+		$('.nav-link--expand--root').on('click', function () {
+			var $root_nav_bar = $(this).closest('.navbar-nav');
+			if ($root_nav_bar.hasClass('navbar-nav--active')) {
+				$root_nav_bar.removeClass('navbar-nav--active');
+				clearAllOpenCategoryMobileMenu();
+			} else {
+				$root_nav_bar.addClass('navbar-nav--active');
+			}
+		});
+		// END Mobile menu
+	}
 });
 
 $(window).on('scroll', function (event) {
 	//getStickyHeader();
 });
+
+/***/ }),
+
+/***/ "./src/js/desktop/libs/jquery.dlmenu.js":
+/*!**********************************************!*\
+  !*** ./src/js/desktop/libs/jquery.dlmenu.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * jquery.dlmenu.js v1.0.1
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * Copyright 2013, Codrops
+ * http://www.codrops.com
+ */
+;(function ($, window, undefined) {
+
+	'use strict';
+
+	// global
+
+	var Modernizr = window.Modernizr,
+	    $body = $('body');
+
+	$.DLMenu = function (options, element) {
+		this.$el = $(element);
+		this._init(options);
+	};
+
+	// the options
+	$.DLMenu.defaults = {
+		// classes for the animation effects
+		animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1' },
+		// callback: click a link that has a sub menu
+		// el is the link element (li); name is the level name
+		onLevelClick: function onLevelClick(el, name) {
+			return false;
+		},
+		// callback: click a link that does not have a sub menu
+		// el is the link element (li); ev is the event obj
+		onLinkClick: function onLinkClick(el, ev) {
+			return false;
+		}
+	};
+
+	$.DLMenu.prototype = {
+		_init: function _init(options) {
+
+			// options
+			this.options = $.extend(true, {}, $.DLMenu.defaults, options);
+			// cache some elements and initialize some variables
+			this._config();
+
+			var animEndEventNames = {
+				'WebkitAnimation': 'webkitAnimationEnd',
+				'OAnimation': 'oAnimationEnd',
+				'msAnimation': 'MSAnimationEnd',
+				'animation': 'animationend'
+			},
+			    transEndEventNames = {
+				'WebkitTransition': 'webkitTransitionEnd',
+				'MozTransition': 'transitionend',
+				'OTransition': 'oTransitionEnd',
+				'msTransition': 'MSTransitionEnd',
+				'transition': 'transitionend'
+			};
+			// animation end event name
+			this.animEndEventName = animEndEventNames[Modernizr.prefixed('animation')] + '.dlmenu';
+			// transition end event name
+			this.transEndEventName = transEndEventNames[Modernizr.prefixed('transition')] + '.dlmenu',
+			// support for css animations and css transitions
+			this.supportAnimations = Modernizr.cssanimations, this.supportTransitions = Modernizr.csstransitions;
+
+			this._initEvents();
+		},
+		_config: function _config() {
+			this.open = false;
+			this.$trigger = this.$el.children('.dl-trigger');
+			this.$menu = this.$el.children('ul.dl-menu');
+			this.$menuitems = this.$menu.find('li:not(.dl-back)');
+			this.$el.find('ul.dl-submenu').prepend('<li class="dl-back"><a href="#">back</a></li>');
+			this.$back = this.$menu.find('li.dl-back');
+		},
+		_initEvents: function _initEvents() {
+
+			var self = this;
+
+			this.$trigger.on('click.dlmenu', function () {
+
+				if (self.open) {
+					self._closeMenu();
+				} else {
+					self._openMenu();
+				}
+				return false;
+			});
+
+			this.$menuitems.on('click.dlmenu', function (event) {
+
+				event.stopPropagation();
+
+				var $item = $(this),
+				    $submenu = $item.children('ul.dl-submenu');
+
+				if ($submenu.length > 0) {
+
+					var $flyin = $submenu.clone().css('opacity', 0).insertAfter(self.$menu),
+					    onAnimationEndFn = function onAnimationEndFn() {
+						self.$menu.off(self.animEndEventName).removeClass(self.options.animationClasses.classout).addClass('dl-subview');
+						$item.addClass('dl-subviewopen').parents('.dl-subviewopen:first').removeClass('dl-subviewopen').addClass('dl-subview');
+						$flyin.remove();
+					};
+
+					setTimeout(function () {
+						$flyin.addClass(self.options.animationClasses.classin);
+						self.$menu.addClass(self.options.animationClasses.classout);
+						if (self.supportAnimations) {
+							self.$menu.on(self.animEndEventName, onAnimationEndFn);
+						} else {
+							onAnimationEndFn.call();
+						}
+
+						self.options.onLevelClick($item, $item.children('a:first').text());
+					});
+
+					return false;
+				} else {
+					self.options.onLinkClick($item, event);
+				}
+			});
+
+			this.$back.on('click.dlmenu', function (event) {
+
+				var $this = $(this),
+				    $submenu = $this.parents('ul.dl-submenu:first'),
+				    $item = $submenu.parent(),
+				    $flyin = $submenu.clone().insertAfter(self.$menu);
+
+				var onAnimationEndFn = function onAnimationEndFn() {
+					self.$menu.off(self.animEndEventName).removeClass(self.options.animationClasses.classin);
+					$flyin.remove();
+				};
+
+				setTimeout(function () {
+					$flyin.addClass(self.options.animationClasses.classout);
+					self.$menu.addClass(self.options.animationClasses.classin);
+					if (self.supportAnimations) {
+						self.$menu.on(self.animEndEventName, onAnimationEndFn);
+					} else {
+						onAnimationEndFn.call();
+					}
+
+					$item.removeClass('dl-subviewopen');
+
+					var $subview = $this.parents('.dl-subview:first');
+					if ($subview.is('li')) {
+						$subview.addClass('dl-subviewopen');
+					}
+					$subview.removeClass('dl-subview');
+				});
+
+				return false;
+			});
+		},
+		closeMenu: function closeMenu() {
+			if (this.open) {
+				this._closeMenu();
+			}
+		},
+		_closeMenu: function _closeMenu() {
+			var self = this,
+			    onTransitionEndFn = function onTransitionEndFn() {
+				self.$menu.off(self.transEndEventName);
+				self._resetMenu();
+			};
+
+			this.$menu.removeClass('dl-menuopen');
+			this.$menu.addClass('dl-menu-toggle');
+			this.$trigger.removeClass('dl-active');
+
+			if (this.supportTransitions) {
+				this.$menu.on(this.transEndEventName, onTransitionEndFn);
+			} else {
+				onTransitionEndFn.call();
+			}
+
+			this.open = false;
+		},
+		openMenu: function openMenu() {
+			if (!this.open) {
+				this._openMenu();
+			}
+		},
+		_openMenu: function _openMenu() {
+			var self = this;
+			// clicking somewhere else makes the menu close
+			$body.off('click').on('click.dlmenu', function () {
+				self._closeMenu();
+			});
+			this.$menu.addClass('dl-menuopen dl-menu-toggle').on(this.transEndEventName, function () {
+				$(this).removeClass('dl-menu-toggle');
+			});
+			this.$trigger.addClass('dl-active');
+			this.open = true;
+		},
+		// resets the menu to its original state (first level of options)
+		_resetMenu: function _resetMenu() {
+			this.$menu.removeClass('dl-subview');
+			this.$menuitems.removeClass('dl-subview dl-subviewopen');
+		}
+	};
+
+	var logError = function logError(message) {
+		if (window.console) {
+			window.console.error(message);
+		}
+	};
+
+	$.fn.dlmenu = function (options) {
+		if (typeof options === 'string') {
+			var args = Array.prototype.slice.call(arguments, 1);
+			this.each(function () {
+				var instance = $.data(this, 'dlmenu');
+				if (!instance) {
+					logError("cannot call methods on dlmenu prior to initialization; " + "attempted to call method '" + options + "'");
+					return;
+				}
+				if (!$.isFunction(instance[options]) || options.charAt(0) === "_") {
+					logError("no such method '" + options + "' for dlmenu instance");
+					return;
+				}
+				instance[options].apply(instance, args);
+			});
+		} else {
+			this.each(function () {
+				var instance = $.data(this, 'dlmenu');
+				if (instance) {
+					instance._init();
+				} else {
+					instance = $.data(this, 'dlmenu', new $.DLMenu(options, this));
+				}
+			});
+		}
+		return this;
+	};
+})(jQuery, window);
 
 /***/ }),
 
@@ -25536,7 +25875,7 @@ $(document).ready(function () {
 
   // Tags slider
   $('.tags-slider').owlCarousel({
-    loop: true,
+    loop: false,
     nav: true,
     mouseDrag: true,
     touchDrag: true,
@@ -25606,7 +25945,11 @@ $(document).ready(function () {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 $(document).ready(function () {
+  var _responsive;
+
   $('select').select2({
     minimumResultsForSearch: -1
   });
@@ -25662,6 +26005,27 @@ $(document).ready(function () {
     }
     ymaps.ready(init);
   })();
+
+  // Typical slider for other product
+  $('#trend-slider').owlCarousel({
+    loop: true,
+    nav: false,
+    mouseDrag: true,
+    dots: true,
+    slideBy: 3,
+    lazyLoad: true,
+    items: 1,
+    margin: 10,
+    responsive: (_responsive = {
+      768: {
+        items: 3
+      }
+    }, _defineProperty(_responsive, '768', {
+      items: 3
+    }), _defineProperty(_responsive, 1280, {
+      items: 4
+    }), _responsive)
+  });
 });
 
 /***/ }),
@@ -25691,7 +26055,7 @@ $(document).ready(function () {
 
 	// Brands home slider
 	$('#brands-slider').owlCarousel({
-		nav: true,
+		nav: false,
 		mouseDrag: true,
 		dots: true,
 		slideBy: 5,
@@ -25699,13 +26063,13 @@ $(document).ready(function () {
 		navText: ['<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>', '<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>'],
 		responsive: {
 			0: {
-				items: 6
+				items: 2
+			},
+			415: {
+				items: 3
 			},
 			991: {
 				items: 7
-			},
-			1280: {
-				items: 8
 			}
 		}
 	});
@@ -25723,7 +26087,10 @@ $(document).ready(function () {
 		navText: ['<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>', '<svg version="1.1" id="" xmlns="http:/www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>'],
 		responsive: {
 			0: {
-				items: 3
+				items: 1
+			},
+			413: {
+				items: 2
 			},
 			768: {
 				items: 3
@@ -25797,6 +26164,9 @@ $(document).ready(function () {
 		lazyLoad: true,
 		responsive: {
 			0: {
+				items: 1
+			},
+			415: {
 				items: 2
 			},
 			991: {

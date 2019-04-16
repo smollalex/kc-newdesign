@@ -16,10 +16,19 @@
     @include media-breakpoint-up(xl) {
       padding: 0 15px;
     }
+    
+    @include media-breakpoint-down(xs) {
+      justify-content: center;
+    }
 
     &-title {
       display: flex;
       align-items: center;
+
+      @include media-breakpoint-down(xs) {
+        justify-content: center;
+        height: 45px;
+      }
 
       &-icon {
         color: #00b3ff;
@@ -44,6 +53,10 @@
 
         @include media-breakpoint-down(md) {
           font-size: 13px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          font-size: 15px;
         }
       }
     }
@@ -78,7 +91,6 @@
         border-bottom: 1px dashed;
         display: inline-block;
         font: normal 12px/12px $font-ubuntu;
-        margin-top: 10px;
         padding-bottom: 2px;
 
         &:hover, &:focus {
@@ -114,16 +126,24 @@
 
     &--delivery {
       background-color: #e3eff7;
+
+      @include media-breakpoint-down(xs) {
+        background: none;
+      }
     }
 
     &--yandex {
       min-width: 170px;
       background: transparent;
       
+      
       @include media-breakpoint-down(lg) {
         display: none;
       }
-      
+      @include media-breakpoint-down(sm) {
+        display: block;  
+      }
+
       .header-item {
         &-title {
           &-icon {
@@ -234,6 +254,10 @@
       @include media-breakpoint-down(md) {
         margin-left: auto;
         min-width: auto;
+      }
+
+      @include media-breakpoint-down(xs) {
+        display: none;
       }
 
       &:not(.active):hover, &:not(.active):focus {

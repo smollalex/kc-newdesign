@@ -1,0 +1,62 @@
+include shared/header
+
+section.breadcrumb
+  .container-fluid
+    ul.breadcrumb-list
+      li.breadcrumb-item.breadcrumb-item--home
+        a.breadcrumb-link(href='javascript:;')
+          <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+            <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+          </svg>
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') О компании
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') Наши партнёры
+
+main.about
+  .container-fluid
+    section.page-header
+      h1 
+        span Наши партнёры
+    .row
+      .col-sm-3
+        .chc-navbar
+          include shared/chc-navbar-about
+          include shared/chc-navbar-help
+          include shared/chc-navbar-delivery
+      .col-sm-9
+        <a href="https://app.halvacard.ru/order/?vis=jh4q5nzp">
+          <img src="https://kc-shoes.ru/front/view/theme/kcnew/image/partners-halva-main.jpg?t=1554448514" alt="Halva Black Friday" class="img-fluid mb-5">
+          </a>
+        h2 Шопинг в "KC-Shoes" с картой Халва это легко
+        .halva-items
+          .halva-item
+            img(src="./img/halva-1.jpg", alt="")
+            span.halva-title Оформите и получите карту Халва
+          .halva-item
+            img(src="./img/halva-2.jpg", alt="")
+            span.halva-title Выбирайте товары на сайте КС или в магазинах сети
+          .halva-item
+            img(src="./img/halva-3.jpg", alt="")
+            span.halva-title Оплачивайте их картой Халва-онлайн
+          .halva-item
+            img(src="./img/halva-4.jpg", alt="")
+            span.halva-title Пользуйтесь беспроцентной рассрочкой
+
+        .halva-conditions
+          h2 Фантастически выгодные условия
+        
+        h2 Оформить Халву сейчас
+        <iframe class="halva-form" src="https://halva-start.sovcombank.ru/partnerform?utm_medium=Partner&amp;utm_source=kc-shoes.ru" scrolling="no"></iframe>
+
+        .text-center.mb-5
+          <p>Картой Халва можно оплатить только товары, которые продает и доставляет КС-Немецкая обувь.</p>
+          <p>Сведения о продавце указаны на странице товара.</p>
+          <p>Оплата картой возможна на сайте или в приложении КС-Немецкая обувь.</p>
+          <p>О возможностях оплаты при получении товаров в пунктах выдачи заказов КС-Немецкая обувь</p>
+          <p>и доставке курьером в вашем городе вы можете узнать <a href="https://kc-shoes.ru/services/dostavka-i-oplata/">здесь</a> </p>
+          <p>ПАО «Совкомбанк». Генеральная лицензия Банка России №963.</p>
+          <p>Подробнее о карте Халва на сайте <a href="http://halvacard.ru">halvacard.ru</a></p>
+    
+include shared/footer
+include shared/modal/allmodals

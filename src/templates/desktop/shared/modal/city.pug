@@ -7,7 +7,20 @@
             path(fill='', d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
       .modal-body
         .row
-          .col-md-7.col-lg-8.col-xl-8
+          .col-md-5.col-lg-4.col-xl-4.order-lg-2
+            .city-input
+              .h5 Введите область / край
+              .form-group
+                input#Modali.is-invalid.form-control(type='text', name='region', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
+                input#Modali(type='hidden', name='regionId', value='')
+                .invalid-feedback Please provide a valid city
+            .city-input
+              .h5 Введите город / поселок
+              .form-group
+                input#Modali.is-invalid.form-control(type='text', name='city', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
+                input#Modali.nav-itemnputCityId(type='hidden', name='cityId', value='')
+                .invalid-feedback Please provide a valid city
+          .col-md-7.col-lg-8.col-xl-8.order-lg-1
             .h5 Выберите свой город
             ul.city-list
               li.nav-item
@@ -74,16 +87,4 @@
                 span(data-city='Симферополь', data-region='Крым', data-id-region='9100000000000', data-id-city='9100000700000') Симферополь
               li.nav-item
                 span(data-city='Ханты-Мансийск', data-region='Ханты-Мансийский Автономный округ - Югра', data-id-region='8600000000000', data-id-city='8600000100000') Ханты-Мансийск
-          .col-md-5.col-lg-4.col-xl-4
-            .city-input
-              .h5 Введите область / край
-              .form-group
-                input#Modali.is-invalid.form-control(type='text', name='region', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
-                input#Modali(type='hidden', name='regionId', value='')
-                .invalid-feedback Please provide a valid city
-            .city-input
-              .h5 Введите город / поселок
-              .form-group
-                input#Modali.is-invalid.form-control(type='text', name='city', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
-                input#Modali.nav-itemnputCityId(type='hidden', name='cityId', value='')
-                .invalid-feedback Please provide a valid city
+          

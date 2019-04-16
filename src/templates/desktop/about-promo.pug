@@ -1,85 +1,71 @@
-doctype html
-html(lang='ru')
-  head
-    title Интернет магазин обуви
-    meta(charset='UTF-8')
-    meta(name='description', content='')
-    meta(name='keywords', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-  body
-    include shared/header
-    include shared/nav
-    
-    section.breadcrumb
-      .container-fluid
-        ul.breadcrumb-list
-          li.breadcrumb-item.breadcrumb-item--home
-            a.breadcrumb-link(href='javascript:;')
-              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
-              </svg>
-          li.breadcrumb-item
-            a.breadcrumb-link(href='javascript:;') О компании
-          li.breadcrumb-item
-            a.breadcrumb-link(href='javascript:;') Акции и скидки
-    
-    main.about
-      .container-fluid
-        section.page-header
-          h1 Акции и скидки
-        .row
-          .col-sm-3
-            .chc-navbar
-              include shared/chc-navbar-about
-              include shared/chc-navbar-help
-              include shared/chc-navbar-delivery
-          .col-sm-9
-            .promo-item
-              .promo-item-banner
-                .banner.banner-2
-                  img(src="img/banners/trends/IMG_67021.jpg")
-              .promo-item-content
-                h3.promo-title Дополнительная скидка 10% на всю коллекцию по промокоду
-                  span DUTIKI10
-                .promo-item-content-inner
-                  .promo-timer
-                    .promo-timer-numbers
-                      span 02
-                      span 06
-                      span 45
-                    .promo-timer-helpers
-                      span дня
-                      span часа
-                      span минут
-                  a.btn(href="category.html") Перейти к покупкам
-            .promo-item
-              .promo-item-banner
-                .banner.banner-2
-                  img(src="img/banners/trends/Valeria_Red V-18.jpg")
-              .promo-item-content
-                h3.promo-title Дополнительная скидка 10% на всю коллекцию по промокоду
-                  span DUTIKI10
-                .promo-item-content-inner
-                  .promo-timer
-                    .promo-timer-numbers
-                      span 02
-                      span 06
-                      span 45
-                    .promo-timer-helpers
-                      span дня
-                      span часа
-                      span минут
-                  a.btn(href="category.html") Перейти к покупкам
-            .promo-item
-              .promo-item-banner
-                .banner.banner-2
-                  img(src="img/banners/trends/IMG_2766.jpg")
-              .promo-item-content
-                h3.promo-title Дополнительная скидка 10% на всю коллекцию по промокоду
-                  span DUTIKI10
- 
-                .promo-item-content-inner
-                  .promo-disabled Акция закончена 12.12.12
-          
-  include shared/footer
-  include shared/modal/allmodals
+include shared/header
+
+section.breadcrumb
+  .container-fluid
+    ul.breadcrumb-list
+      li.breadcrumb-item.breadcrumb-item--home
+        a.breadcrumb-link(href='javascript:;')
+          <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+            <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+          </svg>
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') О компании
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') Акции и скидки
+main.about
+  .container-fluid
+    section.page-header
+      h1 
+        span Акции и скидки
+    .row
+      .col-sm-3
+        .chc-navbar
+          include shared/chc-navbar-about
+          include shared/chc-navbar-help
+          include shared/chc-navbar-delivery
+      .col-sm-9
+        .promo-item
+          .promo-item-banner
+            .banner.banner-2(style="background-image: url(img/banners/trends/IMG_67021.jpg)")
+          .promo-item-content
+            h3.promo-title Дополнительная скидка 10% на всю коллекцию по промокоду
+              span DUTIKI10
+            .promo-item-content-inner
+              .promo-timer
+                .promo-timer-numbers
+                  span 02
+                  span 06
+                  span 45
+                .promo-timer-helpers
+                  span дня
+                  span часа
+                  span минут
+              a.btn(href="category.html") Перейти к покупкам
+        .promo-item
+          .promo-item-banner
+            .banner.banner-2(style="background-image: url(img/banners/trends/IMG_66731.jpg)")
+          .promo-item-content
+            h3.promo-title Дополнительная скидка 10% на всю коллекцию по промокоду
+              span DUTIKI10
+            .promo-item-content-inner
+              .promo-timer
+                .promo-timer-numbers
+                  span 02
+                  span 06
+                  span 45
+                .promo-timer-helpers
+                  span дня
+                  span часа
+                  span минут
+              a.btn(href="category.html") Перейти к покупкам
+        .promo-item.promo-item--closed
+          .promo-item-banner
+              .banner.banner-2(style="background-image: url(img/banners/trends/IMG_2387.jpg)")
+          .promo-item-content
+            h3.promo-title Дополнительная скидка 10% на всю коллекцию по промокоду
+              span DUTIKI10
+            .promo-item-content-inner
+              .promo-disabled Акция закончена 12.12.12
+      
+include shared/footer
+include shared/modal/allmodals

@@ -96,6 +96,14 @@
   }
 }
 
+.progress-bar-striped {
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+  background-size: 1rem 1rem !important;
+}
+
+.progress-bar {
+  background-color: #01b2ff !important;
+}
 
 [type="checkbox"] {
   vertical-align: top;
@@ -158,11 +166,11 @@
       &:after {
         content: '';
         left: 2px;
-        top: -4px;
+        top: 1px;
         position: absolute;
         background-image: url(../img/svg/check-blue.svg);
-        width: 16px;
-        height: 16px;
+        width: 11px;
+        height: 12px;
         background-repeat: no-repeat;
       }
 
@@ -308,11 +316,25 @@
   line-height: 18px;
   padding-left: 13px;
   margin-top: 5px;
-  height: 12px;
 }
 .invalid-feedback {
   color: #f54944;
 }
 .valid-feedback {
   color: green;
+}
+
+
+.link {
+  font-size: 13px;
+  font-family: $font-ubuntu;
+  color: $primary;
+  border-bottom: 1px dashed $primary;
+  padding-bottom: 2px;
+  display: inline-block;
+  
+  &:hover, &:focus {
+    color: $primary-second;
+    border-color: $primary-second;
+  }
 }

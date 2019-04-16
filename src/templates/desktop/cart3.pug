@@ -1,62 +1,30 @@
-doctype html
-html(lang='ru')
-  head
-    title Интернет магазин обуви
-    meta(charset='UTF-8')
-    meta(name='description', content='')
-    meta(name='keywords', content='')
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-  body
-    include shared/header
-    include shared/nav
-    
-    section.breadcrumb
-      .container-fluid
-        ul.breadcrumb-list
-          li.breadcrumb-item.breadcrumb-item--home
-            a.breadcrumb-link(href='javascript:;')
-              <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
-              </svg>
-          li.breadcrumb-item
-            a.breadcrumb-link(href='javascript:;') Корзина
-          li.breadcrumb-item
-            a.breadcrumb-link(href='javascript:;') Доставка и оплата
-          li.breadcrumb-item
-            a.breadcrumb-link(href='javascript:;') Завершение
-    main.cart
-      .container-fluid
-        section.page-header
-          .steps
-            .item.done
-              span 
-                svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64', xml:space='preserve')
-                  path(fill='#ffffff', d='M31.051,51c-1.197,0-2.397-0.428-3.354-1.293l-20.9-18.917c-2.047-1.853-2.205-5.015-0.352-7.062 c1.854-2.049,5.015-2.206,7.062-0.352l17.24,15.604l22.631-24.383c1.88-2.023,5.042-2.141,7.066-0.262 c2.023,1.879,2.141,5.042,0.262,7.066l-25.998,28C33.729,50.462,32.394,51,31.051,51z')
-              div
-                h3 Корзина
-                p Убедитесь в правильном выборе
-            .item.done
-              span
-                svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64', xml:space='preserve')
-                  path(fill='#ffffff', d='M31.051,51c-1.197,0-2.397-0.428-3.354-1.293l-20.9-18.917c-2.047-1.853-2.205-5.015-0.352-7.062 c1.854-2.049,5.015-2.206,7.062-0.352l17.24,15.604l22.631-24.383c1.88-2.023,5.042-2.141,7.066-0.262 c2.023,1.879,2.141,5.042,0.262,7.066l-25.998,28C33.729,50.462,32.394,51,31.051,51z')
-              div
-                h3 Доставка и оплата
-                p Выбирете способ доставки и оплаты
-            .item.active
-              span 3
-              div
-                h3 Завершение
-                p Получите номер Вашего заказа
-        .cart-done
-          img(src="img/svg/administrator.png", alt="")
-          h5.cart-done-title Ваш заказ №77179 оформлен
-          p Наш менеджер свяжется с вами, чтобы уточнить детали.
-          p Подробности заказа смотрите в 
-            a(href="personal.html") личном кабинете. 
-              
-  
-  include shared/footer
-  include shared/modal/allmodals
+include shared/header
+
+section.breadcrumb
+  .container-fluid
+    ul.breadcrumb-list
+      li.breadcrumb-item.breadcrumb-item--home
+        a.breadcrumb-link(href='javascript:;')
+          <svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+            <path fill="" d="M32.023,4L59,24.811V60H42V36H22v24H5V24.811L32.023,4 M32.024,1.475L3,23.827V62h21V38h16v24h21V23.828 L32.024,1.475L32.024,1.475z"/>
+          </svg>
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') Корзина
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') Доставка и оплата
+      li.breadcrumb-item
+        a.breadcrumb-link(href='javascript:;') Завершение
+main.cart
+  .container-fluid
+    .cart-done
+      img(src="img/svg/administrator.png", alt="")
+      h5.cart-done-title Ваш заказ №77179 оформлен
+      p Наш менеджер свяжется с вами, чтобы уточнить детали.
+      p Подробности заказа смотрите в 
+        a(href="personal.html") личном кабинете. 
+          
+
+include shared/footer
+include shared/modal/allmodals
 
 
-  

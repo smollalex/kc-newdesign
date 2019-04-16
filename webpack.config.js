@@ -113,8 +113,18 @@ const config =  {
     }),
 
     new HtmlWebpackPlugin({
+      filename: '404.html',
+      template: `src/templates/${version}/404.pug`
+    }),
+    new HtmlWebpackPlugin({
       filename: 'index.html',
       template: `src/templates/${version}/index.pug`
+    }),
+
+    
+    new HtmlWebpackPlugin({
+      filename: 'index2.html',
+      template: `src/templates/${version}/index2.pug`
     }),
     
     new HtmlWebpackPlugin({
@@ -125,6 +135,11 @@ const config =  {
     new HtmlWebpackPlugin({
       filename: 'category.html',
       template: `src/templates/${version}/category.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'category2.html',
+      template: `src/templates/${version}/category2.pug`
     }),
     
     new HtmlWebpackPlugin({
@@ -151,12 +166,10 @@ const config =  {
       filename: 'about.html',
       template: `src/templates/${version}/about.pug`
     }),
-    
     new HtmlWebpackPlugin({
       filename: 'about-sale.html',
       template: `src/templates/${version}/about-sale.pug`
     }),
-    
     new HtmlWebpackPlugin({
       filename: 'about-certification.html',
       template: `src/templates/${version}/about-certification.pug`
@@ -165,15 +178,21 @@ const config =  {
       filename: 'about-offer.html',
       template: `src/templates/${version}/about-offer.pug`
     }),
-    
     new HtmlWebpackPlugin({
       filename: 'about-promo.html',
       template: `src/templates/${version}/about-promo.pug`
     }),
-    
     new HtmlWebpackPlugin({
       filename: 'about-testimonials.html',
       template: `src/templates/${version}/about-testimonials.pug`
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'about-newsandtrends.html',
+      template: `src/templates/${version}/about-newsandtrends.pug`
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'about-partners.html',
+      template: `src/templates/${version}/about-partners.pug`
     }),
     new HtmlWebpackPlugin({
       filename: 'about-contacts.html',
@@ -187,12 +206,11 @@ const config =  {
       filename: 'fitting.html',
       template: `src/templates/${version}/fitting.pug`
     }),
-    
     new HtmlWebpackPlugin({
       filename: 'personal.html',
       template: `src/templates/${version}/personal.pug`
     }),
-    
+   
     new HtmlWebpackPlugin({
       filename: 'cart1.html',
       template: `src/templates/${version}/cart1.pug`
@@ -205,7 +223,7 @@ const config =  {
       filename: 'cart3.html',
       template: `src/templates/${version}/cart3.pug`
     }),
-   
+
 
     new CopyWebpackPlugin([
       {
