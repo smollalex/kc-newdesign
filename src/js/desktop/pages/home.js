@@ -28,7 +28,7 @@ $(document).ready(function(){
 		],
 		responsive: {
 			0: {
-				items: 2
+				items: 3
 			},
 			415: {
 				items: 3
@@ -58,7 +58,7 @@ $(document).ready(function(){
 			0: {
 				items: 1
 			},
-			413: {
+			320: {
 				items: 2
 			},
 			768: {

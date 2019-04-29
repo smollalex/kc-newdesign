@@ -13,10 +13,15 @@
       color: #7b8288;
       background-color: #fff;
       border: 1px solid #f4f9fe;
-      border-radius: 0;
-      font-size: 18px;
+      padding: 0;
+      font-size: 16px;
       font-weight: 300;
       transition: .5s;
+      border-radius: 35px;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      line-height: 30px;
 
       &:hover, &:focus {
         color: $primary-second;

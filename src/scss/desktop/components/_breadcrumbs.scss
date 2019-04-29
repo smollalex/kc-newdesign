@@ -10,6 +10,7 @@
     padding: 10px 0;
     margin: 0;
     border-top: 1px solid #e9eff7;
+    overflow-x: auto;
   }
 
   &-item {
@@ -18,25 +19,33 @@
       display: flex;
       align-items: center;
       position: relative;
-      padding-left: 20px;
+      padding: 0 20px;
       height: 13px;
-      padding-right: 20px;
+
+      @include media-breakpoint-down(xs) {
+        padding: 0 15px;
+      }
 
       &:before {
         position: absolute;
         content: "/";
         background-size: cover;
-        width: 7px;
         left: 0;
-        height: 14px;
-        color:  #e9eff7;
+        font-size: 16px;
+        height: 16px;
+        color: #7781908c;
+        top: -2px;
+        display: block;
+        padding: 0;
       }
     }
     
     
     &--home {
       padding-right: 20px;
-      
+      @include media-breakpoint-down(xs) {
+        padding-right: 15px;
+      }
       &:before {
         display: none;
       }
@@ -54,16 +63,16 @@
   
   &-link {
     display: flex;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
-    color: #bfc4cc;
+    color: #778190;
     cursor: pointer;
     align-items: center;
-    letter-spacing: .4px;
     border-bottom: 1px solid transparent;
+    white-space: nowrap;
 
     svg {
-      fill: #8c979e;
+      fill: #86909c;
     }
 
     &:hover, &:focus {

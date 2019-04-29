@@ -1,5 +1,5 @@
 .main {
-  margin: 30px 0;
+  margin: 20px 0 50px 0;
   
   @include media-breakpoint-down(xs) {
     margin: 0 -15px;
@@ -12,16 +12,22 @@
     background-size: cover;
 
     @include media-breakpoint-down(xs) {
-      height: 50vh;
+      height: 30vh;
     }
   }
 }
 
 .brands {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 
   @include media-breakpoint-down(xs) {
-    margin-bottom: 30px;
+    margin: 20px 0 0;
+  }
+
+  .section-title {
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
   }
 
   &-slider {
@@ -34,6 +40,10 @@
       height: 100px;
       align-items: center;
       flex-direction: column;
+
+      @include media-breakpoint-down(xs) {
+        height: 60px;
+      }
       
       &-img {
         /* -webkit-filter: grayscale(100%);
@@ -91,7 +101,11 @@
 }
 
 .recomended {
-  margin-bottom: -30px;
+  margin-bottom: -20px;
+  
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 30px;
+  }
 }
 
 .section-title {
@@ -102,7 +116,7 @@
   letter-spacing: 1px;
   display: flex;
   align-items: center;
-  margin: 60px 0 30px;
+  margin: 50px 0;
   white-space: nowrap; 
 
   @include media-breakpoint-down(md) {
@@ -139,6 +153,11 @@
 }
 
 .trends {
+  margin-bottom: 70px;
+  
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 30px;
+  }
 
   &-container {
     display: flex;
@@ -170,9 +189,10 @@
       height: 550px;
       background-size: cover;
       background-position: center;
+      background-repeat: no-repeat;
 
       @include media-breakpoint-down(xs) {
-        height: 47vh;
+        height: 40vh;
       }
     }
 
@@ -220,7 +240,12 @@
 }
 
 .useful-shoes {
+  margin-bottom: 70px;
   
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 30px;
+  }
+
   &-container {
     display: flex;
     justify-content: space-between;
@@ -457,7 +482,11 @@
 }
 
 .advantages {
-  margin-top: 70px;
+  margin-bottom: 70px;
+  
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 30px;
+  }
 
   &-container {
     display: flex;
@@ -561,6 +590,12 @@
 }
 
 .reviews {
+  margin-bottom: 70px;
+  
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 30px;
+  }
+
   &-slider {
     &-item {
       border: 1px solid $border-color;
@@ -674,7 +709,7 @@
           .item {
             display: flex;
             align-items: center;
-            font-size: 14px;
+            font-size: 13px;
             color: #333333;
             margin-right: 15px;
             border: none;
@@ -685,9 +720,9 @@
               align-items: center;
               justify-content: center;
               position: relative;
-              font-size: 12px;
-              line-height: 18px;
-              color: #333333;
+              font-size: 10px;
+              line-height: 15px;
+              color: #fff;
               justify-content: center;
               margin-left: 4px;
               padding-top: 0px;
@@ -697,9 +732,10 @@
 
               svg {
                 position: absolute;
-                fill: #ffdb00;
+                fill: $primary-second;
                 z-index: -1;
                 top: -2px;
+                left: 0;
               }
             }
           }
@@ -707,11 +743,11 @@
         }
 
         &-text {
-          line-height: 19px;
-          /* color: #444; */
-          font-size: 13px;
-          font-weight: 300;
+          line-height: 22px;
+          color: #333333;
           margin-bottom: 10px;
+          font-size: 15px;
+          margin-top: 30px;
         }
 
         &-link {
@@ -730,7 +766,11 @@
 }
 
 .info {
-  margin-bottom: 50px;
+  margin-bottom: 70px;
+  
+  @include media-breakpoint-down(xs) {
+    margin-bottom: 30px;
+  }
 
   &-title {
     font-size: 20px;
@@ -761,6 +801,47 @@
     &:last-child {
       .info-text {
         padding-right: 0;
+      }
+    }
+  }
+}
+
+.mobile-category {
+  display: none;
+  margin: 0 -15px 20px -15px;
+
+  @include media-breakpoint-down(xs) {
+    display: block;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    .nav-item {
+      flex-basis: 50%;
+
+      &:last-child {
+        flex-basis: 100%;
+      }
+
+      .nav-link {
+        text-align: center;
+        height: 55px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid #ecf1f7;
+        font-size: 15px;
+        text-transform: uppercase;
+        //font-weight: 300;
+      }
+
+      &:nth-child(1), &:nth-child(3), &:nth-child(5) {
+        .nav-link {
+          border-right: 1px solid #ecf1f7;
+        }
       }
     }
   }

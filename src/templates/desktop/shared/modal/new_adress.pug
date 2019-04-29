@@ -11,34 +11,28 @@
       .modal-body
         form.form-horizontal
           .form-group.row
-            label.col-form-label.col-sm-3(for='') Регион
-            .col-sm-8
+            label.col-form-label.col-3(for='') Регион
+            .col-9.col-sm-8
               select.form-control(name='adress-region', type='text', placeholder='')
                 option(value="")
           .form-group.row
-            label.col-form-label.col-sm-3(for='') Город
-            .col-sm-8
+            label.col-form-label.col-3(for='') Город
+            .col-9.col-sm-8
               select.form-control(name='adress-city', type='text', placeholder='')
                 option(value="")
           .form-group.row
-            label.col-form-label.col-sm-3(for='') Улица
-            .col-sm-8
+            label.col-form-label.col-3(for='') Улица
+            .col-9.col-sm-8
               input.form-control(name='adress-street', type='text', placeholder='')
           .form-group.row
-            label.col-form-label.col-sm-3(for='') Дом
-            .col-sm-2
+            label.col-form-label.col-3(for='') Дом / Корпус / Квартира
+            .col-9.col-sm-4
               input.form-control(name='adress-house-1', type='text', placeholder='')
-            label.col-form-label.pr-0(for='') Корпус
-            .col-sm-2
-              input.form-control(name='adress-house-2', type='text', placeholder='')
-            label.col-form-label.pr-0(for='') Квартира
-            .col-sm-2
-              input.form-control(name='adress-house-3', type='text', placeholder='')
           .form-group.row
-            label.col-form-label.col-sm-3(for='') Индекс
-            .col-sm-3
+            label.col-form-label.col-3(for='') Индекс
+            .col-9.col-sm-4
               input.form-control(name='adress-index', type='text', placeholder='')
           .form-group.row
-            .col-sm-6.offset-3
+            .col-sm-6.offset-sm-3
               a.btn.mr-3(href="") Добавить
               a.btn.btn-secondary(href="") Отмена

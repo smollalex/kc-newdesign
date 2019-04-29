@@ -25,6 +25,7 @@
     "modernizr": "^3.7.1",
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.14.5",
+    "scroll-lock": "^2.1.0",
     "select2": "^4.0.6-rc.1",
     "starrr": "^2.0.4",
     "waypoints": "^4.0.1"

@@ -6,7 +6,7 @@ main.category
   .container-fluid
 
     section.category-tags
-      .tags-slider.owl-carousel.owl-theme-tags
+      .tags-slider
         a.tag-item(href='javascript:;') Кожаная
         a.tag-item(href='javascript:;') Больших размеров
         a.tag-item(href='javascript:;') Недорогая
@@ -31,8 +31,7 @@ main.category
       img(src="img/banners/category-last-size-baner.jpg", alt="", style="width: 100%; margin-top: 15px;")
     section.category-catalog
       .promo-item
-        .promo-item-banner
-          .banner.banner-2(style="background-image: url(img/banners/trends/IMG_2387.jpg)")
+        .promo-item-banner(style="background-image: url(img/banners/trends/IMG_2387.jpg)")
         .promo-item-content
           h3.promo-title Дополнительная скидка 10% на всю коллекцию по промокоду
             span DUTIKI10
@@ -48,7 +47,7 @@ main.category
                 span минут
             a.btn(href="category.html") Применить промокод: 
               span.up DUTIKI10
-      .category-filters.sticky-top
+      .category-filters-desktop.sticky-top
         .category-filters-top
           h1.category-filters-top-title Новинки 2018 зимней обуви Ara
             span.category-filters-top-count 1953 модели
@@ -93,6 +92,15 @@ main.category
           #filtersCollapse.collapse
             .category-filters-items(style="margin: 0;margin-left: -3px;width: 100%;")
               include shared/category-filters-other
+      .category-filters-mobile.sticky-top
+        .category-filters-top
+          button.btn(type='button', data-toggle='modal', data-target='#filters')
+            span Фильтры -
+              span 7 
+            span Найдено -
+              span 1953
+            svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='64px', height='64px', viewBox='0 0 64 64', enable-background='new 0 0 64 64')
+              polygon(fill='', points='36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 ')
       .category-content
         include shared/cards
         include shared/cards
@@ -106,8 +114,5 @@ main.category
           a.page-link(href='#') 2
         li.page-item
           a.page-link(href='#') 3
-
-
-
 include shared/footer
 include shared/modal/allmodals

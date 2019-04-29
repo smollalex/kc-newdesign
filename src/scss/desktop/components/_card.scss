@@ -7,7 +7,9 @@ $type-sale:#f69781;
   position: relative;
   padding: 0 0 10px 0;
   background-color: #fff;
-  border: 1px solid #f4f7f9;
+  
+  //border: 1px solid #f4f7f9;
+  border: 1px solid transparent;
   border-radius: 0;
   max-width: 240px;
   transition: .2s;
@@ -18,23 +20,35 @@ $type-sale:#f69781;
     margin: auto;
   }
 
+ /*  @media (max-width: 320px) {
+    max-width: 236px;
+  } */
+
   .modal & {
     min-width: auto;
   }
   
   &:hover, &:focus {
-    border-color: $border-color;
+    
+    border: 1px solid $border-color;
     //@include box-shadow();
     z-index: 1000;
     box-shadow: 0 0 20px -15px #0000001f;
 
     .card-size {
       display: flex;
+
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
     }
 
     .card-extra-info {
       display: flex;
       border-color: $border-color;
+    }
+    .card-promo {
+      display: flex;
     }
   }
 
@@ -97,7 +111,7 @@ $type-sale:#f69781;
   &-price {
     height: 20px;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
 
     span {
@@ -106,6 +120,9 @@ $type-sale:#f69781;
       margin: 0 5px;
       position: relative;
       
+      @include media-breakpoint-down(xs) {
+        margin: 0 1px;
+      }
       span {
         font-size: .8em;
         margin: 0 0 0 2px;
@@ -117,6 +134,10 @@ $type-sale:#f69781;
       &--through {
         opacity: .5;
         font-size: 16px;
+
+        @media (max-width: 320px) {
+          font-size: 13px;
+        }
 
         &:before {
           content: '';
@@ -218,27 +239,122 @@ $type-sale:#f69781;
   }
 
   &-extra-info {
-    display: none;
     position: absolute;
-    flex-direction: column;
-    bottom: 35px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    bottom: 40px;
     left: 0px;
     right: 0px;
     z-index: 1010;
+    padding: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+
+    a {
+      
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+  
+      span {
+        font: normal 12px/14px $font-ubuntu;
+        color: $primary;
+        padding-bottom: 2px;
+        border-bottom: 1px dashed $primary;
+
+        @include media-breakpoint-down(xs) {
+         display: none; 
+        }
+      }
+        
+      &.card-preview {
+        svg {
+          fill: $primary;
+
+          @include media-breakpoint-down(xs) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #f5f9fe;
+            margin: 0;
+          }
+        }
+      }
+
+      &.card-add-to-cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background-color: $primary;
+        border: none;
+        margin: 0 10px;
+  
+        svg {
+          fill: #fff;
+        }
+        
+        &:hover, &:focus {
+          background-color: $primary-second;
+        }
+      }
+
+      &.card-add-to-like {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border: 2px solid #f5f9fe;
+        margin: 0;
+  
+        @include media-breakpoint-down(xs) {
+        }
+  
+        svg {
+          fill: #3fb1ff;
+        }
+  
+        &.active {
+          svg {
+            fill: #3fb1ff;
+          }
+        }
+  
+        &:hover, &:focus {
+          background-color: #3fb1ff;
+          border-color: #3fb1ff;
+  
+          svg {
+            fill: #fff;
+          }
+        }
+      }
+    }
   }
 
   &-promo {
+    display: none;
     position: absolute;
     left: -1px;
     right: -1px;
-    top: 83px;
-    display: flex;
+    bottom: -62px;
     background-color: #ffffff;
     color: #fff;
     border: 1px solid #e9eff7;
     border-top: 0;
     @include box-shadow();
 
+    @include media-breakpoint-down(xs) {
+      bottom: -80px;
+    }
+    
     > div {
       justify-content: center;
       display: flex;
@@ -246,12 +362,13 @@ $type-sale:#f69781;
       background-color: #fb4545;
       margin: 2px;
       padding: 10px 0;
+      width: 100%;
     }
 
     &-title {
       width: 100%;
       font-family: Ubuntu;
-      font-size: 13.2px;
+      font-size: 11;
       text-align: center;
       color: white;
       margin-bottom: 7px;
@@ -286,76 +403,6 @@ $type-sale:#f69781;
         border-bottom: 1px dashed;
         font-family: Roboto;
         margin-left: 5px;
-      }
-    }
-  }
-  
-  &-preview {
-    display: flex;
-    align-items: center;
-    padding: 0;
-    background-color: #fff;
-    width: 100%;
-    height: 50px;
-    
-    &-link {
-      margin: auto;
-
-      span {
-        font: normal 12px/14px $font-ubuntu;
-        color: $primary;
-        padding-bottom: 2px;
-        border-bottom: 1px dashed $primary;
-      }
-      svg {
-        width: 24px;
-        height: 24px;
-        fill: $primary;
-
-        @include media-breakpoint-down(xs) {
-          display: none;
-        }
-      }
-
-      &:hover, &:focus {
-        span {
-          color: $primary-second;
-          border-color: $primary-second;
-        }
-        svg {
-          fill: $primary-second;
-        }
-      }
-    }
-
-    &-add-to-like {
-      width: 30px;
-      height: 30px;
-      border: 2px solid #f5f9fe;
-      margin: 0 10px 0 auto;
-      display: flex;
-
-      svg {
-        fill: #3fb1ff;
-        width: 100%;
-        height: 100%;
-      }
-
-      &.active {
-        svg {
-          width: 60%;
-          margin: auto;
-          fill: #3fb1ff;
-        }
-      }
-
-      &:hover, &:focus {
-        background-color: #3fb1ff;
-        border-color: #3fb1ff;
-
-        svg {
-          fill: #fff;
-        }
       }
     }
   }

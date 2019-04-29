@@ -112,36 +112,51 @@ const config =  {
       allChunks: true,
     }),
 
+
+    /* 
+    
+    
+
+    new HtmlWebpackPlugin({
+      filename: 'product.html',
+      template: `src/templates/${version}/product.pug`
+    }),
+    
+
     new HtmlWebpackPlugin({
       filename: '404.html',
       template: `src/templates/${version}/404.pug`
     }),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: `src/templates/${version}/index.pug`
-    }),
-
     
     new HtmlWebpackPlugin({
       filename: 'index2.html',
       template: `src/templates/${version}/index2.pug`
     }),
     
+   
+
     new HtmlWebpackPlugin({
-      filename: 'product.html',
-      template: `src/templates/${version}/product.pug`
+      filename: 'personal.html',
+      template: `src/templates/${version}/personal.pug`
     }),
     
-    new HtmlWebpackPlugin({
-      filename: 'category.html',
-      template: `src/templates/${version}/category.pug`
-    }),
     
     new HtmlWebpackPlugin({
       filename: 'category2.html',
       template: `src/templates/${version}/category2.pug`
     }),
     
+    new HtmlWebpackPlugin({
+      filename: 'fitting.html',
+      template: `src/templates/${version}/fitting.pug`
+    }),
+    
+
+     new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: `src/templates/${version}/index.pug`
+    }),
+
     new HtmlWebpackPlugin({
       filename: 'delivery.html',
       template: `src/templates/${version}/delivery.pug`
@@ -166,6 +181,12 @@ const config =  {
       filename: 'about.html',
       template: `src/templates/${version}/about.pug`
     }),
+
+    new HtmlWebpackPlugin({
+      filename: 'about-newsandtrends.html',
+      template: `src/templates/${version}/about-newsandtrends.pug`
+    }),
+
     new HtmlWebpackPlugin({
       filename: 'about-sale.html',
       template: `src/templates/${version}/about-sale.pug`
@@ -186,10 +207,7 @@ const config =  {
       filename: 'about-testimonials.html',
       template: `src/templates/${version}/about-testimonials.pug`
     }),
-    new HtmlWebpackPlugin({
-      filename: 'about-newsandtrends.html',
-      template: `src/templates/${version}/about-newsandtrends.pug`
-    }),
+    
     new HtmlWebpackPlugin({
       filename: 'about-partners.html',
       template: `src/templates/${version}/about-partners.pug`
@@ -202,28 +220,36 @@ const config =  {
       filename: 'about-vacantion.html',
       template: `src/templates/${version}/about-vacantion.pug`
     }),
-    new HtmlWebpackPlugin({
-      filename: 'fitting.html',
-      template: `src/templates/${version}/fitting.pug`
-    }),
+    
+    */
+
     new HtmlWebpackPlugin({
       filename: 'personal.html',
       template: `src/templates/${version}/personal.pug`
     }),
-   
+    
+ 
+    new HtmlWebpackPlugin({
+      filename: 'category.html',
+      template: `src/templates/${version}/category.pug`
+    }),
+    
     new HtmlWebpackPlugin({
       filename: 'cart1.html',
       template: `src/templates/${version}/cart1.pug`
     }),
+    
     new HtmlWebpackPlugin({
       filename: 'cart2.html',
       template: `src/templates/${version}/cart2.pug`
     }),
+
     new HtmlWebpackPlugin({
       filename: 'cart3.html',
       template: `src/templates/${version}/cart3.pug`
     }),
 
+   
 
     new CopyWebpackPlugin([
       {

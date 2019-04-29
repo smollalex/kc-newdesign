@@ -1,5 +1,6 @@
 $(document).ready(function(){
-  $('select').select2({
+  
+  $('select.form-control').select2({
     minimumResultsForSearch: -1
   });
 
@@ -59,7 +60,7 @@ $(document).ready(function(){
   // Typical slider for other product
 	$('#trend-slider').owlCarousel({
 		loop: true,
-		nav: false,
+		nav: true,
 		mouseDrag: true,
 		dots: true,
 		slideBy: 3,
@@ -76,7 +77,11 @@ $(document).ready(function(){
 			1280: {
 				items: 4
 			}
-		}
+    },
+    navText: [
+      '<span><svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg></span>', 
+      '<span><svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg></span>'
+    ]
 	});
 
 });

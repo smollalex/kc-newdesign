@@ -26,6 +26,28 @@
 
 
 body {
+  
+  .navbar-overlay {
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    left: 0;
+    background: rgba(2, 23, 33, 0.5);
+    top: 85px;
+    z-index: -1;
+    opacity: 0;
+    transition: .2s;
+    
+    @include media-breakpoint-down(md) {
+      top: 85px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      top: 70px;
+    }
+
+  }
+
   &.menu-open {
     overflow-y: hidden;
     
@@ -34,6 +56,9 @@ body {
     }
     
     .navbar-overlay {
+      z-index: 1030 !important;
+      opacity: 1;
+      
       @include media-breakpoint-down(md) {
         top: 147px;
       }
@@ -46,38 +71,49 @@ body {
     @include media-breakpoint-up(lg) {
       padding-right: 7px;
     }
-  
+
     .navbar-overlay {
+      z-index: 1030 !important;
+      opacity: 1;
+      
       @include media-breakpoint-down(md) {
-        top: 85px;
-      }
-      @include media-breakpoint-down(xs) {
-        top: 58px;
+        top: 147px;
       }
     }
   }
 
   &.mobile-menu-open {
     overflow-y: hidden;
-    height: 100%;
-    overflow: hidden;
-    width: 100%;
-    position: fixed;
+    
+    .navbar-overlay {
+      z-index: 1030 !important;
+      opacity: 1;
+    }
+  }
+
+  &.modal-open {
+    
+  }
+
+  &.search-open {
+    .navbar .container-fluid {
+      flex-wrap: nowrap;
+    }
+    .navbar-form {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+    .navbar-brand, .navbar-icons {
+      opacity: 0;
+    }
+    .navbar-overlay {
+      z-index: 1030 !important;
+      opacity: 1;
+    }
   }
 }
 
 .container-fluid {
   max-width: 1280px;
   height: 100%;
-}
-
-.navbar-overlay {
-  width: 100%;
-  position: absolute;
-  height: 100vh;
-  left: 0;
-  background: rgb(2, 23, 33);
-  opacity: .5;
-  top: 85px;
-  z-index: 1030;
 }

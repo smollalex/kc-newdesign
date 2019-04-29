@@ -7,50 +7,59 @@
         
         .owl-nav {
           position: absolute;
-          display: flex;
-          justify-content: space-between;
-          top: calc(50% - 22px);
+          top: 50%;
           width: 100%;
-          padding: 0 30px;
-          margin-top: 0;
-      
+          margin-top: -45px;
+          height: 45px;
+          
+          @include media-breakpoint-down(xs) {
+            display: none;
+          }
+
           &.disabled {
             display: none !important;
           }         
  
           [class^="owl-"] {
+            position: absolute;
             width: 45px;
             height: 45px;
-            background-color: #cbdce3;
+            background-color: #e3eff78a;
             border: none;
             border-radius: 50%;
             padding: 0;
-            opacity: 0.7;
-
+            outline: none;
             svg {
               width: 100%;
               height: 100%;
               fill: #fff;
             }
 
-            &:hover, &:focus {
+            &:hover {
               outline: none;
-              opacity: 1;
+              background-color: #e3eff7;
 
               svg {
                 fill: #fff;
               }
             }
-
           }
           .owl-prev {
-
+            left: 20px;
+  
+            @include media-breakpoint-down(lg) {
+              left: -15px;
+            }
           }
           .owl-next {
+            right: 20px;
             transform: rotate(180deg);
+            
+            @include media-breakpoint-down(lg) {
+              right: -15px;
+            }
           }
         }
-
 
         .owl-dots {
           display: flex;
@@ -79,7 +88,7 @@
               border-radius: 50%;
               height: 9px;
               width: 9px;
-              border: 2px solid #01b2ff;
+              border: 1px solid #00b2ff63;
             }
             
             &.active {
@@ -96,94 +105,103 @@
       // Mobile header features
       &-mobile-header-features {
         z-index: 1060;
+
         .owl-nav {
           right: 0;
           position: absolute;
           left: 0;
           top: 0;
-          height: 45px;
+          height: 35px;
         }
+
         .owl-prev, .owl-next {
-          width: 45px;
-          height: 45px;
+          width: 35px;
+          height: 35px;
           top: 0;
           position: absolute;
+          outline: none;
+          background-color: #f5f9fe;
 
           svg {
             width: 100%;
             height: 100%;
             fill: #c9d5e4;
           }
+
+          &:hover {
+            svg {
+              fill: $primary-second;
+            }
+          }
         }
         .owl-prev {
-          left: 0;
+          left: 15px;
         }
         .owl-next {
           transform: rotate(-180deg);
-          right: 0;
+          right: 15px;
         }
       }
 
       // Cards
       &-card {
-        .owl-item {
-          padding: 0 0 70px 0;
-          @include media-breakpoint-down(xs) {
-            padding-bottom: 40px;
-          }
-        }
 
         .owl-nav {
           position: absolute;
           top: 50%;
           width: 100%;
-          margin-top: -55px;
-          height: 50px;
+          margin-top: -45px;
+          height: 45px;
 
-          .owl-prev, .owl-next {
+          &.disabled {
+            display: none !important;
+          }  
+
+          [class^="owl-"] {
             position: absolute;
             width: 45px;
             height: 45px;
-            border-radius: 45px;
-            transition: .4s;
+            background-color: #e3eff78a;
+            border: none;
+            border-radius: 50%;
+            padding: 0;
+            outline: none;
 
             svg {
               width: 100%;
               height: 100%;
-              fill: #aec2d0;
-              width: 45px;
-              height: 45px;
-              background-color: #f5f9fe;
-              border-radius: 45px;
+              fill: #fff;
             }
 
             &:hover {
-              background-color: #cbdce3;
+              outline: none;
+              background-color: #e3eff7;
 
-              svg  {
+              svg {
                 fill: #fff;
               }
             }
           }
 
-          .disabled {
-            opacity: 0;
+          .owl-prev {
+            left: 20px;
+  
+            @include media-breakpoint-down(lg) {
+              left: -15px;
+            }
+          }
+          .owl-next {
+            right: 20px;
+            transform: rotate(180deg);
+            
+            @include media-breakpoint-down(lg) {
+              right: -15px;
+            }
           }
         }
-        .owl-prev {
-          left: -60px;
 
-          @include media-breakpoint-down(lg) {
-            left: -10px;
-          }
-        }
-        .owl-next {
-          right: -60px;
-          transform: rotate(180deg);
-          
-          @include media-breakpoint-down(lg) {
-            right: -10px;
-          }
+        .owl-stage {
+          //padding-bottom: 65px;
         }
       }
 
@@ -191,6 +209,10 @@
       &-brands {
         .owl-item img {
           width: auto;
+
+          @include media-breakpoint-down(xs) {
+            width: 70% !important;
+          }
         }
       }
 
@@ -198,27 +220,36 @@
       &-product {
         position: static;
         border-top: 1px solid #f5f9fe;
-
+        
+        @include media-breakpoint-down(xs) {
+          border-top: 0;    
+        }
         .owl-nav {
           position: absolute;
           width: 100%;
           top: calc(50% - 85px);
 
+          @include media-breakpoint-down(xs) {
+            top: calc(50% - 45px)
+          }
+
           .owl-prev, .owl-next {
             position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: #e3eff7;
-            border-radius: 50px;
-          
+            width: 45px;
+            height: 45px;
+            background-color: #e3eff78a;
+            border-radius: 45px;
+            transition: .4s;
+            outline: none;
+
             svg {
               width: 100%;
               height: 100%;
               fill: #fff;
             }
 
-            &:hover, &:focus {
-              background-color: #badbf1;
+            &:hover {
+              background-color: #e3eff7;
               
               svg {
                
@@ -228,15 +259,27 @@
 
           .owl-prev {
             left: 20px;
+
+            @include media-breakpoint-down(xs) {
+              left: 0;
+            }
           }
           .owl-next {
             transform: rotate(180deg);
             right: 20px;
+            
+            @include media-breakpoint-down(xs) {
+              right: 0;
+            }
           }
         }
         
         .owl-stage-outer {
           display: none;
+
+          @include media-breakpoint-down(xs) {
+            display: block;
+          }
         }
         
         .owl-dots {
@@ -246,6 +289,10 @@
           
           @include media-breakpoint-up(lg) {
             width: 70%;
+          }
+          
+          @include media-breakpoint-down(xs) {
+            margin: 20px 0;
           }
 
           .owl-dot {
@@ -258,6 +305,13 @@
             background-repeat: no-repeat;
             background-position: center;
             
+            @include media-breakpoint-down(xs) {
+              width: 13%;
+              height: 2px;
+              border: none;
+              border-top: 2px solid #f4f8fd
+            }
+
             &.active {
               border: none;
               border-top: 2px solid $primary;
@@ -270,28 +324,7 @@
       // Tags slider
       &-tags {
         .owl-stage-outer {
-          width: calc(100% - 100px);
           margin: auto;
-
-          &:before {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            z-index: 1011;
-            left: -10px;
-            background-image: linear-gradient(to left, #fff, #fff);
-          }
-          &:after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            z-index: 1011;
-            right: -10px;
-            top: 0;
-            background-image: linear-gradient(to left, #fff, #fff);
-          }
         }
 
         .owl-nav {
@@ -300,29 +333,54 @@
           top: 0;
           width: 100%;
           
+          .disabled {
+            display: none;
+          }
+
           .owl-prev, .owl-next {
             position: absolute;
-            height: 30px;
-            width: 30px;
-            background-color: transparent;
-            border: 1px solid #dadbdb;
-            border-radius: 50%;
             cursor: pointer;
-            opacity: 0.7;
+            background-color: #fff;
+            outline: none;
 
-            svg {
-              width: 30px;
+            &:after {
+              content: '';
+              width: 70px;
               height: 30px;
-              fill: #dbdddd;
-              margin: -1px;
+              position: absolute;
+              background: linear-gradient(to left, #fff0 0%, #fff 70%);
+              top: 0;
+              left: 0;
+              z-index: 0;
             }
 
-            &:hover, &:focus {
-              opacity: 1;
-              border-color: #00b3ff;
+            span {
+              display: block;
+              height: 30px;
+              width: 30px;
+              background-color: transparent;
+              border: 1px solid #dadbdb;
+              border-radius: 50%;
+              z-index: 1;
+              position: relative;
 
               svg {
-                fill: #00b3ff;
+                width: 30px;
+                height: 30px;
+                fill: #dbdddd;
+                margin: -1px;
+              }
+            }
+            
+            &:hover {
+              opacity: 1;
+              
+
+              span {
+                border-color: $primary-second;
+              }
+              svg {
+                fill: $primary-second;
               }
               
             }
@@ -336,6 +394,7 @@
             transform: rotate(180deg);
           }
         }
+        
       }
 
       // Preview silder
@@ -385,6 +444,7 @@
             background-repeat: no-repeat;
             background-position: center bottom;
             border-top: 2px solid transparent;
+            outline: none;
 
             &.active {
               border-color: #0079bf;
@@ -435,35 +495,45 @@
           }         
  
           [class^="owl-"] {
+            position: absolute;
             width: 45px;
             height: 45px;
-            background-color: #cbdce3;
+            background-color: #e3eff78a;
             border: none;
             border-radius: 50%;
             padding: 0;
-            opacity: 0.7;
-
+            outline: none;
+            
             svg {
               width: 100%;
               height: 100%;
               fill: #fff;
             }
 
-            &:hover, &:focus {
+            &:hover {
               outline: none;
-              opacity: 1;
+              background-color: #e3eff7;
 
               svg {
                 fill: #fff;
               }
             }
-
           }
-          .owl-prev {
 
+          .owl-prev {
+            left: 20px;
+  
+            @include media-breakpoint-down(lg) {
+              left: -15px;
+            }
           }
           .owl-next {
+            right: 20px;
             transform: rotate(180deg);
+            
+            @include media-breakpoint-down(lg) {
+              right: -15px;
+            }
           }
         }
 
@@ -492,16 +562,16 @@
             span {
               display: flex;
               border-radius: 50%;
-              background: #85c8e6;
-              height: 6px;
-              width: 6px;
-              margin: 3px 4px;
+              height: 9px;
+              width: 9px;
+              border: 1px solid #00b2ff63;
             }
             
             &.active {
              
               span {
-                background: #0079bf;
+                background: #01b2ff;
+                border-color: #01b2ff;
               }
             }
           }

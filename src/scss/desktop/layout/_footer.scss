@@ -66,7 +66,25 @@
     }
 
     @include media-breakpoint-down(xs) {
-      width: 100% !important;
+      width: 50% !important;
+      display: flex;
+      flex-wrap: wrap;
+
+      &:nth-child(1) {
+        order: 1;
+        width: 100% !important;
+      }
+      &:nth-child(2) {
+        order: 2;
+        flex-direction: column;
+      }
+      &:nth-child(3) {
+        order: 3;
+      }
+      &:nth-child(4) {
+        order: 4;
+        width: 100% !important;
+      }
     }
     
     &-title {
@@ -80,10 +98,16 @@
       display: flex;
       flex-direction: row;    
 
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+      }
       .nav {
         flex-wrap: nowrap;
         flex-direction: column;
         margin-right: 30px;
+        @include media-breakpoint-down(xs) {
+          margin: 0;
+        }
     
         &-item {
           margin-bottom: 10px;
@@ -111,11 +135,15 @@
 
   &-brand {
     display: block;
-    width: 100px;
     margin-bottom: 24px;
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+    }
 
     svg {
       fill: #fff;
+      width: 100px;
     }
   }
 
@@ -123,12 +151,14 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 25px;
+
+    @include media-breakpoint-down(xs) {
+      width: 50%;
+    }
     
     &-title {
       font-size: 19px;
       margin-bottom: 10px;
-      border-top: 1px solid #fff3;
-      padding-top: 17px;
     }
     
     &-text {
@@ -144,6 +174,10 @@
     flex-direction: column;
     margin-bottom: 20px;
     
+    @include media-breakpoint-down(xs) {
+      width: 50%;
+    }
+
     span {
       font-size: 13px;
       line-height: 18px;
@@ -249,6 +283,9 @@
       flex-wrap: wrap;
       justify-content: start;
     }
+    @include media-breakpoint-down(xs) {
+      margin-top: 30px;
+    }
 
     a {
       font-size: 12px;
@@ -270,6 +307,12 @@
       display: flex;
       align-items: center;
       
+
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+        width: 100%;
+      }
+
       img {
         margin-right: 15px;
       }
@@ -279,8 +322,19 @@
         flex-direction: column;
         max-width: 110px;
 
+        @include media-breakpoint-down(xs) {
+          max-width: 100%;
+          display: inline-block;
+          margin-top: 15px;
+        }
+
         span {
           margin-bottom: 3px;
+
+          @include media-breakpoint-down(xs) {
+            margin-bottom: 0;
+            padding-right: 10px;
+          }
         }
       }
     }

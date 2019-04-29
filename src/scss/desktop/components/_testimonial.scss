@@ -17,6 +17,7 @@
       display: flex;
       align-items: center;
       margin-bottom: 20px;
+      flex-wrap: wrap;
 
       &-icon {
         display: flex;
@@ -39,8 +40,16 @@
 
         &:nth-child(3) {
           margin-left: auto;
+          @include media-breakpoint-down(xs) {
+            margin: 20px 0 10px 0;
+          }
         }
-
+        &:last-child {
+          margin-left: 40px;
+          @include media-breakpoint-down(xs) {
+            margin-left: auto;
+          }
+        }
         .name {
           font-weight: 500;
           font-size: 20px;
@@ -111,7 +120,7 @@
       > span {
         color: #0079bf;
         font-size: 17px;
-        margin: 10px 10px 0 80px;
+        margin: 10px 10px 0 70px;
         display: inline-block;
         font-weight: 300;
 
@@ -127,7 +136,7 @@
         .item {
           display: flex;
           align-items: center;
-          font-size: 12px;
+          font-size: 13px;
           color: #333333;
           margin-right: 10px;
           border: none;
@@ -138,19 +147,19 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            font-size: 12px;
-            line-height: 18px;
-            color: #333333;
+            font-size: 10px;
+            line-height: 15px;
+            color: #ffffff;
             justify-content: center;
             margin-left: 4px;
             padding-top: 2px;
-            padding-left: 1px;
+            padding-left: 0px;
             height: 20px;
             width: 20px;
 
             svg {
               position: absolute;
-              fill: #ffdb00;
+              fill: #01b2ff;
               z-index: -1;
               top: -2px;
             }
@@ -175,7 +184,7 @@
         margin-bottom: 0;
         padding-left: 0;
         padding-top: 10px;
-        padding-left: 80px;
+        padding-left: 70px;
 
         @include media-breakpoint-down(md) {
           padding-left: 30px;

@@ -13,7 +13,7 @@
       padding: 0;
       background: none;
       margin-bottom: 20px;
-      margin-top: -30px;
+      margin-top: -10px;
     }
 
     .nav-item {
@@ -37,6 +37,9 @@
       margin: 0 10px  15px 10px;
       font-weight: 300;
 
+      @include media-breakpoint-down(xs) {
+        margin: 0 5px 5px 5px;
+      }
       &:hover, &:focus {
         color: $primary-second;
         border-color: $primary-second;
@@ -65,33 +68,41 @@
   
   
   &-discount-card {
-    border: 1px solid #e3eff7;
-    border-radius: 0;
+    border: 1px solid $primary-second;
+    border-radius: 5px;
     margin-bottom: 30px;
 
     &-header {
-      font-size: 17px;
+      font-size: 15px;
       align-items: center;
       justify-content: center;
       height: 43px;
       margin-bottom: 0;
+      font-weight: 300;
       text-align: center;
-      background-color: #e3eff7;
-      color: #000;
+      background-color: $primary-second;
+      color: #fff;
       display: flex;
       text-transform: uppercase;
+      border-bottom: 1px solid $primary-second;
     }
 
     &-text {
       padding: 20px 30px;
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
+      
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+      }
       
       .item {
         display: flex;
         align-items: baseline;
         justify-content: space-between;
+        min-width: 25%;
+        padding-right: 20px;
+
         
         span {
 
@@ -128,6 +139,10 @@
 
   &-subscribe {
     padding: 20px 30px;
+
+    @include media-breakpoint-down(xs) {
+      padding: 10px;
+    }
 
     p {
       margin-bottom: 10px;
@@ -228,6 +243,16 @@
     align-items: center;
     padding: 30px;
 
+    @include media-breakpoint-down(xs) {
+      flex-wrap: wrap;
+      padding: 15px;
+      align-items: end;
+
+      &-center {
+        width: calc(100% - 52px);
+      }
+    }
+
     &-icon {
       display: flex;
       align-items: center;
@@ -239,6 +264,9 @@
       transition: .5s;
       cursor: pointer;
 
+      @include media-breakpoint-down(xs) {
+        margin-right: 15px;
+      }
       svg {
         width: 32px;
         height: 32px;
@@ -262,17 +290,15 @@
     &-title {
       display: flex;
       flex-direction: row;
-      font-size: 19px;
-      font-weight: 400;
+      font-size: 16px;
       line-height: normal;
 
-      span {
-        opacity: 0.5;
-        padding: 0 8px;
+      @include media-breakpoint-down(xs) {
+        display: block;
+      }
 
-        &:first-child {
-          padding-left: 0;
-        }
+      b {
+        font-weight: bold;
       }
     }
 
@@ -282,28 +308,40 @@
       width: 100%;
       margin: 20px 20px 0 0;
 
+      @include media-breakpoint-down(xs) {
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+      
       img {
         max-width: 60px;
         margin-right: 10px;
         border: 1px solid #e9eff7;
         padding: 5px;
+
+        @include media-breakpoint-down(xs) {
+          max-width: 45px;
+          margin-right: 5px;
+        }
       }
     }
 
     &-status {
       margin-left: auto;
-      height: 124px;
       min-width: 140px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
+
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+        height: auto;
+      }
 
       svg {
         width: 20px;
         height: 20px;
         margin-right: 10px;
-        margin-right: 10px;
-        margin-left: -15px;
       }
 
       span {
@@ -313,6 +351,11 @@
         font-weight: 600;
         text-transform: uppercase;
         justify-content: center;
+
+        @include media-breakpoint-down(xs) {
+          margin-top: 10px;
+          justify-content: end;
+        }
     
         &.order-status {
           &--in-process {
@@ -355,8 +398,15 @@
   &-body {
     padding: 20px 30px 30px 30px;
 
+    @include media-breakpoint-down(xs) {
+      padding: 0px 15px 15px 15px;
+    }
     .alert {
       margin-left: 72px;
+
+      @include media-breakpoint-down(xs) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -381,7 +431,12 @@
       &-item {
         margin-bottom: 10px;
         display: flex;
-  
+        
+        @include media-breakpoint-down(xs) {
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+
         > span {
           min-width: 150px;
           max-width: 150px;
@@ -438,6 +493,9 @@
         margin-top: 45px;
         margin-bottom: 0;
 
+        @include media-breakpoint-down(xs) {
+          margin-top: 20px;
+        }
         span:nth-child(1) {
           color: $primary;
         }
@@ -465,6 +523,10 @@
     @include media-breakpoint-down(md) {
       margin-left: 0;
     }
+    @include media-breakpoint-down(xs) {
+      padding-top: 10px;
+      margin-top: 20px;
+    }
   }
 
   &-item {
@@ -472,6 +534,12 @@
     align-items: flex-start;
     border-bottom: 1px solid #e8eff7;
     padding: 10px 0 20px 0;
+
+    @include media-breakpoint-down(xs) {
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
 
     &:last-child {
       border: none;
@@ -494,14 +562,13 @@
     }
 
     .not-redeemed {
-      font-size: 15px;
+      font-size: 13px;
       text-transform: uppercase;
-      line-height: 30px;
-      font-weight: 300;
+      line-height: 20px;
       color: #e5322d;
       display: flex;
       flex-direction: column;
-      margin-top: 10px;
+      margin-top: 5px;
 
       span {
         text-transform: none;
@@ -511,14 +578,13 @@
     }
 
     .redeemed {
-      font-size: 15px;
+      font-size: 13px;
       text-transform: uppercase;
-      line-height: 30px;
-      font-weight: 300;
-      color: #41dc4e;
+      line-height: 20px;
+      color: #37bd42;
       display: flex;
       flex-direction: column;
-      margin-top: 10px;
+      margin-top: 5px;
 
       span {
         text-transform: none;
@@ -531,6 +597,10 @@
       max-width: 120px;
       margin-right: 20px;
 
+      @include media-breakpoint-down(xs) {
+        max-width: 100px;
+      }
+
       img {
         width: 100%;
       }
@@ -541,18 +611,28 @@
       flex-direction: column;
       margin-top: 30px;
       width: 200px;
+
+      @include media-breakpoint-down(md) {
+        margin-top: 10px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        margin-top: 20px;
+        width: calc(100% - 120px);
+      }
     }
 
     &-title {
       font-size: 18px;
-      text-transform: uppercase;
       line-height: normal;
       color: #333333;
       margin-bottom: 10px;
       font-weight: 300;
+      padding-right: 20px;
   
       span {
         font-weight: 500;
+        border-bottom: 1px solid;
       }
 
     }
@@ -574,12 +654,22 @@
       line-height: 22px;
       margin-top: 30px;
       position: relative;
+
+      @include media-breakpoint-down(xs) {
+        margin-top: 10px;
+        margin-left: 120px;
+      }
     }
 
     &-action {
       margin-left: auto;
       margin-top: 30px;
       min-width: 200px;
+
+      @include media-breakpoint-down(xs) {
+        margin: 20px 0;
+        min-width: 100%;
+      }
 
       a {
         color: #0079c0;
@@ -608,8 +698,18 @@
       padding-top: 30px;
       margin: 30px 0 0 72px;
 
+      @include media-breakpoint-down(xs) {
+        margin: 0;
+        padding: 10px 0 0 0;
+      }
+
       .btn {
         margin-left: auto;
+
+        @include media-breakpoint-down(xs) {
+          margin: 0;
+          width: 100%;
+        }
       }
     }
   }

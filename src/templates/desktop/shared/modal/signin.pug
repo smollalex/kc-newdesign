@@ -1,48 +1,77 @@
 #signin.modal.modal-signin.fade(tabindex='-1', role='dialog', aria-labelledby='signinTitle', aria-hidden='true')
   .modal-dialog.modal-md.modal-dialog-centered(role='document')
+    
     .modal-content
-      .modal-header
-        h5.modal-title
-          span Вход
-        button.close(type='button', data-dismiss='modal', aria-label='Close')
-          span(aria-hidden='true')
-            svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
-              path(fill='', d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
-      .modal-body
-        form.form-signin(action="")
-          .form-inline.mb-3
-            .form-group
-              input.form-control(id='signin-phone-radio', name='signin-radio', type='radio', checked="checked", value="phone")
-              label.col-form-label(for='signin-phone-radio') По номеру телефона
-            .form-group.ml-3
-              input.form-control(id='signin-email-radio', name='signin-radio', type='radio', value="email")
-              label.col-form-label(for='signin-email-radio') По E-mail
-          .signin-type
-            .form-group.form-group--phone
-              input.form-control(id="signin-phone", type="text", placeholder="Ваш телефон", name='sigin-phone') 
-            .form-group.form-group--email(style='display: none')
-              input.form-control(id="signin-email", type="text", placeholder="Ваш email", name='sigin-email') 
-          .form-group
-            .input-group
-              input.form-control(id="signin-password", type="password", placeholder="Пароль", name='sigin-password') 
-              .input-group-append--eye
-                svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
-                  path(fill='', d='M288 288a64 64 0 0 0 0-128c-1 0-1.88.24-2.85.29a47.5 47.5 0 0 1-60.86 60.86c0 1-.29 1.88-.29 2.85a64 64 0 0 0 64 64zm284.52-46.6C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 96a128 128 0 1 1-128 128A128.14 128.14 0 0 1 288 96zm0 320c-107.36 0-205.46-61.31-256-160a294.78 294.78 0 0 1 129.78-129.33C140.91 153.69 128 187.17 128 224a160 160 0 0 0 320 0c0-36.83-12.91-70.31-33.78-97.33A294.78 294.78 0 0 1 544 256c-50.53 98.69-148.64 160-256 160z')
-              .input-group-append
-                button.btn(type='submit') Войти
-          .form-group
-            .flex-row
-              a.link(href="") Забыли пароль?
-              a.link.ml-auto(href="") Зарегистрироваться
-        .signin-social
-          .signin-social-title 
-            span Через социальную сеть
-          .signin-social-items
-            a.signin-social-item.signin-social-item--vk(href='javascript:;')
-              i.fab.fa-vk(aria-hidden='true')
-            a.signin-social-item.signin-social-item--ok(href='javascript:;')
-              i.fab.fa-odnoklassniki(aria-hidden='true')
-            a.signin-social-item.signin-social-item--instagram(href='javascript:;')
-              i.fab.fa-instagram(aria-hidden='true')
-            a.signin-social-item.signin-social-item--fb(href='javascript:;')
-              i.fab.fa-facebook-f(aria-hidden='true')
+      .modal-tab
+        a(data-toggle="collapse", href="#singin", role="button", aria-expanded="true", aria-controls="singin") Вход
+        a(data-toggle="collapse", href="#singup", role="button", aria-expanded="false", aria-controls="singiup") Регистрация
+      #sign
+        #singin.collapse.show(data-parent="#sign")
+          .modal-header
+            h5.modal-title
+              span Вход
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true')
+                svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+                  path(fill='', d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+          .modal-body
+            form.form-signin(action="")
+              .form-inline.mb-3
+                .form-group
+                  input.form-control(id='signin-phone-radio', name='signin-radio', type='radio', checked="checked", value="phone")
+                  label.col-form-label(for='signin-phone-radio') По номеру телефона
+                .form-group.ml-3
+                  input.form-control(id='signin-email-radio', name='signin-radio', type='radio', value="email")
+                  label.col-form-label(for='signin-email-radio') По E-mail
+              .signin-type
+                .form-group.form-group--phone
+                  input.form-control(id="signin-phone", type="text", placeholder="Ваш телефон", name='sigin-phone') 
+                .form-group.form-group--email(style='display: none')
+                  input.form-control(id="signin-email", type="text", placeholder="Ваш email", name='sigin-email') 
+              .form-group
+                .input-group
+                  input.form-control(id="signin-password", type="password", placeholder="Пароль", name='sigin-password') 
+                  .input-group-append--eye
+                    svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 576 512')
+                      path(fill='', d='M288 288a64 64 0 0 0 0-128c-1 0-1.88.24-2.85.29a47.5 47.5 0 0 1-60.86 60.86c0 1-.29 1.88-.29 2.85a64 64 0 0 0 64 64zm284.52-46.6C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 96a128 128 0 1 1-128 128A128.14 128.14 0 0 1 288 96zm0 320c-107.36 0-205.46-61.31-256-160a294.78 294.78 0 0 1 129.78-129.33C140.91 153.69 128 187.17 128 224a160 160 0 0 0 320 0c0-36.83-12.91-70.31-33.78-97.33A294.78 294.78 0 0 1 544 256c-50.53 98.69-148.64 160-256 160z')
+                  .input-group-append
+                    button.btn(type='submit') Войти
+              .form-group
+                .flex-row
+                  a.link(href="") Забыли пароль?
+                  a.link.ml-auto(href="") Зарегистрироваться
+              .signin-social
+                .signin-social-title 
+                  span Через социальную сеть
+                .signin-social-items
+                  a.signin-social-item.signin-social-item--vk(href='javascript:;')
+                    i.fab.fa-vk(aria-hidden='true')
+                  a.signin-social-item.signin-social-item--ok(href='javascript:;')
+                    i.fab.fa-odnoklassniki(aria-hidden='true')
+                  a.signin-social-item.signin-social-item--instagram(href='javascript:;')
+                    i.fab.fa-instagram(aria-hidden='true')
+                  a.signin-social-item.signin-social-item--fb(href='javascript:;')
+                    i.fab.fa-facebook-f(aria-hidden='true')
+        #singup.collapse(data-parent="#sign")
+          .modal-header
+            h5.modal-title
+              span Регистрация
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true')
+                svg(version='1.1', id='', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='10px', height='10px', viewBox='0 0 10 10', enable-background='new 0 0 10 10', xml:space='preserve')
+                  path(fill='', d='M5.429,5l4.478-4.472c0.116-0.118,0.116-0.31,0-0.428c-0.119-0.118-0.31-0.118-0.429-0.001L5,4.571 L0.522,0.099C0.404-0.019,0.212-0.018,0.093,0.1c-0.117,0.118-0.117,0.31,0,0.428L4.571,5L0.094,9.471 c-0.117,0.118-0.117,0.31,0,0.427c0.06,0.062,0.138,0.09,0.215,0.09c0.078,0,0.154-0.028,0.214-0.088L5,5.428l4.479,4.473 c0.059,0.06,0.137,0.088,0.215,0.088c0.076,0,0.155-0.028,0.214-0.09c0.116-0.117,0.116-0.309,0-0.427L5.429,5z')
+          .modal-body
+            form.form-signup(action="")
+              .form-group
+                input.form-control.is-invalid(id="signup-fio", type="text", placeholder="Ф.И.О.", name='signup-fio') 
+                .invalid-feedback You must agree before submitting.
+              .form-group
+                input.form-control(id="signup-phone", type="text", placeholder="Телефон", name='signup-phone') 
+              .form-group
+                input.form-control(id="signup-email", type="email", placeholder="E-mail", name='signup-email') 
+              .form-group
+                input.form-control(id="signup-password", type="password", placeholder="Пароль", name='signup-password') 
+              .form-group
+                input.form-control(id='signup-subscribe', name='signup-subscribe', type='checkbox', checked="checked")
+                label.col-form-label(for='signup-subscribe') Подписка на новости
+              a.btn.ml-auto.mt-3(href="#") Зарегистрироваться

@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
- 
+  margin-bottom: 60px;
 
   &:before {
     content: "";
@@ -40,41 +40,16 @@
     background-size: cover;
 
     @include media-breakpoint-down(xs) {
-      height: 33vh;
-      margin-bottom: 50px;
+      height: 35vh;
     }
   }
-  &-300 {
-    height: 300px;
-    background-color: #f5f9fe;
-    background-position: center;
-    background-size: cover;
-    justify-content: flex-end;
-    align-items: center;
-
-    @include media-breakpoint-down(xs) {
-      height: 33vh;
-      margin-bottom: 50px;
-    }
-
-    .banner-button {
-      display: block;
-      transform: none;
-      justify-self: center;
-      margin: 0 0 -30px 0;
-      height: 60px;
-      line-height: 60px;
-      font-family: Roboto;
-      width: 65%;
-      font-size: 18px;
-      font-weight: 300;
-    }
-  }
+  
   &-3 {
     width: 362px;
     height: 536px;
     background-color: #f5f9fe;
   }
+
   &-4 {
     height: 300px;
     background-color: #f5f9fe;
@@ -82,7 +57,7 @@
     background-size: cover;
 
     @include media-breakpoint-down(xs) {
-      height: 33vh;
+      height: 15vh;
       margin-bottom: 50px;
     }
     
@@ -132,7 +107,9 @@
     box-shadow: 0 -7px 14px -10px #0000001c;
 
     @include media-breakpoint-down(xs) {
-      width: 90%;
+      width: auto;
+      margin-left: 30px;
+      margin-right: 30px;
     }
     
     span:first-child {

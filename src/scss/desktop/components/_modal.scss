@@ -55,19 +55,55 @@
     text-align: center;
     margin: auto;
 
-    span {
+    @include media-breakpoint-down(xs) {
+      font-size: 20px;
+      z-index: 2010;
+    }
+    
+    /* span {
       background: -webkit-linear-gradient(right, #0079bf 0%, #01b2ff 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
+    } */
   }
 
   &-dialog {
     .modal.show & {
       transform: translate(0px, 0px);
     }
+
+    @include media-breakpoint-down(md){
+      max-width: calc(100% - 50px) !important;
+    }
+
+    @include media-breakpoint-down(xs){
+      max-width: 100% !important;
+    }
   }
 
+  &-tab {
+    position: absolute;
+    display: flex;
+    top: -40px;
+
+    a {
+      font-size: 15px;
+      padding: 0 15px;
+      display: flex;
+      height: 40px;
+      line-height: 40px;
+      margin-right: 2px;
+     
+      &[aria-expanded="false"] {
+        background-color: #95a4b0;
+        color: #d6dee4;
+      }
+      
+      &[aria-expanded="true"] {
+        background-color: #f3f9fe;
+      }
+    }
+  }
 
   // Modal city
   &-city {
@@ -75,12 +111,6 @@
     .modal-dialog {
       @include media-breakpoint-up(lg){
         max-width: 1000px;
-      }
-      @include media-breakpoint-down(md){
-        max-width: calc(100% - 50px);
-      }
-      @include media-breakpoint-down(xs){
-        max-width: 100%;
       }
     }
 
@@ -150,12 +180,7 @@
       @include media-breakpoint-up(lg){
         max-width: 900px;
       }
-      @include media-breakpoint-down(md){
-        max-width: calc(100% - 50px)
-      }
-      @include media-breakpoint-down(xs) {
-        max-width: calc(100% - 10px);
-      }
+
     }
 
     .modal-content {
@@ -295,9 +320,8 @@
       @include media-breakpoint-up(lg){
         max-width: 630px;
       }
-      @include media-breakpoint-down(md){
-        max-width: calc(100% - 50px)
-      }
+      
+      
     }
 
     .testimonial  {
@@ -325,7 +349,7 @@
     
           .fa-star {
             &:before {
-              content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='#ffdb00' d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'></path></svg>");
+              content: url("data:image/svg+xml; utf8, <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='#00b3ff' d='M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z'></path></svg>");
             }
           
             &-o:before {
@@ -530,6 +554,110 @@
       }
       @include media-breakpoint-down(md){
         max-width: calc(100% - 50px)
+      }
+    }
+  }
+
+  // Mobile filters
+  &-filters {
+    .modal-dialog {
+      min-height: 100vh;
+      margin: 0;
+    }
+    .modal-content {
+      min-height: 100vh;
+    }
+
+    .modal-body {
+      padding: 30px !important;
+    }
+
+    .filter-mobile-item {
+      margin-bottom: 10px;
+      /* padding: 0 20px; */
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+
+      select {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 40px;
+      }
+
+      &-title {
+        position: relative;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #e8ebef;
+        width: calc(100% - 52px);
+
+        span {
+          font-size: 15px;
+          text-transform: uppercase;
+          padding-left: 5px;
+        }
+      }
+
+      &-icon {
+        height: 32px;
+        width: 32px;
+        background-color: #e2eff7;
+        border-radius: 32px;
+        transition: .5s;
+        cursor: pointer;
+        margin-left: auto;
+        margin-top: 9px;
+        
+        svg {
+          width: 32px;
+          height: 32px;
+          fill: #88939a;
+          transform: rotate(270deg);
+        }
+        &:hover {
+          background-color: #00b3ff;
+
+          svg {
+            fill: #fff;
+          }
+        }
+      }
+
+      
+      &-selected {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 5px 0px;
+        width: 100%;
+
+        a {
+          margin-right: 4px;
+          height: 10px;
+          display: flex;
+        }
+
+        svg {
+          fill: #fff;
+        }
+
+        span {
+          background-color: #00b3ff;
+          color: #fff;
+          border-radius: 3px;
+          padding: 5px 10px;
+          font-weight: 300;
+          font-size: 13px;
+          margin: 4px;
+          display: flex;
+          align-items: center;
+        }
       }
     }
   }

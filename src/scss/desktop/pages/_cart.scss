@@ -193,7 +193,11 @@
     border-top: 1px solid #f5f9fe;
     padding: 0 0 20px 0;
     background-color: #fff;
-  
+    
+    @include media-breakpoint-down(xs) {
+      flex-wrap: wrap;
+    }
+
     &:first-child {
       padding-top: 0;
       border: none;
@@ -212,6 +216,11 @@
     &-img {
       width: 120px;
   
+      @include media-breakpoint-down(xs) {
+        width: 100px;
+        order: 1;
+      }
+
       img {
         width: 100%;
       }
@@ -220,17 +229,24 @@
     &-info {
       min-width: 300px;
 
+      @include media-breakpoint-down(xs) {
+        width: calc(100% - 120px);
+        min-width: 100px;
+        order: 2;
+      }
+
       &-title {
         font-size: 18px;
-        text-transform: uppercase;
         line-height: 21px;
         color: #333333;
         margin-bottom: 10px;
         align-items: center;
         font-weight: 300;
+        
         span {
-          padding-left: 5px;
           font-weight: 500;
+          border-bottom: 1px solid;
+          margin-left: 5px;
         }
       }
       &-category {
@@ -262,6 +278,11 @@
       flex-wrap: wrap;
       justify-content: space-between;
       margin-top: -7px;
+
+      @include media-breakpoint-down(xs) {
+        margin: 20px auto;
+        order: 4;
+      }
 
       .input-group {
         margin-right: 20px;
@@ -348,6 +369,14 @@
       align-items: flex-start;
       width: 100px;
 
+      @include media-breakpoint-down(xs) {
+        margin: -15px 0 0 120px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        order: 3;
+      }
+
       .price {
         color: #333;
         display: flex;
@@ -355,7 +384,7 @@
         position: relative;
         font-size: 20px;
         line-height: 25px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         justify-content: flex-start;
 
         &:last-child {
@@ -444,6 +473,7 @@
   }
 
   &-total {
+    z-index: 0;
     padding: 30px;
     background-color: #ffffff;
     box-shadow: 0 0 20px -5px #0000001f;
@@ -585,6 +615,7 @@
   
     &-title {
       font-size: 36px;
+      line-height: 46px;
       color: #444;
       text-align: center;
       margin: 30px auto;
@@ -612,6 +643,10 @@
       padding: 0 0 40px 75px;
       border: none;
       position: relative;
+
+      @include media-breakpoint-down(xs) {
+        padding-left: 0;
+      }
       
       &:last-child {
         &:before, &:after {
@@ -644,6 +679,10 @@
       display: flex;
       align-items: center;
 
+      @include media-breakpoint-down(xs) {
+        margin-left: 0;
+      }
+
       span {
         min-width: 40px;
         max-width: 40px;
@@ -667,8 +706,15 @@
       margin-bottom: 20px;
     }
 
+    &-options {
+      display: flex;
+
+      @include media-breakpoint-down(xs) {
+        flex-direction: column;
+      }
+    }
     &-option {
-      margin-bottom: 15px;
+      margin: 0 15px 15px 0;
 
       .flex-row & {
         margin-right: 30px;
@@ -677,6 +723,7 @@
     }
     
     &-adress {
+     
       form {
         margin-top: 10px;
         background-color: #f5f9fe70;

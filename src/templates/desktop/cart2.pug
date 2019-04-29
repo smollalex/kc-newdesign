@@ -27,7 +27,7 @@ main.cart
                   <path fill="#ffffff" d="M31.051,51c-1.197,0-2.397-0.428-3.354-1.293l-20.9-18.917c-2.047-1.853-2.205-5.015-0.352-7.062 c1.854-2.049,5.015-2.206,7.062-0.352l17.24,15.604l22.631-24.383c1.88-2.023,5.042-2.141,7.066-0.262 c2.023,1.879,2.141,5.042,0.262,7.066l-25.998,28C33.729,50.462,32.394,51,31.051,51z"></path>
                 </svg>
               | Выберите способ доставки
-            .flex-row
+            .cart-delivery-options
               .cart-delivery-option
                 input(id='delivery-type-1', name='delivery-type', type='radio', checked)
                 label(for='delivery-type-1') Курьером
@@ -65,7 +65,7 @@ main.cart
               span 2
               | Выберите способ оплаты
             .cart-delivery-payment
-              .flex-row
+              .cart-delivery-options
                 .cart-delivery-option
                   input(id='delivery-payment-1', name='delivery-payment', type='radio')
                   label(for='delivery-payment-1') Оплата при получении - 200 ₽
@@ -87,14 +87,14 @@ main.cart
               | Проверьте свои контактные данные
             form.form-horizontal
               .form-group.row
-                label.col-form-label.col-sm-2(for='') Ваш телефон
-                .col-sm-5
+                label.col-form-label.col-3.col-sm-2(for='') Ваш телефон
+                .col-9.col-sm-5
                   input.form-control(name='', type='text', placeholder='')
               .form-group.row
-                label.col-form-label.col-sm-2(for='') Ваш email
-                .col-sm-5
+                label.col-form-label.col-3.col-sm-2(for='') Ваш email
+                .col-9.col-sm-5
                   input.form-control(name='', type='text', placeholder='')
-      .col-sm-10.offset-1.col-lg-4.offset-lg-0
+      .col-sm-10.offset-sm-1.col-lg-4.offset-lg-0
         .cart-total.sticky-top
           .cart-total-heading Данные о заказе
           .cart-total-items

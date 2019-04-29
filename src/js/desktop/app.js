@@ -9,6 +9,8 @@ require ('@zeitiger/elevatezoom/jquery.elevatezoom');
 require ('waypoints/lib/jquery.waypoints.min.js');
 require ('waypoints/lib/shortcuts/inview.min.js');
 
+
+
 require ('./libs/jquery.dlmenu.js');
 
 require ('./layout/header.js');
@@ -20,6 +22,5 @@ require ('./pages/category.js');
 require ('./pages/product.js');
 require ('./pages/chc.js');
 require ('./pages/personal.js');
-
 
 import "../../scss/desktop.scss";

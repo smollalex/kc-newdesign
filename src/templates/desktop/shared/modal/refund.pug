@@ -13,84 +13,86 @@
           .col-lg-8
             form(action="")
               .form-group.row
-                label.col-sm-3.col-form-label(for='') Способ возврата
-                .col-sm-6
+                label.col-3.col-form-label(for='') Способ возврата
+                .col-9.col-sm-6
                   select.refund-type.form-control
                     option(value="refund-type-1") Почтовым переводом
                     option(value="refund-type-2") Банковским переводом
               .refund-type-1
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Получатель
-                  .col-sm-8
+                  label.col-3.col-form-label(for='') Получатель
+                  .col-9.col-sm-8
                     input.form-control(type='text', value='')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') E-mail
-                  .col-sm-8
+                  label.col-3.col-form-label(for='') E-mail
+                  .col-9.col-sm-8
                     input.form-control(type='text', value='')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Регион
-                  .col-lg-8
+                  label.col-3.col-form-label(for='') Регион
+                  .col-9.col-lg-8
                     select.form-control(name='adress-region', type='text', placeholder='')
                       option(value="")
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Город
-                  .col-lg-8
+                  label.col-3.col-form-label(for='') Город
+                  .col-9.col-lg-8
                     select.form-control(name='adress-city', type='text', placeholder='')
                       option(value="")
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Улица
-                  .col-lg-8
+                  label.col-3.col-form-label(for='') Улица
+                  .col-9.col-lg-8
                     input.form-control(name='', type='text', placeholder='')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Дом
-                  .col-lg-2
-                    input.form-control(name='', type='text', placeholder='')
-                  label.col-form-label.pr-0(for='') Корпус
-                  .col-lg-2
-                    input.form-control(name='', type='text', placeholder='')
-                  label.col-form-label.pr-0(for='') Квартира
-                  .col-lg-2
+                  label.col-3.col-form-label(for='') Дом
+                  .col-9.col-lg-3
                     input.form-control(name='', type='text', placeholder='')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Индекс
-                  .col-lg-4
+                  label.col-3.col-form-label(for='') Корпус
+                  .col-9.col-lg-3
+                    input.form-control(name='', type='text', placeholder='')
+                .form-group.row
+                  label.col-3.col-form-label(for='') Квартира
+                  .col-9.col-lg-3
+                    input.form-control(name='', type='text', placeholder='')
+                .form-group.row
+                  label.col-3.col-form-label(for='') Индекс
+                  .col-9.col-lg-4
                     input.form-control(name='', type='text', placeholder='')
               .refund-type-2(style="display: none;")
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Владелец счёта
-                  .col-sm-8
+                  label.col-3.col-form-label(for='') Владелец счёта
+                  .col-9.col-sm-8
                     input.form-control(type='text', value='Иванов Иван Иванович')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') E-mail
-                  .col-sm-8
+                  label.col-3.col-form-label(for='') E-mail
+                  .col-9.col-sm-8
                     input.form-control(type='text', value='example@mail.ru')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') БИК
-                  .col-sm-8
+                  label.col-3.col-form-label(for='') БИК
+                  .col-9.col-sm-8
                     input.form-control(type='text', value='')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') ИНН банка
-                  .col-sm-8
+                  label.col-3.col-form-label(for='') ИНН банка
+                  .col-9.col-sm-8
                     input.form-control(type='text', value='')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Банк
-                  .col-sm-8
+                  label.col-3.col-form-label(for='') Банк
+                  .col-9.col-sm-8
                     input.form-control(type='text', value='')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Кор. счёт
-                  .col-sm-8
+                  label.col-3.col-form-label(for='') Кор. счёт
+                  .col-9.col-sm-8
                     input.form-control(type='text', value='')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Расчётный счёт
-                  .col-sm-8
+                  label.col-3.col-form-label(for='') Расчётный счёт
+                  .col-9.col-sm-8
                     input.form-control(type='text', value='')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Лицевой счёт
-                  .col-sm-8
+                  label.col-3.col-form-label(for='') Лицевой счёт
+                  .col-9.col-sm-8
                     input.form-control(type='text', value='')
                 .form-group.row
-                  label.col-sm-3.col-form-label(for='') Номер карты
-                  .col-sm-8
+                  label.col-3.col-form-label(for='') Номер карты
+                  .col-9.col-sm-8
                     input.form-control(type='text', value='')
           .col-lg-4
             .refund-total

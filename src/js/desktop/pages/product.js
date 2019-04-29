@@ -1,4 +1,4 @@
-function getProductPhotoSlider(){
+function getProductPhotoSliderforDesktop(){
  
   $('.product-slider').owlCarousel({
     loop: true,
@@ -37,14 +37,8 @@ function getProductPhotoSlider(){
   $(".product-zoom").elevateZoom({
     zoomType: "inner",
     cursor: "move"
-  });
-};
-
-$(document).ready(function(){
-
-	// Product photo slider
-	getProductPhotoSlider();
-
+	});
+	
 	$('.product-slider .owl-next, .product-slider .owl-prev').click(function(){
 		let imgSlide = $('.product-slider .owl-item.active .product-slide-item').attr('data-zoom-image');
 		$('.product-zoom img').attr('src', imgSlide);
@@ -54,6 +48,34 @@ $(document).ready(function(){
 			cursor: "move"
 		})
 	});
+};
+
+function getProductPhotoSliderforMobile(){
+ 
+  $('.product-slider').owlCarousel({
+    loop: true,
+    nav: true,
+    mouseDrag: true,
+    margin: 0,
+    dots: true,
+    items: 1,
+    animateIn: 'fadeIn',
+    smartSpeed: 450,
+    navText: [
+			'<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>', 
+			'<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>'
+		]
+	});
+}
+
+$(document).ready(function(){
+
+	// Product photo slider
+	if ($(window).width() > 415 ) {
+		getProductPhotoSliderforDesktop();
+	} else {
+		getProductPhotoSliderforMobile();
+	}
 
 	$('.zoomContainer').hover(function(){
 		$('body').toggleClass('.zoom-product-opened');
@@ -84,15 +106,6 @@ $(document).ready(function(){
 		$('.product-info-promo').removeClass("active");
 	});
 	
-	// Product tabs
-  $('.product-tabs-link').click(function(){
-		if (!$(this).hasClass("active")) {
-			$('.product-tabs-link').removeClass("active");
-			$(this).toggleClass("active");
-			$('.product-feature, .product-reviews').toggleClass("active");
-		}		
-	});
-	
 	// Product option
   $('.product-info-options-item').click(function(){
 		if (!$(this).hasClass("active")) {
@@ -109,14 +122,16 @@ $(document).ready(function(){
   // Typical slider for other product
 	$('.card-slider').owlCarousel({
 		loop: true,
-		nav: false,
+		nav: true,
 		mouseDrag: true,
 		dots: true,
-		slideBy: 4,
+		slideBy: 1,
 		lazyLoad: true,
-		items: 1,
 		margin: 10,
 		responsive: {
+			320: {
+				items: 2
+			},
 			768: {
 				items: 3
 			},
@@ -126,24 +141,29 @@ $(document).ready(function(){
 			1280: {
 				items: 5
 			}
-		}
-	});
-
-	// Tags slider
-	$('.tags-slider').owlCarousel({
-		loop: true,
-		nav: true,
-		mouseDrag: true,
-		touchDrag: true,
-		dots: false,
-		margin: 10,
-		autoWidth: true,
-		items: 8,
-		slideBy: 4,
-		lazyLoad: true,
+		},
 		navText: [
 			'<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>', 
 			'<svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg>'
 		]
 	});
+
+	// Tags slider
+	if ($(window).width() > 415) {
+    $('.tags-slider').addClass('owl-carousel owl-theme-tags').owlCarousel({
+      loop: false,
+      nav: true,
+      mouseDrag: true,
+      touchDrag: true,
+      dots: false,
+      margin: 10,
+      autoWidth: true,
+      slideBy: 4,
+      lazyLoad: true,
+      navText: [
+        '<span><svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg></span>', 
+        '<span><svg version="1.1" id="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><polygon fill="" points="36.238,44.061 24.271,32.226 36.156,20.115 37.996,21.918 27.907,32.199 38.05,42.229 "/></svg></span>'
+      ]
+    });
+  }
 });
