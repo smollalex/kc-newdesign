@@ -18692,6 +18692,10 @@ body::-webkit-scrollbar-thumb {
         padding: 0;
         margin: 0;
         max-height: 500px; }
+        @media (max-width: 991.98px) {
+          .navbar-nav .nav-wrap .nav-list {
+            flex-direction: row;
+            margin-bottom: 20px; } }
         @media (max-width: 575.98px) {
           .navbar-nav .nav-wrap .nav-list {
             max-height: 100%; } }
@@ -20364,7 +20368,11 @@ body::-webkit-scrollbar-thumb {
       max-width: 80px;
       transform: translateY(-10px); }
   .product-info {
-    position: relative; }
+    position: relative;
+    margin-top: 50px; }
+    @media (max-width: 575.98px) {
+      .product-info {
+        margin-top: 0; } }
   .product-articul {
     font: 400 12px/18px "Ubuntu", sans-serif;
     color: #999;
@@ -20585,8 +20593,7 @@ body::-webkit-scrollbar-thumb {
         order: 2;
         margin-bottom: 0; } }
     .product-options > div {
-      display: flex;
-      margin-bottom: 10px; }
+      display: flex; }
     .product-options-title {
       font: 400 12px/18px "Ubuntu", sans-serif;
       color: rgba(51, 51, 51, 0.5);
@@ -20619,6 +20626,10 @@ body::-webkit-scrollbar-thumb {
         width: 100%;
         order: 4;
         margin-bottom: 20px; } }
+    .product-size-help {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; }
     .product-size-title {
       display: flex;
       align-items: baseline;
@@ -20628,7 +20639,7 @@ body::-webkit-scrollbar-thumb {
       margin-bottom: 5px; }
       .product-size-title a {
         margin-left: auto; }
-    .product-size > div {
+    .product-size-items {
       display: flex;
       flex-wrap: wrap;
       margin: 0 -4px 10px -4px; }
@@ -20766,26 +20777,15 @@ body::-webkit-scrollbar-thumb {
           fill: #fff; }
   .product-headline {
     font-size: 22px;
-    line-height: 1.5;
-    margin: 30px 0 20px;
-    width: 66.6%; }
-    @media (max-width: 991.98px) {
-      .product-headline {
-        width: 100%; } }
+    line-height: 1;
+    margin: 30px 0; }
     @media (max-width: 575.98px) {
       .product-headline {
         margin: 20px 0 10px; } }
   .product-info-text {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: 300;
-    width: 66.6%; }
-    @media (max-width: 991.98px) {
-      .product-info-text {
-        width: 100%; } }
-    @media (max-width: 575.98px) {
-      .product-info-text {
-        width: 100%; } }
+    font-weight: 300; }
   .product-text {
     font-size: 16px;
     line-height: 1.5;
@@ -20795,11 +20795,7 @@ body::-webkit-scrollbar-thumb {
     flex-wrap: wrap;
     width: 100%;
     margin: 0;
-    justify-content: space-between;
-    width: 66.6%; }
-    @media (max-width: 991.98px) {
-      .product-feature-list {
-        width: 100%; } }
+    justify-content: space-between; }
     @media (max-width: 575.98px) {
       .product-feature-list {
         width: 100%;
@@ -20844,52 +20840,43 @@ body::-webkit-scrollbar-thumb {
         margin: 10px 0px 0px 0px; } }
   .product-feature-description {
     display: flex;
-    align-items: flex-start;
-    width: 66.6%; }
-    @media (max-width: 991.98px) {
-      .product-feature-description {
-        width: 100%; } }
+    align-items: flex-start; }
     @media (max-width: 575.98px) {
       .product-feature-description {
         width: 100%;
         flex-direction: column; } }
-  .product-reviews {
-    width: 66.6%; }
-    @media (max-width: 991.98px) {
-      .product-reviews {
-        width: 100%; } }
-    @media (max-width: 575.98px) {
-      .product-reviews {
-        margin: 20px 0;
-        width: 100%; } }
-    .product-reviews-header {
-      display: flex;
-      align-items: center;
-      margin: 40px 0 20px; }
-    .product-reviews-total {
-      color: #fff;
-      font-size: 20px;
-      position: relative;
-      height: 50px;
+  @media (max-width: 575.98px) {
+    .product-reviews {
+      margin: 20px 0;
+      width: 100%; } }
+  .product-reviews-header {
+    display: flex;
+    align-items: center;
+    margin: 40px 0 20px; }
+  .product-reviews-total {
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: -1px;
+    font-weight: 300; }
+    .product-reviews-total svg {
+      position: absolute;
       width: 50px;
-      line-height: 50px;
-      text-align: center;
-      letter-spacing: -1px;
-      font-weight: 300; }
-      .product-reviews-total svg {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        fill: #00b2ff;
-        top: -2px;
-        left: 0;
-        z-index: -1; }
-    .product-reviews-title {
-      font-size: 22px;
-      line-height: 1.5;
-      margin: 0 0 0 20px; }
-    .product-reviews .btn {
-      margin-left: auto; }
+      height: 50px;
+      fill: #00b2ff;
+      top: -2px;
+      left: 0;
+      z-index: -1; }
+  .product-reviews-title {
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 0 0 0 20px; }
+  .product-reviews .btn {
+    margin-left: auto; }
   .product-delivery {
     display: flex;
     flex-direction: column;
@@ -20897,10 +20884,7 @@ body::-webkit-scrollbar-thumb {
     border: 1px solid #eaeff7;
     padding: 35px 40px;
     box-shadow: 0 0 20px -15px #0000001f;
-    margin-top: 30px;
-    position: absolute;
-    width: 23.2%;
-    right: 0; }
+    width: 100%; }
     @media (max-width: 991.98px) {
       .product-delivery {
         margin-top: 20px;
@@ -20909,7 +20893,6 @@ body::-webkit-scrollbar-thumb {
         padding: 30px;
         flex-wrap: wrap;
         margin-bottom: 15px;
-        width: 100%;
         position: relative; } }
     .product-delivery-title {
       font-size: 18px;
@@ -20943,6 +20926,9 @@ body::-webkit-scrollbar-thumb {
           flex-direction: row;
           justify-content: space-between;
           width: 100%; } }
+      @media (max-width: 575.98px) {
+        .product-delivery-type {
+          flex-direction: column; } }
       .product-delivery-type-item {
         margin-top: 15px; }
         @media (max-width: 991.98px) {
@@ -21015,11 +21001,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    box-shadow: 0 0 20px -15px #0000001f;
-    position: absolute;
-    width: 23.2%;
-    right: 0;
-    bottom: 0; }
+    box-shadow: 0 0 20px -15px #0000001f; }
     @media (max-width: 991.98px) {
       .product-additional {
         position: relative;
@@ -21054,7 +21036,7 @@ body::-webkit-scrollbar-thumb {
   .product-tags {
     max-width: 100%;
     padding: 0;
-    margin: 30px auto; }
+    margin: 50px auto; }
     @media (max-width: 575.98px) {
       .product-tags {
         margin: 0 auto;
