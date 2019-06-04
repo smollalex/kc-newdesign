@@ -25,6 +25,12 @@ main.about
           include shared/chc-navbar-help
           include shared/chc-navbar-delivery
       .col-sm-9
+        .page-header-sub
+          form(action="", class="", style="width: 100%")
+            .input-group
+              input.form-control(type="text", placeholder="Введите название бренда")
+              .input-group-append
+                button.btn(type="submit") Запросить сертификат
         .about-certification
           a(href="").certificat
             svg(aria-hidden='true', focusable='false', role='img', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 384 512')

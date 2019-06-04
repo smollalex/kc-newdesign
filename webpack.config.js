@@ -105,21 +105,33 @@ const config =  {
   },
 
   plugins: [
-    
-
     new ExtractTextPlugin({
       filename: 'css/style.css',
       allChunks: true,
     }),
 
-
-    /* 
-    
-    
-
     new HtmlWebpackPlugin({
       filename: 'product.html',
       template: `src/templates/${version}/product.pug`
+    }),
+    
+    
+
+   
+    
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: `src/templates/${version}/index.pug`
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: 'index2.html',
+      template: `src/templates/${version}/index2.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'index3.html',
+      template: `src/templates/${version}/index3.pug`
     }),
     
 
@@ -129,33 +141,16 @@ const config =  {
     }),
     
     new HtmlWebpackPlugin({
-      filename: 'index2.html',
-      template: `src/templates/${version}/index2.pug`
-    }),
-    
-   
-
-    new HtmlWebpackPlugin({
       filename: 'personal.html',
       template: `src/templates/${version}/personal.pug`
     }),
-    
-    
-    new HtmlWebpackPlugin({
-      filename: 'category2.html',
-      template: `src/templates/${version}/category2.pug`
-    }),
-    
+   
+   
     new HtmlWebpackPlugin({
       filename: 'fitting.html',
       template: `src/templates/${version}/fitting.pug`
     }),
     
-
-     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: `src/templates/${version}/index.pug`
-    }),
 
     new HtmlWebpackPlugin({
       filename: 'delivery.html',
@@ -221,19 +216,6 @@ const config =  {
       template: `src/templates/${version}/about-vacantion.pug`
     }),
     
-    */
-
-    new HtmlWebpackPlugin({
-      filename: 'personal.html',
-      template: `src/templates/${version}/personal.pug`
-    }),
-    
- 
-    new HtmlWebpackPlugin({
-      filename: 'category.html',
-      template: `src/templates/${version}/category.pug`
-    }),
-    
     new HtmlWebpackPlugin({
       filename: 'cart1.html',
       template: `src/templates/${version}/cart1.pug`
@@ -249,8 +231,13 @@ const config =  {
       template: `src/templates/${version}/cart3.pug`
     }),
 
-   
+    new HtmlWebpackPlugin({
+      filename: 'category.html',
+      template: `src/templates/${version}/category.pug`
+    }),
 
+    
+   
     new CopyWebpackPlugin([
       {
         from: './src/fonts',

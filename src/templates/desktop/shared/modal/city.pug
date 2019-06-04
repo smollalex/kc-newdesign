@@ -11,14 +11,14 @@
             .city-input
               .h5 Введите область / край
               .form-group
-                input#Modali.is-invalid.form-control(type='text', name='region', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
-                input#Modali(type='hidden', name='regionId', value='')
+                input.form-control(type='text', name='region', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
+                input(type='hidden', name='regionId', value='')
                 .invalid-feedback Please provide a valid city
             .city-input
               .h5 Введите город / поселок
               .form-group
-                input#Modali.is-invalid.form-control(type='text', name='city', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
-                input#Modali.nav-itemnputCityId(type='hidden', name='cityId', value='')
+                input.form-control(type='text', name='city', placeholder='Введите первые буквы и выберите из списка', value='', autocomplete='off')
+                input.nav-itemnputCityId(type='hidden', name='cityId', value='')
                 .invalid-feedback Please provide a valid city
           .col-md-7.col-lg-8.col-xl-8.order-lg-1
             .h5 Выберите свой город

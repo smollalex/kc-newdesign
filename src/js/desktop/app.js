@@ -6,12 +6,8 @@ require ('jquery-hoverintent/jquery.hoverIntent');
 require ('select2/dist/js/select2');
 require ('starrr/dist/starrr');
 require ('@zeitiger/elevatezoom/jquery.elevatezoom');
-require ('waypoints/lib/jquery.waypoints.min.js');
-require ('waypoints/lib/shortcuts/inview.min.js');
-
-
-
-require ('./libs/jquery.dlmenu.js');
+require ('sticky-sidebar/dist/sticky-sidebar.min.js');
+const scrollLock = require ('scroll-lock/dist/scroll-lock.min.js');
 
 require ('./layout/header.js');
 require ('./layout/footer.js');

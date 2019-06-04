@@ -1,31 +1,91 @@
-.main {
-  margin: 20px 0 50px 0;
+.section-title {
+  font-size: 22px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #333333;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+  white-space: nowrap; 
+
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+    margin: 30px 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    
+  }
   
+  @include media-breakpoint-down(xs) {
+    margin: 15px 0;
+  }
+
+
+  &:before, &:after {
+    content: '';
+    border-top: 1px solid $border-color;
+    width: 100%;
+  }
+  &:before {
+    margin-right: 10px;
+  }
+  &:after {
+    margin-left: 10px;
+  }
+
+  span {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    white-space: nowrap; 
+
+    @include media-breakpoint-down(xs) {
+      white-space: normal;
+      min-width: 70%;
+    }
+  }
+}
+
+.main {
+  margin: 0 0 50px 0;
+  // 2 вариант
+  margin: 10px 0 50px 0;
+
+  @include media-breakpoint-down(md) {
+    margin: 0;
+  }
+
   @include media-breakpoint-down(xs) {
     margin: 0 -15px;
   }
 
   .item {
-    height: 529px;
+    height: 600px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    @include media-breakpoint-down(xs) {
+    
+    @include media-breakpoint-down(md) {
       height: 30vh;
     }
   }
 }
 
 .brands {
-  margin-bottom: 50px;
+  margin: 50px 0;
 
-  @include media-breakpoint-down(xs) {
-    margin: 20px 0 0;
+  @include media-breakpoint-down(md) {
+    margin: 25px 0;
   }
 
-  .section-title {
-    @include media-breakpoint-down(xs) {
+  @include media-breakpoint-down(sm) {
+    
+  }
+  
+  @include media-breakpoint-down(xs) {
+    .section-title {
       display: none;
     }
   }
@@ -100,63 +160,43 @@
   }
 }
 
-.recomended {
-  margin-bottom: -20px;
+.banners {
+  margin: 50px 0 -20px;
   
-  @include media-breakpoint-down(xs) {
-    margin-bottom: 30px;
+  @include media-breakpoint-down(md) {
+    margin: 25px 0;
   }
 }
 
-.section-title {
-  font-size: 22px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: #333333;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  margin: 50px 0;
-  white-space: nowrap; 
-
+.recomended {
+  margin: 50px 0 -50px 0;
+  
   @include media-breakpoint-down(md) {
-    font-size: 18px;
+    margin: 25px 0;
   }
 
+  @include media-breakpoint-down(sm) {
+    
+  }
+  
   @include media-breakpoint-down(xs) {
-    margin: 30px 0;
-  }
 
-  &:before, &:after {
-    content: '';
-    border-top: 1px solid $border-color;
-    width: 100%;
-  }
-  &:before {
-    margin-right: 10px;
-  }
-  &:after {
-    margin-left: 10px;
-  }
-
-  span {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    white-space: nowrap; 
-
-    @include media-breakpoint-down(xs) {
-      white-space: normal;
-      min-width: 70%;
-    }
   }
 }
 
 .trends {
-  margin-bottom: 70px;
+  margin: 70px 0;
+
+  @include media-breakpoint-down(md) {
+    margin: 25px 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    
+  }
   
   @include media-breakpoint-down(xs) {
-    margin-bottom: 30px;
+    
   }
 
   &-container {
@@ -240,10 +280,18 @@
 }
 
 .useful-shoes {
-  margin-bottom: 70px;
+  margin: 70px 0;
+
+  @include media-breakpoint-down(md) {
+    margin: 25px 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    
+  }
   
   @include media-breakpoint-down(xs) {
-    margin-bottom: 30px;
+    
   }
 
   &-container {
@@ -482,10 +530,10 @@
 }
 
 .advantages {
-  margin-bottom: 70px;
-  
-  @include media-breakpoint-down(xs) {
-    margin-bottom: 30px;
+  margin: 70px 0;
+
+  @include media-breakpoint-down(md) {
+    margin: 25px 0;
   }
 
   &-container {
@@ -590,10 +638,10 @@
 }
 
 .reviews {
-  margin-bottom: 70px;
-  
-  @include media-breakpoint-down(xs) {
-    margin-bottom: 30px;
+  margin: 70px 0;
+
+  @include media-breakpoint-down(md) {
+    margin: 25px 0;
   }
 
   &-slider {
@@ -620,8 +668,8 @@
           font-weight: 400;
           text-transform: uppercase;
           color: white;
-          height: 58px;
-          width: 58px;
+          height: 56px;
+          width: 56px;
           border-radius: 50%;
           margin-right: 15px;
         }
@@ -766,10 +814,10 @@
 }
 
 .info {
-  margin-bottom: 70px;
-  
-  @include media-breakpoint-down(xs) {
-    margin-bottom: 30px;
+  margin: 70px 0;
+
+  @include media-breakpoint-down(md) {
+    margin: 25px 0;
   }
 
   &-title {
@@ -833,7 +881,7 @@
         align-items: center;
         justify-content: center;
         border-bottom: 1px solid #ecf1f7;
-        font-size: 15px;
+        font-size: 17px;
         text-transform: uppercase;
         //font-weight: 300;
       }

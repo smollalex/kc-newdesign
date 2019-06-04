@@ -1,5 +1,5 @@
 .category {
-  padding: 0;
+  padding: 0 0 30px 0;
   
   .container-fluid {
     display: flex;
@@ -8,7 +8,10 @@
   }
  
   .promo-item {
-    margin-bottom: 30px;
+    
+    @include media-breakpoint-up(xs) {
+      margin-bottom: 10px;
+    }
   }
 
   &-list {
@@ -66,13 +69,6 @@
             display: none;
             flex-direction: column;
             margin: 0px 0px 10px 10px;
-
-            .nav-item {
-              
-            }
-            .nav-link {
-              
-            }
           }
         }
 
@@ -119,7 +115,9 @@
       margin-bottom: 20px;
 
       @include media-breakpoint-down(xs) {
-        display: none;
+        margin-bottom: 0;
+        border: none;
+        padding-bottom: 0;
       }
 
       .category-filters {
@@ -127,6 +125,10 @@
           display: flex;
           flex-wrap: wrap;
           margin-bottom: 10px;
+          
+          @include media-breakpoint-down(xs) {
+            margin-bottom: 0;
+          }
     
           &-title {
             font-size: 22px;
@@ -145,8 +147,9 @@
             font-size: 14px;
     
             @include media-breakpoint-down(xs) {
-              display: block;
+              line-height: 35px;
               padding-left: 0;
+              display: block;
             }
           }
     
@@ -394,7 +397,7 @@
                 left: 2px;
                 top: 1px;
                 position: absolute;
-                background-image: url(../img/svg/check-blue.svg);
+                background-image: url(#{$PATH}/svg/check-blue.svg);
                 width: 11px;
                 height: 12px;
                 background-repeat: no-repeat;

@@ -1,26 +1,21 @@
-main {
-  /* @media (min-width: 1025px) {
-    .col-lg-9 {
-      flex: 0 0 80%;
-      max-width: 80%;
-    }
-    .col-lg-3 {
-      flex: 0 0 20%;
-      max-width: 20%;
-    }
-  } */
-}
-
 .product {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 600px;
+
+  @include media-breakpoint-down(xs) {
+    flex-direction: column;
+    height: auto;
+  }
+
   &-link {
-    font: normal 12px/12px $font-ubuntu;
+    font: normal 12px/16px $font-ubuntu;
     color: $primary;
     padding-bottom: 2px;
     border-bottom: 1px dashed $primary;
+    margin-bottom: 5px;
 
     &:hover, &:focus {
       color: $primary-second;
@@ -29,13 +24,22 @@ main {
   }
 
   &-photos {
-    position: relative;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: absolute;
+    left: 0;
+    width: 66.6%;
 
+    @include media-breakpoint-down(md) {
+      width: 56.6%;
+    }
 
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      position: relative;
+      order:2;
+    }
     .product-zoom {
       display: flex;
       height: 500px;
@@ -50,7 +54,7 @@ main {
 
       &:before {
         content: '';
-        background-image: url(../img/svg/zoom.svg);
+        background-image: url(#{$PATH}/svg/zoom.svg);
         display: block;
         position: absolute;
         width: 30px;
@@ -90,508 +94,570 @@ main {
     }
   }
 
-  &-info {
-    margin: 0 auto;
+  &-brand {
+    //border: 1px solid #f5f9fe;
+    display: inline-block;
+    //padding: 15px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
 
-    @include media-breakpoint-down(md){
-      margin: 0 0 0 auto;
+    > div {
+      border-left: 1px solid #f4f9fe;
+      padding-left: 20px;
+      margin-left: 10px;
+      color: #666;
+      font-size: 13px;
+      line-height: 18px;
+
+      p {
+        font: normal 13px/18px $font-ubuntu;
+
+        a {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  &-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-left: auto;
+    width: 23.2%;
+
+    @include media-breakpoint-down(md) {
+      width: 33.2%;
+    }
+    
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      order: 1;
     }
 
-    &-brand {
-      //border: 1px solid #f5f9fe;
+    svg {
+      fill: #01b2ff;
+      width: 15px;
+      height: 15px;
+    }
+
+    a {
+      border-bottom: 1px solid #77777778;
+      color: #777;
+      margin-left: 8px;
+      font-size: 11px;
+      padding-bottom: 0px;
+      line-height: 11px;
+    }
+  }
+
+  &-title {
+    font-size: 18px;
+    line-height: normal;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+    margin-left: auto;
+    width: 23.2%;
+
+    @include media-breakpoint-down(md) {
+      width: 33.2%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      order: 1;
+    }
+
+    span {
+      font-weight: 400;
+      border-bottom: 1px solid #333;
+      margin-left: 4px;
+    }
+
+    img {
       display: inline-block;
-      //padding: 15px;
+      max-width: 80px;
+      transform: translateY(-10px);
+    }
+  }
+
+  &-info {
+    position: relative;
+  }
+
+  &-articul {
+    font: 400 12px/18px $font-ubuntu;
+    color: #999;
+    line-height: 18px;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: auto;
+    width: 23.2%;
+
+    @include media-breakpoint-down(md) {
+      width: 33.2%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      order: 1;
       margin-bottom: 10px;
+    
+      .modal {
+        margin-bottom: 0;
+      }
+    }
+
+    span {
+      color: #666666;
+      margin-left: 6px;
+    }
+  }
+    
+  &-price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-left: auto;
+    width: 23.2%;
+
+    @include media-breakpoint-down(md) {
+      width: 33.2%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      margin: 0 0 10px 0;
+      order: 3;
+
+      .modal & {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .price {
       position: relative;
       display: flex;
-      align-items: center;
+      align-items: baseline;
+      line-height: 30px;
+      font-size: 30px;
+      color: #333;
 
-      > div {
-        border-left: 1px solid #f4f9fe;
-        padding-left: 20px;
-        margin-left: 10px;
-        color: #666;
-        font-size: 13px;
-        line-height: 18px;
+      &--sale {
+        font-size: 20px;
+        font-weight: 300;
+        margin-right: 10px;
+        color: #bfc7c7;
 
-        p {
-          font: normal 13px/18px $font-ubuntu;
+        span {
+          position: relative;
 
-          a {
-            margin-left: 5px;
+          &:after {
+            content: '';
+            display: block;
+            border-top: 1px solid;
+            position: absolute;
+            width: 100%;
+            top: 49%;
+          }
+
+          small {
+            font-size: 0.8em;
+            margin-left: 2px;
+          }
+        }
+
+        .price-badge-discount {
+          display: inline-block;
+          color: #fff;
+          height: 22px;
+          line-height: 22px;
+          border-radius: 4px;
+          position: relative;
+          padding: 0 5px;
+          margin-left: 8px;
+          font-size: 12px;
+          font-family: Ubuntu;
+          top: -7px;
+          background-color: #f69781;
+
+          &:before {
+            background-color: #f69781;
+          }
+
+          &:after {
+            display: none;
           }
         }
       }
+
+      &--total {
+        margin: 0 0 0 20px;
+
+        @include media-breakpoint-up(sm) {
+          width: 100%;
+          margin: 5px 0 0 0;   
+        }
+        
+        small {
+          font-size: 23px;
+          padding-left: 3px;
+        }
+      }
+    }
+  }
+
+  &-promo {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: auto;
+    width: 23.2%;
+
+    @include media-breakpoint-down(md) {
+      width: 33.2%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      order: 3;
     }
 
     &-title {
-      font-size: 18px;
-      line-height: normal;
-      color: #333333;
-      display: flex;
-      align-items: center;
-      font-weight: 300;
-      flex-wrap: wrap;
-      margin-bottom: 5px;
-      
-     
-      span {
-        font-weight: 400;
-        border-bottom: 1px solid #333;
-        margin-left: 4px;
-      }
-
-      img {
-        display: inline-block;
-        max-width: 80px;
-        transform: translateY(-10px);
-      }
-    }
-
-    &-articul {
-      font: 400 12px/18px $font-ubuntu;
-      color: #999;
-      line-height: 18px;
-      margin-bottom: 4px;
       display: inline-block;
-      
-      @include media-breakpoint-down(xs){
-        .modal {
-          margin-bottom: 0;
-        }
-      }
+      height: 27px;
+      font: normal 12px/26px $font-ubuntu;
+      color: white;
+      padding: 0 10px 0 4px;
+      text-align: center;
+      background: #ff423c;
+      border-radius: 0 4px 4px 0;
+      margin-bottom: 10px;
 
-      span {
-        color: #666666;
-        margin-left: 6px;
-      }
-    }
-
-    &-rating {
-      display: flex;
-      align-items: center;
-      margin-bottom: 5px;
-
-      svg {
-        fill: #01b2ff;
-        width: 15px;
+      &:before {
+        content: '';
+        width: 19px;
+        background-color: #ff423c;
+        height: 19px;
+        display: inline-block;
+        position: absolute;
+        left: -10px;
+        top: 4px;
+        border-top-left-radius: 6px;
+        transform: rotate(-45deg);
+        z-index: -1;
       }
 
       a {
-        border-bottom: 1px solid #77777778;
-        color: #777;
-        margin-left: 8px;
-        font-size: 11px;
-        padding-bottom: 0px;
-        line-height: 11px;
+        border-bottom: 1px dashed;
       }
     }
-    
-    &-price {
-      margin: 20px 0;
-      display: flex;
-      align-items: baseline;
-      flex-wrap: wrap;
 
-      @include media-breakpoint-down(xs){
-        margin: 0 0 10px 0;
+    &-content {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      align-items: center;
+      z-index: 1010;
+      right: 100%;
+      top: 0;
+      background: white;
+      padding: 20px 30px;
+      border: 1px solid $border-color;
+      margin-right: 20px;
 
-        .modal & {
-          margin-top: 20px;
-          margin-bottom: 20px;
+      .cpipc {
+        &-price {
+          font-size: 25px;
+          line-height: 25px;
+          margin-bottom: 10px;
+          color: #333;
+
+          small {
+            font-size: 20px;
+            margin-left: 4px;
+          }
         }
-      }
-
-      .price {
-        position: relative;
-        display: flex;
-        align-items: baseline;
-        line-height: 30px;
-        font-size: 30px;
-        color: #333;
-
-        &--sale {
-          font-size: 20px;
-          font-weight: 300;
-          margin-right: 10px;
-          color: #bfc7c7;
+        &-close {
+          background: url(#{$PATH}/svg/close.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          position: absolute;
+          min-width: 10px;
+          max-width: 10px;
+          top: 10px;
+          right: 10px;
+          height: 10px;
+          cursor: pointer;
+          border: none;
+        }
+        &-text {
+          font-size: 13px;
+          color: #333333;
+          line-height: 18px;
+          text-align: center;
+          margin: 0px 0 20px 0;
 
           span {
-            position: relative;
-
-            &:after {
-              content: '';
-              display: block;
-              border-top: 1px solid;
-              position: absolute;
-              width: 100%;
-              top: 49%;
-            }
-
-            small {
-              font-size: 0.8em;
-              margin-left: 2px;
-            }
-          }
-
-          .price-badge-discount {
-            display: inline-block;
-            color: #fff;
-            height: 22px;
-            line-height: 22px;
-            border-radius: 4px;
-            position: relative;
-            padding: 0 5px;
-            margin-left: 8px;
-            font-size: 12px;
-            font-family: Ubuntu;
-            top: -7px;
-            background-color: #f69781;
-
-            &:before {
-              background-color: #f69781;
-            }
-
-            &:after {
-              display: none;
-            }
+            font-weight: 700;
           }
         }
-
-        &--total {
-          margin-top: 5px;
-
-          @include media-breakpoint-up(sm) {
-            width: 100%;
+        &-apply {
+          display: flex;
+          background: $primary;
+          font-size: 13px;
+          color: white;
+          padding: 10px 28px;
+          border: 1px solid transparent;
+          cursor: pointer;
+          margin-bottom: 10px;
+          
+          &:hover, &:focus {
+            background: $primary-second;
           }
-          small {
-            font-size: 23px;
-            padding-left: 3px;
+        }
+        &-timer {
+          display: flex;
+          align-items: center;
+          color: #ff423c;
+          font-size: 12px;
+          line-height: 16px;
+          margin-bottom: 10px;
+          
+          svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+            fill: #ff423c;
           }
         }
       }
     }
 
-    &-promo {
-      position: relative;
-      margin-bottom: 8px;
+    &.active {
+      .product-info-promo-content {
+        display: flex;
 
-      &-title {
-        display: inline-block;
-        height: 27px;
-        font: normal 12px/26px $font-ubuntu;
-        color: white;
-        padding: 0 10px 0 4px;
-        text-align: center;
-        background: #ff423c;
-        border-radius: 0 4px 4px 0;
-
-        &:before {
-          content: '';
-          width: 19px;
-          background-color: #ff423c;
-          height: 19px;
-          display: inline-block;
-          position: absolute;
-          left: -10px;
-          top: 4px;
-          border-top-left-radius: 6px;
-          transform: rotate(-45deg);
-          z-index: -1;
-        }
-
-        a {
-          border-bottom: 1px dashed;
+        @include media-breakpoint-down(xs) {
+          right: 0;
+          margin: 0;
+          left: 0;
+          top: 37px;
         }
       }
+    }
+  }
 
-      &-content {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        align-items: center;
-        z-index: 1010;
-        right: 100%;
-        top: 0;
-        background: white;
-        padding: 20px 30px;
-        border: 1px solid $border-color;
-        margin-right: 20px;
+  &-credit {
+    font: normal 12px/18px $font-ubuntu;
+    color: #333333;
+    margin-left: auto;
 
-        .cpipc {
-          &-price {
-            font-size: 25px;
-            line-height: 25px;
-            margin-bottom: 10px;
-            color: #333;
+    span {
+      color: $primary;
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+    a {
+      margin-left: 3px;
+    }
+  }
 
-            small {
-              font-size: 20px;
-              margin-left: 4px;
-            }
-          }
-          &-close {
-            background: url(#{$PATH}/svg/close.svg);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            position: absolute;
-            min-width: 10px;
-            max-width: 10px;
-            top: 10px;
-            right: 10px;
-            height: 10px;
-            cursor: pointer;
-            border: none;
-          }
-          &-text {
-            font-size: 13px;
-            color: #333333;
-            line-height: 18px;
-            text-align: center;
-            margin: 0px 0 20px 0;
+  &-options {
+    margin-bottom: 20px;
+    margin-left: auto;
+    width: 23.2%;
 
-            span {
-              font-weight: 700;
-            }
-          }
-          &-apply {
-            display: flex;
-            background: $primary;
-            font-size: 13px;
-            color: white;
-            padding: 10px 28px;
-            border: 1px solid transparent;
-            cursor: pointer;
-            margin-bottom: 10px;
-            
-            &:hover, &:focus {
-              background: $primary-second;
-            }
-          }
-          &-timer {
-            display: flex;
-            align-items: center;
-            color: #ff423c;
-            font-size: 12px;
-            line-height: 16px;
-            margin-bottom: 10px;
-            
-            svg {
-              width: 16px;
-              height: 16px;
-              margin-right: 5px;
-              fill: #ff423c;
-            }
-          }
-          &-view-all {
+    @include media-breakpoint-down(md) {
+      width: 33.2%;
+    }
 
-          }
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      order: 2;
+      margin-bottom: 0;
+    }
+
+    > div {
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    &-title {
+      font: 400 12px/18px $font-ubuntu;
+      color: rgba(51, 51, 51, 0.5);
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    &-item {
+      margin-right: 5px;
+      border: 1px solid transparent;
+      padding: 0 5px;
+      cursor: pointer;
+
+      img {
+        width: auto;
+        height: 90px;
+
+        @include media-breakpoint-down(md){
+          height: 65px;
         }
       }
 
       &.active {
-        .product-info-promo-content {
-          display: flex;
-
-          @include media-breakpoint-down(xs) {
-            right: 0;
-            margin: 0;
-            left: 0;
-            top: 37px;
-          }
-        }
-      }
-    }
-
-    &-credit {
-      font: normal 12px/18px $font-ubuntu;
-      margin-bottom: 40px;
-      color: #333333;
-      
-      @include media-breakpoint-down(xs) {
-        margin-bottom: 20px;
-      }
-      span {
-        color: $primary;
-        margin-left: 3px;
-        margin-right: 3px;
-      }
-      a {
-        margin-left: 3px;
-      }
-    }
-
-    &-options {
-      margin-bottom: 20px;
-
-      > div {
-        display: flex;
-        margin-bottom: 10px;
-      }
-
-      &-title {
-        font: 400 12px/18px $font-ubuntu;
-        color: rgba(51, 51, 51, 0.5);
-        margin-bottom: 5px;
-        display: inline-block;
-      }
-
-      &-item {
-        margin-right: 5px;
-        border: 1px solid transparent;
-        padding: 0 5px;
-        cursor: pointer;
-
-        img {
-          width: auto;
-          height: 90px;
-
-          @include media-breakpoint-down(md){
-            height: 65px;
-          }
-        }
-
-        &.active {
-          border: 1px solid $border-color;
-        }
-      }
-    }
-
-    &-size {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-bottom: 20px;
-      max-width: 280px;
-      
-      @include media-breakpoint-down(xs) {
-        max-width: 100%;
-      }
-      
-      &-title {
-        display: flex;
-        align-items: baseline;
-        width: 100%;
-        font: 400 12px/18px $font-ubuntu;
-        color: #999;
-        margin-bottom: 5px;
-
-        a {
-          margin-left: auto;
-        }
-      }
-      
-      > div {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -4px 10px -4px;
-      }
-
-      &-item {
         border: 1px solid $border-color;
-        font: normal 12px/30px $font-ubuntu;
-        cursor: pointer;
-        color: #333333;
-        padding: 0;
-        margin: 3px;
-        height: 35px;
-        width: 35px;
-        text-align: center;
-        
-        &:hover, &:focus {
-          border-color: $primary-second;
-          color: $primary-second;
-        }
-        &.active {
-          border: 1px solid $primary-second;
-          color: white;
-          background: $primary-second;
-        }
-      }
-
-      &-check {
-        display: flex;
-        position: relative;
-        margin-bottom: 15px;
-        align-items: center;
-        font-size: 12px;
-        color: #666666;
-        letter-spacing: 1px;
-        padding-bottom: 3px;
-        border-bottom: 1px dashed #666666;
-        
-        img {
-          width: 17px;
-          height: 17px;
-          border: 1px solid #dadbdb;
-          border-radius: 50%;
-          padding: 3px;
-          margin-right: 5px;
-        }
-
-        a {
-          font-size: 12px;
-          color: $primary;
-          line-height: 25px;
-          margin-left: auto;
-        }
       }
     }
+  }
 
-    &--preview {
+  &-size {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: auto;
+    width: 23.2%;
 
-      .product-info-name-brand {
-        padding-bottom: 10px;
-        margin-top: 20px;
-        border-bottom: 1px solid #e9eff7;
-      }
-      .product-info-brand {
+    @include media-breakpoint-down(md) {
+      width: 33.2%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      order: 4;
+      margin-bottom: 20px;
+    }
+    
+    &-title {
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      font: 400 12px/18px $font-ubuntu;
+      color: #999;
+      margin-bottom: 5px;
+
+      a {
         margin-left: auto;
       }
-      .product-feature-list {
-        flex-direction: column;
-        margin: 20px 0;
-      }
-      .product-feature-item {
-        width: 100%;
-      }
-      .product-feature-name {
-        min-width: auto;
-        margin: 0;
-        white-space: nowrap;
-      }
-      .product-rating {
-        font-family: "Roboto Condensed", sans-serif;
-        font-size: 15px;
-        text-transform: uppercase;
-        line-height: 16px;
-        color: #9e9e9e;
-        
-        span {
-          margin-left: 5px;
-        }
+    }
+    
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -4px 10px -4px;
+    }
 
-        i {
-          color: #fed545;
-        }
+    &-item {
+      border: 1px solid $border-color;
+      font: normal 12px/30px $font-ubuntu;
+      cursor: pointer;
+      color: #333333;
+      padding: 0;
+      margin: 3px;
+      height: 35px;
+      width: 35px;
+      text-align: center;
+      
+      &:hover, &:focus {
+        border-color: $primary-second;
+        color: $primary-second;
       }
-      .product-link {
-        margin-right: 10px;
+      &.active {
+        border: 1px solid $primary-second;
+        color: white;
+        background: $primary-second;
+      }
+    }
 
+    &-check {
+      display: flex;
+      position: relative;
+      margin-bottom: 15px;
+      align-items: center;
+      font-size: 12px;
+      color: #666666;
+      letter-spacing: 1px;
+      padding-bottom: 3px;
+      border-bottom: 1px dashed #666666;
+      
+      img {
+        width: 17px;
+        height: 17px;
+        border: 1px solid #dadbdb;
+        border-radius: 50%;
+        padding: 3px;
+        margin-right: 5px;
+      }
+
+      a {
+        font-size: 12px;
+        color: $primary;
+        line-height: 25px;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &--preview {
+
+    .product-info-name-brand {
+      padding-bottom: 10px;
+      margin-top: 20px;
+      border-bottom: 1px solid #e9eff7;
+    }
+    .product-info-brand {
+      margin-left: auto;
+    }
+    .product-feature-list {
+      flex-direction: column;
+      margin: 20px 0;
+    }
+    .product-feature-item {
+      width: 100%;
+    }
+    .product-feature-name {
+      min-width: auto;
+      margin: 0;
+      white-space: nowrap;
+    }
+    .product-rating {
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 15px;
+      text-transform: uppercase;
+      line-height: 16px;
+      color: #9e9e9e;
+      
+      span {
+        margin-left: 5px;
+      }
+
+      i {
+        color: #fed545;
+      }
+    }
+    .product-link {
+      margin-right: 10px;
+
+      svg {
+        fill: $primary;
+        width: 20px;
+        height: 20px;
+        transform: rotate(-180deg);
+        margin-left: -5px;
+        margin-right: -20px;
+      }
+
+      &:hover, &:focus {
         svg {
-          fill: $primary;
-          width: 20px;
-          height: 20px;
-          transform: rotate(-180deg);
-          margin-left: -5px;
-          margin-right: -20px;
-        }
-
-        &:hover, &:focus {
-          svg {
-            fill: $primary-second;
-          }
+          fill: $primary-second;
         }
       }
     }
@@ -599,9 +665,17 @@ main {
 
   &-add {
     display: flex;
-   
+    margin-left: auto;
+    width: 23.2%;
+    margin-top: auto;
+
+    @include media-breakpoint-down(md) {
+      width: 33.2%;
+    }
+
     @include media-breakpoint-down(xs) {
-      
+      width: 100%;
+      order: 5;
     }
 
     a {
@@ -617,14 +691,14 @@ main {
       background: $primary;
       color: white;
       height: 40px;
-      padding: 0 20px;
+      padding: 0 10px;
       text-transform: uppercase;
       border: 1px solid transparent;
 
       svg {
-        width: 30px;
-        height: 30px;
-        margin-right: 10px;
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
         fill: #fff;
       }
 
@@ -638,8 +712,9 @@ main {
 
     &-to-like {
       border: 2px solid #dadbdb;
-      margin-left: 15px;
+      margin-left: 10px;
       width: 40px;
+      min-width: 40px;
 
       @include media-breakpoint-down(md) {
         width: 40px;
@@ -674,13 +749,32 @@ main {
     }
   }
 
-  &-title {
+  &-headline {
     font-size: 22px;
     line-height: 1.5;
     margin: 30px 0 20px;
+    width: 66.6%;
 
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
     @include media-breakpoint-down(xs) {
       margin: 20px 0 10px;
+    }
+  }
+
+  &-info-text {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 300;
+    width: 66.6%;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
     }
   }
 
@@ -691,14 +785,21 @@ main {
   }
   
   &-feature {
+    
     &-list {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
-      margin: 0 0 40px 0;
+      margin: 0;
       justify-content: space-between;
+      width: 66.6%;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
 
       @include media-breakpoint-down(xs) {
+        width: 100%;
         margin-bottom: 0;
       }
     }
@@ -710,7 +811,6 @@ main {
 
       @include media-breakpoint-down(xs) {
         width: 100%;
-        flex-direction: column;
       }
     }
 
@@ -729,21 +829,12 @@ main {
       width: 100%;
       border: none;
       border-bottom: 1px dotted #e0ebf3;
-      
-      @include media-breakpoint-down(xs) {
-        order: 3;
-      }
     }
     &-name {
       color: #000;
       font: normal 14px/21px $font-ubuntu;
       white-space: nowrap;
       text-align: right;
-
-      @include media-breakpoint-down(xs) {
-        white-space: initial;
-        text-align: left;
-      }
 
       span {
         display: block;
@@ -766,21 +857,37 @@ main {
     &-description {
       display: flex;
       align-items: flex-start;
+      width: 66.6%;
+
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
 
       @include media-breakpoint-down(xs) {
+        width: 100%;
         flex-direction: column;
       }
     }
   }
 
   &-reviews {
-    display: flex;
-    align-items: center;
-    margin: 50px 0 20px;
-    
+    width: 66.6%;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
     @include media-breakpoint-down(xs) {
       margin: 20px 0;
+      width: 100%;
     }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      margin: 40px 0 20px;
+    }
+
     &-total {
       color: #fff;
       font-size: 20px;
@@ -820,6 +927,9 @@ main {
     padding: 35px 40px;
     box-shadow: 0 0 20px -15px #0000001f;
     margin-top: 30px;
+    position: absolute;
+    width: 23.2%;
+    right: 0;
 
     @include media-breakpoint-down(md) {
       margin-top: 20px;
@@ -827,6 +937,9 @@ main {
       align-items: center;
       padding: 30px;
       flex-wrap: wrap;
+      margin-bottom: 15px;
+      width: 100%;
+      position: relative;
     }
 
     &-title {
@@ -870,14 +983,10 @@ main {
       display: flex;
       flex-direction: column;
 
-      @include media-breakpoint-down(md){
+      @include media-breakpoint-down(md) {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-      }
-
-      @include media-breakpoint-down(md) {
-        flex-direction: column;
       }
 
       &-item {
@@ -955,6 +1064,7 @@ main {
 
     &-free {
       margin-top: 15px;
+      
       @include media-breakpoint-down(md) {
         margin-top: 20px;
       }
@@ -985,7 +1095,6 @@ main {
         }
       }
     }
-    
   }
 
   &-additional {
@@ -993,14 +1102,21 @@ main {
     flex-direction: column;
     margin-top: 30px;
     box-shadow: 0 0 20px -15px #0000001f;
-    
+    position: absolute;
+    width: 23.2%;
+    right: 0;
+    bottom: 0;
+
     @include media-breakpoint-down(md) {
+      position: relative;
+      width: 100%;
       flex-direction: row;
       margin-top: -1px;
     }
 
     @include media-breakpoint-down(xs) {
       flex-direction: column;
+      display: none;
     }
   }
 
@@ -1036,7 +1152,7 @@ main {
   &-tags {
     max-width: 100%;
     padding: 0;
-    margin: 10px auto 30px;
+    margin: 30px auto;
     
     @include media-breakpoint-down(xs) {
       margin: 0 auto;
@@ -1084,9 +1200,13 @@ main {
 
 
 .interesting-filters {
-  margin: -15px auto 40px;
+  margin: -20px auto 40px;
   display: flex;
   justify-content: center;
+
+  @include media-breakpoint-down(xs) {
+    margin: 0 0 30px 0;
+  }
 
   &-link {
     font-size: 15px;

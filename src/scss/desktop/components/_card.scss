@@ -14,41 +14,37 @@ $type-sale:#f69781;
   max-width: 240px;
   transition: .2s;
 
-
   @include media-breakpoint-down(xs) {
     max-width: 200px;
     margin: auto;
   }
 
- /*  @media (max-width: 320px) {
-    max-width: 236px;
-  } */
-
   .modal & {
     min-width: auto;
   }
   
-  &:hover, &:focus {
-    
-    border: 1px solid $border-color;
-    //@include box-shadow();
-    z-index: 1000;
-    box-shadow: 0 0 20px -15px #0000001f;
+  @include media-breakpoint-up(sm) {
+    &:hover, &:focus {
+      border: 1px solid $border-color;
+      //@include box-shadow();
+      z-index: 1000;
+      box-shadow: 0 0 20px -15px #0000001f;
 
-    .card-size {
-      display: flex;
+      .card-size {
+        display: flex;
 
-      @include media-breakpoint-down(xs) {
-        display: none;
+        @include media-breakpoint-down(xs) {
+          display: none;
+        }
       }
-    }
 
-    .card-extra-info {
-      display: flex;
-      border-color: $border-color;
-    }
-    .card-promo {
-      display: flex;
+      .card-extra-info {
+        display: flex;
+        border-color: $border-color;
+      }
+      .card-promo {
+        display: flex;
+      }
     }
   }
 
@@ -253,7 +249,7 @@ $type-sale:#f69781;
     height: 50px;
 
     a {
-      
+
       svg {
         width: 25px;
         height: 25px;
@@ -265,7 +261,7 @@ $type-sale:#f69781;
         padding-bottom: 2px;
         border-bottom: 1px dashed $primary;
 
-        @include media-breakpoint-down(xs) {
+        @include media-breakpoint-down(md) {
          display: none; 
         }
       }
@@ -287,7 +283,7 @@ $type-sale:#f69781;
       }
 
       &.card-add-to-cart {
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
         width: 30px;
@@ -351,6 +347,9 @@ $type-sale:#f69781;
     border-top: 0;
     @include box-shadow();
 
+    @include media-breakpoint-down(md) {
+      bottom: -50px;
+    }
     @include media-breakpoint-down(xs) {
       bottom: -80px;
     }
@@ -368,7 +367,7 @@ $type-sale:#f69781;
     &-title {
       width: 100%;
       font-family: Ubuntu;
-      font-size: 11;
+      font-size: 11px;
       text-align: center;
       color: white;
       margin-bottom: 7px;

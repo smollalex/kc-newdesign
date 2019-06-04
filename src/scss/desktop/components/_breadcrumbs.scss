@@ -2,7 +2,12 @@
   background: white;
   border-radius: 0;
   padding: 0;
+  margin-top: 10px;
   
+  @include media-breakpoint-down(md) {
+    margin-top: 0;
+  }
+
   &-list {
     display: flex;
     align-items: center;
@@ -11,6 +16,10 @@
     margin: 0;
     border-top: 1px solid #e9eff7;
     overflow-x: auto;
+
+    @include media-breakpoint-down(xs) {
+      margin: 0 5px;
+    }
   }
 
   &-item {
@@ -72,7 +81,7 @@
     white-space: nowrap;
 
     svg {
-      fill: #86909c;
+      fill: #383e46;
     }
 
     &:hover, &:focus {

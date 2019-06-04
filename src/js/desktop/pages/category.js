@@ -1,4 +1,14 @@
 $(document).ready(function(){
+  
+  // Sticky sidebar
+  if ($('.category-list').length > 0 ) {
+    new StickySidebar('.category-list', {
+      containerSelector: '.category .container-fluid',
+      //innerWrapperSelector: '.category-list-inner',
+      topSpacing: 20,
+      bottomSpacing: 20
+    });
+  }
 
   // Card
 	$('.card').on('click', function(e){

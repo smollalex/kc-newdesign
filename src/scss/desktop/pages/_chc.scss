@@ -883,7 +883,8 @@
       align-items: end;
       padding-right: 30px;
       margin-bottom: 20px;
-
+      text-transform: lowercase;
+      
       @include media-breakpoint-down(lg) {
         width: 33%;
         padding-right: 10px;
@@ -906,7 +907,6 @@
     img {
       border: 1px solid #ddd;
     }
-
   }
 
   &-vacantion {

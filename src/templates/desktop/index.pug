@@ -8,13 +8,13 @@ main
 		section.mobile-category
 			ul.category-nav
 				li.nav-item
-					a.nav-link(href="") Женская обувь
-				li.nav-item
-					a.nav-link(href="") Мужская обувь
+					a.nav-link(href="") Обувь
 				li.nav-item
 					a.nav-link(href="") Сумки
 				li.nav-item
 					a.nav-link(href="") Бренды
+				li.nav-item
+					a.nav-link(href="") Тренды
 				li.nav-item
 					a.nav-link(href="") Акции
 				li.nav-item
@@ -22,7 +22,6 @@ main
 				li.nav-item
 					a.nav-link(href="") Распродажа
 		section.brands
-			h3.section-title Топ бренды
 			#brands-slider.owl-carousel.owl-theme-brands
 				a.brands-slider-item(href='javascript:;')
 					img.brands-slider-item-img(src='img/brands/Rieker-120x81.png')
@@ -57,45 +56,9 @@ main
 					span.brands-slider-item-name Tamaris
 					span.brands-slider-item-count 642 товаров
 		section.banners
-			.row
-				.col-md-6.col-lg-4
-					.banner.banner-2(style='background-image: url(img/banners/main/left.jpg)')
-						.banner-text-badge.banner-text-badge--discount
-							span -5%
-							span Promo
-						a.banner-button(href='#') Смотреть
-						.banner-text
-							span Резиновые сапоги
-							span Дополнительная скидка
-				.col-md-6.col-lg-4
-					.banner.banner-2(style='background-image: url(img/banners/main/300.jpg)')
-						a.banner-button(href='#') Перейти к покупкам
-				.col-lg-4
-					.banner.banner-2(style='background-image: url(img/banners/main/right.jpg)')
-						.banner-text-badge.banner-text-badge--brand
-							span NEW`19
-						a.banner-button(href='#') Смотреть
-						.banner-text
-							span Carpice
-							span Новая коллекция
-			.row
-				.col-md-6.col-lg-8
-					.banner.banner-4(style='background-image: url(img/banners/main/banner2.jpg)')
-						.banner-text-badge
-						a.banner-button(href='#') Смотреть
-						.banner-text
-							span -30% на последний размер
-							span 
-				.col-md-6.col-lg-4
-					.banner.banner-2(style='background-image: url(img/banners/trends/X1827-8-Z223.jpg)')
-						.banner-text-badge.banner-text-badge--brand
-							span NEW`19
-						a.banner-button(href='#') Смотреть
-						.banner-text
-							span Tamaris
-							span Новая коллекция
+			include shared/home-banners-1
 		section.recomended
-			h3.section-title K-C рекомендует 
+			h3.section-title Рекомендуем 
 			#new-products-slider.owl-carousel.owl-theme-card
 				include shared/cards
 		section.trends

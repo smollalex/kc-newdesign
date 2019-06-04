@@ -18,6 +18,7 @@
       align-items: center;
       margin-bottom: 20px;
       flex-wrap: wrap;
+      position: relative;
 
       &-icon {
         display: flex;
@@ -48,6 +49,9 @@
           margin-left: 40px;
           @include media-breakpoint-down(xs) {
             margin-left: auto;
+            position: absolute;
+            right: 0;
+            top: 10px;
           }
         }
         .name {
@@ -98,6 +102,7 @@
               }
 
               &--dislake {
+                margin-right: 0;
                 span {
                   background-image: url("#{$PATH}/svg/dislike.svg");
                 }

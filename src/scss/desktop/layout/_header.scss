@@ -21,10 +21,6 @@
     color: #333333;
     padding: 0 10px;
 
-    @include media-breakpoint-up(xl) {
-      padding: 0 15px;
-    }
-    
     @include media-breakpoint-down(xs) {
       display: none;
     }
@@ -136,6 +132,17 @@
       }
     }
 
+    &--fitting {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    &--brands {
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
     &--delivery {
       background-color: #e3eff7;
       //background-color: #f6f9fe;
@@ -151,13 +158,6 @@
       
       
       @include media-breakpoint-down(lg) {
-        display: none;
-      }
-      @include media-breakpoint-down(sm) {
-        display: block;  
-      }
-
-      @include media-breakpoint-down(xs) {
         display: none;
       }
 
@@ -199,27 +199,24 @@
           }
         }
       }
-      
     }
 
     &--phone {
-      min-width: 165px;
+      min-width: 150px;
       margin-left: auto;
 
       @include media-breakpoint-down(md) {
-        display: none;
+        display: inline-flex;
       }
 
       @include media-breakpoint-down(xs) {
-        display: none;
-        /*  display: inline-flex;
         min-width: 1px;
         margin: 10px 0 0 10px;
         padding: 0 0 0 10px;
         justify-content: center;
         border-left: 1px solid #dedede;
         height: 15px;
-        order: 2; */
+        order: 2;
       }
 
       .header-item {
@@ -233,10 +230,15 @@
             white-space: nowrap;
             font-family: 'Roboto Condensed', sans-serif;
             font-size: 18px;
-            letter-spacing: 1px;
-            font-size: 15px;
-            letter-spacing: 0px;
+
+            @include media-breakpoint-down(xs) {
+              font-size: 14px;
+              letter-spacing: 0;
+            }
           }
+        }
+        &-content {
+          padding: 15px 10px;
         }
       }
       &.active, &:hover, &:focus {
@@ -282,15 +284,15 @@
       align-items: center;
       justify-content: center;
       order: 1;
-
+      margin-right: -5px;
+      
       @include media-breakpoint-down(md) {
-        margin-left: auto;
         min-width: auto;
       }
 
       @include media-breakpoint-down(xs) {
         display: inline-flex;
-        margin: 0 0 0 5px;
+        margin: 0;
         padding: 0;
       }
 
@@ -310,6 +312,15 @@
 
       .header-item {
 
+        &-title {
+          @include media-breakpoint-down(md) {
+           
+          }
+          @include media-breakpoint-down(xs) {
+
+          }
+        }
+
         &-link {
 
           &-city {
@@ -318,12 +329,12 @@
             font-size: 14px;
             cursor: pointer;
             color: #333;
-            
+            white-space: nowrap;
+
             svg {
               margin-right: 4px;
               width: 14px;
               height: 15px;
-              align-self: baseline;
               min-width: auto;
               fill: #333;
               margin-top: -2px;
@@ -336,19 +347,41 @@
                 fill:#00b3ff; 
               }
             }
+
+            span {
+              white-space: normal;
+
+              @include media-breakpoint-down(md) {
+                max-width: 100%;
+              }
+              @include media-breakpoint-down(xs) {
+                font-size: 13px;
+                line-height: 14px;
+              }
+            }
           } 
+
           &-point {
             font-size: 11px;
             color: #86909c;
             border-bottom: 1px dashed #86909c;
             margin-left: 10px;
+            white-space: nowrap;
             
-            @include media-breakpoint-down(xs) {
-              
-            }
             &:hover, &:focus {
               color: #00b3ff;
               border-color: #00b3ff;
+            }
+
+            @include media-breakpoint-down(md) {
+              margin-left: 20px;
+            }
+
+            @include media-breakpoint-down(xs) {
+              margin-left: 10px;
+              span {
+                display: none;
+              }
             }
           }   
         }
@@ -420,6 +453,7 @@
           &-links {
             display: flex;
             align-self: center;
+            justify-content: center;
 
             @include media-breakpoint-down(xs) {
               justify-content: center;

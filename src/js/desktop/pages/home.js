@@ -19,7 +19,7 @@ $(document).ready(function(){
 	$('#brands-slider').owlCarousel({
 		nav: false,
 		mouseDrag: true,
-		dots: true,
+		dots: false,
 		slideBy: 5,
 		lazyLoad: true,
 		navText: [
@@ -31,7 +31,7 @@ $(document).ready(function(){
 				items: 3
 			},
 			415: {
-				items: 3
+				items: 5
 			},
 			991: {
 				items: 7
@@ -43,9 +43,7 @@ $(document).ready(function(){
 	// New product slider
 	$('#new-products-slider, #actual-discount-slider').owlCarousel({
 		loop: false,
-		nav: true,
 		mouseDrag: true,
-		dots: false,
 		lazyLoad: true,
 		slideBy: 1,
 		margin: 10,
@@ -59,16 +57,17 @@ $(document).ready(function(){
 				items: 1
 			},
 			320: {
-				items: 2
+				items: 2,
+				nav: false,
+				dots: true
 			},
 			768: {
-				items: 3
-			},
-			1024: {
-				items: 4
+				items: 4,
+				nav: true,
+				dots: false,
 			},
 			1280: {
-				items: 5
+				items: 5,
 			}
 		}
 	});

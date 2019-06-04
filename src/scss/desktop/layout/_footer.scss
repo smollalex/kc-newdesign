@@ -38,7 +38,7 @@
       border-color: #fff;
     }
     &:after {
-      background-image: url(../img/svg/check-white.svg);
+      background-image: url(#{$PATH}/svg/check-white.svg);
     }
   }
 
