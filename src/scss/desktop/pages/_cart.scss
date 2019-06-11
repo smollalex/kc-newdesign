@@ -708,7 +708,8 @@
 
     &-options {
       display: flex;
-
+      flex-wrap: wrap;
+      
       @include media-breakpoint-down(xs) {
         flex-direction: column;
       }

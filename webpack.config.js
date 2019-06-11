@@ -115,8 +115,30 @@ const config =  {
       template: `src/templates/${version}/product.pug`
     }),
     
+    new HtmlWebpackPlugin({
+      filename: 'personal.html',
+      template: `src/templates/${version}/personal.pug`
+    }),
     
+    new HtmlWebpackPlugin({
+      filename: 'cart1.html',
+      template: `src/templates/${version}/cart1.pug`
+    }),
+    
+    new HtmlWebpackPlugin({
+      filename: 'cart2.html',
+      template: `src/templates/${version}/cart2.pug`
+    }),
 
+    new HtmlWebpackPlugin({
+      filename: 'cart3.html',
+      template: `src/templates/${version}/cart3.pug`
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: 'category.html',
+      template: `src/templates/${version}/category.pug`
+    }),
    
     
     new HtmlWebpackPlugin({
@@ -140,10 +162,7 @@ const config =  {
       template: `src/templates/${version}/404.pug`
     }),
     
-    new HtmlWebpackPlugin({
-      filename: 'personal.html',
-      template: `src/templates/${version}/personal.pug`
-    }),
+
    
    
     new HtmlWebpackPlugin({

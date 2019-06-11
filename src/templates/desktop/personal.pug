@@ -540,13 +540,15 @@ main.personal
                         input#fio.form-control(type='text', value='Иванович')
                     .form-group.row
                       label.col-3.col-sm-2.col-form-label(for='personal-sex') Пол
-                      .col-9.col-sm-4
-                        .mb-2
-                          input(id='personal-sex-1', name='personal-sex', type='radio', checked)
+                      .col-sm-10.form-inline
+                        .form-check.mr-3
+                          input.form-control.is-invalid(id='personal-sex-1', name='personal-sex', type='radio')
                           label(for='personal-sex-1') Женский
-                        .mb-2
-                          input(id='personal-sex-2', name='personal-sex', type='radio')
+                          .invalid-feedback You must agree before submitting.
+                        .form-check
+                          input.form-control.is-invalid(id='personal-sex-2', name='personal-sex', type='radio')
                           label(for='personal-sex-2') Мужской
+                          .invalid-feedback You must agree before submitting.
                     .form-group.row
                       label.col-3.col-sm-2.col-form-label(for='personal-birthady') Размер обуви
                       .col-9.col-sm-2
@@ -593,7 +595,6 @@ main.personal
                     .form-group.row
                       .col-sm-5.offset-md-2
                         a.btn(href="") Сохранить
-
           #personal-subscribe.tab-pane.fade(role='tabpanel', aria-labelledby='personal-subscribe-tab')
             .row
               .col-md-6

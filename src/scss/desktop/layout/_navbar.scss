@@ -440,6 +440,7 @@
             }
 
             @include media-breakpoint-down(xs) {
+              flex-direction: column;
               max-height: 100%;
             }
 

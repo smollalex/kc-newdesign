@@ -116,7 +116,7 @@
   & + label {
     cursor: pointer;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: flex-start;
     height: 14px;
     font: 14px/18px $font-ubuntu;
@@ -194,7 +194,7 @@
     cursor: pointer;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: baseline;
     height: 14px;
     font: 14px/18px $font-ubuntu;
 
@@ -319,8 +319,8 @@
   font-family: $font-ubuntu;
   font-size: 12px;
   line-height: 18px;
-  padding-left: 13px;
-  margin-top: 5px;
+  padding: 0;
+  margin: 0;
 }
 .invalid-feedback {
   color: #f54944;
@@ -329,6 +329,9 @@
   color: green;
 }
 
+.is-invalid .invalid-feedback {
+  display: block;
+}
 
 .link {
   font-size: 13px;
